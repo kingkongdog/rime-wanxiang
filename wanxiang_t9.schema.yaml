@@ -53,6 +53,7 @@ engine:
     - recognizer                                #与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
     - key_binder                                #在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页、开关快捷键等
     - lua_processor@*key_binder                 #绑定按键扩展能力，支持正则扩展将按键生效情景更加细化
+    - lua_processor@*force_digit_input_processor  #解决偶发数字上屏问题
     - speller                                   #拼写处理器，接受字符按键，编辑输入
     - punctuator                                #符号处理器，将单个字符按键直接映射为标点符号或文字
     - selector                                  #选字处理器，处理数字选字键〔可以换成别的哦〕、上、下候选定位、换页
@@ -82,6 +83,7 @@ engine:
     - lua_filter@*super_filter                      #功能太多详见Lua文件
     - lua_filter@*super_replacer                    #用来替代OpenCC的处理器
     - lua_filter@*super_sequence*F                  #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
+    - lua_filter@*put_input_in_cand_list_when_empty_filter  #没有候选词时把 input 放入候选词，比如输入手机号码
     - uniquifier                                    # 去重
 
 t9:
@@ -373,7 +375,7 @@ key_binder:
   select_first_character: "bracketleft"  # 左中括号 [
   select_last_character: "bracketright"  # 右中括号 ]
   bindings:               # 也可以再增加方案专有的
-    - { when: has_menu, accept: 1, send: apostrophe }
+    # - { when: has_menu, accept: 1, send: apostrophe }
 
 #当tab第一个字补码正确后，可以使用Ctrl+tab进行上屏并依次补码
     - { when: composing, accept: "Control+Tab", send_sequence: '{Home}{Shift+Right}{1}{Shift+Right}' }
