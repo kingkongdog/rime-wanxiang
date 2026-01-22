@@ -49,6 +49,7 @@ switches:
 # 输入引擎
 engine:
   processors:
+    - lua_processor@*pangu_processor            #中英文间自动加空格
     - lua_processor@*super_processor            #KP小键盘、字母选词、符号快打、超强分词、重复限制、退格限制、声调回退、以词定字
     - lua_processor@*partial_commit             #通过ctrl+1~0局部提交10个字以内的句子的前几个字（一般为正确的前几个）使用时要遵循合理的分词结构能促进后续编码打出正确的词汇
     - lua_processor@*super_tips                 #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
@@ -567,14 +568,14 @@ key_binder:
 # 通过按下/发送/+1节约一个按键，不冲突的时候可以开启
     #- { match: "[a-z]{1,4}", accept: "/",  send_sequence: "/1" }
 # 翻页 , .
-    # - { when: paging, accept: comma, send: Page_Up }
-    # - { when: has_menu, accept: period, send: Page_Down }
+    - { when: paging, accept: comma, send: Page_Up }
+    - { when: has_menu, accept: period, send: Page_Down }
 # 翻页 [ ]
     # - { when: paging, accept: bracketleft, send: Page_Up }
     # - { when: has_menu, accept: bracketright, send: Page_Down }
 # 翻页 - =
-    - { when: has_menu, accept: minus, send: Page_Up }
-    - { when: has_menu, accept: equal, send: Page_Down }
+    # - { when: has_menu, accept: minus, send: Page_Up }
+    # - { when: has_menu, accept: equal, send: Page_Down }
 # Option/Alt + ←/→ 切换光标至下/上一个拼音
     - { when: always, toggle: ascii_punct, accept: Control+Shift+3 }              # 切换中英标点
     - { when: always, toggle: ascii_punct, accept: Control+Shift+numbersign }     # 切换中英标点
