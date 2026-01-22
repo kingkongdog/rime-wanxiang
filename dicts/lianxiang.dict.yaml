@@ -14620,6 +14620,7 @@ sort: by_weight
 不可预测性	bù kě yù cè xìng	1
 不可预见费	bù kě yù jiàn fèi	1
 不可预见性	bù kě yù jiàn xìng	1
+不可预知的	bù kě yù zhī de	1
 不可预知性	bù kě yù zhī xìng	1
 不可约表示	bù kě yuē biǎo shì	2
 不可约方程	bù kě yuē fāng chéng	1
@@ -48925,7 +48926,6 @@ sort: by_weight
 发动机平台	fā dòng jī píng tái	1
 发动机启动	fā dòng jī qǐ dòng	1
 发动机气缸	fā dòng jī qì gāng	1
-发动机汽缸	fā dòng jī qì gāng	1
 发动机起火	fā dòng jī qǐ huǒ	1
 发动机气门	fā dòng jī qì mén	1
 发动机启停	fā dòng jī qǐ tíng	1
@@ -145994,15 +145994,14 @@ sort: by_weight
 起点中文网	qǐ diǎn zhōng wén wǎng	1
 七点钟新闻	qī diǎn zhōng xīn wén	1
 旗顶山炮台	qí dǐng shān pào tái	1
-起动变压器	qǐ dòng biàn yā qì	1
+启动变压器	qǐ dòng biàn yā qì	1
 启动电动机	qǐ dòng diàn dòng jī	1
-起动电动机	qǐ dòng diàn dòng jī	1
 启动发布会	qǐ dòng fā bù huì	1
 启动发动机	qǐ dòng fā dòng jī	1
 启动服务器	qǐ dòng fú wù qì	1
 骑动感单车	qí dòng gǎn dān chē	1
 气动隔膜泵	qì dòng gé mó bèng	1
-起动过程中	qǐ dòng guò chéng zhōng	1
+启动过程中	qǐ dòng guò chéng zhōng	1
 启动和调控	qǐ dòng hé tiáo kòng	1
 启动和停止	qǐ dòng hé tíng zhǐ	1
 启动继电器	qǐ dòng jì diàn qì	1
@@ -220101,7 +220100,7 @@ sort: by_weight
 星期二档案	xīng qī èr dàng àn	1
 星期二上午	xīng qī èr shàng wǔ	1
 星期二下午	xīng qī èr xià wǔ	1
-型汽缸引擎	xíng qì gāng yǐn qíng	1
+型气缸引擎	xíng qì gāng yǐn qíng	1
 星期六评论	xīng qī liù píng lùn	1
 星期六上午	xīng qī liù shàng wǔ	1
 星期六晚上	xīng qī liù wǎn shàng	1
@@ -358249,7 +358248,6 @@ sort: by_weight
 齐次线性方程组	qí cì xiàn xìng fāng chéng zǔ	1
 期待可能性理论	qī dài kě néng xìng lǐ lùn	1
 气道过敏性炎症	qì dào guò mǐn xìng yán zhèng	1
-起动器起动装置	qǐ dòng qì qǐ dòng zhuāng zhì	1
 芪冬颐心口服液	qí dōng yí xīn kǒu fú yè	1
 气独盛者则脉强	qì dú shèng zhě zé mài qiáng	1
 齐多夫定注射液	qí duō fū dìng zhù shè yè	1
