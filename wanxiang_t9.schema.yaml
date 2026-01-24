@@ -49,12 +49,12 @@ engine:
   processors:
     - lua_processor@*force_digit_input_processor  #解决偶发数字上屏问题
     - t9_processor                              #元书T9处理器
-    - lua_processor@*super_tips                 #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
-    - lua_processor@*super_sequence*P           #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+l 移除位移  ctrl+p 置顶
+    # - lua_processor@*super_tips                 #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
+    # - lua_processor@*super_sequence*P           #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+l 移除位移  ctrl+p 置顶
     - ascii_composer                            #处理英文模式及中英文切换
     - recognizer                                #与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
     - key_binder                                #在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页、开关快捷键等
-    - lua_processor@*key_binder                 #绑定按键扩展能力，支持正则扩展将按键生效情景更加细化
+    # - lua_processor@*key_binder                 #绑定按键扩展能力，支持正则扩展将按键生效情景更加细化
     - speller                                   #拼写处理器，接受字符按键，编辑输入
     - punctuator                                #符号处理器，将单个字符按键直接映射为标点符号或文字
     - selector                                  #选字处理器，处理数字选字键〔可以换成别的哦〕、上、下候选定位、换页
@@ -64,7 +64,7 @@ engine:
     - ascii_segmentor                           #标识英文段落〔譬如在英文模式下〕字母直接上屛
     - matcher                                   #配合 recognizer 标识符合特定规则的段落，如网址、反查等，加上特定 tag
     - abc_segmentor                             #标识常规的文字段落，加上 abc 这个 tag
-    - affix_segmentor@wanxiang_reverse          #反查 tag
+    # - affix_segmentor@wanxiang_reverse          #反查 tag
     - punct_segmentor                           #标识符号段落〔键入标点符号用〕加上 punct 这个 tag
     - fallback_segmentor                        #标识其他未标识段落，必须放在最后帮助tag模式切换后回退重新处理
   translators:
@@ -78,7 +78,7 @@ engine:
     - table_translator@custom_phrase       #自定义短语 custom_phrase.txt，用于置顶自定义编码候选词
     - table_translator@chengyu             #简码成语词汇表导入
     - table_translator@wanxiang_mixedcode  #中英等混合词汇表导入
-    - reverse_lookup_translator@wanxiang_reverse    #挂接部件组字和笔画反查
+    # - reverse_lookup_translator@wanxiang_reverse    #挂接部件组字和笔画反查
   filters:
     # - lua_filter@*super_lookup                      #字词输入中反查辅助筛选
     - lua_filter@*super_filter                      #功能太多详见Lua文件
