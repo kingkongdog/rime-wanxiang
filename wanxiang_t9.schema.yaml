@@ -400,8 +400,8 @@ speller:
     - xform/^n$/en/
     - xform/^m$/me/
     - derive/^(.*)$/\U$1/
-    #- abbrev/^([A-Z]).+$/$1/
-    #- abbrev/^([ZCS]H).+$/$1/
+    - abbrev/^([A-Z]).+$/$1/
+    - abbrev/^([ZCS]H).+$/$1/
     - derive/^([nl])ve$/$1ue/
     - derive/^([NL])VE$/$1UE/
     - derive/^([jqxy])u/$1v/
