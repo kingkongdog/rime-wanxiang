@@ -1,5 +1,13 @@
 # Changelog
 
+## [14.4.3](https://github.com/amzxyz/rime_wanxiang/compare/v14.4.1...v14.4.3) (2026-01-23)
+
+### 🐛 Bug 修复
+
+* /命令模式不派生候选 ([0a08cbe](https://github.com/amzxyz/rime_wanxiang/commit/0a08cbed18913a22a2e8660d4b077388472e71d8))
+* **tips:** 翻页后不再匹配输入编码，释放翻页返回按键 ([6626142](https://github.com/amzxyz/rime_wanxiang/commit/662614238d4cabb4f2ffec79395dbb73e53406dc))
+* 九宫格注释掉简拼 ([1ee350d](https://github.com/amzxyz/rime_wanxiang/commit/1ee350d9a7e8e2ff81ad5625a83c5fe31f8ae943))
+
 ## [14.4.1](https://github.com/amzxyz/rime_wanxiang/compare/v14.4.0...v14.4.1) (2026-01-21)
 
 
