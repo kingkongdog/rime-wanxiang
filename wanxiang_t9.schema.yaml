@@ -400,7 +400,7 @@ speller:
     - xform/^n$/en/
     - xform/^m$/me/
     - derive/^(.*)$/\U$1/
-    - abbrev/^([A-Z])H?[AOEIUV]+$/$1/
+    - abbrev/^([A-Z])[AOEIU]+$/$1/
     - derive/^([NL])VE$/$1UE/
     - derive/^([JQXY])U/$1V/
     - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
