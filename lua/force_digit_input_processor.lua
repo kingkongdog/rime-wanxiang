@@ -11,8 +11,10 @@ function M.func(key, env)
   local input = context.input or ""
 
   if not context:is_composing() then
-    env.last_input = ""
-    return 2
+    local char = string.char(code)
+    context:push_input(char)
+    env.last_input = char
+    return 1
   end
 
   if code >= 48 and code <= 57 then
