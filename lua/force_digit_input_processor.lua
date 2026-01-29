@@ -10,6 +10,11 @@ function M.func(key, env)
   local code = key.keycode
   local input = context.input or ""
 
+  if not context:is_composing() then
+    env.last_input = ""
+    return 2
+  end
+
   if code >= 48 and code <= 57 then
     if #env.last_input == #input then
       -- 这里不要用 key:repr()，否则可能推入 Shift+1
