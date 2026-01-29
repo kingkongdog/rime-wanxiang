@@ -81,8 +81,8 @@ engine:
     # - reverse_lookup_translator@wanxiang_reverse    #挂接部件组字和笔画反查
   filters:
     # - lua_filter@*super_lookup                      #字词输入中反查辅助筛选
-    - lua_filter@*super_filter                      #功能太多详见Lua文件
-    - lua_filter@*super_replacer                    #用来替代OpenCC的处理器
+    - lua_filter@*super_replacer                    #OpenCC替代器，更灵活的处理方式，更自由的自定义方式，支持简繁转换、简码模式、支持候选替换、注释替换、候选派生等等
+    - lua_filter@*super_filter                      #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
     # - lua_filter@*super_sequence*F                  #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
     - lua_filter@*put_input_in_cand_list_when_empty_filter  #没有候选词时把 input 放入候选词，比如输入手机号码
     - uniquifier                                    # 去重
@@ -264,7 +264,7 @@ super_replacer:
     types:
       # 场景1：输入 '哈哈' -> 变成 '1.哈哈 2.😄'
       - option: emoji           # 开关名称与上面开关名称保持一致
-        mode: append            # 新增候选append 替换原候选replace 替换注释comment
+        mode: append            # 新增候选append 替换原候选replace 替换注释comment 简码模式abbrev匹配输入编码置顶词组
         comment_mode: none      # 注释模式: "append"(原候选注释继承), "text"(原候选文本放在注释), "none"(空，默认)
         tags: [abc]             # 生效的tag
         prefix: "_em_"          # 前缀用于区分同一个数据库的不同用途数据
@@ -315,6 +315,12 @@ super_replacer:
         files:
           - lua/data/TWVariants.txt
           - lua/data/TWVariantsRevPhrases.txt
+      - option: [ abbrev_lazy, abbrev_always ]
+        mode: abbrev          # <--- 新增的简码模式
+        tags: [abc]
+        prefix: "_abbr_"
+        files:
+          - lua/data/t9_abbrev.txt # 格式：zm\t怎么|在吗
 
 # 部件拆字反查
 wanxiang_reverse:
