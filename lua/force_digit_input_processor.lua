@@ -10,7 +10,7 @@ function M.func(key, env)
   local code = key.keycode
   local input_time_ms = rime_api.get_time_ms()
 
-  if code >= 48 and code <= 57 and input_time_ms - env.last_input_time_ms > 50 then
+  if code >= 48 and code <= 57 and input_time_ms - env.last_input_time_ms > 70 then
     -- 这里不要用 key:repr()，否则可能推入 Shift+1
     context:push_input(string.char(code))
     env.last_input_time_ms = input_time_ms
