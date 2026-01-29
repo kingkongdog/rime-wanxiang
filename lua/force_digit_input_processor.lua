@@ -11,7 +11,7 @@ function M.func(key, env)
   local input_time_ms = rime_api.get_time_ms()
 
   if key:release() then
-    return 2
+    return 1
   end
 
   if code >= 48 and code <= 57 then
