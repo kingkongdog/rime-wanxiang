@@ -15,8 +15,10 @@ function M.func(key, env)
       -- 这里不要用 key:repr()，否则可能推入 Shift+1
       context:push_input(string.char(code))
       env.last_input_time_ms = input_time_ms
+      return 1
+    else
+      return 0
     end
-    return 1
   end
 
   return 2
