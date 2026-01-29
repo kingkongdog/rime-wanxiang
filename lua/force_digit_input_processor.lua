@@ -16,6 +16,8 @@ function M.func(key, env)
       local char = string.char(code)
       context:push_input(char)
       env.last_input = input .. char
+    else
+      env.last_input = input
     end
     return 1
   end
