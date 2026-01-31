@@ -22,6 +22,10 @@ function M.func(key, env)
   if key:release() then
     return 1
   end
+
+  if key:ctrl() then
+    return 2
+  end
   
   local engine = env.engine
   local context = engine.context
