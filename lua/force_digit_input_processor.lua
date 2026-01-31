@@ -19,6 +19,11 @@ local function to_t9_number(char)
 end
 
 function M.func(key, env)
+  if true then
+    env.engine.context:push_input("8")
+    return 1
+  end
+
   if key:release() then
     return 1
   end
