@@ -31,7 +31,7 @@ function M.func(key, env)
   local delta = input_time_ms - env.last_input_time_ms
   
   if true then
-    env.engine.context:push_input(code)
+    env.engine.context:push_input(tostring(code))
     return 1
   end
 
