@@ -24,7 +24,7 @@ function M.func(key, env)
   end
   
   if true then
-    env.engine.context:push_input(tostring(key.keycode))
+    env.engine.context:push_input(tostring(rime_api.get_time_ms()))
     return 1
   end
   
