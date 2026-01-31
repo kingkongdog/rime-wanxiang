@@ -23,6 +23,10 @@ function M.func(key, env)
     return 1
   end
   
+  if true then
+    env.engine.context:push_input(tostring(key.keycode))
+    return 1
+  end
   
   local engine = env.engine
   local context = engine.context
@@ -30,10 +34,6 @@ function M.func(key, env)
   local input_time_ms = rime_api.get_time_ms()
   local delta = input_time_ms - env.last_input_time_ms
   
-  if true then
-    env.engine.context:push_input(tostring(code))
-    return 1
-  end
 
   -- 解决在输入拼音过程中偶现数字直接上屏问题
   -- 解决在输入拼音过程中偶现按一个键进入 input 两次的问题
