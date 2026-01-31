@@ -19,6 +19,11 @@ local function to_t9_number(char)
 end
 
 function M.func(key, env)
+  local is_ascii = env.engine.context:get_option("ascii_mode")
+  if is_ascii then
+    return 2
+  end
+
   if key:release() then
     return 1
   end
