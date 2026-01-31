@@ -26,7 +26,6 @@ function M.func(key, env)
   local engine = env.engine
   local context = engine.context
   local code = key.keycode
-  local char = string.char(code)
   local input_time_ms = rime_api.get_time_ms()
   local delta = input_time_ms - env.last_input_time_ms
 
@@ -34,6 +33,7 @@ function M.func(key, env)
   -- 解决在输入拼音过程中偶现按一个键进入 input 两次的问题
   -- 小于 70 认为是同文 bug 导致的二次触发，https://gemini.google.com/share/b0c0711a3ce4
   if code >= 48 and code <= 57 then
+    local char = string.char(code)
     if delta > 70 then
       -- 这里不要用 key:repr()，否则可能推入 Shift+1
       context:push_input(char)
@@ -47,6 +47,7 @@ function M.func(key, env)
   -- 解决在快速输入拼音过程中，触发 swipe 事件，导致进入 input 的不是数字是字母的问题
   -- 输入数字过程是比较快的，真正 swipe 的时候是比较慢的，以 300ms 为界。
   if (code >= 97 and code <= 122) or (code >= 65 and code <= 90) then
+    local char = string.char(code)
     if delta > 70 then
       if delta < 400 then
         context:push_input(to_t9_number(char))
