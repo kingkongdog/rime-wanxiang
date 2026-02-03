@@ -1,5 +1,41 @@
 # Changelog
 
+## [14.6.7](https://github.com/amzxyz/rime_wanxiang/compare/v14.6.6...v14.6.7) (2026-02-02)
+
+
+### 📚 词库更新
+
+* 九键新增成语简码 ([ede14bb](https://github.com/amzxyz/rime_wanxiang/commit/ede14bb2f74edd59615e92503c5858d37df02491))
+* 词库调整 ([7be4781](https://github.com/amzxyz/rime_wanxiang/commit/7be47813512ae4994bd14623f5adf942d56c5de2))
+
+
+### 🐛 Bug 修复
+
+* 人名物种不打包到zip中 ([ff710b3](https://github.com/amzxyz/rime_wanxiang/commit/ff710b3186d311f61840ece12c2b377ab4fc9f2b))
+* 候选格式化新增更多时间相关占位符，任何能产生候选的表都可以写入占位符，试着输入：此时此刻 ([c63a855](https://github.com/amzxyz/rime_wanxiang/commit/c63a8554a17aac6c7f0f9f33ba0afe859ab3ab75))
+* 成语简码默认设为0即不前置，有需要的朋友请自行重新patch前置位置，在自定义路上又前进一步 ([0b0adc7](https://github.com/amzxyz/rime_wanxiang/commit/0b0adc7d3e3e86d53c3e0ce75417d6d7fbf5bf4e))
+
+## [14.6.6](https://github.com/amzxyz/rime_wanxiang/compare/v14.6.5...v14.6.6) (2026-02-02)
+
+
+### 🐛 Bug 修复
+
+* **replacer:** 发现新问题，通过权重构建扎实地根目录指定优先、程序补充简码滞后等恰当的逻辑 ([d378948](https://github.com/amzxyz/rime_wanxiang/commit/d378948cb3fd287cf353474cd37dcfc279992bfa))
+
+## [14.6.5](https://github.com/amzxyz/rime_wanxiang/compare/v14.6.4...v14.6.5) (2026-02-01)
+
+
+### 📚 词库更新
+
+* 词库调整 ([9632fb1](https://github.com/amzxyz/rime_wanxiang/commit/9632fb1e18315fc81d742a35978b3640ea5b05dd))
+
+
+### 🐛 Bug 修复
+
+* **replacer:** 置顶词出现在根目录user_table置顶词后面 ([7dc7b95](https://github.com/amzxyz/rime_wanxiang/commit/7dc7b951a7ee47ccc7cc4b8df2f8c53773a42bcf))
+* 修改英文转写 ([f51f76c](https://github.com/amzxyz/rime_wanxiang/commit/f51f76cfd33b94a157365283440dc223e538ab96))
+* 打包时间改成中国时区 ([81fcc40](https://github.com/amzxyz/rime_wanxiang/commit/81fcc405e3bb448bdf455302fe70c32364cbab08))
+
 ## [14.6.4](https://github.com/amzxyz/rime_wanxiang/compare/v14.6.3...v14.6.4) (2026-01-30)
 
 
