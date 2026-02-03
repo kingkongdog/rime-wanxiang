@@ -379,15 +379,15 @@ speller:
     - derive/^ng$/eng/
     - xform/^n$/en/
     - xform/^m$/me/
-    # - derive/^(.*)$/\U$1/
-    # - abbrev/^([A-Z])[AOE]+$/$1/
-    # - derive/^([NL])VE$/$1UE/
-    # - derive/^([JQXY])U/$1V/
-    # - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
-    - abbrev/^([a-z])[aoe]+$/$1/
-    - derive/^([nl])ve$/$1ue/
-    - derive/^([jqxy])u/$1v/
-    - xlit/abcdefghijklmnopqrstuvwxyz/22233344455566677778889999/
+    - derive/^(.*)$/\U$1/
+    - abbrev/^([A-Z])[AOE]+$/$1/
+    - derive/^([NL])VE$/$1UE/
+    - derive/^([JQXY])U/$1V/
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
+    # - abbrev/^([a-z])[aoe]+$/$1/
+    # - derive/^([nl])ve$/$1ue/
+    # - derive/^([jqxy])u/$1v/
+    # - xlit/abcdefghijklmnopqrstuvwxyz/22233344455566677778889999/
 
 
 
