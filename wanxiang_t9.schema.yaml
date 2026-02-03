@@ -399,6 +399,3 @@ grammar:
   non_collocation_penalty: -20
   weak_collocation_penalty: -35
   rear_penalty: -12
-
-#成语简码前置位置，只能设置在第一页，大于当前页数量则默认在最后一个，0代表关闭前置
-idiom_preposition: 0
