@@ -596,17 +596,15 @@ function M.func(input, env)
                 if pq > max_q then max_q = pq end 
             end
 
-            -- if max_q > HIGH_THRESHOLD then
-            --     -- 情况 A 有 99 词，输出后跟简码
-            --     for _, pc in ipairs(pending_cands) do process_and_record(pc) end
-            --     try_trigger_abbrev_logic(true, max_q - 0.001)
-            -- else
-            --     -- 情况 B 没 99 词 (或只有普通词/空码)，简码置顶
-            --     try_trigger_abbrev_logic(not has_phrase, 9999)
-            --     for _, pc in ipairs(pending_cands) do process_and_record(pc) end
-            -- end
-            for _, pc in ipairs(pending_cands) do process_and_record(pc) end
-            try_trigger_abbrev_logic(true, max_q - 0.001)
+            if max_q > HIGH_THRESHOLD then
+                -- 情况 A 有 99 词，输出后跟简码
+                for _, pc in ipairs(pending_cands) do process_and_record(pc) end
+                try_trigger_abbrev_logic(true, max_q - 0.001)
+            else
+                -- 情况 B 没 99 词 (或只有普通词/空码)，简码置顶
+                try_trigger_abbrev_logic(not has_phrase, 9999)
+                for _, pc in ipairs(pending_cands) do process_and_record(pc) end
+            end
             pending_cands = nil
         end
 
