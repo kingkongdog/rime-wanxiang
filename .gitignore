@@ -11,3 +11,6 @@ sync
 *.userdb
 installation.yaml
 user.yaml
+
+defualt.custom.yaml
+weasel.custom.yaml
