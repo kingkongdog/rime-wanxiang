@@ -43,7 +43,7 @@ function M.func(key, env)
   -- 小于 70 认为是同文 bug 导致的二次触发，https://gemini.google.com/share/b0c0711a3ce4
   if code >= 48 and code <= 57 then
     local char = string.char(code)
-    if delta > 20 then
+    if delta > 30 then
       -- 这里不要用 key:repr()，否则可能推入 Shift+1
       context:push_input(char)
       env.last_input_time_ms = input_time_ms
@@ -57,7 +57,7 @@ function M.func(key, env)
   -- 输入数字过程是比较快的，真正 swipe 的时候是比较慢的，以 300ms 为界。
   if (code >= 97 and code <= 122) or (code >= 65 and code <= 90) then
     local char = string.char(code)
-    if delta > 20 then
+    if delta > 30 then
       if delta < 300 then
         context:push_input(to_t9_number(char))
       else
