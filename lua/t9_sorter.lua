@@ -31,7 +31,7 @@ local function sort_filter(input)
         end
     end
 
-    yield(Candidate("raw", 0, #tostring(start_sort_index), tostring(start_sort_index), ""))
+    yield(Candidate("raw", 0, #tostring(l[0].code), tostring(l[0].code), ""))
 
     -- 渲染输出
     -- if start_sort_index == -1 then
