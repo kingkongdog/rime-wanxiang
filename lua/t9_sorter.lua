@@ -2,6 +2,7 @@
 
 local function t9_sorter(input)
     local l = {}
+
     -- 获取所有候选词
     for cand in input:iter() do
         table.insert(l, cand)
@@ -9,72 +10,84 @@ local function t9_sorter(input)
 
     if #l == 0 then return end
 
-    local start_sort_index = -1
-    
-    -- 使用 utf8.len 计算第一个候选词的字符长度
-    -- 注意：Lua 原生 utf8.len 对非法序列会返回 nil，所以加个 or 0 保险
-    local first_len = utf8.len(l[1].text) or 0
+    -- 获取第一个单字候选词索引
+    -- 候选词排列是这样：多字候选词，然后单字候选词，多字和单字候选词后面都可能有 emoji，emoji 的长度一般是 1, comment 是 ""
+    local first_single_index = -1
+    local first_len = utf8.len(l[1].text)
 
-    -- 判定逻辑
     if first_len == 1 then
-        -- 第一个是单字/表情，从第 9 个开始排序
-        if #l >= 9 then
-            start_sort_index = 9
-        end
+        first_single_index = 1
     else
-        -- 第一个是词组，寻找列表中第一个出现的单字
         for i = 2, #l do
-            if (utf8.len(l[i].text) or 0) == 1 and l[i].comment ~= "" then      -- comment 为 "" 的是 emoji
-                start_sort_index = i
+            if utf8.len(l[i].text) == 1 and l[i].comment ~= "" then
+                first_single_index = i
                 break
             end
         end
     end
 
-    -- 渲染输出
-    if start_sort_index == -1 then
+    -- 全部是多字候选词
+    if first_single_index == -1 then 
         for i = 1, #l do yield(l[i]) end
-    else
-        -- 输出前缀部分
-        for i = 1, start_sort_index - 1 do
+        return
+    end
+
+    -- 多字候选词直接 yield
+    for i = 1, first_single_index - 1 do
+        yield(l[i])
+    end
+
+    -- 单字候选词不到 20 个
+    if #l - (first_single_index - 1) < 20 then 
+        for i = first_single_index, #l do 
             yield(l[i])
         end
+        return
+    end
 
-        -- 对剩余部分进行分组：将 Emoji 归入前一个汉字组
-        local groups = {}
-        local group_pinyin = ""
-        for i = start_sort_index, #l do
-            local cand = l[i]
-            if #groups == 0 then                        -- 第一组
-                table.insert(groups, {cand})
-                group_pinyin = cand.comment
-            elseif cand.comment == "" then              -- emoji 加入当前组
-                table.insert(groups[#groups], cand)
-            elseif cand.comment == group_pinyin then    -- 拼音一样，加入当前组
-                table.insert(groups[#groups], cand)
-            else                                        -- 拼音不一样，新开一组
-                table.insert(groups, {cand})
-                group_pinyin = cand.comment
-            end
+    -- 前 20 个单字候选词直接 yield
+    for i = first_single_index, first_single_index + 19 do 
+        yield(l[i])
+    end
+
+    -- 分割线
+    local sep = "===================================="
+    yield(Candidate("raw", l[1]._start, l[1]._end, sep, ""))
+
+    -- 剩余的单字按拼音排序
+    local groups = {}
+    local group_pinyin = ""
+    for i = first_single_index + 20, #l do
+        local cand = l[i]
+        if #groups == 0 then                        -- 第一组
+            table.insert(groups, {cand})
+            group_pinyin = cand.comment
+        elseif cand.comment == "" then              -- emoji 加入当前组
+            table.insert(groups[#groups], cand)
+        elseif cand.comment == group_pinyin then    -- 拼音一样，加入当前组
+            table.insert(groups[#groups], cand)
+        else                                        -- 拼音不一样，新开一组
+            table.insert(groups, {cand})
+            group_pinyin = cand.comment
         end
+    end
 
-        -- 对组进行排序（只比较组里的第一个候选词）
-        table.sort(groups, function(group_a, group_b)
-            local a = group_a[1]
-            local b = group_b[1]
+    -- 对组进行排序（只比较组里的第一个候选词）
+    table.sort(groups, function(group_a, group_b)
+        local a = group_a[1]
+        local b = group_b[1]
 
-            -- 获取排序用的 Key
-            local key_a = a.comment
-            local key_b = b.comment
+        -- 获取排序用的 Key
+        local key_a = a.comment
+        local key_b = b.comment
 
-            return key_a < key_b
-        end)
+        return key_a < key_b
+    end)
 
-        -- 按组平铺输出
-        for _, group in ipairs(groups) do
-            for _, cand in ipairs(group) do
-                yield(cand)
-            end
+    -- 按组平铺输出
+    for _, group in ipairs(groups) do
+        for _, cand in ipairs(group) do
+            yield(cand)
         end
     end
 end
