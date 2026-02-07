@@ -1,6 +1,6 @@
 -- 目标：使用原生 utf8 库实现动态候选词排序
 
-local function sort_filter(input)
+local function t9_sorter(input)
     local l = {}
     -- 获取所有候选词
     for cand in input:iter() do
@@ -24,7 +24,7 @@ local function sort_filter(input)
     else
         -- 第一个是词组，寻找列表中第一个出现的单字
         for i = 2, #l do
-            if (utf8.len(l[i].text) or 0) == 1 and l[i].comment ~= "" then
+            if (utf8.len(l[i].text) or 0) == 1 and l[i].comment ~= "" then      -- comment 为 "" 的是 emoji
                 start_sort_index = i
                 break
             end
@@ -79,4 +79,4 @@ local function sort_filter(input)
     end
 end
 
-return sort_filter
+return t9_sorter
