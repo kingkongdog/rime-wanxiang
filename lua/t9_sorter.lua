@@ -1,5 +1,7 @@
 -- 目标：使用原生 utf8 库实现动态候选词排序
 
+local sep = "====================================================="
+
 local function t9_sorter(input)
     local l = {}
 
@@ -36,6 +38,8 @@ local function t9_sorter(input)
     for i = 1, first_single_index - 1 do
         yield(l[i])
     end
+
+    yield(Candidate("raw", l[1]._start, l[1]._end, "--- 高频单字 ---", sep))
 
     -- 单字候选词不到 18 个
     local multi_count = first_single_index - 1
@@ -88,7 +92,6 @@ local function t9_sorter(input)
     -- 按组平铺输出
     for _, group in ipairs(groupsArr) do
         -- 分割线
-        local sep = "====================================================="
         yield(Candidate("raw", l[1]._start, l[1]._end, "--- " .. group[1].comment .. " ---", sep))
         for _, cand in ipairs(group) do
             yield(cand)
