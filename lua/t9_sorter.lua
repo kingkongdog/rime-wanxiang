@@ -38,7 +38,8 @@ local function t9_sorter(input)
     end
 
     -- 单字候选词不到 20 个
-    if #l - (first_single_index - 1) < 20 then 
+    local multi_count = first_single_index - 1
+    if #l - multi_count < 20 then
         for i = first_single_index, #l do 
             yield(l[i])
         end
