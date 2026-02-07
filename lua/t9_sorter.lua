@@ -32,6 +32,7 @@ local function sort_filter(input)
     end
 
     yield(Candidate("raw", 0, #tostring(l[0].code), tostring(l[0].code), ""))
+    yield(Candidate("raw", 0, #tostring(l[0].comment), tostring(l[0].comment), ""))
 
     -- 渲染输出
     -- if start_sort_index == -1 then
