@@ -69,7 +69,7 @@ local function t9_sorter(input)
     end
 
     local groupsArr = {}
-    for _, group in ipairs(groupsMap) do
+    for _, group in pairs(groupsMap) do
         table.insert(groupsArr, group)
     end
 
