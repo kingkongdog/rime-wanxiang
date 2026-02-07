@@ -39,7 +39,9 @@ local function t9_sorter(input)
         yield(l[i])
     end
 
-    yield(Candidate("raw", l[1]._start, l[1]._end, "--- 高频单字 ---", sep))
+    if first_len > 1 then
+        yield(Candidate("raw", l[1]._start, l[1]._end, "--- 高频单字 ---", sep))
+    end
 
     -- 单字候选词不到 18 个
     local multi_count = first_single_index - 1
