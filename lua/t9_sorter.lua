@@ -47,8 +47,8 @@ local function sort_filter(input)
         end
 
         table.sort(sort_part, function(a, b)
-            local key_a = (a.comment ~= "" and a.comment) or a.text
-            local key_b = (b.comment ~= "" and b.comment) or b.text
+            local key_a = a.comment
+            local key_b = b.comment
             return key_a < key_b
         end)
 
