@@ -84,7 +84,7 @@ local function t9_sorter(input)
     -- 按组平铺输出
     for _, group in ipairs(groups) do
         -- 分割线
-        local sep = "===================================="
+        local sep = "====================================================="
         yield(Candidate("raw", l[1]._start, l[1]._end, "--- " .. group[1].comment .. " ---", sep))
         for _, cand in ipairs(group) do
             yield(cand)
