@@ -86,8 +86,8 @@ engine:
     - lua_filter@*super_filter                      #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
     # - lua_filter@*super_sequence*F                  #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
     - lua_filter@*put_input_in_cand_list_when_empty_filter  #没有候选词时把 input 放入候选词，比如输入手机号码
+    - lua_filter@*t9_sorter                         #万象T9排序器，根据首个候选词长度动态调整后续单字排序方式：1️⃣ 第一个候选词是单个汉字或者表情的，从第9个候选词开始按拼音升序排序，2️⃣ 第一个候选词是多个汉字的，已知单个汉字的候选词都排在后面，从第一个单字候选词开始按拼音排序。https://gemini.google.com/share/efd91333894c
     - uniquifier                                    # 去重
-    - lua_filter@*t9_sorter                         #万象T9排序器，动态调整单字排序方式：1️⃣ 多字候选词直接 yield 2️⃣ 前 18 个单子候选词直接 yield 3️⃣ 剩余的单字候选词按拼音排序。https://gemini.google.com/share/efd91333894c
 
 t9:
   isDisplayOriginalPreedit: false
