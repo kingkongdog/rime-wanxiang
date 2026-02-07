@@ -1,5 +1,12 @@
 -- 目标：使用原生 utf8 库实现动态候选词排序
 
+local function log(a, b)
+    local file_path = "/Users/ligang/Downloads/log"
+    local file, err = io.open(file_path, "a") -- 关键："a" 追加模式
+    file:write(a, ',', b, "\n")
+    file:close()
+end
+
 local function sort_filter(input)
     local l = {}
     -- 获取所有候选词
@@ -31,9 +38,8 @@ local function sort_filter(input)
         end
     end
 
-    yield(Candidate("raw", 0, #tostring(l[0].code), tostring(l[0].code), ""))
-    yield(Candidate("raw", 0, #tostring(l[0].comment), tostring(l[0].comment), ""))
-    yield(Candidate("raw", 0, #tostring(l[0].preedit), tostring(l[0].preedit), ""))
+    yield(Candidate("raw", 0, #tostring(l[1].comment), tostring(l[1].comment), ""))
+    yield(Candidate("raw", 1, #tostring(l[1].preedit), tostring(l[1].preedit), ""))
 
     -- 渲染输出
     -- if start_sort_index == -1 then
