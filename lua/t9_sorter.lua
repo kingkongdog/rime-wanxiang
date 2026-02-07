@@ -24,7 +24,7 @@ local function sort_filter(input)
     else
         -- 第一个是词组，寻找列表中第一个出现的单字
         for i = 2, #l do
-            if (utf8.len(l[i].text) or 0) == 1 then
+            if (utf8.len(l[i].text) or 0) == 1 and l[i].comment ~= "" then
                 start_sort_index = i
                 break
             end
@@ -40,21 +40,41 @@ local function sort_filter(input)
             yield(l[i])
         end
 
-        -- 提取并按字母顺序排序
-        local sort_part = {}
+        -- 对剩余部分进行分组：将 Emoji 归入前一个汉字组
+        local groups = {}
+        local group_pinyin = ""
         for i = start_sort_index, #l do
-            table.insert(sort_part, l[i])
+            local cand = l[i]
+            if #groups == 0 then                        -- 第一组
+                table.insert(groups, {cand})
+                group_pinyin = cand.comment
+            elseif cand.comment == "" then              -- emoji 加入当前组
+                table.insert(groups[#groups], cand)
+            elseif cand.comment == group_pinyin then    -- 拼音一样，加入当前组
+                table.insert(groups[#groups], cand)
+            else                                        -- 拼音不一样，新开一组
+                table.insert(groups, {cand})
+                group_pinyin = cand.comment
+            end
         end
 
-        table.sort(sort_part, function(a, b)
+        -- 对组进行排序（只比较组里的第一个候选词）
+        table.sort(groups, function(group_a, group_b)
+            local a = group_a[1]
+            local b = group_b[1]
+
+            -- 获取排序用的 Key
             local key_a = a.comment
             local key_b = b.comment
+
             return key_a < key_b
         end)
 
-        -- 输出排序后的部分
-        for _, cand in ipairs(sort_part) do
-            yield(cand)
+        -- 按组平铺输出
+        for _, group in ipairs(groups) do
+            for _, cand in ipairs(group) do
+                yield(cand)
+            end
         end
     end
 end
