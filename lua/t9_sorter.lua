@@ -37,17 +37,17 @@ local function t9_sorter(input)
         yield(l[i])
     end
 
-    -- 单字候选词不到 20 个
+    -- 单字候选词不到 18 个
     local multi_count = first_single_index - 1
-    if #l - multi_count < 20 then
+    if #l - multi_count < 18 then
         for i = first_single_index, #l do 
             yield(l[i])
         end
         return
     end
 
-    -- 前 20 个单字候选词直接 yield
-    for i = first_single_index, first_single_index + 19 do 
+    -- 前 18 个单字候选词直接 yield
+    for i = first_single_index, first_single_index + 17 do 
         yield(l[i])
     end
 
@@ -58,7 +58,7 @@ local function t9_sorter(input)
     -- 剩余的单字按拼音排序
     local groups = {}
     local group_pinyin = ""
-    for i = first_single_index + 20, #l do
+    for i = first_single_index + 18, #l do
         local cand = l[i]
         if #groups == 0 then                        -- 第一组
             table.insert(groups, {cand})
@@ -90,6 +90,9 @@ local function t9_sorter(input)
         for _, cand in ipairs(group) do
             yield(cand)
         end
+        -- 分割线
+        local sep = "===================================="
+        yield(Candidate("raw", l[1]._start, l[1]._end, sep, ""))
     end
 end
 
