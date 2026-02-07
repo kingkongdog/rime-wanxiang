@@ -44,9 +44,9 @@ local function sort_filter(input)
         end
 
         -- 按拼音（code）升序排序
-        table.sort(sort_part, function(a, b)
-            return a.code < b.code
-        end)
+        -- table.sort(sort_part, function(a, b)
+        --     return a.code < b.code
+        -- end)
 
         -- 输出排序后的部分
         for _, cand in ipairs(sort_part) do
