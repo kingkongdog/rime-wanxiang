@@ -52,25 +52,29 @@ local function t9_sorter(input)
     end
 
     -- 剩余的单字按拼音排序
-    local groups = {}
+    local groupsMap = {}
     local group_pinyin = ""
     for i = first_single_index + 18, #l do
         local cand = l[i]
-        if #groups == 0 then                        -- 第一组
-            table.insert(groups, {cand})
+        if cand.comment ~= "" then
             group_pinyin = cand.comment
-        elseif cand.comment == "" then              -- emoji 加入当前组
-            table.insert(groups[#groups], cand)
-        elseif cand.comment == group_pinyin then    -- 拼音一样，加入当前组
-            table.insert(groups[#groups], cand)
-        else                                        -- 拼音不一样，新开一组
-            table.insert(groups, {cand})
-            group_pinyin = cand.comment
+        end
+
+        local group = groupsMap[group_pinyin]
+        if group then
+            table.insert(group, cand)
+        else
+            groupsMap[group_pinyin] = {cand}
         end
     end
 
+    local groupsArr = {}
+    for _, group in ipairs(groupsMap) do
+        table.insert(groupsArr, group)
+    end
+
     -- 对组进行排序（只比较组里的第一个候选词）
-    table.sort(groups, function(group_a, group_b)
+    table.sort(groupsArr, function(group_a, group_b)
         local a = group_a[1]
         local b = group_b[1]
 
@@ -82,7 +86,7 @@ local function t9_sorter(input)
     end)
 
     -- 按组平铺输出
-    for _, group in ipairs(groups) do
+    for _, group in ipairs(groupsArr) do
         -- 分割线
         local sep = "====================================================="
         yield(Candidate("raw", l[1]._start, l[1]._end, "--- " .. group[1].comment .. " ---", sep))
