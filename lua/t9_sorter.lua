@@ -51,10 +51,6 @@ local function t9_sorter(input)
         yield(l[i])
     end
 
-    -- 分割线
-    local sep = "===================================="
-    yield(Candidate("raw", l[1]._start, l[1]._end, sep, ""))
-
     -- 剩余的单字按拼音排序
     local groups = {}
     local group_pinyin = ""
@@ -87,12 +83,12 @@ local function t9_sorter(input)
 
     -- 按组平铺输出
     for _, group in ipairs(groups) do
+        -- 分割线
+        local sep = "===================================="
+        yield(Candidate("raw", l[1]._start, l[1]._end, sep, group[1].comment))
         for _, cand in ipairs(group) do
             yield(cand)
         end
-        -- 分割线
-        local sep = "===================================="
-        yield(Candidate("raw", l[1]._start, l[1]._end, sep, ""))
     end
 end
 
