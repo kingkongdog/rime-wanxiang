@@ -1,12 +1,5 @@
 -- 目标：使用原生 utf8 库实现动态候选词排序
 
-local function log(a, b)
-    local file_path = "/Users/ligang/Downloads/log"
-    local file, err = io.open(file_path, "a") -- 关键："a" 追加模式
-    file:write(a, ',', b, "\n")
-    file:close()
-end
-
 local function sort_filter(input)
     local l = {}
     -- 获取所有候选词
@@ -38,36 +31,32 @@ local function sort_filter(input)
         end
     end
 
-    yield(Candidate("raw", 0, #tostring(l[1].comment), tostring(l[1].comment), ""))
-    yield(Candidate("raw", 1, #tostring(l[1].preedit), tostring(l[1].preedit), ""))
-
     -- 渲染输出
-    -- if start_sort_index == -1 then
-    --     for i = 1, #l do yield(l[i]) end
-    -- else
-    --     -- 输出前缀部分
-    --     for i = 1, start_sort_index - 1 do
-    --         yield(l[i])
-    --     end
+    if start_sort_index == -1 then
+        for i = 1, #l do yield(l[i]) end
+    else
+        -- 输出前缀部分
+        for i = 1, start_sort_index - 1 do
+            yield(l[i])
+        end
 
-    --     -- 提取并按字母顺序排序
-    --     local sort_part = {}
-    --     for i = start_sort_index, #l do
-    --         table.insert(sort_part, l[i])
-    --     end
+        -- 提取并按字母顺序排序
+        local sort_part = {}
+        for i = start_sort_index, #l do
+            table.insert(sort_part, l[i])
+        end
 
-    --     table.sort(sort_part, function(a, b)
-    --         -- 优先使用输入码(code)排序，如果 code 相同或不存在则按文本内容排序
-    --         local key_a = (a.code ~= "" and a.code) or a.text
-    --         local key_b = (b.code ~= "" and b.code) or b.text
-    --         return key_a < key_b
-    --     end)
+        table.sort(sort_part, function(a, b)
+            local key_a = (a.comment ~= "" and a.comment) or a.text
+            local key_b = (b.comment ~= "" and b.comment) or b.text
+            return key_a < key_b
+        end)
 
-    --     -- 输出排序后的部分
-    --     for _, cand in ipairs(sort_part) do
-    --         yield(cand)
-    --     end
-    -- end
+        -- 输出排序后的部分
+        for _, cand in ipairs(sort_part) do
+            yield(cand)
+        end
+    end
 end
 
 return sort_filter
