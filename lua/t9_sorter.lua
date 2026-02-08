@@ -60,8 +60,6 @@ local function t9_sorter(input)
         yield(l[i])
     end
 
-    yield(Candidate("raw", l[1]._start, l[1]._end, "###111", sep))
-
     -- 剩余的单字按拼音排序
     local groupsMap = {}
     local group_pinyin = ""
@@ -80,8 +78,6 @@ local function t9_sorter(input)
             groupsMap[group_pinyin] = {clean_pinyin = clean_pinyin, tone_level = tone_level, cands = { cand }}
         end
     end
-
-    yield(Candidate("raw", l[1]._start, l[1]._end, "###222", sep))
 
     local groupsArr = {}
     for _, group in pairs(groupsMap) do
