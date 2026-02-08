@@ -75,7 +75,7 @@ local function t9_sorter(input)
         else
             local clean_pinyin = group_pinyin:gsub("[%z\128-\255][\128-\191]*", tone_map)
             local tone_level = tone_level_map[group_pinyin:match("[%z\128-\255][\128-\191]*")] or 0
-            groupsMap[group_pinyin] = {clean_pinyin = clean_pinyin, tone_level = tone_level, cands = { cand }}
+            groupsMap[group_pinyin] = {pinyin_with_tone = group_pinyin, clean_pinyin = clean_pinyin, tone_level = tone_level, cands = { cand }}
         end
     end
 
@@ -96,8 +96,8 @@ local function t9_sorter(input)
     -- 按组平铺输出
     for _, group in ipairs(groupsArr) do
         -- 分割线
-        yield(Candidate("raw", l[1]._start, l[1]._end, "--- " .. group[1].comment .. " ---", sep))
-        for _, cand in ipairs(group) do
+        yield(Candidate("raw", l[1]._start, l[1]._end, "--- " .. group.pinyin_with_tone .. " ---", sep))
+        for _, cand in ipairs(group.cands) do
             yield(cand)
         end
     end
