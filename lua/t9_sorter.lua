@@ -2,6 +2,27 @@
 
 local sep = "====================================================="
 
+-- 1. 定义映射表（放在 Filter 函数外部，只需加载一次）
+local tone_map = {
+    ["ā"]="a", ["á"]="a", ["ǎ"]="a", ["à"]="a",
+    ["ē"]="e", ["é"]="e", ["ě"]="e", ["è"]="e",
+    ["ī"]="i", ["í"]="i", ["ǐ"]="i", ["ì"]="i",
+    ["ō"]="o", ["ó"]="o", ["ǒ"]="o", ["ò"]="o",
+    ["ū"]="u", ["ú"]="u", ["ǔ"]="u", ["ù"]="u",
+    ["ü"]="v", ["ǘ"]="v", ["ǚ"]="v", ["ǜ"]="v"
+}
+
+-- 2. 统一替换函数
+local function clean_pinyin(s)
+    if not s or s == "" then return "" end
+    -- 使用正则匹配所有多字节字符，并根据映射表替换
+    -- [%z\128-\255] 匹配所有非标准 ASCII 字符
+    local str = s:gsub("[%z\128-\255]+", function(c)
+        return tone_map[c] or c
+    end)
+    return str
+end
+
 local function t9_sorter(input)
     local l = {}
 
@@ -85,10 +106,21 @@ local function t9_sorter(input)
         local b = group_b[1]
 
         -- 获取排序用的 Key
-        local key_a = a.comment
-        local key_b = b.comment
+        local raw_a = a.comment
+        local raw_b = b.comment
 
-        return key_a < key_b
+        -- 获取纯字母拼音
+        local clean_a = clean_pinyin(raw_a)
+        local clean_b = clean_pinyin(raw_b)
+
+        if clean_a ~= clean_b then
+            -- 基础字母不同，按纯字母排 (如 a < b)
+            return clean_a < clean_b
+        else
+            -- 基础字母相同 (如 a vs ā)，按原始字符串排
+            -- 这样保证了 a 会排在 ai 前面，且声调固定的顺序
+            return raw_a < raw_b
+        end
     end)
 
     -- 按组平铺输出
