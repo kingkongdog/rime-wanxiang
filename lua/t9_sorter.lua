@@ -2,35 +2,8 @@
 
 local sep = "====================================================="
 
--- 1. 定义映射表（放在 Filter 函数外部，只需加载一次）
-local tone_map = {
-    ["ā"]="a", ["á"]="a", ["ǎ"]="a", ["à"]="a",
-    ["ē"]="e", ["é"]="e", ["ě"]="e", ["è"]="e",
-    ["ī"]="i", ["í"]="i", ["ǐ"]="i", ["ì"]="i",
-    ["ō"]="o", ["ó"]="o", ["ǒ"]="o", ["ò"]="o",
-    ["ū"]="u", ["ú"]="u", ["ǔ"]="u", ["ù"]="u",
-    ["ü"]="v", ["ǘ"]="v", ["ǚ"]="v", ["ǜ"]="v"
-}
-
--- 2. 创建缓存表（核心优化点）
-local clean_cache = setmetatable({}, { __mode = "kv" }) -- 弱引用表，防止内存溢出
-
--- 2. 统一替换函数
-local function clean_pinyin(s)
-    if not s or s == "" then return "" end
-
-    -- 如果缓存里有，直接返回，不再计算
-    if clean_cache[s] then return clean_cache[s] end
-
-    -- 使用正则匹配所有多字节字符，并根据映射表替换
-    -- [%z\128-\255] 匹配所有非标准 ASCII 字符
-    local str = s:gsub("[%z\128-\255][\128-\191]*", tone_map)
-
-    -- 存入缓存
-    clean_cache[s] = str
-
-    return str
-end
+local tone_map = {["ā"]="a",["á"]="a",["ǎ"]="a",["à"]="a",["ē"]="e",["é"]="e",["ě"]="e",["è"]="e",["ī"]="i",["í"]="i",["ǐ"]="i",["ì"]="i",["ō"]="o",["ó"]="o",["ǒ"]="o",["ò"]="o",["ū"]="u",["ú"]="u",["ǔ"]="u",["ù"]="u",["ü"]="v",["ǘ"]="v",["ǚ"]="v",["ǜ"]="v"}
+local tone_level_map = {["ā"]=1,["á"]=2,["ǎ"]=3,["à"]=4,["ē"]=1,["é"]=2,["ě"]=3,["è"]=4,["ī"]=1,["í"]=2,["ǐ"]=3,["ì"]=4,["ō"]=1,["ó"]=2,["ǒ"]=3,["ò"]=4,["ū"]=1,["ú"]=2,["ǔ"]=3,["ù"]=4,["ü"]=1,["ǘ"]=2,["ǚ"]=3,["ǜ"]=4}
 
 local function t9_sorter(input)
     local l = {}
@@ -98,9 +71,11 @@ local function t9_sorter(input)
 
         local group = groupsMap[group_pinyin]
         if group then
-            table.insert(group, cand)
+            table.insert(group.cands, cand)
         else
-            groupsMap[group_pinyin] = {cand}
+            local clean_pinyin = group_pinyin:gsub("[%z\128-\255][\128-\191]*", tone_map)
+            local tone_level = tone_level_map[group_pinyin:match("[%z\128-\255][\128-\191]*")] or 0
+            groupsMap[group_pinyin] = {clean_pinyin = clean_pinyin, tone_level = tone_level, cands = { cand }}
         end
     end
 
@@ -110,26 +85,12 @@ local function t9_sorter(input)
     end
 
     -- 对组进行排序（只比较组里的第一个候选词）
-    table.sort(groupsArr, function(group_a, group_b)
-        local a = group_a[1]
-        local b = group_b[1]
-
-        -- 获取排序用的 Key
-        local raw_a = a.comment
-        local raw_b = b.comment
-
-        -- 获取纯字母拼音
-        local clean_a = clean_pinyin(raw_a)
-        local clean_b = clean_pinyin(raw_b)
-
-        if clean_a ~= clean_b then
-            -- 基础字母不同，按纯字母排 (如 a < b)
-            return clean_a < clean_b
-        else
-            -- 基础字母相同 (如 a vs ā)，按原始字符串排
-            -- 这样保证了 a 会排在 ai 前面，且声调固定的顺序
-            return raw_a < raw_b
+    table.sort(groupsArr, function(a, b)
+        if a.clean_pinyin ~= b.clean_pinyin then
+            return a.clean_pinyin < b.clean_pinyin
         end
+
+        return a.tone_level < b.tone_level
     end)
 
     -- 按组平铺输出
