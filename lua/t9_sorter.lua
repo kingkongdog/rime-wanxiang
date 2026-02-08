@@ -12,14 +12,25 @@ local tone_map = {
     ["ü"]="v", ["ǘ"]="v", ["ǚ"]="v", ["ǜ"]="v"
 }
 
+-- 2. 创建缓存表（核心优化点）
+local clean_cache = setmetatable({}, { __mode = "kv" }) -- 弱引用表，防止内存溢出
+
 -- 2. 统一替换函数
 local function clean_pinyin(s)
     if not s or s == "" then return "" end
+
+    -- 如果缓存里有，直接返回，不再计算
+    if clean_cache[s] then return clean_cache[s] end
+
     -- 使用正则匹配所有多字节字符，并根据映射表替换
     -- [%z\128-\255] 匹配所有非标准 ASCII 字符
     local str = s:gsub("[%z\128-\255]+", function(c)
         return tone_map[c] or c
     end)
+
+    -- 存入缓存
+    clean_cache[s] = str
+
     return str
 end
 
