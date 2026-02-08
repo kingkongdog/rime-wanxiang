@@ -91,11 +91,11 @@ local function t9_sorter(input)
             return a.clean_pinyin < b.clean_pinyin
         end
 
-        if a.tone_level ~= b.tone_leven then
-            return a.tone_level < b.tone_level
+        if a.tone_pos ~= b.tone_pos then
+            return a.tone_pos > b.tone_pos
         end
 
-        return a.tone_pos > b.tone_pos
+        return a.tone_level < b.tone_level
     end)
 
     -- 按组平铺输出
