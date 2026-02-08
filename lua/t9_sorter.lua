@@ -108,7 +108,7 @@ local function t9_sorter(input)
             -- groupsMap[group_pinyin] = {pinyin_with_tone = group_pinyin, clean_pinyin = clean_pinyin, tone_level = tone_level, tone_pos = tone_pos, cands = { cand }}
             -- 预处理：直接生成权重序列数字数组
             local weight_seq = {}
-            for char in group_pinyin do
+            for char in group_pinyin:gmatch(utf8.charpattern) do
                 local w = char_order[char]
                 if w then
                     table.insert(weight_seq, w)
