@@ -95,7 +95,7 @@ local function t9_sorter(input)
             return a.tone_level < b.tone_level
         end
 
-        return a.tone_pos < b.tone_pos
+        return a.tone_pos > b.tone_pos
     end)
 
     -- 按组平铺输出
