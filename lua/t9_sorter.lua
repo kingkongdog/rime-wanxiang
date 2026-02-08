@@ -24,9 +24,7 @@ local function clean_pinyin(s)
 
     -- 使用正则匹配所有多字节字符，并根据映射表替换
     -- [%z\128-\255] 匹配所有非标准 ASCII 字符
-    local str = s:gsub("[%z\128-\255]+", function(c)
-        return tone_map[c] or c
-    end)
+    local str = s:gsub("[%z\128-\255][\128-\191]*", tone_map)
 
     -- 存入缓存
     clean_cache[s] = str
