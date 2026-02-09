@@ -101,6 +101,7 @@ engine:
     - lua_filter@*super_filter                      #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
     - lua_filter@*super_english                     #comment前,负责英文方案及中英混输中英文单词格式化，语句流，自动加空格等策略
     - lua_filter@*super_sequence*F                  #手动排序，对高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
+    - lua_filter@*with_dot_filter
     - uniquifier                                    # 去重
 
 grammar:
@@ -548,6 +549,7 @@ recognizer:
     #add_user_dict: "^ac[A-Za-z/`']*$"      #自造词引导方式
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"                            # email @ 之后不上屏
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$"  # URL
+    url2: "^[a-z]+[.].*$"
 
 # 标点符号
 # punctuator 下面有三个子项：
@@ -642,7 +644,7 @@ speller:
 #  auto_select: true
 #  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射，alphabet就是将字符纳入输入编码的范畴
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1234567890`;/\
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1234567890`;/\.
   # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA/
   delimiter: " '"        # 系统配置，第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
