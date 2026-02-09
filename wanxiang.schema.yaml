@@ -101,7 +101,7 @@ engine:
     - lua_filter@*super_filter                      #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
     - lua_filter@*super_english                     #comment前,负责英文方案及中英混输中英文单词格式化，语句流，自动加空格等策略
     - lua_filter@*super_sequence*F                  #手动排序，对高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
-    - lua_filter@*with_dot_filter
+    - lua_filter@*with_dot_filter                   #jd.com
     - uniquifier                                    # 去重
 
 grammar:
