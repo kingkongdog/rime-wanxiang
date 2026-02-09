@@ -92,7 +92,7 @@ local function t9_sorter(input)
     -- 剩余的单字按拼音排序
     local groupsMap = {}
     local group_pinyin = ""
-    for i = first_single_index, #l do
+    for i = first_single_index + 18, #l do
         local cand = l[i]
         if cand.comment ~= "" then
             group_pinyin = cand.comment
