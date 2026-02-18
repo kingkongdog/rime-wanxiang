@@ -1,5 +1,35 @@
 # Changelog
 
+## [14.7.2](https://github.com/amzxyz/rime_wanxiang/compare/v14.7.1...v14.7.2) (2026-02-16)
+
+
+### 🐛 Bug 修复
+
+* input长度为5最后一个字符是/开启临时大字集 ([948f15b](https://github.com/amzxyz/rime_wanxiang/commit/948f15bd1f5dce738a9be7d5f25446146e457b14))
+* 辅助码处理的位置也要增加一个豁免不清空太极注释，这样开启辅助的时候也能干掉英文句子 ([ac7e81f](https://github.com/amzxyz/rime_wanxiang/commit/ac7e81ffcc1555e745519d306c1169ba8ab2a9c2))
+
+## [14.7.1](https://github.com/amzxyz/rime_wanxiang/compare/v14.7.0...v14.7.1) (2026-02-16)
+
+
+### 📚 词库更新
+
+* dict update ([523391b](https://github.com/amzxyz/rime_wanxiang/commit/523391bbf45c23090c7121f13755302e94341624))
+* 词库更新 ([71ada10](https://github.com/amzxyz/rime_wanxiang/commit/71ada10f6385c3e28a84d873fb1b0d18774b575e))
+* 词库调整 ([85e3dab](https://github.com/amzxyz/rime_wanxiang/commit/85e3dab1243e90deb87b98d4bd49ac5dd0da79cd))
+* 词库调整 ([30033ce](https://github.com/amzxyz/rime_wanxiang/commit/30033ce0b07073662cfde02ce4e40fdcebb6e6fb))
+* 词库调整 ([0ff83ce](https://github.com/amzxyz/rime_wanxiang/commit/0ff83ce22b58fe0515001ef5c9813b1783661b10))
+
+
+### 🐛 Bug 修复
+
+* 优化字符集范围数据库 ([40d6729](https://github.com/amzxyz/rime_wanxiang/commit/40d67293653614b2cfbdf4a42278c9466dd79c91))
+* 支持[#810](https://github.com/amzxyz/rime_wanxiang/issues/810)提到的无感造词可通过反查筛选来选字进而完成造词 ([af90f4f](https://github.com/amzxyz/rime_wanxiang/commit/af90f4f46c594223db32b0dd44379f04671a7183))
+
+
+### 🏡 杂项
+
+* fix doc ([43c3636](https://github.com/amzxyz/rime_wanxiang/commit/43c363628b3b684dff64858490fd8f9edf6aab74))
+
 ## [14.7.0](https://github.com/amzxyz/rime_wanxiang/compare/v14.6.12...v14.7.0) (2026-02-12)
 
 
