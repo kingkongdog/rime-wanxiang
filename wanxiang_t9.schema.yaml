@@ -38,7 +38,7 @@ switches:
     states: [ 简体, 通繁, 港繁, 臺繁 ]
   - options: [comment_off, tone_hint, toneless_hint]                     #开启后在候选的注释里面实时显示全拼声调，不开启则采用系统配置，影响的是comment_format，归属：super_comment.lua
     states: [ 注释关, 有声调, 无声调 ]
-    reset: 1     #对于9键，仓、元书用这个参数选择拼音，所以固定为无声调输出，其他前端用户可以适当patch修改
+    reset: 2     #对于9键，仓、元书用这个参数选择拼音，所以固定为无声调输出，其他前端用户可以适当patch修改
   - name: super_tips                    #开启后在输入编码后面的提示区显示实时的提示数据，受tips数据库影响，表情、翻译、车牌、符号等对应关系数据，并可实现句号上屏，不开启则默认，影响的是segment.prompt参数，归属：super_tips.lua
     states: [ 提示关, 提示开 ]
     reset: 0
@@ -92,7 +92,7 @@ engine:
     - lua_filter@*t9_sorter                         #万象T9排序器，根据首个候选词长度动态调整后续单字排序方式：1️⃣ 第一个候选词是单个汉字或者表情的，从第9个候选词开始按拼音升序排序，2️⃣ 第一个候选词是多个汉字的，已知单个汉字的候选词都排在后面，从第一个单字候选词开始按拼音排序。https://gemini.google.com/share/efd91333894c
 
 t9:
-  isDisplayOriginalPreedit: false
+  isDisplayOriginalPreedit: true
 
 super_comment:                 # 超级注释模块，子项配置 true 开启，false 关闭
   candidate_length: 15         # 候选词辅助码提醒的生效长度，0为关闭  但同时清空其它，应当使用上面开关来处理
