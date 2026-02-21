@@ -2422,8 +2422,8 @@ sort: by_weight
 傲之追猎者	ào zhī zhuī liè zhě	1
 澳洲肺鱼目	ào zhōu fèi yú mù	1
 澳洲籍华人	ào zhōu jí huá rén	1
-澳洲茄边碱	ào zhōu jiā biān jiǎn	1
 澳洲膜翅目	ào zhōu mó chì mù	1
+澳洲茄边碱	ào zhōu qié biān jiǎn	1
 澳洲土著人	ào zhōu tǔ zhù rén	1
 澳洲鸭脚木	ào zhōu yā jiǎo mù	1
 澳洲有袋类	ào zhōu yǒu dài lèi	1
@@ -9389,7 +9389,7 @@ sort: by_weight
 鼻病毒感染	bí bìng dú gǎn rǎn	1
 鼻部错构瘤	bí bù cuò gòu liú	1
 比蔡二氏征	bǐ cài èr shì zhēng	1
-荜澄茄油烯	bì chéng jiā yóu xī	1
+荜澄茄油烯	bì chéng qié yóu xī	1
 吡虫啉原药	bǐ chóng lín yuán yào	1
 鼻出血鼻衄	bí chū xiě bí nǜ	1
 鼻唇淋巴结	bí chún lín bā jié	1
@@ -18843,7 +18843,6 @@ sort: by_weight
 沧海一声笑	cāng hǎi yì shēng xiào	1
 沧海一声啸	cāng hǎi yì shēng xiào	1
 沧海月明珠	cāng hǎi yuè míng zhū	1
-藏茄流浸膏	cáng jiā liú jìn gāo	1
 藏降脂胶囊	cáng jiàng zhī jiāo náng	1
 苍颉检字法	cāng jié jiǎn zì fǎ	1
 仓颉输入法	cāng jié shū rù fǎ	1
@@ -18874,6 +18873,7 @@ sort: by_weight
 苍南火车站	cāng nán huǒ chē zhàn	1
 舱内航天服	cāng nèi háng tiān fú	1
 仓配一体化	cāng pèi yì tǐ huà	1
+藏茄流浸膏	cáng qié liú jìn gāo	1
 苍穹红莲队	cāng qióng hóng lián duì	1
 苍穹之禁城	cāng qióng zhī jìn chéng	1
 苍穹之战神	cāng qióng zhī zhàn shén	1
@@ -27262,7 +27262,7 @@ sort: by_weight
 传媒经济学	chuán méi jīng jì xué	1
 传媒类专业	chuán méi lèi zhuān yè	1
 传媒研究员	chuán méi yán jiū yuán	1
-串门走亲戚	chuàn mén zǒu qīn qī	1
+串门走亲戚	chuàn mén zǒu qīn qi	1
 穿棉袄洗澡	chuān mián ǎo xǐ zǎo	1
 传男不传女	chuán nán bù chuán nǚ	1
 传能线密度	chuán néng xiàn mì dù	1
@@ -27271,7 +27271,7 @@ sort: by_weight
 传女不传男	chuán nǚ bù chuán nán	1
 穿膀胱壁处	chuān páng guāng bì chù	1
 穿漂亮衣服	chuān piào liang yī fu	1
-穿破石茄根	chuān pò shí jiā gēn	1
+穿破石茄根	chuān pò shí qié gēn	1
 传奇编年史	chuán qí biān nián shǐ	1
 传奇的诞生	chuán qí de dàn shēng	1
 传奇的故事	chuán qí de gù shi	1
@@ -55319,7 +55319,6 @@ sort: by_weight
 逢甲陈列室	féng jiǎ chén liè shì	1
 逢甲纪念亭	féng jiǎ jì niàn tíng	1
 逢甲扛坝子	féng jiǎ káng bà zi	1
-风茄平喘膏	fēng jiā píng chuǎn gāo	1
 冯家山水库	féng jiā shān shuǐ kù	1
 封建大家庭	fēng jiàn dà jiā tíng	1
 封建的思想	fēng jiàn de sī xiǎng	1
@@ -55528,6 +55527,7 @@ sort: by_weight
 奉其为圭臬	fèng qí wéi guī niè	1
 风起云飞扬	fēng qǐ yún fēi yáng	1
 凤桥楼十郎	fèng qiáo lóu shí láng	1
+风茄平喘膏	fēng qié píng chuǎn gāo	1
 风琴马铃薯	fēng qín mǎ líng shǔ	1
 风情不摇晃	fēng qíng bù yáo huàng	1
 凤庆大叶茶	fèng qìng dà yè chá	1
@@ -74001,7 +74001,7 @@ sort: by_weight
 过年那几天	guò nián nà jǐ tiān	1
 过年七天乐	guò nián qī tiān lè	1
 过年这几天	guò nián zhè jǐ tiān	1
-过年走亲戚	guò nián zǒu qīn qī	1
+过年走亲戚	guò nián zǒu qīn qi	1
 过胖暴食症	guò pàng bào shí zhèng	1
 郭骗酸宗痛	guō piàn suān zōng tòng	1
 国乒总教练	guó pīng zǒng jiào liàn	1
@@ -92484,7 +92484,6 @@ sort: by_weight
 甲硅烷基膦	jiǎ guī wán jī lìn	1
 甲过度弯曲	jiǎ guò dù wān qū	1
 荚果蕨贯众	jiá guǒ jué guàn zhòng	1
-茄果类蔬菜	jiā guǒ lèi shū cài	1
 荚果凝集素	jiá guǒ níng jí sù	1
 加害人过错	jiā hài rén guò cuò	1
 加号和减号	jiā hào hé jiǎn hào	1
@@ -92959,7 +92958,7 @@ sort: by_weight
 家里的女人	jiā lǐ de nǚ rén	1
 家里的妻子	jiā lǐ de qī zǐ	1
 家里的墙壁	jiā lǐ de qiáng bì	1
-家里的亲戚	jiā lǐ de qīn qī	1
+家里的亲戚	jiā lǐ de qīn qi	1
 家里的亲人	jiā lǐ de qīn rén	1
 家里的情况	jiā lǐ de qíng kuàng	1
 家里的日子	jiā lǐ de rì zi	1
@@ -95540,7 +95539,7 @@ sort: by_weight
 见了个领导	jiàn le gè lǐng dǎo	1
 见了个朋友	jiàn le gè péng you	1
 捡了个便宜	jiǎn le gè pián yi	1
-见了个亲戚	jiàn le gè qīn qī	1
+见了个亲戚	jiàn le gè qīn qi	1
 见了个熟人	jiàn le gè shú rén	1
 见了个同学	jiàn le gè tóng xué	1
 见了个网友	jiàn le gè wǎng yǒu	1
@@ -115779,7 +115778,7 @@ sort: by_weight
 老板的儿子	lǎo bǎn de ér zi	1
 老板的秘书	lǎo bǎn de mì shū	1
 老板的女儿	lǎo bǎn de nǚ er	1
-老板的亲戚	lǎo bǎn de qīn qī	1
+老板的亲戚	lǎo bǎn de qīn qi	1
 老板的食谱	lǎo bǎn de shí pǔ	1
 老板的要求	lǎo bǎn de yāo qiú	1
 老板渡假去	lǎo bǎn dù jiǎ qù	1
@@ -116017,7 +116016,7 @@ sort: by_weight
 老家的房子	lǎo jiā de fáng zi	1
 老家的父母	lǎo jiā de fù mǔ	1
 老家的母亲	lǎo jiā de mǔ qīn	1
-老家的亲戚	lǎo jiā de qīn qī	1
+老家的亲戚	lǎo jiā de qīn qi	1
 老家的亲人	lǎo jiā de qīn rén	1
 老家的味道	lǎo jiā de wèi dào	1
 老甲艺术馆	lǎo jiǎ yì shù guǎn	1
@@ -141028,7 +141027,7 @@ sort: by_weight
 欧盟领导人	ōu méng lǐng dǎo rén	1
 欧盟委员会	ōu méng wěi yuán huì	1
 欧米加常数	ōu mǐ jiā cháng shù	1
-欧米茄常数	ōu mǐ jiā cháng shù	1
+欧米茄常数	ōu mǐ qié cháng shù	1
 欧尼的酸叶	ōu ní de suān yè	1
 欧佩克大会	ōu pèi kè dà huì	1
 欧佩克组织	ōu pèi kè zǔ zhī	1
@@ -149960,6 +149959,7 @@ sort: by_weight
 切割抛光机	qiē gē pāo guāng jī	1
 切割平面法	qiē gē píng miàn fǎ	1
 切割线定理	qiē gē xiàn dìng lǐ	1
+茄果类蔬菜	qié guǒ lèi shū cài	1
 窃国者诸侯	qiè guó zhě zhū hóu	1
 切好的葱段	qiē hǎo de cōng duàn	1
 切好的葱花	qiē hǎo de cōng huā	1
@@ -150245,14 +150245,14 @@ sort: by_weight
 亲民的售价	qīn mín de shòu jià	1
 亲朋好友们	qīn péng hǎo yǒu men	1
 秦皮各三两	qín pí gè sān liǎng	1
-亲戚打电话	qīn qī dǎ diàn huà	1
-亲戚的孩子	qīn qī de hái zi	1
-亲戚和朋友	qīn qī hé péng you	1
-亲戚或余悲	qīn qī huò yú bēi	1
-亲戚家孩子	qīn qī jiā hái zi	1
-亲戚朋友家	qīn qī péng you jiā	1
-亲戚朋友借	qīn qī péng you jiè	1
-亲戚朋友们	qīn qī péng you men	1
+亲戚打电话	qīn qi dǎ diàn huà	1
+亲戚的孩子	qīn qi de hái zi	1
+亲戚和朋友	qīn qi hé péng you	1
+亲戚或余悲	qīn qi huò yú bēi	1
+亲戚家孩子	qīn qi jiā hái zi	1
+亲戚朋友家	qīn qi péng you jiā	1
+亲戚朋友借	qīn qi péng you jiè	1
+亲戚朋友们	qīn qi péng you men	1
 芩翘口服液	qín qiào kǒu fú yè	1
 亲切的称呼	qīn qiè de chēng hu	1
 亲切的父亲	qīn qiè de fù qīn	1
@@ -160076,9 +160076,9 @@ sort: by_weight
 三草汤人民	sān cǎo tāng rén mín	1
 三层板配筋	sān céng bǎn pèi jīn	1
 三层茴香丸	sān céng huí xiāng wán	1
-三层茄香丸	sān céng jiā xiāng wán	1
 三层交换机	sān céng jiāo huàn jī	1
 三层梁配筋	sān céng liáng pèi jīn	1
+三层茄香丸	sān céng qié xiāng wán	1
 三岔河大桥	sān chà hé dà qiáo	1
 三岔河水库	sān chà hé shuǐ kù	1
 三叉汇接区	sān chā huì jiē qū	1
@@ -165729,7 +165729,7 @@ sort: by_weight
 身边的女人	shēn biān de nǚ rén	1
 身边的女生	shēn biān de nǚ shēng	1
 身边的女性	shēn biān de nǚ xìng	1
-身边的亲戚	shēn biān de qīn qī	1
+身边的亲戚	shēn biān de qīn qi	1
 身边的亲人	shēn biān de qīn rén	1
 身边的亲友	shēn biān de qīn yǒu	1
 身边的人才	shēn biān de rén cái	1
@@ -184420,7 +184420,7 @@ sort: by_weight
 所有的汽车	suǒ yǒu de qì chē	1
 所有的期待	suǒ yǒu de qī dài	1
 所有的企业	suǒ yǒu de qǐ yè	1
-所有的亲戚	suǒ yǒu de qīn qī	1
+所有的亲戚	suǒ yǒu de qīn qi	1
 所有的亲人	suǒ yǒu de qīn rén	1
 所有的青春	suǒ yǒu de qīng chūn	1
 所有的情感	suǒ yǒu de qíng gǎn	1
@@ -184736,7 +184736,7 @@ sort: by_weight
 塌积角砾岩	tā jī jiǎo lì yán	1
 塔吉克边界	tǎ jí kè biān jiè	1
 她加分不少	tā jiā fēn bù shǎo	1
-他家亲戚多	tā jiā qīn qī duō	1
+他家亲戚多	tā jiā qīn qi duō	1
 她叫我老公	tā jiào wǒ lǎo gōng	1
 他进了屋子	tā jìn le wū zi	1
 他经常给我	tā jīng cháng gěi wǒ	1
@@ -195732,7 +195732,7 @@ sort: by_weight
 万岁毛主席	wàn suì máo zhǔ xí	1
 万岁通天帖	wàn suì tōng tiān tiē	1
 万索科查湖	wàn suǒ kē chá hú	1
-万桃花水茄	wàn táo huā shuǐ jiā	1
+万桃花水茄	wàn táo huā shuǐ qié	1
 万替妥单抗	wàn tì tuǒ dān kàng	1
 烷烃异构体	wán tīng yì gòu tǐ	1
 顽童合唱团	wán tóng hé chàng tuán	1
@@ -240641,6 +240641,7 @@ sort: by_weight
 玉树调查记	yù shù diào chá jì	1
 余树共轭树	yú shù gòng è shù	1
 榆树馆西里	yú shù guǎn xī lǐ	1
+宇树机器人	yǔ shù jī qì rén	1
 玉黍螺次目	yù shǔ luó cì mù	1
 玉黍螺形类	yù shǔ luó xíng lèi	1
 与庶民同罪	yǔ shù mín tóng zuì	1
@@ -241513,7 +241514,7 @@ sort: by_weight
 远方的来信	yuǎn fāng de lái xìn	1
 远方的男人	yuǎn fāng de nán rén	1
 远方的朋友	yuǎn fāng de péng you	1
-远方的亲戚	yuǎn fāng de qīn qī	1
+远方的亲戚	yuǎn fāng de qīn qi	1
 远方的亲人	yuǎn fāng de qīn rén	1
 远方的声音	yuǎn fāng de shēng yīn	1
 远方的天空	yuǎn fāng de tiān kōng	1
@@ -279492,7 +279493,6 @@ sort: by_weight
 二甲苯磺酸铵	èr jiǎ běn huáng suān ǎn	3
 二甲苯磺酸钠	èr jiǎ běn huáng suān nà	3
 二甲苯可溶物	èr jiǎ běn kě róng wù	1
-尔茄的精灵石	ěr jiā de jīng líng shí	1
 二加二等于四	èr jiā èr děng yú sì	1
 二加二等于五	èr jiā èr děng yú wǔ	1
 二价钴配合物	èr jià gǔ pèi hé wù	1
@@ -279879,6 +279879,7 @@ sort: by_weight
 二羟酮环戊烯	èr qiǎng tóng huán wù xī	1
 二羟乙基氨酸	èr qiǎng yǐ jī ān suān	1
 二羟乙基苯胺	èr qiǎng yǐ jī běn àn	3
+尔茄的精灵石	ěr qié de jīng líng shí	1
 而秦兵又至矣	ér qín bīng yòu zhì yǐ	1
 二氢埃托啡片	èr qīng āi tuō fēi piàn	1
 耳清创缝合术	ěr qīng chuàng féng hé shù	1
@@ -281861,7 +281862,7 @@ sort: by_weight
 酚咖麻敏胶囊	fēn kā má mǐn jiāo náng	1
 酚咖片薄膜衣	fēn kā piàn báo mó yī	1
 芬坎蒂尼集团	fēn kǎn dì ní jí tuán	1
-芬克的剥皮刀	fēn kè de bāo pí dāo	1
+芬克的剥皮刀	fēn kè de bō pí dāo	1
 芬克里夫墓园	fēn kè lǐ fū mù yuán	1
 分块崩开采法	fēn kuài bēng kāi cǎi fǎ	1
 分块对角矩阵	fēn kuài duì jiǎo jǔ zhèn	1
@@ -287241,7 +287242,7 @@ sort: by_weight
 贵族家族墓地	guì zú jiā zú mù dì	1
 贵族世家牛排	guì zú shì jiā niú pái	1
 滚刀破碎岩石	gǔn dāo pò suì yán shí	1
-滚刀式剥皮机	gǔn dāo shì bāo pí jī	1
+滚刀式剥皮机	gǔn dāo shì bō pí jī	1
 滚动摩阻力偶	gǔn dòng mó zǔ lì ǒu	1
 滚球兽的诞生	gǔn qiú shòu de dàn shēng	1
 滚球兽之诞生	gǔn qiú shòu zhī dàn shēng	1
@@ -306397,7 +306398,7 @@ sort: by_weight
 欧陆理性主义	ōu lù lǐ xìng zhǔ yì	1
 欧盟外部边界	ōu méng wài bù biān jiè	1
 欧盟宪法条约	ōu méng xiàn fǎ tiáo yuē	1
-欧米茄表公司	ōu mǐ jiā biǎo gōng sī	1
+欧米茄表公司	ōu mǐ qié biǎo gōng sī	1
 欧乃影注射液	ōu nǎi yǐng zhù shè yè	1
 偶然治瘥一病	ǒu rán zhì chài yí bìng	1
 偶然中的必然	ǒu rán zhōng de bì rán	1
@@ -308785,7 +308786,7 @@ sort: by_weight
 秦灭六国之战	qín miè liù guó zhī zhàn	1
 秦末农民起义	qín mò nóng mín qǐ yì	1
 秦皮接骨胶囊	qín pí jiē gǔ jiāo náng	1
-亲戚家的孩子	qīn qī jiā de hái zi	1
+亲戚家的孩子	qīn qi jiā de hái zi	1
 亲亲得相首匿	qīn qīn dé xiāng shǒu nì	1
 勤勤恳恳做事	qín qín kěn kěn zuò shì	1
 亲清政商关系	qīn qīng zhèng shāng guān xì	1
@@ -328628,7 +328629,7 @@ sort: by_weight
 延崇高速公路	yán chóng gāo sù gōng lù	1
 演出最后一场	yǎn chū zuì hòu yì chǎng	1
 言传不如身教	yán chuán bù rú shēn jiào	1
-烟囱化学剥皮	yān cōng huà xué bāo pí	1
+烟囱化学剥皮	yān cōng huà xué bō pí	1
 烟大海底隧道	yān dà hǎi dǐ suì dào	1
 烟大铁路轮渡	yān dà tiě lù lún dù	1
 岩代大久保站	yán dài dà jiǔ bǎo zhàn	1
@@ -334317,7 +334318,7 @@ sort: by_weight
 越努力越幸运	yuè nǔ lì yuè xìng yùn	1
 悦品天秀酒店	yuè pǐn tiān xiù jiǔ diàn	1
 乐器演奏技法	yuè qì yǎn zòu jì fǎ	1
-悦亲戚之情话	yuè qīn qī zhī qíng huà	1
+悦亲戚之情话	yuè qīn qi zhī qíng huà	1
 乐清黄杨木雕	yuè qīng huáng yáng mù diāo	1
 乐清细纹刻纸	yuè qīng xì wén kè zhǐ	1
 月球表面半径	yuè qiú biǎo miàn bàn jìng	1
@@ -341888,8 +341889,6 @@ sort: by_weight
 包皮背侧切开术	bāo pí bèi cè qiē kāi shù	1
 包皮变应性水肿	bāo pí biàn yīng xìng shuǐ zhǒng	1
 包皮过长的危害	bāo pí guò cháng de wēi hài	1
-剥皮寮历史街区	bāo pí liáo lì shǐ jiē qū	1
-剥皮数据记录器	bāo pí shù jù jì lù qì	1
 爆破鬼才吉格斯	bào pò guǐ cái jí gé sī	1
 宝珀耐力系列赛	bǎo pò nài lì xì liè sài	1
 宝箧印陀罗尼经	bǎo qiè yìn tuó luó ní jīng	1
@@ -343045,6 +343044,8 @@ sort: by_weight
 薄暮蛙声连晓闹	bó mù wā shēng lián xiǎo nào	1
 博内尔血红蛋白	bó nèi ěr xuè hóng dàn bái	1
 玻尿酸注射隆鼻	bō niào suān zhù shè lóng bí	1
+剥皮寮历史街区	bō pí liáo lì shǐ jiē qū	1
+剥皮数据记录器	bō pí shù jù jì lù qì	1
 伯琼路三氏试验	bó qióng lù sān shì shì yàn	1
 博让二氏培养基	bó ràng èr shì péi yǎng jī	1
 般若波罗蜜多故	bō rě bō luó mì duō gù	1
@@ -350426,7 +350427,7 @@ sort: by_weight
 富贵定要依本分	fù guì dìng yào yī běn fèn	1
 富贵何时乃济贫	fù guì hé shí nǎi jì pín	1
 富贵人家的小姐	fù guì rén jiā de xiǎo jiě	1
-富贵则亲戚畏惧	fù guì zé qīn qī wèi jù	1
+富贵则亲戚畏惧	fù guì zé qīn qi wèi jù	1
 富贵者安敢骄人	fù guì zhě ān gǎn jiāo rén	1
 富硅质熔岩穹丘	fù guī zhì róng yán qióng qiū	1
 富贵终如草上霜	fù guì zhōng rú cǎo shàng shuāng	1
