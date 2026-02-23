@@ -12,9 +12,10 @@ local function filter(input, env)
         yield(cand)
         
         -- 之后正常输出其他的候选词
-        for cand in input:iter() do
-            yield(cand)
-        end
+    end
+    
+    for cand in input:iter() do
+        yield(cand)
     end
 end
 
