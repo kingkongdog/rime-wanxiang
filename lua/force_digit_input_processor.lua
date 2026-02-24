@@ -54,11 +54,11 @@ function M.func(key, env)
   end
 
   -- 解决在快速输入拼音过程中，触发 swipe 事件，导致进入 input 的不是数字是字母的问题
-  -- 输入数字过程是比较快的，真正 swipe 的时候是比较慢的，以 300ms 为界。
+  -- 输入数字过程是比较快的，真正 swipe 的时候是比较慢的，以 250ms 为界。
   if (code >= 97 and code <= 122) or (code >= 65 and code <= 90) then
     local char = string.char(code)
     if delta > 30 then
-      if delta < 300 then
+      if delta < 250 then
         context:push_input(to_t9_number(char))
       else
         -- 这里不要用 key:repr()，否则可能推入 Shift+1
