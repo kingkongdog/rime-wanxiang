@@ -41,6 +41,51 @@ local function t9_sorter(input)
     for cand in input:iter() do
         table.insert(l, cand)
     end
+    
+    -- local l = {}
+    -- local en = {}
+
+    -- -- 获取所有候选词
+    -- -- 有新情况：加入了英文候选词，comment 是 "", 英文候选词后面可能有 emoji，comment 是 ""。请注意：这里说的英文包含中英混合。
+    -- local isEn = false
+    -- local isFirstCand = true
+    -- for cand in input:iter() do
+    --     if isFirstCand then
+    --         if cand.comment == "" then
+    --             isEn = true
+    --         else
+    --             isEn = false
+    --         end
+    --         isFirstCand = false
+    --     else
+    --         -- 1. cand.comment 不为空，isEn 为 false
+    --         -- 2. cand.comment 为空，有四种情况：
+    --         -- 1.1 中文候选词后面的表情
+    --         -- 1.2 英文候选词后面的表情
+    --         -- 1.3 第 1 个英文候选词
+    --         -- 1.4 第 n 个英文候选词
+
+    --         if cand.comment == "" then
+    --             if isEn then -- 1.2 和 1.4
+    --                 isEn = true
+    --             else
+    --                 if string.match(cand.text, "%a") then  -- 含有英文字母，1.3
+    --                     isEn = true
+    --                 else    -- 1.1
+    --                     isEn = false
+    --                 end
+    --             end
+    --         else
+    --             isEn = false
+    --         end
+    --     end
+
+    --     if isEn then
+    --         table.insert(en, cand)
+    --     else
+    --         table.insert(l, cand)
+    --     end
+    -- end
 
     if #l == 0 then return end
 
