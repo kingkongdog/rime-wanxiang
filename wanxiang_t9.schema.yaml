@@ -311,9 +311,9 @@ super_replacer:
 wanxiang_english:
   dictionary: wanxiang_english
   user_dict: en
-  enable_completion: true
-  enable_sentence: true
-  initial_quality: 2.1
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 0.5
   comment_format:  #这里很重要如果残留带声调字母，剩余编码提示计算出错引发程序崩溃
     - xform/^~.+$//
   #英文自动加空格，除关闭外共有3种模式可供选择
@@ -326,9 +326,9 @@ wanxiang_english:
 wanxiang_mixedcode:
   dictionary: wanxiang_mixedcode
   db_class: stabledb
-  enable_completion: true
+  enable_completion: false
   enable_sentence: false
-  initial_quality: 2
+  initial_quality: 0.4
   comment_format:  #这里很重要如果残留带声调字母，剩余编码提示计算出错引发程序崩溃
     - xform/.*//
 
