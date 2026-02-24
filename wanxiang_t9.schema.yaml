@@ -412,6 +412,18 @@ speller:
   delimiter: " '"        # 系统配置，第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
   visual_delimiter: " "  # super_preedit.lua配置：是否让分隔符号跟着一起转换，例如nǐ'hǎo 在实际使用中表现出视觉拥挤，我们可以让delimiter平时是'转换为拼音的时候使用空格nǐ hǎo，更符合实际。
   tone_isolate: true     # super_preedit.lua配置：是否将数字声调从转换后拼音中隔离出来（true=隔离， false 直接参与转换）例如：nǐ3
+  # algebra:
+  #   - xform/ⅱ//  #用于Lua判断输入类型的标记
+  #   - xform/^(.*);.*$/$1/
+  #   - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüńňǹḿm̀/aaaaooooeeeeiiiiuuuuvvvvvnnnmmm/
+  #   - derive/^ng$/eng/
+  #   - xform/^n$/en/
+  #   - xform/^m$/me/
+  #   - derive/^([nl])ve$/$1ue/
+  #   - derive/^([jqxy])u/$1v/
+  #   - derive/^(.*)$/\U$1/
+  #   - abbrev/^([A-Z])A$/$1/
+  #   - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
   algebra:
     - xform/ⅱ//  #用于Lua判断输入类型的标记
     - xform/^(.*);.*$/$1/
@@ -419,11 +431,15 @@ speller:
     - derive/^ng$/eng/
     - xform/^n$/en/
     - xform/^m$/me/
+    # - derive/^(.*)$/\U$1/
+    # - abbrev/^([A-Z])[AOE]+$/$1/
+    # - derive/^([NL])VE$/$1UE/
+    # - derive/^([JQXY])U/$1V/
+    # - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
+    - abbrev/^([a-z])a$/$1/
     - derive/^([nl])ve$/$1ue/
     - derive/^([jqxy])u/$1v/
-    - derive/^(.*)$/\U$1/
-    - abbrev/^([A-Z])A$/$1/
-    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
+    - xlit/abcdefghijklmnopqrstuvwxyz/22233344455566677778889999/
 
 grammar:
   language: wanxiang-lts-zh-hans
