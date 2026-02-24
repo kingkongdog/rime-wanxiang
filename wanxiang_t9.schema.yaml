@@ -11,6 +11,8 @@ schema:
     仓输入法:万象拼音九宫格方案
   dependencies:
     #- wanxiang_reverse      # 部件拆字，反查及辅码
+    - wanxiang_mixedcode    #混合编码
+    - wanxiang_english      #英文
 
 # 开关
 # reset: 默认状态。注释掉后，切换窗口时不会重置到默认状态。
@@ -81,6 +83,8 @@ engine:
     # - table_translator@chengyu             #简码成语词汇表导入
     # - table_translator@wanxiang_mixedcode  #中英等混合词汇表导入
     # - reverse_lookup_translator@wanxiang_reverse    #挂接部件组字和笔画反查
+    - table_translator@wanxiang_english    #英文词汇表导入
+    - table_translator@wanxiang_mixedcode  #混合编码词汇表导入
   filters:
     # - lua_filter@*super_lookup                      #字词输入中反查辅助筛选
     - lua_filter@*super_comment_preedit             #OpenCC前，超级注释模块、超级preedit，支持错词提示、辅助码显示，部件组字读音注释，有声调、无声调全拼编码的转换，支持个性化配置和关闭相应的功能，详情搜索super_comment_preedit进行详细配置
@@ -302,6 +306,31 @@ super_replacer:
         files:
           - lua/data/t9_abbrev.txt # 格式：zm\t怎么|在吗
           #- lua/data/t9_custom.txt #你可以这样patch一个新的文本代替根目录custom_phrase.txt，九键就有了自己的自定义词典
+
+# 中文、英文、数字、符号等混合词汇
+wanxiang_english:
+  dictionary: wanxiang_english
+  user_dict: en
+  enable_completion: true
+  enable_sentence: true
+  initial_quality: 2.1
+  comment_format:  #这里很重要如果残留带声调字母，剩余编码提示计算出错引发程序崩溃
+    - xform/^~.+$//
+  #英文自动加空格，除关闭外共有3种模式可供选择
+  #off: 关闭; before: 总是前加; after: 总是后加; 
+  #smart: 智能模式连续输入英文时第二个单词前开始加空格，非输入状态的回车与空格都能打断加空格状态
+  #支持设置延时销毁加空格状态，单位秒,0不超时，大于0为超时时间，极大的保证了连续输入的体验。
+  english_spacing: smart
+  spacing_timeout: 5
+
+wanxiang_mixedcode:
+  dictionary: wanxiang_mixedcode
+  db_class: stabledb
+  enable_completion: true
+  enable_sentence: false
+  initial_quality: 2
+  comment_format:  #这里很重要如果残留带声调字母，剩余编码提示计算出错引发程序崩溃
+    - xform/.*//
 
 # 部件拆字反查
 wanxiang_reverse:
