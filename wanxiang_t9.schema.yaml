@@ -46,7 +46,7 @@ switches:
     reset: 0
   - options: [abbrev_off, abbrev_lazy, abbrev_always]
     states: [简码关, 空出简, 总出简]
-    reset: 0
+    reset: 1
 
 # 输入引擎
 engine:
@@ -436,7 +436,7 @@ speller:
     # - derive/^([NL])VE$/$1UE/
     # - derive/^([JQXY])U/$1V/
     # - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
-    - abbrev/^([a-z])a$/$1/
+    # - abbrev/^([a-z])a$/$1/   使用空出简
     - derive/^([nl])ve$/$1ue/
     - derive/^([jqxy])u/$1v/
     - xlit/abcdefghijklmnopqrstuvwxyz/22233344455566677778889999/
