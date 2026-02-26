@@ -5,8 +5,8 @@ local function filter(input, env)
     local context = env.engine.context
     local input_str = context.input
 
-    -- 使用正则判断是否为2个数字
-    if string.match(input_str, "^%d%d$") then
+    -- 使用正则判断是否为纯数字
+    if string.match(input_str, "^%d$") then
         -- 构造一个候选词：类型为 "number"，内容为输入字符串，注释为 "数字"
         local cand = Candidate("raw", 0, #input_str, input_str, "")
         yield(cand)
