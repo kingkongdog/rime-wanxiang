@@ -117,7 +117,7 @@ local function t9_sorter(input)
     end
 
     if first_len > 1 then
-        yield(Candidate("raw", l[1]._start, l[1]._end, "======================= 高频单字 =======================", ""))
+        yield(Candidate("raw", l[1]._start, l[1]._end, "====================== 高频单字 ======================", ""))
     end
 
     -- 单字候选词不到 18 个
@@ -197,7 +197,7 @@ local function t9_sorter(input)
     -- 按组平铺输出
     for _, group in ipairs(groupsArr) do
         -- 分割线
-        yield(Candidate("raw", l[1]._start, l[1]._end, "======================= " .. group.pinyin_with_tone .. " =======================", ""))
+        yield(Candidate("raw", l[1]._start, l[1]._end, "====================== " .. group.pinyin_with_tone .. " ======================", ""))
         for _, cand in ipairs(group.cands) do
             yield(cand)
         end
