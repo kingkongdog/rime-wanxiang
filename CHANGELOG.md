@@ -1,5 +1,39 @@
 # Changelog
 
+## [14.8.2](https://github.com/amzxyz/rime_wanxiang/compare/v14.8.1...v14.8.2) (2026-02-26)
+
+
+### 🐛 Bug 修复
+
+* 新增cand.type类型外显设置能力，可以在super_comment参数进行设置([#824](https://github.com/amzxyz/rime_wanxiang/issues/824)) ([9599fef](https://github.com/amzxyz/rime_wanxiang/commit/9599fef3a060499859084bbc1c1a9018d498efe5))
+
+## [14.8.1](https://github.com/amzxyz/rime_wanxiang/compare/v14.8.0...v14.8.1) (2026-02-26)
+
+
+### 🐛 Bug 修复
+
+* 利用自动补全N-1双大写辅助码的方法固定前面明确的语句，循环按句号能在N-1个字最早的候选(不加任何辅助码时的状态)和N字候选当前进行循环，类似写文档想起来点下保存，不好理解在输入句子后点点句号感受一下，其次再次向使用句号逗号翻页的宝宝们说一声麻烦自己改一下按键，因为真的手机上一个逗号一个句号分配至tips、这个固定候选的功能非常好用，电脑上也一样 ([74b5015](https://github.com/amzxyz/rime_wanxiang/commit/74b5015c6403b3be9ee0b2969f58433e14ec4e6e))
+
+## [14.8.0](https://github.com/amzxyz/rime_wanxiang/compare/v14.7.7...v14.8.0) (2026-02-26)
+
+
+### ✨ 新特性
+
+* 新增一个利用自动补全N-1双大写辅助码的方法固定前面明确的语句，类似写文档想起来点下保存 ([6e847d3](https://github.com/amzxyz/rime_wanxiang/commit/6e847d3a5b408e672f8108b9b18614ca74f430fa))
+
+## [14.7.7](https://github.com/amzxyz/rime_wanxiang/compare/v14.7.6...v14.7.7) (2026-02-25)
+
+
+### 📚 词库更新
+
+* 词库调整 ([65936a2](https://github.com/amzxyz/rime_wanxiang/commit/65936a27b3766ceb56580fde809781c7365c33cb))
+
+
+### 🐛 Bug 修复
+
+* symbol表兼容uiv双拼用法 ([1e3109a](https://github.com/amzxyz/rime_wanxiang/commit/1e3109a260c9d036cd690e1faf46a140c22eff96))
+* 修复bug ([f912676](https://github.com/amzxyz/rime_wanxiang/commit/f9126766cf1fdd06387b006d85451411411932c6))
+
 ## [14.7.6](https://github.com/amzxyz/rime_wanxiang/compare/v14.7.5...v14.7.6) (2026-02-25)
 
 
