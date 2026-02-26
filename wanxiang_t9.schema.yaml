@@ -85,6 +85,7 @@ engine:
     # - reverse_lookup_translator@wanxiang_reverse    #挂接部件组字和笔画反查
     - table_translator@wanxiang_english    #英文词汇表导入
     - table_translator@wanxiang_mixedcode  #混合编码词汇表导入
+    - lua_translator@*force_gc           # 暴力 GC
   filters:
     - lua_filter@*english_filter                    # 输入 2 个及 2 个以上英文字母才显示英文候选词。不加这个的话，输入第一个字母的时候挺卡的。
     # - lua_filter@*super_lookup                      #字词输入中反查辅助筛选
