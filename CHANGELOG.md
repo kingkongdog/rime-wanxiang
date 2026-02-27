@@ -1,5 +1,33 @@
 # Changelog
 
+## [14.8.5](https://github.com/amzxyz/rime_wanxiang/compare/v14.8.4...v14.8.5) (2026-02-27)
+
+
+### 📚 词库更新
+
+* 词库调整 ([22f3646](https://github.com/amzxyz/rime_wanxiang/commit/22f3646f588d13b45b3c4038cfc8328c1e17c08f))
+
+## [14.8.4](https://github.com/amzxyz/rime_wanxiang/compare/v14.8.3...v14.8.4) (2026-02-27)
+
+
+### 📚 词库更新
+
+* 词库调整 ([c539605](https://github.com/amzxyz/rime_wanxiang/commit/c539605c58a966c84ebf0cba403d8640916070e9))
+
+
+### 🐛 Bug 修复
+
+* 多种tag模式下不启用按键锁定 ([62050ea](https://github.com/amzxyz/rime_wanxiang/commit/62050ea7f514e1814412abeeee5e2bd752a22b2a))
+
+## [14.8.3](https://github.com/amzxyz/rime_wanxiang/compare/v14.8.2...v14.8.3) (2026-02-26)
+
+
+### 🐛 Bug 修复
+
+* **force_upper_aux:** 智能选择反查数据库 ([756d168](https://github.com/amzxyz/rime_wanxiang/commit/756d168458f7956b6d3d894b18215c7d73f384e5))
+* 交换lua顺序以被超级注释接管 ([b43e4ca](https://github.com/amzxyz/rime_wanxiang/commit/b43e4ca7a2d15561871cdba6af23b096ab7e895d))
+* 符号下面有一些生僻康熙部首不应该被字符集过滤 ([daef812](https://github.com/amzxyz/rime_wanxiang/commit/daef812d4de36ea4dc5c712225bb057ccdb1f2ce))
+
 ## [14.8.2](https://github.com/amzxyz/rime_wanxiang/compare/v14.8.1...v14.8.2) (2026-02-26)
 
 
