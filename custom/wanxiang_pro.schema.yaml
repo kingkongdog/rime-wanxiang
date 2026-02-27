@@ -98,12 +98,12 @@ engine:
   filters:
     - lua_filter@*auto_phrase                       #comment前，无感造词，关闭调频的时候将汉字写入次翻译器，当没有英文候选的时候追加\上屏可完成英文造词
     - lua_filter@*super_lookup                      #comment前，字词输入中反查辅助筛选
-    - lua_filter@*super_replacer                    #OpenCC替代器，更灵活的处理方式，更自由的自定义方式，支持简繁转换、简码模式、支持候选替换、注释替换、候选派生等等
-    - lua_filter@*super_comment_preedit             #OpenCC前，超级注释模块、超级preedit，支持错词提示、辅助码显示，部件组字读音注释，有声调、无声调全拼编码的转换，支持个性化配置和关闭相应的功能，详情搜索super_comment_preedit进行详细配置
-    - lua_filter@*super_filter                      #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
     - lua_filter@*super_english                     #comment前,负责英文方案及中英混输中英文单词格式化，语句流，自动加空格等策略
+    - lua_filter@*super_replacer                    #OpenCC替代器，更灵活的处理方式，更自由的自定义方式，支持简繁转换、简码模式、支持候选替换、注释替换、候选派生等等
+    - lua_filter@*super_filter                      #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
+    - lua_filter@*super_comment_preedit             #超级注释模块、超级preedit，支持错词提示、辅助码显示，部件组字读音注释，有声调、无声调全拼编码的转换，支持个性化配置和关闭相应的功能，详情搜索super_comment_preedit进行详细配置
     - lua_filter@*super_sequence*F                  #手动排序，对高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
-    - uniquifier                                    #去重
+    - uniquifier                                    # 去重
 
 grammar:
   language: wanxiang-lts-zh-hans
@@ -128,7 +128,7 @@ super_comment:                  # 超级注释模块，子项配置 true 开启�
     abbrev: ""
 
 force_upper_aux:
-  hotkey: "period"  #用来固定候选的快捷键，原理是用双大写字母定字,能用组合键能用符号Tab等
+  hotkey: "period"  #用来固定候选的快捷键，原理是用双大写字母定字,能用组合键能用符号Tab等，按一下固定当前可见候选，按两下固定N-1个字状态下记录的字
   symbol: "›" #用来替代双大写字母辅助的preedit视觉拉长的问题
 
 #常规状态下数字转换成相应的字符，由超级preedit接管
