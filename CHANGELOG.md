@@ -1,5 +1,232 @@
 # Changelog
 
+## [15.2.3](https://github.com/amzxyz/rime_wanxiang/compare/v15.2.2...v15.2.3) (2026-03-15)
+
+
+### 📚 词库更新
+
+* 词库调整 ([d90a834](https://github.com/amzxyz/rime_wanxiang/commit/d90a8347a50592bc9490d34fc591cf0fdbcc19df))
+
+
+### 🐛 Bug 修复
+
+* input统计配置项目合并，可定义数据库位置，可设置触发按键，支持等级 ([9c77770](https://github.com/amzxyz/rime_wanxiang/commit/9c777705cf567ac51dd35f42c58324a663215a2d))
+* tips配置项目合并，可定义数据库位置 ([7828908](https://github.com/amzxyz/rime_wanxiang/commit/782890843b741e7e5a9d27c796cce6918d15b937))
+* 变更同文主题集成 ([b13372f](https://github.com/amzxyz/rime_wanxiang/commit/b13372f3be5c76510b0dfd3f35172e95cb2b336c))
+* 排序配置整理集中，数据库名称可配置 ([75c2306](https://github.com/amzxyz/rime_wanxiang/commit/75c2306b45cfa2c2f7b197b054eefd1c4903fc8b))
+* 新增自动预览版发布 ([99c18bd](https://github.com/amzxyz/rime_wanxiang/commit/99c18bd377aae9d422c3e6b0f9485a9529c293ff))
+
+## [15.2.2](https://github.com/amzxyz/rime_wanxiang/compare/v15.2.1...v15.2.2) (2026-03-12)
+
+
+### 🐛 Bug 修复
+
+* 开启了预测后tips还在匹配无input的候选，体验不好予以规避 ([05204fa](https://github.com/amzxyz/rime_wanxiang/commit/05204fa7306708b369c2dec807522e97e562308e))
+* 调了一个模型参数测试一下 ([f58c49f](https://github.com/amzxyz/rime_wanxiang/commit/f58c49ff46691f39cc463ab7ca2b5dc723a09320))
+
+## [15.2.1](https://github.com/amzxyz/rime_wanxiang/compare/v15.2.0...v15.2.1) (2026-03-11)
+
+
+### 🐛 Bug 修复
+
+* 修复了句子锁定脚本引发的数字后符号不能上屏问题，以及新增了按下回退键直接释放锁定 ([2594ba8](https://github.com/amzxyz/rime_wanxiang/commit/2594ba82ae31c371425dedf6a0e73febd509f9d9))
+* 修复了配合九键拼音的一些问题，以及平板安卓使用时数字无法成为选字键的问题 ([61b1fed](https://github.com/amzxyz/rime_wanxiang/commit/61b1fed60567261ec56fce2246d245bbe8c0e496))
+
+## [15.2.0](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.11...v15.2.0) (2026-03-11)
+
+
+### ✨ 新特性
+
+* 新增联想输入时空格打断联想并上屏空格对齐大厂，默认开启 ([e585912](https://github.com/amzxyz/rime_wanxiang/commit/e58591228df015f80dde2988b4590926ecc05c40))
+
+## [15.1.11](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.10...v15.1.11) (2026-03-10)
+
+
+### 🐛 Bug 修复
+
+* release页面预测数据库下载指引 ([858b490](https://github.com/amzxyz/rime_wanxiang/commit/858b490c0c88173492ad6af0404d805482c822de))
+* 修复若干bug ([d3c880a](https://github.com/amzxyz/rime_wanxiang/commit/d3c880a310bba8ee05e1afb5668ecfa04ebab283))
+
+## [15.1.10](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.9...v15.1.10) (2026-03-10)
+
+
+### 🐛 Bug 修复
+
+* 句号在特殊情况下不应被占用 ([4712c5e](https://github.com/amzxyz/rime_wanxiang/commit/4712c5e396e067c1ce2d39838c51602c8484f139))
+* 英文lua加上user_table这个类型后可以都显示不受英文词组数量过滤逻辑干扰 ([27f9f6b](https://github.com/amzxyz/rime_wanxiang/commit/27f9f6b728763c1bbff209a049e671b9ef5d0e4a))
+
+## [15.1.9](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.8...v15.1.9) (2026-03-10)
+
+
+### 🐛 Bug 修复
+
+* 修复时辰计算的若干bug，按键处理器全方位暴露出设置项功能启用开关，以词定字等功能配置也归并到一起 ([f6e21e7](https://github.com/amzxyz/rime_wanxiang/commit/f6e21e7a37fcb1b4d7396b800d30c33ee7470b15))
+* 增加了简码的tag配置，反查出现简码的加上[abc] ([c516436](https://github.com/amzxyz/rime_wanxiang/commit/c5164366c9a2a4b33690846f48a4ea3c83ee9acc))
+
+## [15.1.8](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.7...v15.1.8) (2026-03-09)
+
+
+### 🐛 Bug 修复
+
+* 一直以来有人问我繁体字转换出问题，没有人描述清楚，今天我终于洞察到他们发生了什么，首先是开启大字集这个动作的本质上是关闭了过滤，其实这个线条就不工作了，s2t开启，则他只过滤显示繁体字，简体字就没了，这就是为啥东西没了的缘故，原本我希望正常使用通规范围，到了s2t求个并集，通规字参与过滤又会转换回来繁体字从而得到留存，现在我为你s2t 等也加上了a的范围，这样s2t开启后就是fa的范围，在后续被超级替换刷过以后就变成了全繁体 ([f2b88e0](https://github.com/amzxyz/rime_wanxiang/commit/f2b88e06e1e1b27f7104ae2ce7f957e4fe15b8c4))
+
+## [15.1.7](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.6...v15.1.7) (2026-03-09)
+
+
+### 🐛 Bug 修复
+
+* 混合编码还是恢复到单独的方案，能用但会干扰正常单字母派生，这可能是rime底层逻辑的一些限制没办法 ([8015ccc](https://github.com/amzxyz/rime_wanxiang/commit/8015ccc29fd251033579908e93762eb8f1dca575))
+
+## [15.1.6](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.5...v15.1.6) (2026-03-09)
+
+
+### 📚 词库更新
+
+* 词库调整 ([a8c8c40](https://github.com/amzxyz/rime_wanxiang/commit/a8c8c409f8d8f3a83293e28fdc8972a881b27039))
+* 调整3字词频 ([65663d6](https://github.com/amzxyz/rime_wanxiang/commit/65663d69bf315031b02c3be94ce620061722bd5a))
+
+
+### 🐛 Bug 修复
+
+* 1、取消英文在非句子中的无候选兜底，干扰中文是否唯一的判定2、超级替换支持剩余编码匹配简码3、超级注释的部分逻辑调整 ([5349353](https://github.com/amzxyz/rime_wanxiang/commit/534935331931a8f8e97fcd229deba282f11819a5))
+* 九键设置简化了，不在暴露外部转换参数，而是用一个t9优化替代，他能将维护的字母编码存入数据库时候变成数字，并把原编码储存起来用于修改preedit ([59a0910](https://github.com/amzxyz/rime_wanxiang/commit/59a091082652be07742760cb9c9593a03403f9bf))
+* 九键输入数字编码打时间现在可以看到正确的编码了 ([ddb3c2c](https://github.com/amzxyz/rime_wanxiang/commit/ddb3c2ca084538efe67f3bfb623f06a77456147f))
+* 规范化shijian.lua的cand.type参数 ([098aa64](https://github.com/amzxyz/rime_wanxiang/commit/098aa646a8af8f1267c1c8b2a9d1e6029395909e))
+
+## [15.1.5](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.4...v15.1.5) (2026-03-07)
+
+
+### 🐛 Bug 修复
+
+* 恢复几个脚本 ([60a8dd1](https://github.com/amzxyz/rime_wanxiang/commit/60a8dd17135d2863d2b1cc6e24bc00d4f47b9684))
+
+## [15.1.4](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.3...v15.1.4) (2026-03-07)
+
+
+### 🐛 Bug 修复
+
+* 修复一处转写 ([6c40df9](https://github.com/amzxyz/rime_wanxiang/commit/6c40df94e07eb96d06dd1bd90af155bf967d8684))
+* 恢复lookup脚本 ([3166d9b](https://github.com/amzxyz/rime_wanxiang/commit/3166d9bcc738820a34c02b550ba66461fc6b8519))
+
+## [15.1.3](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.2...v15.1.3) (2026-03-07)
+
+
+### 🐛 Bug 修复
+
+* 修复一处转写 ([5421cb8](https://github.com/amzxyz/rime_wanxiang/commit/5421cb8fced15e0dbf0630561ff3d7cefd259e12))
+* 修复一处遗漏 ([466a253](https://github.com/amzxyz/rime_wanxiang/commit/466a253c9d4bd3229f6967ba27bc74f48983435d))
+
+## [15.1.2](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.1...v15.1.2) (2026-03-07)
+
+
+### 🐛 Bug 修复
+
+* 兜底行为统一type=fallback ([c14b965](https://github.com/amzxyz/rime_wanxiang/commit/c14b965f4d97c5411b77b80b2f459ec259d3c28f))
+* 定义为万象状态面板 ([6c739f1](https://github.com/amzxyz/rime_wanxiang/commit/6c739f15a8459673ac9064e0e9bc3be50bed1e6f))
+* 部分混合编码迁移到固定词库参与组句 ([bf31afb](https://github.com/amzxyz/rime_wanxiang/commit/bf31afb6d51f3f3d9ba3c37c449bec6c6ea0bf4b))
+* 针对字符切分整体lua做uft-8优化 ([c72a36c](https://github.com/amzxyz/rime_wanxiang/commit/c72a36c983a82909ca1723dd34f1ad4084e473b2))
+
+## [15.1.1](https://github.com/amzxyz/rime_wanxiang/compare/v15.1.0...v15.1.1) (2026-03-06)
+
+
+### 🐛 Bug 修复
+
+* 遗漏了开关名称 ([629954d](https://github.com/amzxyz/rime_wanxiang/commit/629954d86757dd46bdd1be570b1b1460e647421d))
+
+## [15.1.0](https://github.com/amzxyz/rime_wanxiang/compare/v15.0.3...v15.1.0) (2026-03-06)
+
+
+### ✨ 新特性
+
+* 出简这个配置重构了一下,数据维护层回归到abbrev.txt一个文件,同时开关也只留一个简码开关,逻辑层我们可以定义置顶几个词、置顶到什么位置,同时将空出简变成了一个常态化兜底动作。同时这个特性让九键也能合理使用简码,有系统词可以置顶适当位置补充1-2个简码，没有多显示几个简码，逻辑非常自洽⚠️本次更新后用户请自行修改custom文件和预设文件super_plcaer相关段落一样否则出简码功能将会异常,请知悉 ([3fe782e](https://github.com/amzxyz/rime_wanxiang/commit/3fe782e1c769fe6a5e57b3dc0393becb99ba2a61))
+* 新增总出简码支持设置置顶位置了,次选三选随便写,同时这个特性让九键也能合理使用简码,⚠️本次更新后用户请自行修改custom文件和预设文件super_plcaer相关段落一样否则总出简码功能等于没有,请知悉 ([93f4670](https://github.com/amzxyz/rime_wanxiang/commit/93f467074244b35877105c20d78c020117c2956d))
+
+
+### 📚 词库更新
+
+* AI精炼移除无用词条 ([aa03b91](https://github.com/amzxyz/rime_wanxiang/commit/aa03b91b774b2a29b2b863dac33ece9cdd795804))
+* AI精炼移除无用词条/调整词频 ([54e913e](https://github.com/amzxyz/rime_wanxiang/commit/54e913ef3868fb26d5f936c4d72c06ceb2399271))
+
+
+### 🐛 Bug 修复
+
+* 优化英文脚本与超级滤镜在使用\时的一些逻辑细节，从而不干扰用户造词 ([52c14be](https://github.com/amzxyz/rime_wanxiang/commit/52c14beb5425e6416a47bb12160dd74c232de9ac))
+* 成语一同移动到简码db数据库跟随简码前置的位置一起处理 ([335b230](https://github.com/amzxyz/rime_wanxiang/commit/335b2300d7d72ed4678ad53a0047778ae1635dfd))
+* 成语也一并并入了简码库，复杂滤镜这一层不再负责简码前置的相关逻辑了，交还给replacer直接处理简码数据与逻辑，更加集中，因此精简这个滤镜的复杂代码提升性能 ([f357cfc](https://github.com/amzxyz/rime_wanxiang/commit/f357cfc2d5891be4c9c40d716abbbeb34c7470f9))
+
+
+### 🏡 杂项
+
+* 添加说明 ([065c7bd](https://github.com/amzxyz/rime_wanxiang/commit/065c7bdfa6c1bbe84dca9c6e70da64c30ba851f2))
+
+## [15.0.3](https://github.com/amzxyz/rime_wanxiang/compare/v15.0.2...v15.0.3) (2026-03-04)
+
+
+### 📚 词库更新
+
+* 词库调整 ([6ac0b25](https://github.com/amzxyz/rime_wanxiang/commit/6ac0b2528aca84965fda9698c6062c7764c80209))
+* 调整词频 ([32c9c5a](https://github.com/amzxyz/rime_wanxiang/commit/32c9c5afb1d5b8d2c6578fcfa7bcad4ce19ef28f))
+
+
+### 🐛 Bug 修复
+
+* 移除元叔内置文件 ([ac460a5](https://github.com/amzxyz/rime_wanxiang/commit/ac460a5b7b369107efa48e058a8b318ef8a85968))
+
+## [15.0.2](https://github.com/amzxyz/rime_wanxiang/compare/v15.0.1...v15.0.2) (2026-03-04)
+
+
+### 🐛 Bug 修复
+
+* **super_english:** 限制候选数时用户词不占用数量配额有多少显示多少 ([ea36231](https://github.com/amzxyz/rime_wanxiang/commit/ea36231aaa9a9a0b928a70f8b24f327d95008057))
+* **super_replacer:** 修复总出简应该出现在根目录置顶词之后 ([57323cd](https://github.com/amzxyz/rime_wanxiang/commit/57323cd34cfb04cd37e1e04d99026f197efb7c45))
+* **super_replacer:** 简码拆分为两个文件,空出简码和总出简码分别提供不同的数据库 ([582f41e](https://github.com/amzxyz/rime_wanxiang/commit/582f41e050e5a4be2e6d922e8f44efe935ed3d64))
+
+## [15.0.1](https://github.com/amzxyz/rime_wanxiang/compare/v15.0.0...v15.0.1) (2026-03-03)
+
+
+### 🐛 Bug 修复
+
+* **super_replacer:** 修复了一个大量积累用户词导致的空出简异常([#843](https://github.com/amzxyz/rime_wanxiang/issues/843)) ([3760876](https://github.com/amzxyz/rime_wanxiang/commit/376087671b19967ed4d629813feae5477b63b7a4))
+
+
+### 🏡 杂项
+
+* 修改说明 ([45d95a7](https://github.com/amzxyz/rime_wanxiang/commit/45d95a7a010580bcfa870523db7744943e621bfa))
+
+## [15.0.0](https://github.com/amzxyz/rime_wanxiang/compare/v14.9.0...v15.0.0) (2026-03-03)
+
+
+### 💅 重构
+
+* 新增独立的字符集过滤，重构lua文件放在wanxiang文件夹下，兼容多方案共存,新增英文候选限制 ([f2bbb39](https://github.com/amzxyz/rime_wanxiang/commit/f2bbb39916982b6c5b63e9a275a62220566fa733))
+
+
+### 🏡 杂项
+
+* release 15.0.0 ([a99f006](https://github.com/amzxyz/rime_wanxiang/commit/a99f006e0ed3a77dfadf5daa15a2c67f945c475b))
+
+## [14.9.0](https://github.com/amzxyz/rime_wanxiang/compare/v14.8.8...v14.9.0) (2026-03-02)
+
+
+### ✨ 新特性
+
+* 新增独立的字符集过滤，重构lua文件放在wanxiang文件夹下，兼容多方案共存 ([1123f4f](https://github.com/amzxyz/rime_wanxiang/commit/1123f4fdab367cbcbd59cc3675adb83d3ed16d48))
+
+
+### 📚 词库更新
+
+* AI甄选移除3字词条片段3万,词库精炼持续进行中... ([8deb95a](https://github.com/amzxyz/rime_wanxiang/commit/8deb95af530b543085686a49399430d8aad00f9d))
+* AI精炼移除13000词条 ([373fe90](https://github.com/amzxyz/rime_wanxiang/commit/373fe90936ff5ceb4da91dd53e74d1e6baf126f0))
+* AI精炼移除3000词条 ([4d47ef9](https://github.com/amzxyz/rime_wanxiang/commit/4d47ef9cf878498e5799a383278eabd6e1d1bc82))
+* AI精炼移除6000词条 ([6cd7cb1](https://github.com/amzxyz/rime_wanxiang/commit/6cd7cb1c1488a42a592b0466dcf1dd717de80991))
+* AI精炼移除8000词条 ([6360af1](https://github.com/amzxyz/rime_wanxiang/commit/6360af17e8fef1c8410bf374f090decf54819994))
+* 词库调整 ([6b5aa0b](https://github.com/amzxyz/rime_wanxiang/commit/6b5aa0b4641ae1fcff11ae49540ad51a322feddb))
+
+
+### 🐛 Bug 修复
+
+* 修改自动化 ([6b0d9bb](https://github.com/amzxyz/rime_wanxiang/commit/6b0d9bb395ad3dd22c3e8cd4218670d80891f7eb))
+
 ## [14.8.8](https://github.com/amzxyz/rime_wanxiang/compare/v14.8.7...v14.8.8) (2026-03-01)
 
 

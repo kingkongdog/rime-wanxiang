@@ -134,6 +134,7 @@ package_schema() {
     fi
 
     ZIP_NAME=$(basename "$OUT_DIR").zip
+ 
     # 构建 zip 的排除列表格式：-x "dicts/file1" "dicts/file2" ...
     ZIP_EXCLUDE_ARGS=()
     for file in "${EXCLUDE_DICT_FILES[@]}"; do
