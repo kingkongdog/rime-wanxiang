@@ -46,7 +46,7 @@ switches:
     reset: 0
   - name: abbrev
     states: [简码关, 简码开]
-    reset: 0
+    reset: 1
 
 # 输入引擎
 engine:
