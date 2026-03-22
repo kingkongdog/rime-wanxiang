@@ -1,5 +1,32 @@
 # Changelog
 
+## [15.3.4](https://github.com/amzxyz/rime_wanxiang/compare/v15.3.3...v15.3.4) (2026-03-22)
+
+
+### 🐛 Bug 修复
+
+* 放行太极被后面滤镜删除英文句子 ([6da61c6](https://github.com/amzxyz/rime_wanxiang/commit/6da61c6dd79a8c4899ce92834c705d37a226ab22))
+
+## [15.3.3](https://github.com/amzxyz/rime_wanxiang/compare/v15.3.2...v15.3.3) (2026-03-22)
+
+
+### 🐛 Bug 修复
+
+* 修复新建候选引发的边界不稳 ([1851300](https://github.com/amzxyz/rime_wanxiang/commit/1851300d87077b644403d5a0196a1696fe27edc3))
+* 只记忆候选长度变化的第一个 ([b30e981](https://github.com/amzxyz/rime_wanxiang/commit/b30e9816190d0c926f684beb18431811361ded49))
+* 回复两个拦截逻辑 ([b52e3c8](https://github.com/amzxyz/rime_wanxiang/commit/b52e3c8b69567fa0a101664ddd80bd57664423b9))
+
+## [15.3.2](https://github.com/amzxyz/rime_wanxiang/compare/v15.3.1...v15.3.2) (2026-03-22)
+
+
+### 🐛 Bug 修复
+
+* cand.type标记移动到末尾的处理器，调整超级注释与超级替换的位置，从而让注释替换不受干扰的工作 ([a4e9055](https://github.com/amzxyz/rime_wanxiang/commit/a4e90551af0c2b2730e51c5651c2a28892442269))
+* 优化预测脚本算法 ([edafcec](https://github.com/amzxyz/rime_wanxiang/commit/edafcec806ce661808040b1d609b2b19d9983316))
+* 移除超级注释中无用的函数 ([6b41964](https://github.com/amzxyz/rime_wanxiang/commit/6b41964fdd9ae44a5bb8d46ad71900d93fc216b5))
+* 超级替换如果用于替换注释的编码与当前input一致，则不进行注释替换 ([6c0ddf2](https://github.com/amzxyz/rime_wanxiang/commit/6c0ddf2cb5ba52d72f9b812c89f2f15fc9813cd9))
+* 采用神级接口重构两个input切分为重点的lua ([2bce950](https://github.com/amzxyz/rime_wanxiang/commit/2bce950a22beda7874af195c3cef946b59c3dc9b))
+
 ## [15.3.1](https://github.com/amzxyz/rime_wanxiang/compare/v15.3.0...v15.3.1) (2026-03-21)
 
 
