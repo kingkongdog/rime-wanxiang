@@ -55,6 +55,7 @@ switches:
 engine:
   processors:
     - lua_processor@*force_digit_input_processor  #解决偶发数字上屏问题
+    - lua_processor@*predict_patch_processor      #解决预测候选出现时，按空格会往 input 里 push 0 的问题
     - lua_processor@*wanxiang.super_processor   #KP小键盘、字母选词、符号快打、超强分词、重复限制、退格限制、声调回退、以词定字
     - lua_processor@*wanxiang.user_predict*P    #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
     - t9_processor                              #元书T9处理器
