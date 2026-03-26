@@ -8,17 +8,21 @@ function M.func(key, env)
     local input = context.input
     local keycode = key.keycode
 
-    if key:release() then
-        return 2
-    end
+    engine:commit_text(tostring(keycode))
+    context:clear()
+    return 1
 
-    if context:is_composing() and keycode == 48 then
-        engine:commit_text(" ")
-        context:clear()
-        return 1
-    end
+    -- if key:release() then
+    --     return 2
+    -- end
 
-    return 2
+    -- if context:is_composing() and keycode == 48 then
+    --     engine:commit_text(" ")
+    --     context:clear()
+    --     return 1
+    -- end
+
+    -- return 2
 end
 
 return M
