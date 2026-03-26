@@ -12,7 +12,7 @@ function M.func(key, env)
         return 2
     end
 
-    if context:is_composing() and string.find(input, "›") and keycode == 48 then
+    if context:is_composing() and keycode == 48 then
         engine:commit_text(" ")
         context:clear()
         return 1
