@@ -44,6 +44,15 @@ function M.func(key, env)
   if code >= 48 and code <= 57 then
     local char = string.char(code)
     if delta > 30 then
+      
+      -- 加入预测功能后有个 bug：当出现预测候选词列表时，按空格键会把 0 推入 input，而不是直接输入空格。这里尝试解决。begin
+      if context:is_composing() and string.find(context.input, "›") and keycode == 48 then
+        engine:commit_text(" ")
+        context:clear()
+        return 1
+      end
+      -- end
+
       -- 这里不要用 key:repr()，否则可能推入 Shift+1
       context:push_input(char)
       env.last_input_time_ms = input_time_ms
