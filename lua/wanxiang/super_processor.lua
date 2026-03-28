@@ -795,7 +795,7 @@ function M.func(key, env)
 
     -- 8. 数字键 (小键盘 + 声调 + 选词)[KpNumber & ToneFallback] 数字键综合逻辑
     if (kc >= 0xFFB0 and kc <= 0xFFB9) or (kc >= 0x30 and kc <= 0x39) then
-        if handle_number_logic(key, env, ctx) then return K_ACCEPT end
+        -- if handle_number_logic(key, env, ctx) then return K_ACCEPT end
     else
         -- 非数字键，重置声调状态
         if env.enable_tone_fallback then
