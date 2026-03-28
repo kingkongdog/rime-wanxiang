@@ -719,8 +719,7 @@ local function handle_number_logic(key, env, ctx)
                         local index = page_start + (d - 1)
                         if index < menu:candidate_count() then
                             -- 这里执行纯净的 ctx:select，不干涉物理按键事件
-                            -- if ctx:select(index) then return true end
-                            return false
+                            if ctx:select(index) then return true end
                         end
                     end
                 end
