@@ -71,7 +71,7 @@ function M.func(key, env)
     if delta > 30 then
       if delta < 250 then
         -- context:push_input(to_t9_number(char))
-        engine:process_key(KeyEvent(char))
+        engine:process_key(KeyEvent(to_t9_number(char)))
         return 1
       else
         -- 这里不要用 key:repr()，否则可能推入 Shift+1
