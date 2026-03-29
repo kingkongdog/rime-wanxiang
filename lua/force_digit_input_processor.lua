@@ -25,7 +25,7 @@ function M.func(key, env)
   end
 
   if key:release() then
-    return 2
+    return 1
   end
 
   if key:ctrl() then
