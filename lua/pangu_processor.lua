@@ -338,10 +338,14 @@ function M.func(key, env)
 
     if commit_text ~= "" then
         prepend_space(env, env.last_text, commit_text)
-        engine:commit_text(commit_text)
-        context:clear()
-        updateLastText(env, commit_text)
-        return 1
+        if is_space or is_digit or is_return then  -- 交给后续的 wanxiang processors
+            return 2
+        else
+            engine:commit_text(commit_text)
+            context:clear()
+            updateLastText(env, commit_text)
+            return 1
+        end
     end
 
     return 2
