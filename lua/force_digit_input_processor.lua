@@ -25,7 +25,7 @@ function M.func(key, env)
   end
 
   if key:release() then
-    return 1
+    return 2
   end
 
   if key:ctrl() then
@@ -54,12 +54,14 @@ function M.func(key, env)
       -- end
 
       -- 这里不要用 key:repr()，否则可能推入 Shift+1
-      context:push_input(char)
+      -- context:push_input(char)
       env.last_input_time_ms = input_time_ms
+      return 2
     else
-      context:push_input("")
+      -- context:push_input("")
+      return 1
     end
-    return 1
+    -- return 1
   end
 
   -- 解决在快速输入拼音过程中，触发 swipe 事件，导致进入 input 的不是数字是字母的问题
@@ -68,16 +70,20 @@ function M.func(key, env)
     local char = string.char(code)
     if delta > 30 then
       if delta < 250 then
-        context:push_input(to_t9_number(char))
+        -- context:push_input(to_t9_number(char))
+        engine:process_key(KeyEvent(char))
+        return 1
       else
         -- 这里不要用 key:repr()，否则可能推入 Shift+1
-        context:push_input(char)
+        -- context:push_input(char)
+        env.last_input_time_ms = input_time_ms
+        return 2
       end
-      env.last_input_time_ms = input_time_ms
     else
-      context:push_input("")
+      -- context:push_input("")
+      return 1
     end
-    return 1
+    -- return 1
   end
 
   return 2
