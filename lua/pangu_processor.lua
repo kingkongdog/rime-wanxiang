@@ -338,7 +338,7 @@ function M.func(key, env)
 
     if commit_text ~= "" then
         prepend_space(env, env.last_text, commit_text)
-        if is_space or is_digit or is_return then  -- 交给后续的 wanxiang processors
+        if is_space or is_digit or is_return then  -- 交给后续的 wanxiang processors。非常的完美，造词和候选词排序都生效了。
             return 2
         else
             engine:commit_text(commit_text)
