@@ -3,7 +3,7 @@ name: Auto Bump Version
 on:
   push:
     branches:
-      - main
+      - wanxiang
     paths-ignore:
       - 'version'
 
