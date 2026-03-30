@@ -1,0 +1,43 @@
+name: Auto Bump Version
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'version'
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump version
+        run: |
+          VERSION_FILE="version"
+
+          if [ ! -f "$VERSION_FILE" ]; then
+            echo "0" > $VERSION_FILE
+          fi
+
+          version=$(cat $VERSION_FILE)
+
+          if [[ "$version" =~ ^[0-9]+$ ]]; then
+            new_version=$((version + 1))
+            echo $new_version > $VERSION_FILE
+            echo "Bumped: $version -> $new_version"
+          else
+            echo "Invalid version format"
+            exit 1
+          fi
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add version
+          git commit -m "chore: bump version to $(cat version)" || exit 0
+          git push
