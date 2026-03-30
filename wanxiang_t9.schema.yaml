@@ -54,7 +54,6 @@ switches:
 # 输入引擎
 engine:
   processors:
-    - lua_processor@*force_digit_input_processor  #解决偶发数字上屏问题
     - lua_processor@*wanxiang.super_processor   #KP小键盘、字母选词、符号快打、超强分词、重复限制、退格限制、声调回退、以词定字
     - lua_processor@*wanxiang.user_predict*P    #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
     - t9_processor                              #元书T9处理器
@@ -64,6 +63,7 @@ engine:
     - recognizer                                #与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
     - key_binder                                #在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页、开关快捷键等
     - lua_processor@*wanxiang.key_binder        #绑定按键扩展能力，支持正则扩展将按键生效情景更加细化
+    - lua_processor@*force_digit_input_processor  #解决偶发数字上屏问题
     - speller                                   #拼写处理器，接受字符按键，编辑输入
     - punctuator                                #符号处理器，将单个字符按键直接映射为标点符号或文字
     - selector                                  #选字处理器，处理数字选字键〔可以换成别的哦〕、上、下候选定位、换页
