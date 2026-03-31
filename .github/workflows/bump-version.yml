@@ -38,6 +38,6 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add version
+          git add wanxiang_version
           git commit -m "chore: bump version to $(cat wanxiang_version)" || exit 0
           git push
