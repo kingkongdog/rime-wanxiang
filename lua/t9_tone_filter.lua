@@ -16,10 +16,6 @@ local function t9_tone_filter(input, env)
     local target_tone = raw_input:match("1([0-4])$")
     target_tone = target_tone and tonumber(target_tone)
 
-    if target_tone then 
-        yield(Candidate("raw", 0, #tostring(target_tone), tostring(target_tone), ""))
-    end
-
     -- 如果没有输入筛选符，直接放行
     if not target_tone then
         for cand in input:iter() do
@@ -31,9 +27,13 @@ local function t9_tone_filter(input, env)
     for cand in input:iter() do
         local pinyin = cand.comment or ""
         local cand_vowel = pinyin:match("([aāáǎàoōóǒòeēéěèiīíǐìūúǔùǖǘǚǜ])")
+
+        if cand_vowel then
+            yield(Candidate("raw", 0, #cand_vowel, cand_vowel, ""))
+        end
+
         local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
-        
-        
+
         -- 声调匹配校验
         if target_tone == cand_tone then
             yield(cand)
