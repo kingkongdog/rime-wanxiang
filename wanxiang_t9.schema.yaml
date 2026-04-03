@@ -101,7 +101,7 @@ engine:
     - lua_filter@*prepend_digit_filter
     - lua_filter@*put_input_in_cand_list_when_empty_filter  #没有候选词时把 input 放入候选词，比如输入手机号码
     # - uniquifier                                    # 去重
-    - lua_filter@*t9_vowel_tone_filter              # 元音声调筛选
+    - lua_filter@*t9_tone_filter                    # 元音声调筛选
     - lua_filter@*t9_uniquifier                     # uniquifier 在去重时，会把 肖(xiāo) 和 肖(xiǎo) 去重，所以要改成自定义的去重
     - lua_filter@*t9_sorter                         # 万象T9排序器，根据首个候选词长度动态调整后续单字排序方式：1️⃣ 第一个候选词是单个汉字或者表情的，从第9个候选词开始按拼音升序排序，2️⃣ 第一个候选词是多个汉字的，已知单个汉字的候选词都排在后面，从第一个单字候选词开始按拼音排序。https://gemini.google.com/share/efd91333894c
 
@@ -465,7 +465,7 @@ speller:
 #  auto_select: true
 #  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射，alphabet就是将字符纳入输入编码的范畴
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210`/\›@āōēīūǖ①②③④
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210`/\›@
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210›
   delimiter: " '"        # 系统配置，第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
   visual_delimiter: " "  # super_preedit.lua配置：是否让分隔符号跟着一起转换，例如nǐ'hǎo 在实际使用中表现出视觉拥挤，我们可以让delimiter平时是'转换为拼音的时候使用空格nǐ hǎo，更符合实际。
