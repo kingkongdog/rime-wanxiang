@@ -8,8 +8,8 @@ local M = {}
 function M.init(env)
     env.select_notifier = env.engine.context.select_notifier:connect(function(ctx)
         if ctx.input:match("1[0-4]$") then
-            -- ctx:commit()
-            -- ctx:clear()
+            env.engine:commit_text(ctx:get_preedit().text:gsub("%d", ""))
+            ctx:clear()
         end
     end)
 end
