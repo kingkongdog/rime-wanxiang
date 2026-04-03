@@ -8,9 +8,11 @@ local M = {}
 function M.init(env)
     env.select_notifier = env.engine.context.select_notifier:connect(function(ctx)
         if ctx.input:match("1[0-4]$") then
-            local text = ctx:get_commit_text()
-            ctx:clear()
-            env.engine:commit_text(text)
+            local cand = ctx:get_selected_candidate()
+            if cand then
+                env.engine:commit_text(cand.text)
+                ctx:clear()
+            end
         end
     end)
 end
