@@ -13,9 +13,17 @@ local function t9_tone_filter(input, env)
     }
 
     -- 1. 提取约束条件
-    local target_tone = raw_input:match("1(%d)$")
+    local target_tone = raw_input:match("1([0-4])$")
+    target_tone = target_tone and tonumber(target_tone)
 
     yield(Candidate("raw", 0, #raw_input, raw_input, ""))
+
+    -- 如果没有输入筛选符，直接放行
+    if not target_tone then
+        for cand in input:iter() do
+            yield(cand)
+        end
+    end
 
     -- 2. 开始过滤候选词
     for cand in input:iter() do
@@ -23,14 +31,10 @@ local function t9_tone_filter(input, env)
         local cand_vowel = pinyin:match("([aāáǎàoōóǒòeēéěèiīíǐìūúǔùǖǘǚǜ])")
         local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
         
-        -- 如果没有输入筛选符，直接放行
-        if not target_tone then
+        
+        -- 声调匹配校验
+        if target_tone == cand_tone then
             yield(cand)
-        else
-            -- 声调匹配校验
-            if target_tone and tonumber(target_tone) == cand_tone then
-                yield(cand)
-            end
         end
     end
 end
