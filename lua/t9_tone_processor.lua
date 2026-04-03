@@ -7,11 +7,10 @@ local M = {}
 
 function M.init(env)
     local engine = env.engine
-    local context = engine.context
-    env.select_notifier = context.select_notifier:connect(function(ctx, cand)
-        if context.input:match("1[0-4]$") then
-            engine:commit_text(cand.text)
-            context:clear()
+    env.select_notifier = context.select_notifier:connect(function(ctx)
+        if ctx.input:match("1[0-4]$") then
+            ctx.commit()
+            ctx:clear()
         end
     end)
 end
