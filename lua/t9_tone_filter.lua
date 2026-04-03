@@ -27,7 +27,7 @@ local function t9_tone_filter(input, env)
     for cand in input:iter() do
         local pinyin = cand.comment or ""
         
-        if #pinyin == #raw_input then
+        if #pinyin == #raw_input - 2 then
             local cand_vowel = pinyin:match("[%z\128-\255][\128-\191]*")
     
             local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
