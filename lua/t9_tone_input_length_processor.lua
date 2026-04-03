@@ -8,7 +8,7 @@ local M = {}
 
 function M.init(env)
     env.select_notifier = env.engine.context.select_notifier:connect(function(ctx)
-        if ctx.input:match("1[0-4]$") or (ctx.input:match("1$") and not ctx.input:match("%d1$")) then
+        if ctx.input:match("1[0-4]$") or (ctx.input:match("1$") and not ctx.input:match("11$")) then
             env.engine:commit_text(ctx:get_preedit().text:gsub("%d+‸$", ""))
             ctx:clear()
         end

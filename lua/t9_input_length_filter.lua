@@ -3,7 +3,7 @@ local function t9_input_length_filter(input, env)
     local context = env.engine.context
     local raw_input = context.input
     
-    if raw_input:match("1$") and not raw_input:match("%d1$") then
+    if raw_input:match("1$") and not raw_input:match("11$") then
         for cand in input:iter() do
             local pinyin = cand.comment or ""
             
