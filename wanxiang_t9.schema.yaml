@@ -463,7 +463,7 @@ speller:
 #  auto_select: true
 #  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射，alphabet就是将字符纳入输入编码的范畴
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210`/\›@
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210`/\›@āōēīūǖ①②③④
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210›
   delimiter: " '"        # 系统配置，第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
   visual_delimiter: " "  # super_preedit.lua配置：是否让分隔符号跟着一起转换，例如nǐ'hǎo 在实际使用中表现出视觉拥挤，我们可以让delimiter平时是'转换为拼音的时候使用空格nǐ hǎo，更符合实际。
@@ -483,14 +483,6 @@ speller:
   algebra:
     - xform/ⅱ//  #用于Lua判断输入类型的标记
     - xform/^(.*);.*$/$1/
-
-    # 声调筛选 begin
-    - derive/^.*[āōēīūǖ].*$/$01/
-    - derive/^.*[áóéíúǘ].*$/$02/
-    - derive/^.*[ǎǒěǐǔǚ].*$/$03/
-    - derive/^.*[àòèìùǜ].*$/$04/
-    # 声调筛选 end
-
     - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüńňǹḿm̀/aaaaooooeeeeiiiiuuuuvvvvvnnnmmm/
     - derive/^ng$/eng/
     - xform/^n$/en/
