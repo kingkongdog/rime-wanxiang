@@ -17,9 +17,9 @@ local function t9_tone_filter(input, env)
     target_tone = target_tone and tonumber(target_tone)
 
     if target_tone then 
-        yield(Candidate("raw", 0, #target_tone, target_tone, ""))
+        yield(Candidate("raw", 0, #tostring(target_tone), tostring(target_tone), ""))
     end
-    
+
     -- 如果没有输入筛选符，直接放行
     if not target_tone then
         for cand in input:iter() do
