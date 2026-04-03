@@ -15,7 +15,7 @@ local function t9_tone_filter(input, env)
     -- 1. 提取约束条件
     local target_tone = raw_input:match("1(%d)$")
 
-    yield(Candidate("raw", 0, #raw_input, target_tone, ""))
+    yield(Candidate("raw", 0, #raw_input, raw_input, ""))
 
     -- 2. 开始过滤候选词
     for cand in input:iter() do
