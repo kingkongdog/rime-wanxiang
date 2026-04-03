@@ -16,7 +16,7 @@ local function t9_tone_filter(input, env)
     local target_tone = raw_input:match("1([0-4])$")
     target_tone = target_tone and tonumber(target_tone)
 
-    yield(Candidate("raw", 0, #raw_input, raw_input, ""))
+    yield(Candidate("raw", 0, #target_tone, target_tone, ""))
 
     -- 如果没有输入筛选符，直接放行
     if not target_tone then
