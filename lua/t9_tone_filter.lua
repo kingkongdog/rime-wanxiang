@@ -26,14 +26,18 @@ local function t9_tone_filter(input, env)
     -- 2. 开始过滤候选词
     for cand in input:iter() do
         local pinyin = cand.comment or ""
-        local cand_vowel = pinyin:match("[%z\128-\255][\128-\191]*")
-
-        local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
-
-        -- 声调匹配校验
-        if target_tone == cand_tone then
-            yield(cand)
+        
+        if #pinyin == #raw_input then
+            local cand_vowel = pinyin:match("[%z\128-\255][\128-\191]*")
+    
+            local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
+    
+            -- 声调匹配校验
+            if target_tone == cand_tone then
+                yield(cand)
+            end
         end
+
     end
 end
 
