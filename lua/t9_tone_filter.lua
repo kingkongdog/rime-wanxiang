@@ -26,7 +26,7 @@ local function t9_tone_filter(input, env)
             yield(cand)
         else
             -- 声调匹配校验
-            if target_tone and target_tone == cand_tone then
+            if target_tone and tonumber(target_tone) == cand_tone then
                 yield(cand)
             end
         end
