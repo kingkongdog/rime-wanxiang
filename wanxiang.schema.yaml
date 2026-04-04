@@ -127,7 +127,7 @@ super_comment:                  # 超级注释模块，子项配置 true 开启�
   chaifen: "〔chaifen〕"         # 随意更换左右括号，比如"〔chaifen〕" 不加括号为无括号，chaifen占位不能动
   cand_type:
     user_phrase: ""
-    sentence: "∞"
+    sentence: ""
     phrase: ""
     table: ""
     user_table: ""
