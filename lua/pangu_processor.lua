@@ -274,6 +274,7 @@ function M.func(key, env)
     local is_space = (krepr == "space")
     local is_digit = krepr:match("^[0-9]$")
     local is_minus = (krepr == 'minus')
+    local is_underline = (krepr == 'underline')
     local is_comma = (krepr == "comma")
     local is_period = (krepr == "period")
     -- TODO 发现还有一些别的标点也会触发上屏，可能大概也许也需要处理
@@ -323,6 +324,10 @@ function M.func(key, env)
 
     if is_minus then
         commit_text = context.input .. '-'
+    end
+
+    if is_underline then
+        commit_text = context.input .. '_'
     end
 
     -- 当用户输入拼音后，如果没有对候选词进行过翻页，按下逗号直接上屏 preedit，加上逗号，如果对候选词进行过翻页，在第一页按逗号没有反应。这个逻辑跟 sogou 是一致的。
