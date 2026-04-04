@@ -120,18 +120,29 @@ local function t9_sorter(input)
         yield(Candidate("raw", l[1]._start, l[1]._end, "================ 高频单字 ================", ""))
     end
 
+    -- 高频单字去重
+    local map = {}
+
     -- 单字候选词不到 18 个
     local multi_count = first_single_index - 1
     if #l - multi_count < 18 then
         for i = first_single_index, #l do 
-            yield(l[i])
+            local cand = l[i]
+            if not map[cand.text] then
+                yield(cand)
+                map[cand.text] = true
+            end
         end
         return
     end
 
     -- 前 18 个单字候选词直接 yield
     for i = first_single_index, first_single_index + 17 do 
-        yield(l[i])
+        local cand = l[i]
+        if not map[cand.text] then
+            yield(cand)
+            map[cand.text] = true
+        end
     end
 
     -- 剩余的单字按拼音排序
