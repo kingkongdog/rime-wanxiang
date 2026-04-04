@@ -274,7 +274,7 @@ function M.func(key, env)
     local is_space = (krepr == "space")
     local is_digit = krepr:match("^[0-9]$")
     local is_minus = (krepr == 'minus')
-    local is_underline = (krepr == 'underline')
+    local is_underline = (keycode == 95)
     local is_comma = (krepr == "comma")
     local is_period = (krepr == "period")
     -- TODO 发现还有一些别的标点也会触发上屏，可能大概也许也需要处理
