@@ -46,7 +46,7 @@ function M.func(key, env)
 
     -- 正常按下 backspace 回到前一个 pinyin 的候选词列表。这里拦截一下，改成删除声调 1[0-4]
     if context.input:match("1[0-4]?$") and krepr == "BackSpace" then
-        context.pop_input(1)
+        context:pop_input(1)
         return 1
     end
 end
