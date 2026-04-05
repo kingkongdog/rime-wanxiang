@@ -11,8 +11,8 @@ schema:
     仓输入法:万象拼音九宫格方案
   dependencies:
     #- wanxiang_reverse      # 部件拆字，反查及辅码
-    - wanxiang_mixedcode    #混合编码
-    - wanxiang_english      #英文
+    # - wanxiang_mixedcode    #混合编码
+    # - wanxiang_english      #英文
 
 # 开关
 # reset: 默认状态。注释掉后，切换窗口时不会重置到默认状态。
