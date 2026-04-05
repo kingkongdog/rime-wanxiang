@@ -18,12 +18,11 @@ function M.init(env)
         
         if ctx.input:match("1[0-4]$") then
             ctx:pop_input(2)
-            
+
             local preedit = ctx:get_preedit().text
             if not preedit:match("%d") then
-                env.engine:commit_text(preedit:sub(1, -2))
+                env.engine:commit_text(preedit:gsub("‸$", ""))
                 ctx:clear()
-                return
             end
         end
     end)
