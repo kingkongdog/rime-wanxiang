@@ -15,16 +15,16 @@ function M.init(env)
         if not ctx.input:match("^%d+$") then
             return
         end
-
-        local preedit = ctx:get_preedit().text
-        if not preedit:match("%d") then
-            env.engine:commit_text(preedit:sub(1, -2))
-            ctx:clear()
-            return
-        end
-
+        
         if ctx.input:match("1[0-4]$") then
             ctx:pop_input(2)
+            
+            local preedit = ctx:get_preedit().text
+            if not preedit:match("%d") then
+                env.engine:commit_text(preedit:sub(1, -2))
+                ctx:clear()
+                return
+            end
         end
     end)
 end
