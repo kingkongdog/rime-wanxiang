@@ -326,6 +326,7 @@ function M.init(env)
     if wanxiang and wanxiang.get_input_method_type then
         env.input_type = wanxiang.get_input_method_type(env)
     end
+    env.is_t9 = env.input_type == "t9"
     env.chain = config:get_bool(ns .. "/chain")
     if env.chain == nil then env.chain = false end
 
