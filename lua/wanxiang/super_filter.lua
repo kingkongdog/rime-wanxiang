@@ -491,6 +491,14 @@ function M.init(env)
             end
         end
     end
+
+    env.is_t9 = false
+    if wanxiang.get_input_method_type then
+        local im_type = wanxiang.get_input_method_type(env)
+        if im_type == "t9" then
+            env.is_t9 = true
+        end
+    end
 end
 
 function M.fini(env)
@@ -503,6 +511,14 @@ function M.func(input, env)
     local ctx  = env and env.engine and env.engine.context or nil
     local code = ctx and (ctx.input or "") or ""
     local comp = ctx and ctx.composition or nil
+
+    local function getKey(cand)
+        if env.is_t9 then
+            return cand.text .. cand.comment
+        else
+            return cand.text
+        end
+    end
 
     -- 1. 空环境清理
     if not code or code == "" or (comp and comp:empty()) then
@@ -652,12 +668,13 @@ function M.func(input, env)
             should_skip = true 
         end
         
-        if not should_skip and suppress_set[cand.text .. cand.comment] then 
+        local candKey = getKey(cand)
+        if not should_skip and suppress_set[candKey] then 
             should_skip = true 
         end
 
         if not should_skip then
-            suppress_set[cand.text .. cand.comment] = true
+            suppress_set[candKey] = true
             
             local formatted_cand = format_and_autocap(cand, env)
             if not code_has_symbol and #env.page_cache < wrap_limit then
@@ -688,12 +705,13 @@ function M.func(input, env)
             should_skip = true 
         end
         
-        if not should_skip and suppress_set[cand.text .. cand.comment] then 
+        local candKey = getKey(cand)
+        if not should_skip and suppress_set[candKey] then 
             should_skip = true 
         end
 
         if not should_skip then
-            suppress_set[cand.text .. cand.comment] = true
+            suppress_set[candKey] = true
             yield(format_and_autocap(cand, env))
         end
     end
