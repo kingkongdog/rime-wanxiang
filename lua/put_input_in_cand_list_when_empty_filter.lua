@@ -15,6 +15,7 @@ function M.func(input, env)
         local code = env.engine.context.input
         -- 构造一个简单的候选词：类型为 "raw"，起始位置 0，结束位置为输入长度
         yield(Candidate("raw", 0, #code, code, ""))
+        yield(Candidate("raw", 0, #code, code, ""))
     end
 end
 
