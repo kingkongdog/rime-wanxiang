@@ -67,6 +67,7 @@ package_schema_pro() {
   # 2) 复制拆分表并重命名，同时拷贝 schema
   src="$ROOT_DIR/custom/${SCHEMA_NAME}_chaifen.txt"
   dst="$OUT_DIR/lua/data/chaifen.txt"
+  mkdir -p "$(dirname "$dst")"
   [[ -f "$src" ]] && cp "$src" "$dst"
 
   for f in \
