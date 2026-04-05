@@ -652,12 +652,12 @@ function M.func(input, env)
             should_skip = true 
         end
         
-        if not should_skip and suppress_set[text] then 
+        if not should_skip and suppress_set[cand.text .. cand.comment] then 
             should_skip = true 
         end
 
         if not should_skip then
-            suppress_set[text] = true
+            suppress_set[cand.text .. cand.comment] = true
             
             local formatted_cand = format_and_autocap(cand, env)
             if not code_has_symbol and #env.page_cache < wrap_limit then
@@ -688,12 +688,12 @@ function M.func(input, env)
             should_skip = true 
         end
         
-        if not should_skip and suppress_set[text] then 
+        if not should_skip and suppress_set[cand.text .. cand.comment] then 
             should_skip = true 
         end
 
         if not should_skip then
-            suppress_set[text] = true
+            suppress_set[cand.text .. cand.comment] = true
             yield(format_and_autocap(cand, env))
         end
     end
