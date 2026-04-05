@@ -334,7 +334,7 @@ function M.init(env)
     else local esc = s_gsub(delim, "[%-%.%+%[%]%(%)%$%^%%%?%*]", "%%%1"); env.split_pattern = "([^" .. esc .. "]+)" end
 
     env.rules = {}
-    local tasks = {} 
+    local tasks = {}
 
     local function resolve_path(relative)
         if not relative then return nil end
@@ -652,6 +652,19 @@ function M.func(input, env)
     local lazy_cands = {}
     local top_buffer = {}
 
+    local function yield_cand(cand)
+        local key = cand.text
+        if env.is_t9 then
+            key = key .. (cand.comment or "")
+        end
+
+        if not global_yielded[key] then
+            global_yielded[key] = true
+            yield(cand)
+            yield_count = yield_count + 1 
+        end
+    end
+
     -- 第一步：提前提取简码候选，分配阵营
     for _, t in ipairs(rules) do
         if t.mode == "abbrev" and env.input_type ~= "pinyin" then
@@ -716,24 +729,11 @@ function M.func(input, env)
                 local ac = table.remove(always_cands, 1)
                 local ac_processed = process_rules(ac.cand)
                 for _, apc in ipairs(ac_processed) do
-                    if not global_yielded[apc.text] then
-                        global_yielded[apc.text] = true
-                        yield(apc)
-                        yield_count = yield_count + 1 
-                    end
+                    yield_cand(apc)
                 end
             end
 
-            local key = pc.text
-            if env.is_t9 then
-                key = key .. (pc.comment or "")
-            end
-
-            if not global_yielded[key] then
-                global_yielded[key] = true
-                yield(pc)
-                yield_count = yield_count + 1
-            end
+            yield_cand(pc)
         end
     end
 
@@ -750,16 +750,7 @@ function M.func(input, env)
                 local processed_cands = process_rules(cand)
                 for _, pc in ipairs(processed_cands) do
                     
-                    local key = pc.text
-                    if env.is_t9 then
-                        key = key .. (pc.comment or "")
-                    end
-                    
-                    if not global_yielded[key] then
-                        global_yielded[key] = true
-                        yield(pc)
-                        yield_count = yield_count + 1
-                    end
+                    yield_cand(pc)
                 end
             end
             
@@ -768,11 +759,7 @@ function M.func(input, env)
                 local ac = table.remove(always_cands, 1)
                 local ac_processed = process_rules(ac.cand)
                 for _, apc in ipairs(ac_processed) do
-                    if not global_yielded[apc.text] then
-                        global_yielded[apc.text] = true
-                        yield(apc)
-                        yield_count = yield_count + 1
-                    end
+                    yield_cand(apc)
                 end
             end
             
@@ -780,11 +767,7 @@ function M.func(input, env)
             for _, lc in ipairs(lazy_cands) do
                 local lc_processed = process_rules(lc)
                 for _, lpc in ipairs(lc_processed) do
-                    if not global_yielded[lpc.text] then
-                        global_yielded[lpc.text] = true
-                        yield(lpc)
-                        yield_count = yield_count + 1
-                    end
+                    yield_cand(lpc)
                 end
             end
             lazy_cands = {}
@@ -822,11 +805,7 @@ function M.func(input, env)
         local ac = table.remove(always_cands, 1)
         local ac_processed = process_rules(ac.cand)
         for _, apc in ipairs(ac_processed) do
-            if not global_yielded[apc.text] then
-                global_yielded[apc.text] = true
-                yield(apc)
-                yield_count = yield_count + 1 
-            end
+            yield_cand(apc)
         end
     end
 end
