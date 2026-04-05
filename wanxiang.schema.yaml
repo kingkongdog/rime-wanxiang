@@ -117,14 +117,13 @@ grammar:
   collocation_max_length: 8
   collocation_min_length: 2
   collocation_penalty: -10
-  non_collocation_penalty: -5
+  non_collocation_penalty: 0
   weak_collocation_penalty: -35
   rear_penalty: -12
 
 super_comment:                  # 超级注释模块，子项配置 true 开启，false 关闭
   candidate_length: 2           # 候选词辅助码提醒的生效长度，0为关闭  但同时清空其它，应当使用上面开关来处理
   corrector_type: "〔comment〕"  # 随意更换左右括号，比如"〔comment〕" 不加括号为无括号，comment占位不能动
-  chaifen: "〔chaifen〕"         # 随意更换左右括号，比如"〔chaifen〕" 不加括号为无括号，chaifen占位不能动
   cand_type:
     user_phrase: ""
     sentence: ""
