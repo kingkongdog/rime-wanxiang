@@ -722,8 +722,14 @@ function M.func(input, env)
                     end
                 end
             end
-            if not global_yielded[pc.text] then
-                global_yielded[pc.text] = true
+
+            local key = pc.text
+            if env.is_t9 then
+                key = key .. (pc.comment or "")
+            end
+
+            if not global_yielded[key] then
+                global_yielded[key] = true
                 yield(pc)
                 yield_count = yield_count + 1
             end
@@ -742,8 +748,14 @@ function M.func(input, env)
             for _, cand in ipairs(top_buffer) do
                 local processed_cands = process_rules(cand)
                 for _, pc in ipairs(processed_cands) do
-                    if not global_yielded[pc.text] then
-                        global_yielded[pc.text] = true
+                    
+                    local key = pc.text
+                    if env.is_t9 then
+                        key = key .. (pc.comment or "")
+                    end
+                    
+                    if not global_yielded[key] then
+                        global_yielded[key] = true
                         yield(pc)
                         yield_count = yield_count + 1
                     end
