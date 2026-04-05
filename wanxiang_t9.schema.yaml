@@ -99,7 +99,7 @@ engine:
     - lua_filter@*wanxiang.super_filter                      #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
     - lua_filter@*wanxiang.super_sequence*F                  #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
     - lua_filter@*wanxiang.user_predict*F                    #用于输入编码后的上下文调频
-    - lua_filter@*t9_input_length_filter            # input 以 1 结尾时，要求候选词的拼音长度为 input.length - 1
+    # - lua_filter@*t9_input_length_filter            # input 以 1 结尾时，要求候选词的拼音长度为 input.length - 1
     - lua_filter@*t9_tone_filter                    # 元音声调筛选
     # - uniquifier                                    # 去重
     - lua_filter@*t9_uniquifier                   # uniquifier 在去重时，会把 肖(xiāo) 和 肖(xiǎo) 去重，所以要改成自定义的去重
