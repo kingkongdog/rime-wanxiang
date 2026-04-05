@@ -9,7 +9,7 @@ local M = {}
 function M.init(env)
     env.select_notifier = env.engine.context.select_notifier:connect(function(ctx)
         if ctx.input:match("1[0-4]$") then
-            ctx.pop_input(2)
+            ctx:pop_input(2)
         end
     end)
 end
