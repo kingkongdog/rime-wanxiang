@@ -32,4 +32,22 @@ function M.fini(env)
    env.select_notifier:disconnect()
 end
 
+function M.func(key, env)
+    local context = env.engine.context
+    local krepr = key:repr()
+
+    if not context:is_composing() then
+        return 2
+    end
+
+    if not context.input:match("^%d+$") then
+        return 2
+    end
+
+    if context.input:match("1[0-4]?$") and krepr == "BackSpace" then
+        context.pop_input(1)
+        return 1
+    end
+end
+
 return M
