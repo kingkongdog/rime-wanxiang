@@ -37,9 +37,9 @@ local function t9_tone_filter(input, env)
     end
 
     -- 获取最长的候选词拼音长度
-    local maxLength = 0
-    local cands = {}
     if target_tone_prefix_0 then 
+        local maxLength = 0
+        local cands = {}
         for cand in input:iter() do
             table.insert(cands, cand)
             cand.comment = cand.comment:gsub("%s+", "")
