@@ -44,10 +44,9 @@ local function t9_tone_filter(input, env)
         local maxLength = 0
         local cands = {}
         for cand in input:iter() do
-            table.insert(cands, cand)
             local pinyin = cand.comment:gsub("%s+", "")
             local length = utf8.len(pinyin)
-            cand.pinyin_length = length
+            table.insert(cands, {cand, length})
             if length > maxLength then
                 maxLength = length
             end
@@ -55,8 +54,8 @@ local function t9_tone_filter(input, env)
 
         for i, cand in ipairs(cands) do
             -- 计算 pinyin 长度不能用 #pinyin，否则带声调的元音的长度计算错误
-            if cand.pinyin_length == maxLength then
-                yield_cand_by_tone(cand, target_tone)
+            if cand[1] == maxLength then
+                yield_cand_by_tone(cand[0], target_tone)
             end
         end
     end
