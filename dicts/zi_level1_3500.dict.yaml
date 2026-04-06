@@ -3,6 +3,7 @@
 #https://github.com/amzxyz/RIME-LMDG
 ---
 name: zi
+desc: 通用规范汉字表一级 3500 字
 version: "LTS"
 sort: by_weight
 ...
