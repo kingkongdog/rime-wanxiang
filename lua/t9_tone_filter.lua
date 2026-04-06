@@ -31,7 +31,8 @@ local function t9_tone_filter(input, env)
     local maxLength = 0
     if target_tone_prefix_0 then 
         for cand in input:iter() do
-            local length = #cand.comment
+            local pinyin = cand.comment:gsub("%s+", "")
+            local length = utf8.len(pinyin)
             if length > maxLength then
                 maxLength = length
             end
