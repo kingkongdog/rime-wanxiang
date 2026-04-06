@@ -17,7 +17,7 @@ local function t9_tone_filter(input, env)
     local function yield_cand_by_tone(cand, target_tone)
         local cand_vowel = cand.comment:match("[%z\128-\255][\128-\191]*")
         if not cand_vowel then
-            cand_vowel = cand.comment:match("([aoeiu])")
+            cand_vowel = cand.comment:match("([aoeiu])")    -- 注意 ü 在上面匹配到
         end
         local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
         -- 声调匹配校验
