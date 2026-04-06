@@ -44,7 +44,7 @@ local function t9_tone_filter(input, env)
         local pinyin = cand.comment:gsub("%s+", "")
         
         -- 计算 pinyin 长度不能用 #pinyin，否则带声调的元音的长度计算错误
-        if (target_tone_prefix_0 and utf8.len(pinyin) == #raw_input - 2) or target_tone_prefix_1 then
+        if (target_tone_prefix_0 and utf8.len(pinyin) == maxLength) or target_tone_prefix_1 then
 
             local cand_vowel = pinyin:match("[aeiouüāáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜ]")
     
