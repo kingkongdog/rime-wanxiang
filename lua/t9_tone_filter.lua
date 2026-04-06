@@ -1,4 +1,6 @@
 -- input 末尾通过 11 12 13 14 10 表示声调
+-- input 末尾通过 01 02 03 04 00 表示声调, 同时筛选拼音最长的候选词
+
 local function t9_tone_filter(input, env)
     local context = env.engine.context
     local raw_input = context.input
@@ -13,7 +15,9 @@ local function t9_tone_filter(input, env)
     }
 
     -- 1. 提取约束条件
-    local target_tone = raw_input:match("1([0-4])$")
+    local target_tone_prefix_0 = raw_input:match("0([0-4])$")
+    local target_tone_prefix_1 = raw_input:match("1([0-4])$")
+    local target_tone = target_tone_prefix_0 or target_tone_prefix_1
     target_tone = target_tone and tonumber(target_tone)
 
     -- 如果没有输入筛选符，直接放行
@@ -23,12 +27,24 @@ local function t9_tone_filter(input, env)
         end
     end
 
-    -- 2. 开始过滤候选词
+    -- 获取最长的候选词拼音长度
+    local maxLength = 0
+    if target_tone_prefix_0 then 
+        for cand in input:iter() do
+            local length = #cand.comment
+            if length > maxLength then
+                maxLength = length
+            end
+        end
+    end
+
+    -- 开始过滤候选词
     for cand in input:iter() do
-        local pinyin = (cand.comment or ""):gsub("%s+", "")
+        local pinyin = cand.comment:gsub("%s+", "")
         
         -- 计算 pinyin 长度不能用 #pinyin，否则带声调的元音的长度计算错误
-        -- if utf8.len(pinyin) == #raw_input - 2 then
+        if (target_tone_prefix_0 and utf8.len(pinyin) == #raw_input - 2) or target_tone_prefix_1 then
+
             local cand_vowel = pinyin:match("[%z\128-\255][\128-\191]*")
     
             local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
@@ -37,7 +53,7 @@ local function t9_tone_filter(input, env)
             if target_tone == cand_tone then
                 yield(cand)
             end
-        -- end
+        end
     end
 end
 
