@@ -14,6 +14,15 @@ local function t9_tone_filter(input, env)
         ["ü"] = 0, ["ǖ"] = 1, ["ǘ"] = 2, ["ǚ"] = 3, ["ǜ"] = 4
     }
 
+    local function yield_cand_by_tone(cand, target_tone)
+        local cand_vowel = cand.comment:match("[aeiouüāáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜ]")
+        local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
+        -- 声调匹配校验
+        if target_tone == cand_tone then
+            yield(cand)
+        end
+    end
+
     -- 1. 提取约束条件
     local target_tone_prefix_0 = raw_input:match("0([0-4])$")
     local target_tone_prefix_1 = raw_input:match("1([0-4])$")
@@ -29,31 +38,28 @@ local function t9_tone_filter(input, env)
 
     -- 获取最长的候选词拼音长度
     local maxLength = 0
+    local cands = {}
     if target_tone_prefix_0 then 
         for cand in input:iter() do
-            local pinyin = cand.comment:gsub("%s+", "")
-            local length = utf8.len(pinyin)
+            table.insert(cands, cand)
+            cand.comment = cand.comment:gsub("%s+", "")
+            local length = utf8.len(cand.comment)
             if length > maxLength then
                 maxLength = length
             end
         end
+
+        for i, cand in ipairs(cands) do
+            -- 计算 pinyin 长度不能用 #pinyin，否则带声调的元音的长度计算错误
+            if utf8.len(cand.comment) == maxLength then
+                yield_cand_by_tone(cand, target_tone)
+            end
+        end
     end
 
-    -- 开始过滤候选词
-    for cand in input:iter() do
-        local pinyin = cand.comment:gsub("%s+", "")
-        
-        -- 计算 pinyin 长度不能用 #pinyin，否则带声调的元音的长度计算错误
-        if (target_tone_prefix_0 and utf8.len(pinyin) == maxLength) or target_tone_prefix_1 then
-
-            local cand_vowel = pinyin:match("[aeiouüāáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜ]")
-    
-            local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
-    
-            -- 声调匹配校验
-            if target_tone == cand_tone then
-                yield(cand)
-            end
+    if target_tone_prefix_1 then
+        for cand in input:iter() do
+            yield_cand_by_tone(cand, target_tone)
         end
     end
 end
