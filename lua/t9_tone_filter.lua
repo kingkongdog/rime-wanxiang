@@ -15,13 +15,12 @@ local function t9_tone_filter(input, env)
     }
 
     local function yield_cand_by_tone(cand, target_tone)
-        yield(cand)
-        -- local cand_vowel = cand.comment:match("[aeiouüāáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜ]")
-        -- local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
-        -- -- 声调匹配校验
-        -- if target_tone == cand_tone then
-        --     yield(cand)
-        -- end
+        local cand_vowel = cand.comment:match("[aeiouüāáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜ]")
+        local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
+        -- 声调匹配校验
+        if target_tone == cand_tone then
+            yield(cand)
+        end
     end
 
     -- 1. 提取约束条件
