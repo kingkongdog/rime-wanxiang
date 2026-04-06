@@ -54,8 +54,8 @@ local function t9_tone_filter(input, env)
 
         for i, cand in ipairs(cands) do
             -- 计算 pinyin 长度不能用 #pinyin，否则带声调的元音的长度计算错误
-            if cand[1] == maxLength then
-                yield_cand_by_tone(cand[0], target_tone)
+            if cand[2] == maxLength then
+                yield_cand_by_tone(cand[1], target_tone)
             end
         end
     end
