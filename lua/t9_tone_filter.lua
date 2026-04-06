@@ -36,23 +36,20 @@ local function t9_tone_filter(input, env)
         end
     end
 
-    local cands = {}
-    for cand in input:iter() do
-        cand.comment = (cand.comment or ""):gsub("%s+", "")
-        table.insert(cands, cand)
-    end
-
     -- 获取最长的候选词拼音长度
     if target_tone_prefix_0 then 
         local maxLength = 0
-        for _, cand in ipairs(cands) do
+        local cands = {}
+        for cand in input:iter() do
+            table.insert(cands, cand)
+            cand.comment = cand.comment:gsub("%s+", "")
             local length = utf8.len(cand.comment)
             if length > maxLength then
                 maxLength = length
             end
         end
 
-        for _, cand in ipairs(cands) do
+        for i, cand in ipairs(cands) do
             -- 计算 pinyin 长度不能用 #pinyin，否则带声调的元音的长度计算错误
             if utf8.len(cand.comment) == maxLength then
                 yield_cand_by_tone(cand, target_tone)
@@ -61,7 +58,7 @@ local function t9_tone_filter(input, env)
     end
 
     if target_tone_prefix_1 then
-        for _, cand in ipairs(cands) do
+        for cand in input:iter() do
             yield_cand_by_tone(cand, target_tone)
         end
     end
