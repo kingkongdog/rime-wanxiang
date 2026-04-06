@@ -496,7 +496,7 @@ speller:
     # - derive/^([NL])VE$/$1UE/
     # - derive/^([JQXY])U/$1V/
     # - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
-    - abbrev/^([a-z])a$/$1/
+    # - abbrev/^([a-z])a$/$1/
     - derive/^([nl])ve$/$1ue/
     - derive/^([jqxy])u/$1v/
     - derive/nong/nog/
