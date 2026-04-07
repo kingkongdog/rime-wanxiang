@@ -3,7 +3,7 @@
 #https://github.com/amzxyz/RIME-LMDG
 ---
 name: zi_level1_ext
-desc: 通用规范汉字表一级 3500 字之外的常用字
+desc: 通用规范汉字表一级 3500 字之外的常用字。遇到打不出来的字，到 zi.dict.yaml 里去找，然后拷贝到这里。
 version: "LTS"
 sort: by_weight
 ...
