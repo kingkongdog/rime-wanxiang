@@ -1,0 +1,11 @@
+# Rime dictionary
+# encoding: utf-8
+#https://github.com/amzxyz/RIME-LMDG
+---
+name: zi_level1_ext
+desc: 通用规范汉字表一级 3500 字之外的常用字
+version: "LTS"
+sort: by_weight
+...
+嘞  lei 1
+囧  jiǒng 1

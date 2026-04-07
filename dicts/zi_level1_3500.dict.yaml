@@ -2,7 +2,7 @@
 # encoding: utf-8
 #https://github.com/amzxyz/RIME-LMDG
 ---
-name: zi
+name: zi_level1
 desc: 通用规范汉字表一级 3500 字
 version: "LTS"
 sort: by_weight
