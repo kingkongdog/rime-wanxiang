@@ -1,0 +1,61 @@
+name: 定时更新搜狗网络流行新词
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-dict:
+    runs-on: macos-latest
+
+    steps:
+      # 1. 检出源码分支到 'main_repo' 目录
+      - name: Checkout Source Branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main_repo
+
+      # 2. 检出词库分支到 'dicts_repo' 目录
+      - name: Checkout Dicts Branch
+        uses: actions/checkout@v4
+        with:
+          ref: dicts
+          path: dicts_repo
+
+      # 3. 执行转换逻辑
+      - name: Generate and Move Dictionary
+        run: |
+          # 进入源码目录
+          cd main_repo
+          
+          # 下载原始文件
+          curl -L "http://pinyin.sogou.com/d/dict/download_cell.php?id=4&name=%E7%BD%91%E7%BB%9C%E6%B5%81%E8%A1%8C%E6%96%B0%E8%AF%8D&f=detail" -o xinci.scel
+          
+          # 赋予执行权限并转换
+          chmod +x ./ImeWlConverterCmd
+          ./ImeWlConverterCmd -i scel -o rime_with_tone_by_ms_pinyin -O wangluoliuxing.dict.yaml xinci.scel
+          ./ImeWlConverterCmd -i scel -o rime_with_tone_include_english_by_ms_pinyin -O wangluoliuxing_en.dict.yaml xinci.scel
+          
+          # 将生成的 yaml 移动到 dicts_repo 目录
+          mv wangluoliuxing.dict.yaml ../dicts_repo/
+          mv wangluoliuxing_en.dict.yaml ../dicts_repo/
+
+      # 4. 在 dicts 目录完成推送
+      - name: Commit and Push to Dicts Branch
+        run: |
+          cd dicts_repo
+          
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add wangluoliuxing.dict.yaml wangluoliuxing_en.dict.yaml
+          
+          # 检查变化
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto update dictionaries: $(date +'%Y-%m-%d')"
+            git push origin dicts
+          fi
