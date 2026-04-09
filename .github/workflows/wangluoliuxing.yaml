@@ -1,4 +1,4 @@
-name: Update Rime Dict from External Tool
+name: 定时更新搜狗网络流行新词
 
 on:
   schedule:
@@ -18,7 +18,7 @@ jobs:
           path: rime_wanxiang
 
       # 2. 检出外部工具仓库的 main 分支
-      - name: Checkout External Converter Tool
+      - name: Checkout ImeWlConverterCmd
         uses: actions/checkout@v4
         with:
           repository: kingkongdog/ImeWlConverterCmd
