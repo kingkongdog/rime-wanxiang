@@ -11,4 +11,5 @@ version: "lts"
 sort: by_weight
 import_tables:
   - dicts/cn&en     #混合编码词库
+  - dicts/wangluoliuxing_en
 ...
