@@ -1,4 +1,4 @@
-name: 定时更新搜狗网络流行新词
+name: Update Rime Dict from External Tool
 
 on:
   schedule:
@@ -10,52 +10,58 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      # 1. 检出源码分支到 'main_repo' 目录
-      - name: Checkout Source Branch
+      # 1. 检出目标仓库的 wanxiang 分支 (当前仓库)
+      - name: Checkout Target Branch
         uses: actions/checkout@v4
         with:
-          ref: main
-          path: main_repo
+          ref: wanxiang
+          path: rime_wanxiang
 
-      # 2. 检出词库分支到 'dicts_repo' 目录
-      - name: Checkout Dicts Branch
+      # 2. 检出外部工具仓库的 main 分支
+      - name: Checkout External Converter Tool
         uses: actions/checkout@v4
         with:
-          ref: dicts
-          path: dicts_repo
+          repository: kingkongdog/ImeWlConverterCmd
+          ref: main
+          path: tool_repo
 
       # 3. 执行转换逻辑
       - name: Generate and Move Dictionary
         run: |
-          # 进入源码目录
-          cd main_repo
+          # 确保目标目录存在
+          mkdir -p rime_wanxiang/dicts
           
-          # 下载原始文件
+          # 进入工具目录
+          cd tool_repo
+          
+          # 下载原始搜狗词库文件
           curl -L "http://pinyin.sogou.com/d/dict/download_cell.php?id=4&name=%E7%BD%91%E7%BB%9C%E6%B5%81%E8%A1%8C%E6%96%B0%E8%AF%8D&f=detail" -o xinci.scel
           
-          # 赋予执行权限并转换
+          # 确保二进制文件有执行权限（假设它在仓库根目录）
           chmod +x ./ImeWlConverterCmd
+          
+          # 执行转换命令
           ./ImeWlConverterCmd -i scel -o rime_with_tone_by_ms_pinyin -O wangluoliuxing.dict.yaml xinci.scel
           ./ImeWlConverterCmd -i scel -o rime_with_tone_include_english_by_ms_pinyin -O wangluoliuxing_en.dict.yaml xinci.scel
           
-          # 将生成的 yaml 移动到 dicts_repo 目录
-          mv wangluoliuxing.dict.yaml ../dicts_repo/
-          mv wangluoliuxing_en.dict.yaml ../dicts_repo/
+          # 移动生成的 yaml 文件到 rime_wanxiang 的 dicts 目录 (覆盖已有文件)
+          mv -f wangluoliuxing.dict.yaml ../rime_wanxiang/dicts/
+          mv -f wangluoliuxing_en.dict.yaml ../rime_wanxiang/dicts/
 
-      # 4. 在 dicts 目录完成推送
-      - name: Commit and Push to Dicts Branch
+      # 4. 在 rime_wanxiang 目录完成推送
+      - name: Commit and Push to wanxiang Branch
         run: |
-          cd dicts_repo
+          cd rime_wanxiang
           
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          git add wangluoliuxing.dict.yaml wangluoliuxing_en.dict.yaml
+          # 添加 dicts 目录下的新文件
+          git add dicts/wangluoliuxing.dict.yaml dicts/wangluoliuxing_en.dict.yaml
           
-          # 检查变化
           if git diff --staged --quiet; then
-            echo "No changes to commit."
+            echo "No changes in dictionaries today."
           else
-            git commit -m "Auto update dictionaries: $(date +'%Y-%m-%d')"
-            git push origin dicts
+            git commit -m "Auto update dicts: $(date +'%Y-%m-%d')"
+            git push origin wanxiang
           fi
