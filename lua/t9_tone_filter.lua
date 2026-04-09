@@ -27,8 +27,8 @@ local function t9_tone_filter(input, env)
     end
 
     -- 1. 提取约束条件
-    local target_tone_prefix_0 = raw_input:match("0([0-4])$")
-    local target_tone_prefix_1 = raw_input:match("1([0-4])$")
+    local target_tone_prefix_0 = raw_input:match("[2-9]+0([0-4])$")
+    local target_tone_prefix_1 = raw_input:match("[2-9]+1([0-4])$")
     local target_tone = target_tone_prefix_0 or target_tone_prefix_1
     target_tone = target_tone and tonumber(target_tone)
 
