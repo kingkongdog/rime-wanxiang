@@ -47,7 +47,7 @@ local function t9_tone_filter(input, env)
             local pinyin = cand.comment:gsub("%s+", "")
             local length = utf8.len(pinyin)
             table.insert(cands, {cand, length})
-            if length > maxLength and length <= #raw_input - 2 then  -- 有时候候选词长度会大于 input 长度
+            if length > maxLength and length <= #raw_input - 2 then  -- 有时候候选词长度会大于 input 长度，比如想输入囧， 按下 54664
                 maxLength = length
             end
         end
