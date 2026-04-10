@@ -3,12 +3,12 @@ import sys
 # 建议从 GitHub 搜索 "通用规范汉字表3500" 获取完整字符串
 # https://ty8.ustb.edu.cn/pub/yywzbgs/docs/2019-12/3257a7350ff544449f4d26577b48d292.pdf
 with open("3500.txt", 'r', encoding='utf-8') as f:
-    COMMON_3500 = f.read()
+    GRADE1_3500 = f.read()
 
 def is_modern_common(char):
     if len(char) != 1: return True # 保留词组
     # 检查是否在 3500 字表内
-    return char in COMMON_3500
+    return char in GRADE1_3500
 
 with open('zi.dict.yaml', 'r', encoding='utf-8') as f, \
      open('zi_level1_3500.dict.yaml', 'w', encoding='utf-8') as out:
