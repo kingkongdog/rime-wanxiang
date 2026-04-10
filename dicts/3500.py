@@ -1,4 +1,5 @@
 import sys
+from datetime import datetime
 
 # 建议从 GitHub 搜索 "通用规范汉字表3500" 获取完整字符串
 # https://ty8.ustb.edu.cn/pub/yywzbgs/docs/2019-12/3257a7350ff544449f4d26577b48d292.pdf
@@ -16,10 +17,16 @@ def is_modern_common(char):
 
 with open('zi.dict.yaml', 'r', encoding='utf-8') as f, \
      open('zi_level1_3500.dict.yaml', 'w', encoding='utf-8') as out:
+    out.write("---\n")
+    out.write("name: zi_level1_3500\n")
+    out.write("desc: 通用规范汉字表一级 3500 字 + 二级常用字 + 其他常用字\n")
+    out.write("version: " + datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
+    out.write("sort: by_weight\n")
+    out.write("...\n")
+
     header_done = False
     for line in f:
         if not header_done:
-            out.write(line)
             if line.strip() == "...": header_done = True
             continue
         
