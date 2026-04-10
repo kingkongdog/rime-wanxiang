@@ -5,10 +5,12 @@ import sys
 with open("3500.txt", 'r', encoding='utf-8') as f:
     GRADE1_3500 = f.read()
 
+GRADE2_COMMON = "嘞囧喵"
+
 def is_modern_common(char):
     if len(char) != 1: return True # 保留词组
     # 检查是否在 3500 字表内
-    return char in GRADE1_3500
+    return char in (GRADE1_3500 + GRADE2_COMMON)
 
 with open('zi.dict.yaml', 'r', encoding='utf-8') as f, \
      open('zi_level1_3500.dict.yaml', 'w', encoding='utf-8') as out:
