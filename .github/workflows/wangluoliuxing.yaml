@@ -48,6 +48,23 @@ jobs:
           mv -f wangluoliuxing.dict.yaml ../rime_wanxiang/dicts/
           mv -f wangluoliuxing_en.dict.yaml ../rime_wanxiang/dicts/
 
+      - name: Bump version
+        run: |
+          cd rime_wanxiang
+
+          VERSION_FILE="wanxiang_version"
+
+          version=$(cat $VERSION_FILE)
+
+          if [[ "$version" =~ ^[0-9]+$ ]]; then
+            new_version=$((version + 1))
+            echo $new_version > $VERSION_FILE
+            echo "Bumped: $version -> $new_version"
+          else
+            echo "Invalid version format"
+            exit 1
+          fi
+
       # 4. 在 rime_wanxiang 目录完成推送
       - name: Commit and Push to wanxiang Branch
         run: |
@@ -57,7 +74,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           
           # 添加 dicts 目录下的新文件
-          git add dicts/wangluoliuxing.dict.yaml dicts/wangluoliuxing_en.dict.yaml
+          git add dicts/wangluoliuxing.dict.yaml dicts/wangluoliuxing_en.dict.yaml wanxiang_version
           
           if git diff --staged --quiet; then
             echo "No changes in dictionaries today."
