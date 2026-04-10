@@ -2,7 +2,8 @@ name: 定时更新搜狗网络流行新词
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    # UTC 16:00 = 北京时间 00:00
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 jobs:
