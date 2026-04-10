@@ -48,6 +48,7 @@ jobs:
           mv -f wangluoliuxing.dict.yaml ../rime_wanxiang/dicts/
           mv -f wangluoliuxing_en.dict.yaml ../rime_wanxiang/dicts/
 
+      # 在 github action 里使用默认的 token 进行 push 后，不会触发 bump-version.yml 执行，所以在这里手动改一下。
       - name: Bump version
         run: |
           cd rime_wanxiang
