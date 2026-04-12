@@ -643,12 +643,14 @@ function P.func(key, env)
                 end
             end
             if d > page_size or not is_valid_candidate then
+                -- 在预测状态下，如果数字不对应有效候选，应该回到 RIME 默认处理
+                -- 而不是强行上屏数字，这样可以避免预测候选数量不足时数字被直接上屏的问题
                 ctx:clear()
                 if reset_memory_chain then
-                    reset_memory_chain(env, "非选词数字打断联想并上屏")
+                    reset_memory_chain(env, "非选词数字打断联想")
                 end
-                env.engine:commit_text(digit)
-                return 1
+                -- 改为 return 2，让 RIME 继续处理，而不是直接上屏数字
+                return 2
             else
                 return 2
             end
