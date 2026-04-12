@@ -499,6 +499,14 @@ function P.init(env)
         local input = ctx.input
         if not input then return end
         
+        -- 防止占位符在鼠标点击别处时被作为普通文本提交
+        -- 当只有占位符时，直接清除 composition
+        if is_predicting and s_match(input, "^[›]+$") then
+            ctx:clear()
+            reset_memory_chain(env, "占位符被鼠标操作触发清空")
+            return
+        end
+        
         if input == "/outpredict" then
             ctx:clear()
             local sync_path = rime_api.get_user_data_dir() .. "/predict_export.txt"
