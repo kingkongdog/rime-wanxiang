@@ -327,7 +327,6 @@ bash rime-install amzxyz/rime_wanxiang@wanxiang-shouyou-fuzhu:plum/dicts
 | --- | --- | --- |
 | `renming.dict.yaml` | **人名词库，按需下载，pro使用万象工具箱刷新编码即可** | 下载后复制内容，追加到根目录的 `wanxiang.dict.yaml` 中。 |
 | `wuzhong.dict.yaml` | **物种词库，含动物植物分类等词条，按需下载，pro使用万象工具箱刷新编码即可** | 下载后复制内容，追加到根目录的 `wanxiang.dict.yaml` 中。 |
-| `tips_user.txt` | **Tips 翻译扩展数据** | 下载后放入 `lua/data` 目录中，重新部署即可生效。 |
 
 #### 9. 📂 数据管理
 | 文件名 | 用途 | 注意事项 |
@@ -340,7 +339,6 @@ bash rime-install amzxyz/rime_wanxiang@wanxiang-shouyou-fuzhu:plum/dicts
 | `lua/data/*Phrases.txt` | **OpenCC简繁转换词组数据库** | 数据库位于lua/replacer.userdb中。HK香港TW台湾 |
 | `lua/data/*Characters.txt` | **OpenCC简繁转换单字数据库** | 数据库位于lua/replacer.userdb中。ST简繁、TS繁简 |
 | `tips_show.txt` | **Tips 自带数据** | 数据库位于tips.userdb |
-| `tips_user.txt` | **Tips 用户数据** | 空文件交给用户自定义，数据库位于lua/tips.userdb  |
 | `input_statistics.lua` | **输入统计lua创建的实时数据** | 数据库位于lua/stats.userdb |
 | `super_sequence.lua` | **手动排序lua创建的实时数据** | 数据库位于lua/sequence.userdb |
 
@@ -452,14 +450,14 @@ wanxiang_lookup:
 
 ⚙️**自学习双模式输入预测** 支持上屏后弹出预测候选或者输入上文后继续输入下文匹配到数据则置顶，两种模式相辅相成，开关中打开预测即可，最好是在手机上两种模式全开，在PC上面只开上下文调频具体详见：[user_predict.lua：Rime 智能联想与语境记忆引擎](https://github.com/amzxyz/rime_wanxiang/wiki/user_predict.lua%EF%BC%9ARime-%E6%99%BA%E8%83%BD%E8%81%94%E6%83%B3%E4%B8%8E%E8%AF%AD%E5%A2%83%E8%AE%B0%E5%BF%86%E5%BC%95%E6%93%8E)
 
-⚙️**14/18键设定：**  在万象的的各主方案的custom示例文件中我们已经预设了相关*18jian*、*14jian*的转写段落，位于文件末尾，他的作用就是将方案原来的编码转换成键盘能打出来的字母或者数字，最终相呼应自然就能打出字了，万象默认转换成大写，因此需要键盘发送的也是大写：
+⚙️**14/18键设定：**  在万象的的各主方案的custom示例文件中我们已经预设了相关*18jian*、*14jian*的转写段落，位于wanxiang_algebra文件末尾，他的作用就是将方案原来的编码转换成键盘能打出来的字母或者数字，最终相呼应自然就能打出字了，当然这一切都可以自定义在custom文件中归你管理：
 ```
 18jian:
   __append:
-    - xlit/qwertyuiopasdfghjklzxcvbnm/QWWRRYUIIPASSFFHJJLZXXVBBM
+    - xlit/qwertyuiopasdfghjklzxcvbnm/qwwrryuiipassffhjjlzxxvbbm
 14jian:
   __append:
-    - xlit/qwertyuiopasdfghjklzxcvbnm/QQEETTUUOOAADDGGJJLZZCCBBM
+    - xlit/qwertyuiopasdfghjklzxcvbnm/qqeettuuooaaddggjjlzzccbbm
 ```
 
 开启方式，就是将相应的段落引用到custom头部的拼写运算后面
@@ -468,9 +466,9 @@ wanxiang_lookup:
 patch:
   speller/algebra:
     __patch:
-      #- 模糊音
+      #- wanxiang_algebra:/模糊音
       - wanxiang_algebra:/base/全拼
-      - 18jian    #引用到这里即可，⚠️注意，这一行必须是最后一行，不管前面有什么
+      - wanxiang_algebra:/18jian    #引用到这里即可，⚠️注意，这一行必须是最后一行，不管前面有什么
 ```
 
 ⚙️**英文方案：**  
@@ -633,7 +631,7 @@ datetime_formats:
 
 ⚙️**输入模式切换Lua：** 使用shift+space来进行中文候选词、英文候选词、混合候选词之间切换，默认为混合编码输入模式。这种是通过单一方案过滤得到的，当切换到英文模式的时候也可以用来输入英文整句。你也可以单独启用英文方案，可自定义快捷键在英文方案与中文方案之间切换，也是可以的。  
 
-⚙️**辅助码提示Lua（仅PRO）：** 任意长度候选词的辅助码提示能力，默认开启1个字的辅助码，可以在方案文件中定义更长的长度。Ctrl+a可以实时在开启辅助码提示、开启声调全拼提示、关闭注释 三个状态循环，Ctrl+c开启拆分辅助提示，优先级高于普通辅助提示；
+⚙️**超级注释Lua：** 任意长度候选词的辅助码提示能力，默认开启1个字的辅助码，可以在方案文件中定义更长的长度。Ctrl+a可以实时在开启辅助码提示、开启声调全拼提示、关闭注释 三个状态循环，Ctrl+c开启拆分辅助提示，优先级高于普通辅助提示。辅助码、拆分提示仅PRO有。cand_type则能配置候选类型外显标识符号，如∞代表多片段组成的句子，小加号代表记录的用户词，一起一些其他可配置项。
 
 <img  src="https://storage.deepin.org/thread/202509260134283927_辅助码提示.jpg" height="80">
 <img  src="https://storage.deepin.org/thread/202509260134278003_声调提示.jpg" height="80">
@@ -790,7 +788,7 @@ B 重复以上操作完成更多设备的添加和同步
 
 ⚙️**声调辅助回退（Lua）：** 万象是将7890用来代表1234声，轻声归并到了4，我们支持在例如输入ni9后发现我可能要4声，ni0，此时我们无需删除数字9而是直接输入对的0，类似手动在7890之间轮巡，能有效快速提升声调辅助的效率，减少使用负担，也是万象独创功能。
 
-⚙️**固定已经输入的语句（Lua）：** 万象支持在输入中，通过按下句号锁定当前输入的候选，双击句号锁定上一个N-1句子长度记忆的句子，翻译成现实逻辑就是，我输入了四五个字了我发后面发生变化，我立马锁定，这样后续继续输入前面几乎不会跟着变了。如果我输入错了一个音节发现前面变了，此时双击句号相当于回溯了一个音节。，其原理实际上就是利用自动补齐每个字的双大写辅助码，起到定词定字的效果，为了避免编码区长度太长，我将连续的两个大写字母转换成一个向右趋势的视觉符号"›"该功能在输入中占用句号，使用句号翻页的用户自行修改位于force_upper_aux:下。
+⚙️**固定已经输入的语句（Lua）：** 万象支持在输入中，通过按下F1锁定当前输入的候选，双击F1锁定上一个N-1句子长度记忆的句子，翻译成现实逻辑就是，我输入了四五个字了我发后面发生变化，我立马锁定，这样后续继续输入前面几乎不会跟着变了。如果我输入错了一个音节发现前面变了，此时双击F1相当于回溯了一个音节。，其原理实际上就是利用自动补齐每个字的双大写辅助码，起到定词定字的效果，为了避免编码区长度太长，我将连续的两个大写字母转换成一个向右趋势的视觉符号"›"该功能在输入中占用F1,用户自行修改位于force_upper_aux:下。
 
 ⚙️**小键盘有妙用（Lua）：** auto模式：可配置输入中数字跟在字母后面不上屏。compose模式：可配置数字持续不上屏，不用区分先后。select模式：小键盘行为对齐主键盘。
 
