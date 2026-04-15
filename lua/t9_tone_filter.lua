@@ -1,5 +1,7 @@
 -- input 末尾通过 11 12 13 14 10 表示声调
 -- input 末尾通过 01 02 03 04 00 表示声调, 同时筛选拼音最长的候选词
+-- 增加声母筛选功能：[01][a-z]
+-- 支持同时筛选声母和声调，声母和声调顺序随意
 
 local function t9_tone_filter(input, env)
     local context = env.engine.context
