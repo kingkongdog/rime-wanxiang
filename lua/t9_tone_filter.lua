@@ -74,7 +74,7 @@ local function t9_tone_filter(input, env)
     end
 
     -- 获取最长的候选词拼音长度
-    if target_tone_prefix_0 then 
+    if target_tone_prefix_0 or target_first_letter_prefix_0 then 
         local maxLength = 0
         local cands = {}
         for cand in input:iter() do
@@ -94,7 +94,7 @@ local function t9_tone_filter(input, env)
         end
     end
 
-    if target_tone_prefix_1 then
+    if target_tone_prefix_1 or target_first_letter_prefix_1 then
         for cand in input:iter() do
             yield_cand_by_tone_and_first_letter(cand, target_tone, target_first_letter)
         end
