@@ -56,14 +56,14 @@ local function t9_tone_filter(input, env)
 
     -- 1. 提取约束条件
     -- 根据声调筛选
-    local target_tone_prefix_0 = raw_input:match("[2-9]+0.*([0-4])$")
-    local target_tone_prefix_1 = raw_input:match("[2-9]+1.*([0-4])$")
+    local target_tone_prefix_0 = raw_input:match("[2-9]+0.*([0-4]).*$")
+    local target_tone_prefix_1 = raw_input:match("[2-9]+1.*([0-4]).*$")
     local target_tone = target_tone_prefix_0 or target_tone_prefix_1
     target_tone = target_tone and tonumber(target_tone)
 
     -- 根据首字母筛选
-    local target_first_letter_prefix_0 = raw_input:match("[2-9]+0.*([a-z])$")
-    local target_first_letter_prefix_1 = raw_input:match("[2-9]+1.*([a-z])$")
+    local target_first_letter_prefix_0 = raw_input:match("[2-9]+0.*([a-z]).*$")
+    local target_first_letter_prefix_1 = raw_input:match("[2-9]+1.*([a-z]).*$")
     local target_first_letter = target_first_letter_prefix_0 or target_first_letter_prefix_1
 
     -- 如果没有输入筛选符，直接放行
