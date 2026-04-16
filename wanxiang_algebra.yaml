@@ -115,7 +115,8 @@ base:
       # 其他
       - derive/ong$/on/ # lon → long
       - derive/([tl])eng$/$1en/ # ten → teng
-      - derive/([a-z])ou$/$1o/ # sougou → sogo
+      - derive/([a-z])ou$/$1o/ # sogo → sougou
+      - derive/([a-z])uan$/$1aun/ # chaun -> chuan
 
 
 
