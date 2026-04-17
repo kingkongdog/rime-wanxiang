@@ -509,6 +509,7 @@ speller:
     - derive/^([nl])ve$/$1ue/
     - derive/^([jqxy])u/$1v/
     - derive/nong/nog/
+    - derive/^([zcs]h.*)$/$11/
     - xlit/abcdefghijklmnopqrstuvwxyz/22233344455566677778889999/
 
 
