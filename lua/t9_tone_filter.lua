@@ -3,6 +3,7 @@
 -- 增加声母筛选功能：[01][a-z]
 -- 支持同时筛选声母和声调，声母和声调顺序随意
 -- 增加支持多声调多声母功能：[01]1234bpmf：【01】后面的数字序列分别对应每个字的声调，字母对应每个字的声母，数字和字母顺序随意，比如 1a2b3c4d 或者 a1b2c3d4 或者 1a2b3c4d 或者 a1b2c3d4 等等
+-- TODO: 发现会把 emoji 过滤掉。如果想保留 emoji 的话，就要把原始的候选词分组，就要提前循环一次。那就可以把 0 和 1 前缀统一了。按照 长度过滤 -> 声调过滤 -> 首字母过滤 的顺序来处理就好了。
 
 local function t9_tone_filter(input, env)
     local context = env.engine.context
@@ -39,6 +40,11 @@ local function t9_tone_filter(input, env)
 
     local function yield_cand_by_tone_and_first_letter(cand, target_tone_array, target_first_letter_array)
         local reserve = true
+
+        if not cand.comment or cand.comment == "" then
+            return
+        end
+
         local pinyin_array = split_by_space(cand.comment)
 
         if reserve and target_tone_array then
@@ -61,7 +67,6 @@ local function t9_tone_filter(input, env)
         end
 
         if reserve and target_first_letter_array then
-
             for i, target_first_letter in ipairs(target_first_letter_array) do
                 if i > #pinyin_array then
                     break
