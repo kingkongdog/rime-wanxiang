@@ -2,6 +2,7 @@
 -- input 末尾通过 01 02 03 04 00 表示声调, 同时筛选拼音最长的候选词
 -- 增加声母筛选功能：[01][a-z]
 -- 支持同时筛选声母和声调，声母和声调顺序随意
+-- 增加支持多声调多声母功能：[01]1234bpmf：【01】后面的数字序列分别对应每个字的声调，字母对应每个字的声母，数字和字母顺序随意，比如 1a2b3c4d 或者 a1b2c3d4 或者 1a2b3c4d 或者 a1b2c3d4 等等
 
 local function t9_tone_filter(input, env)
     local context = env.engine.context
@@ -25,27 +26,54 @@ local function t9_tone_filter(input, env)
         ["ü"] = "v", ["ǖ"] = "v", ["ǘ"] = "v", ["ǚ"] = "v", ["ǜ"] = "v"
     }
 
-    local function yield_cand_by_tone_and_first_letter(cand, target_tone, target_first_letter)
-        local reserve = true
+    local function split_by_space (str)
+        local results = {}
 
-        if target_tone then
-            local cand_vowel = cand.comment:match("[%z\128-\255][\128-\191]*")
-            if not cand_vowel then
-                cand_vowel = cand.comment:match("([aoeiu])")    -- 注意 ü 在上面匹配到
-            end
-            local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
-            -- 声调匹配校验
-            if target_tone ~= cand_tone then
-                reserve = false
+        for word in string.gmatch(str, "%S+") do
+            table.insert(results, word)
+        end
+
+        return results
+    end
+
+
+    local function yield_cand_by_tone_and_first_letter(cand, target_tone_array, target_first_letter_array)
+        local reserve = true
+        local pinyin_array = split_by_space(cand.comment)
+
+        if reserve and target_tone_array then
+            for i, target_tone in ipairs(target_tone_array) do
+                if i > #pinyin_array then
+                    break
+                end
+
+                local cand_vowel = pinyin_array[i]:match("[%z\128-\255][\128-\191]*")
+                if not cand_vowel then
+                    cand_vowel = cand.comment:match("([aoeiu])")    -- 注意 ü 在上面匹配到 -- 注意这个元音字母的排列顺序可是有讲究的。
+                end
+                local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
+                -- 声调匹配校验
+                if target_tone ~= cand_tone then
+                    reserve = false
+                    break
+                end
             end
         end
 
-        if target_first_letter then
-            local cand_first_letter = cand.comment:match("[%z\1-\127\194-\244][\128-\191]*")
-            cand_first_letter = cand_first_letter and vowel_letter_map[cand_first_letter] or cand_first_letter or nil
-             -- 首字母匹配校验
-            if target_first_letter ~= cand_first_letter then
-                reserve = false
+        if reserve and target_first_letter_array then
+
+            for i, target_first_letter in ipairs(target_first_letter_array) do
+                if i > #pinyin_array then
+                    break
+                end
+
+                local cand_first_letter = pinyin_array[i]:match("[%z\1-\127\194-\244][\128-\191]*")
+                cand_first_letter = cand_first_letter and vowel_letter_map[cand_first_letter] or cand_first_letter or nil
+                -- 首字母匹配校验
+                if target_first_letter ~= cand_first_letter then
+                    reserve = false
+                    break
+                end
             end
         end
 
@@ -54,16 +82,43 @@ local function t9_tone_filter(input, env)
         end
     end
 
+    local function get_target_tone_array(input, prefix)
+        local suffix = input:match("[2-9]+" .. prefix .. "(.*)$")
+
+        if suffix and suffix:match("[0-4]") then
+            local results = {}
+            for num in suffix:gmatch("[0-4]") do
+                table.insert(results, tonumber(num))
+            end
+            return results
+        end
+
+        return null
+    end
+
+    local function get_target_first_letter_array(input, prefix)
+        local suffix = input:match("[2-9]+" .. prefix .. "(.*)$")
+
+        if suffix and suffix:match("[a-z]") then
+            local results = {}
+            for letter in suffix:gmatch("[a-z]") do
+                table.insert(results, letter)
+            end
+            return results
+        end
+
+        return null
+    end
+
     -- 1. 提取约束条件
     -- 根据声调筛选
-    local target_tone_prefix_0 = raw_input:match("[2-9]+0.*([0-4]).*$")
-    local target_tone_prefix_1 = raw_input:match("[2-9]+1.*([0-4]).*$")
+    local target_tone_prefix_0 = get_target_tone_array(raw_input, "0")
+    local target_tone_prefix_1 = get_target_tone_array(raw_input, "1")
     local target_tone = target_tone_prefix_0 or target_tone_prefix_1
-    target_tone = target_tone and tonumber(target_tone)
 
     -- 根据首字母筛选
-    local target_first_letter_prefix_0 = raw_input:match("[2-9]+0.*([a-z]).*$")
-    local target_first_letter_prefix_1 = raw_input:match("[2-9]+1.*([a-z]).*$")
+    local target_first_letter_prefix_0 = get_target_first_letter_array(raw_input, "0")
+    local target_first_letter_prefix_1 = get_target_first_letter_array(raw_input, "1")
     local target_first_letter = target_first_letter_prefix_0 or target_first_letter_prefix_1
 
     -- 如果没有输入筛选符，直接放行
