@@ -317,8 +317,6 @@ translator:
   comment_format:
   #disable_user_dict_for_patterns:  #如果你开启调频，需要一并考虑这个配置是否需要，基本的6码3字不调频，你可以自定义，目前的逻辑是依然记录用户词但满足规则的不输出不被使用
   #  - "^[a-z]{1,6}"
-  preedit_format:
-    - xlit/'/1/   # 预编辑格式化，默认不变，可以用来实现输入法状态的可视化（如声调、简繁、注音等），或者其他你想要的效果
 
 super_replacer:
     db_name: lua/replacer
@@ -466,7 +464,7 @@ key_binder:
   # Lua 配置: shijian.lua 的引导符，涉及：日期、时间、节日、节气、生日、问候模板等功能
   shijian_keys: ["/", "6"]
   bindings:               # 也可以再增加方案专有的
-    - { when: has_menu, accept: 1, send: apostrophe }
+    # - { when: has_menu, accept: 1, send: apostrophe }
 
 #当tab第一个字补码正确后，可以使用Ctrl+tab进行上屏并依次补码
     - { when: composing, accept: "Control+Tab", send_sequence: '{Home}{Shift+Right}{1}{Shift+Right}' }
