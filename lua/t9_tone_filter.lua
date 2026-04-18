@@ -137,11 +137,13 @@ local function t9_tone_filter(input, env)
     if target_tone_prefix_0 or target_first_letter_prefix_0 then 
         local maxLength = 0
         local cands = {}
+        local pure_input = raw_input:match("^(.*)0")  -- 去掉末尾的声调或首字母筛选符
+        local pure_input_length = #pure_input
         for cand in input:iter() do
             local pinyin = cand.comment:gsub("%s+", "")
             local length = utf8.len(pinyin)
             table.insert(cands, {cand, length})
-            if length > maxLength and length <= #(raw_input:match("^(.*)[01]")) then  -- 有时候候选词长度会大于 input 长度，比如想输入囧， 按下 54664
+            if length > maxLength and length <= pure_input_length then  -- 有时候候选词长度会大于 input 长度，比如想输入囧， 按下 54664
                 maxLength = length
             end
         end
