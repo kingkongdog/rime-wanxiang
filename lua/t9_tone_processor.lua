@@ -21,7 +21,7 @@ function M.init(env)
         
         local filter = ctx.input:match("[2-9]+[01](.*)$")
         if filter then
-            ctx:pop_input(#filter + 1)
+            ctx:pop_input(#filter)
 
             local preedit = ctx:get_preedit().text
             if not preedit:match("%d") then
