@@ -23,8 +23,6 @@ function M.init(env)
         if filter then
             ctx:pop_input(#filter + 1)
 
-            return
-
             local preedit = ctx:get_preedit().text
             if not preedit:match("%d") then
                 env.engine:commit_text(preedit:gsub("‸$", ""))
