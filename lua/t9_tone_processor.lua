@@ -20,8 +20,13 @@ function M.init(env)
         -- end
         
         local filter = ctx.input:match("[2-9]+[01](.*)$")
-        if filter then
+        local selected_candidate = ctx:get_selected_candidate()
+        local selected_text = selected_candidate and selected_candidate.text or ""
+        local selected_text_length = utf8.len(selected_text)
+        if filter and #filter > 0 then
             ctx:pop_input(#filter)  -- 在把 01 设置为 delimiter 后，比如输入 42614，选择"干"后，preedit 变成 "干4"，01 消失了。
+            filter = filter:gsub("%a", "", selected_text_length):gsub("%d", "", selected_text_length) -- 删掉筛选声调和首字母，删除的数量等于选择的候选词的长度
+            ctx:push_input(filter)  -- 把剩下的数字和字母重新 push 进去
 
             local preedit = ctx:get_preedit().text
             if not preedit:match("%d") then
