@@ -21,13 +21,13 @@ function M.init(env)
         
         local filter = ctx.input:match("[2-9]+[01](.*)$")
         if filter then
-            ctx:pop_input(#filter)
+            ctx:pop_input(#filter)  -- 在把 01 设置为 delimiter 后，比如输入 42614，选择"干"后，preedit 变成 "干4"，01 消失了。
 
-            local preedit = ctx:get_preedit().text
-            if not preedit:match("%d") then
-                env.engine:commit_text(preedit:gsub("‸$", ""))
-                ctx:clear()
-            end
+            -- local preedit = ctx:get_preedit().text
+            -- if not preedit:match("%d") then
+            --     env.engine:commit_text(preedit:gsub("‸$", ""))
+            --     ctx:clear()
+            -- end
         end
     end)
 end
