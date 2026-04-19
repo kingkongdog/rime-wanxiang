@@ -74,6 +74,7 @@ engine:
   segmentors:
     - ascii_segmentor                           #标识英文段落〔譬如在英文模式下〕字母直接上屛
     - matcher                                   #配合 recognizer 标识符合特定规则的段落，如网址、反查等，加上特定 tag
+    - affix_segmentor@tone_filter
     - abc_segmentor                             #标识常规的文字段落，加上 abc 这个 tag
     # - affix_segmentor@wanxiang_reverse          #反查 tag
     - punct_segmentor                           #标识符号段落〔键入标点符号用〕加上 punct 这个 tag
@@ -107,6 +108,13 @@ engine:
     - lua_filter@*t9_sorter                         # 万象T9排序器，根据首个候选词长度动态调整后续单字排序方式：1️⃣ 第一个候选词是单个汉字或者表情的，从第9个候选词开始按拼音升序排序，2️⃣ 第一个候选词是多个汉字的，已知单个汉字的候选词都排在后面，从第一个单字候选词开始按拼音排序。https://gemini.google.com/share/efd91333894c
     - lua_filter@*prepend_digit_filter
     - lua_filter@*put_input_in_cand_list_when_empty_filter  #没有候选词时把 input 放入候选词，比如输入手机号码
+
+tone_filter:
+    tag: tone_filter
+    prefix: "1"
+    # 如果你希望 1 后面的数字直接显示在屏幕上而不进行任何变换
+    # 可以不定义 dictionary 或使用空的 table
+    enable_completion: false
 
 t9:
   isDisplayOriginalPreedit: true
