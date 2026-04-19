@@ -20,8 +20,6 @@ function M.init(env)
         -- end
         
         local filter = ctx.input:match("[2-9]+[01](.*)$")
-        ctx:push_input("#" .. ctx.input .. "#" .. filter)
-        return
         if filter then
             ctx:pop_input(#filter)
 
