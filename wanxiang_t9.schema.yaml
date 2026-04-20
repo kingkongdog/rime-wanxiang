@@ -446,6 +446,7 @@ recognizer:
     #add_user_dict: "^ac[A-Za-z/`']*$"      #自造词引导方式
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"                            # email @ 之后不上屏
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"  # URL
+    tone_filter: "^[01].*"
 
 punctuator:
   digit_separators: ""  #数字分隔符，系统逻辑是在中文状态下输入数字后继续输入句号按下两次即输入半角状态
