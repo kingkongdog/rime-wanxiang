@@ -74,6 +74,7 @@ engine:
   segmentors:
     - ascii_segmentor                           #标识英文段落〔譬如在英文模式下〕字母直接上屛
     - matcher                                   #配合 recognizer 标识符合特定规则的段落，如网址、反查等，加上特定 tag
+    - affix_segmentor@tone_filter  # 关键：必须放在 abc_segmentor 之前
     - abc_segmentor                             #标识常规的文字段落，加上 abc 这个 tag
     # - affix_segmentor@wanxiang_reverse          #反查 tag
     - punct_segmentor                           #标识符号段落〔键入标点符号用〕加上 punct 这个 tag
@@ -110,6 +111,18 @@ engine:
 
 t9:
   isDisplayOriginalPreedit: true
+
+# 定义段划分器
+tone_filter:
+  tag: tone_filter
+  # 正则解析：
+  # ^([0-9]+?)     -> 第 1 组：前面的数字序列（非贪婪匹配，遇到 0 或 1 即停止）
+  # ([01][0-9a-z]*) -> 第 2 组：以 0 或 1 开头，后面跟任意数量的数字或字母
+  pattern: "^([0-9]+?)([01][0-9a-z]*)$"
+  prefix: ""
+  # 虽然叫 suffix，但在 affix_segmentor 逻辑中，
+  # 它会自动将 pattern 的第二个捕获组识别为该 tag 的范围
+  tips: "〔滤镜模式〕"
 
 super_comment:                 # 超级注释模块，子项配置 true 开启，false 关闭
   candidate_length: 15         # 候选词辅助码提醒的生效长度，0为关闭  但同时清空其它，应当使用上面开关来处理
@@ -295,6 +308,7 @@ calculator:
 
 # 主翻译器，拼音
 translator:
+  tag: abc
   dictionary: wanxiang_t9         # 挂载主词库
 #  packs: user                  #导入根目录下名称为user.dict.yaml的自定义固定词典
   prism: wanxiang_t9             # 多方案共用一个词库时，为避免冲突，需要用 prism 指定一个名字。
@@ -446,7 +460,7 @@ recognizer:
     #add_user_dict: "^ac[A-Za-z/`']*$"      #自造词引导方式
     email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"                            # email @ 之后不上屏
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"  # URL
-    tone_filter: "([01].*)$"
+    tone_filter: "^[0-9]+[01][0-9a-z]*$"
 
 punctuator:
   digit_separators: ""  #数字分隔符，系统逻辑是在中文状态下输入数字后继续输入句号按下两次即输入半角状态
