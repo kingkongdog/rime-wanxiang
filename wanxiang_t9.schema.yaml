@@ -73,8 +73,8 @@ engine:
     - express_editor                            #编辑器，处理空格、回车上屏、回退键
   segmentors:
     - ascii_segmentor                           #标识英文段落〔譬如在英文模式下〕字母直接上屛
-    - affix_segmentor@tone_filter  # 关键：必须放在 abc_segmentor 之前
     - matcher                                   #配合 recognizer 标识符合特定规则的段落，如网址、反查等，加上特定 tag
+    - affix_segmentor@tone_filter  # 关键：必须放在 abc_segmentor 之前
     - abc_segmentor                             #标识常规的文字段落，加上 abc 这个 tag
     # - affix_segmentor@wanxiang_reverse          #反查 tag
     - punct_segmentor                           #标识符号段落〔键入标点符号用〕加上 punct 这个 tag
