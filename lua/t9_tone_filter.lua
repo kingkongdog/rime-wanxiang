@@ -8,7 +8,7 @@
 local function t9_tone_filter(input, env)
     local context = env.engine.context
     local raw_input = context.input
-    log:info("李刚 test log: raw_input: " .. raw_input);
+    log.info("李刚 test log: raw_input: " .. raw_input);
     
     local vowel_tone_map = {
         ["a"] = 0, ["ā"] = 1, ["á"] = 2, ["ǎ"] = 3, ["à"] = 4,
