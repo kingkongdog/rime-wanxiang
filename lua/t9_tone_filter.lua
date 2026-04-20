@@ -6,9 +6,6 @@
 -- TODO: 发现会把 emoji 过滤掉。如果想保留 emoji 的话，就要把原始的候选词分组，就要提前循环一次。那就可以把 0 和 1 前缀统一了。按照 长度过滤 -> 声调过滤 -> 首字母过滤 的顺序来处理就好了。
 
 local function t9_tone_filter(input, env)
-    yield(Candidate("raw", 0, #input, input, ""))
-    return;
-
     local context = env.engine.context
     local raw_input = context.input
     
