@@ -11,6 +11,9 @@ local M = {}
 
 local function get_selected_text_length(env)
     local context = env.engine.context
+    -- 这里有个有意思的陷阱：gsub 函数返回两个值，第一个是替换后的字符串，第二个是替换的次数。
+    -- utf8.len 如果不传第二个参数 1，gsub 返回的两个值将作为 len 的参数。
+    -- 会报错：bad argument #2 to 'len' (initial position out of bounds)
     local length = utf8.len(context:get_script_text():gsub("[%a%d%s]", ""), 1) - utf8.len(env.script_text:gsub("[%a%d%s]", ""), 1)
     env.script_text = context:get_script_text()
     return length
