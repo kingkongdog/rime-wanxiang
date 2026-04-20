@@ -9,7 +9,15 @@
 
 local M = {}
 
+local function get_selected_text_length(env)
+    local context = env.engine.context
+    local length = utf8.len(context:get_script_text():gsub("[%a%d]", "")) - utf8.len(env.script_text:gsub("[%a%d]", ""))
+    env.script_text = context:get_script_text()
+    return length
+end
+
 function M.init(env)
+    env.script_text = ""
     env.select_notifier = env.engine.context.select_notifier:connect(function(ctx)
         if not ctx:is_composing() then
             return
@@ -20,9 +28,11 @@ function M.init(env)
         -- end
         
         local filter = ctx.input:match("[2-9]+[01](.*)$")
-        local selected_candidate = ctx:get_selected_candidate()
-        local selected_text = selected_candidate and selected_candidate.text or ""
-        local selected_text_length = utf8.len(selected_text)
+        -- local selected_candidate = ctx:get_selected_candidate()
+        -- local selected_text = selected_candidate and selected_candidate.text or ""  -- 获取到的竟然不是上次 confirm 的候选词，而是当前候选词列表的第一项。
+        -- local selected_text_length = utf8.len(selected_text)
+        local selected_text_length = get_selected_text_length(env)
+        log.info("selected_text_length: " .. selected_text_length)
         if filter and #filter > 0 then
             ctx:pop_input(#filter)  -- 在把 01 设置为 delimiter 后，比如输入 42614，选择"干"后，preedit 变成 "干4"，01 消失了。
             filter = filter:gsub("%a", "", selected_text_length):gsub("%d", "", selected_text_length) -- 删掉筛选声调和首字母，删除的数量等于选择的候选词的长度
