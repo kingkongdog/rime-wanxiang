@@ -13,18 +13,19 @@ local function get_selected_text_length(env)
     -- 这里有个有意思的陷阱：gsub 函数返回两个值，第一个是替换后的字符串，第二个是替换的次数。
     -- utf8.len 如果不传第二个参数 1，gsub 返回的两个值将作为 len 的参数。
     -- 会报错：bad argument #2 to 'len' (initial position out of bounds)
-    local length = utf8.len(context:get_script_text():gsub("[%a%d%s]", ""), 1) - utf8.len(env.script_text:gsub("[%a%d%s]", ""), 1)
+    local length = utf8.len(context:get_script_text():gsub("[%z\1-\127]", ""), 1) - utf8.len(env.script_text:gsub("[%z\1-\127]", ""), 1)
     env.script_text = context:get_script_text()
     return length
 end
 
 function M.init(env)
     env.script_text = ""
+    -- env.engine.context.commit_notifier:connect(function(ctx)
+    --     local commit_text = ctx:get_commit_text()
+    --     -- 在这里处理上屏的文字
+    --     log.info("触发了上屏文字为: " .. commit_text)
+    -- end)
     env.select_notifier = env.engine.context.select_notifier:connect(function(ctx)
-        if not ctx:is_composing() then
-            return
-        end
-
         -- if not ctx.input:match("^%d+$") then
         --     return
         -- end
@@ -53,7 +54,7 @@ function M.init(env)
 end
 
 function M.fini(env)
-   env.select_notifier:disconnect()
+    env.select_notifier:disconnect()
 end
 
 function M.func(key, env)
@@ -61,6 +62,7 @@ function M.func(key, env)
     local krepr = key:repr()
 
     if not context:is_composing() then
+        env.script_text = ""
         return 2
     end
 
