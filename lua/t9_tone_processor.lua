@@ -5,7 +5,6 @@
 -- 这个 processor 注册 select_notifier，把选中的候选词直接上屏
 -- 增加声母筛选功能：[01][a-z]
 -- 支持同时筛选声母和声调，声母和声调顺序随意
--- TODO 每 select 一个候选词，就把第一位筛选声调删掉，把第一位筛选首字母删掉    DONE
 
 local M = {}
 
@@ -34,8 +33,8 @@ function M.init(env)
         -- local selected_candidate = ctx:get_selected_candidate()
         -- local selected_text = selected_candidate and selected_candidate.text or ""  -- 获取到的竟然不是上次 confirm 的候选词，而是当前候选词列表的第一项。
         -- local selected_text_length = utf8.len(selected_text)
-        if filter and #filter > 0 then
-            ctx:pop_input(#filter)  -- 在把 01 设置为 delimiter 后，比如输入 42614，选择"干"后，preedit 变成 "干4"，01 消失了。
+        if filter then
+            ctx:pop_input(#filter)
             local selected_text_length = get_selected_text_length(env)
             filter = filter:gsub("%a", "", selected_text_length):gsub("%d", "", selected_text_length) -- 删掉筛选声调和首字母，删除的数量等于选择的候选词的长度
             if #filter > 0 then
