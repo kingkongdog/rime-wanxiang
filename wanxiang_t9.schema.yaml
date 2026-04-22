@@ -462,7 +462,7 @@ t9_sym:
 key_binder:
   import_preset: default  # 从 default.yaml 继承通用的
   # Lua 配置: shijian.lua 的引导符，涉及：日期、时间、节日、节气、生日、问候模板等功能
-  shijian_keys: ["/", "6"]
+  shijian_keys: ["/", "6", "o"]
   bindings:               # 也可以再增加方案专有的
     # - { when: has_menu, accept: 1, send: apostrophe }
 
