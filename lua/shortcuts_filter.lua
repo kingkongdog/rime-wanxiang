@@ -51,7 +51,7 @@ function M.func(input, env)
       deal_with_jianma(segment_input, segment)
     end
 
-    deal_with_privacy(rawInput, segment)
+    deal_with_privacy(segment_input, segment)
   end
 
   for cand in input:iter() do
