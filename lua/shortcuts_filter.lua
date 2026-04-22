@@ -8,7 +8,7 @@ local map = {
   s = "是"
 }
 
-local function fix_cand_at_first_filter(input, env)
+local function shortcuts_filter(input, env)
   local rawInput = env.engine.context.input
 
   local composition = env.engine.context.composition
@@ -26,4 +26,4 @@ local function fix_cand_at_first_filter(input, env)
   end
 end
 
-return fix_cand_at_first_filter
+return shortcuts_filter
