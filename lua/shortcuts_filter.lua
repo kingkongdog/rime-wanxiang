@@ -33,7 +33,7 @@ local function shortcuts_filter(input, env)
     local segment = composition:back()
     local segment_input = rawInput:sub(segment._start + 1, segment._end)
     deal_with_jianma(segment_input, segment)
-    deal_with_privacy(segment_input, segment)
+    deal_with_privacy(rawInput, segment)
   end
 
   for cand in input:iter() do
