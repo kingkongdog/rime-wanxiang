@@ -3,7 +3,9 @@ local map = {
   d = "的",
   b = "吧",
   n = "呢",
-  m = "吗"
+  m = "吗",
+  z = "在",
+  s = "是"
 }
 
 local function fix_cand_at_first_filter(input, env)
