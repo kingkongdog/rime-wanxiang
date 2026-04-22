@@ -117,7 +117,7 @@ base:
       - derive/([tl])eng$/$1en/ # ten → teng
       - derive/([a-z])ou$/$1o/ # sogo → sougou
       - derive/([a-z])uan$/$1aun/ # chaun -> chuan
-      - derive/jian$/jina/ # jina → jian
+      - derive/ian$/ina/ # ina → ian
 
 
 
