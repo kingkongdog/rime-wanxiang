@@ -27,7 +27,8 @@ local tonumber = tonumber
 local math_max = math.max
 local math_min = math.min
 local os_time  = os.time
-
+local shared_reverted_code = ""
+local shared_is_backspacing = false
 -- 内部运行参数默认值 (会被外部 YAML 配置覆盖)
 local CONFIG = {
     MAX_CANDIDATES      = 5,             
@@ -42,12 +43,13 @@ local CONFIG = {
     CONTEXT_TIMEOUT_MS  = 5000,
     ENABLE_POST_PREDICT = true,
     ENABLE_CONTEXT_REORDER = true,
+    ENABLE_FALLBACK_REORDER = true,
 }
 local is_after_number = false  --量词调频状态
 -- 量词动态查找表与构建函数
 local CLASSIFIER_LOOKUP = {}
 -- 量词兜底字符串
-local default_classifiers = "个只名位口头匹条群批伙张把件台部块根颗粒滴片朵面扇顶栋座所辆艘架盏支枝杆双对副套打串束排阵堆叠摞扎杯瓶盒包份碗锅盆桶袋罐盘次场局回趟顿番遍声项宗桩款步招年月天周岁秒分刻代期届任夜季本册篇首句段卷幅节堂门帖字行米寸尺里斤两吨克升元角毛笔百千万亿"
+local default_classifiers = "百千万亿个多只名位口头匹条群批伙张把件台部块根颗粒滴片朵面扇顶栋座所辆艘架盏支枝杆双对副套打串束排阵堆叠摞扎杯瓶盒包份碗锅盆桶袋罐盘次场局回趟顿番遍声项宗桩款步招年月天周岁秒分刻代期届任夜季本册篇首句段卷幅节堂门帖字行米寸尺里斤两吨克升元角毛笔"
 
 local function build_classifier_lookup(str)
     CLASSIFIER_LOOKUP = {}
@@ -74,6 +76,10 @@ local function is_tone_symbol(text)
     return s_match(text, "^[！？，。～]+$") ~= nil 
 end
 
+local utf8_len = utf8 and utf8.len or function(str)
+    local _, count = string.gsub(str, "[^\128-\191]", "")
+    return count
+end
 -- 动态加载 YAML 方案配置
 local function load_config(env)
     local config = env.engine.schema.config
@@ -92,6 +98,8 @@ local function load_config(env)
         if post_val ~= nil then CONFIG.ENABLE_POST_PREDICT = post_val end
         local reorder_val = config:get_bool("user_predict/enable_context_reorder")
         if reorder_val ~= nil then CONFIG.ENABLE_CONTEXT_REORDER = reorder_val end
+        local fallback_val = config:get_bool("user_predict/enable_fallback_reorder")
+        if fallback_val ~= nil then CONFIG.ENABLE_FALLBACK_REORDER = fallback_val end
         local custom_node = config:get_item("user_predict/custom_classifiers")
         if custom_node then
             local custom_str = ""
@@ -177,8 +185,14 @@ local function get_utf8_chars(str)
     if not str or str == "" then return {} end
     if s_match(str, "^[a-zA-Z0-9]+$") or is_tone_symbol(str) then return { str } end
     local chars = {}
-    for c in string.gmatch(str, "[%z\1-\127\194-\244][\128-\191]*") do
-        insert(chars, c)
+    if utf8 and utf8.codes then
+        for _, c in utf8.codes(str) do
+            insert(chars, utf8.char(c))
+        end
+    else
+        for c in string.gmatch(str, "[%z\1-\127\194-\244][\128-\191]*") do
+            insert(chars, c)
+        end
     end
     return chars
 end
@@ -190,43 +204,6 @@ local function get_suffix_lengths(len)
     elseif len == 2 then return {2}       
     elseif len == 1 then return {1} end
     return {}
-end
-
---全局过期数据回收
-local _last_sweep_memory = 0 
-local function sweep_expired_data(db)
-    if not db then return end
-    local now = os_time()
-    
-    if (now - _last_sweep_memory) < 86400 then return end
-    
-    local last_sweep_str = db:fetch("\0_last_sweep")
-    local db_last_sweep = tonumber(last_sweep_str) or 0
-    
-    if (now - db_last_sweep) < 86400 then 
-        _last_sweep_memory = db_last_sweep 
-        return 
-    end
-    
-    -- 开启全库扫描
-    for k, v in db:query(""):iter() do
-        if s_sub(k, 1, 1) ~= "\1" and s_sub(k, 1, 1) ~= "\0" then
-            local c_str, ts_str = s_match(v, "^([^|]+)|?(.*)$")
-            local count = tonumber(c_str) or 0
-            local ts = tonumber(ts_str) or 0
-            
-            -- 区分 P 记录和正式记录的寿命
-            local is_p_gram = (s_sub(k, 1, 2) == "P\t")
-            local current_limit = is_p_gram and CONFIG.P_EXPIRY_SECONDS or CONFIG.EXPIRY_SECONDS
-            if ts == 0 then ts = now - current_limit - 1 end
-            if (now - ts) > current_limit then
-                if db.erase then db:erase(k) else db:update(k, "") end
-            end
-        end
-    end
-    
-    db:update("\0_last_sweep", tostring(now))
-    _last_sweep_memory = now 
 end
 
 -- 读取层预测核心
@@ -294,8 +271,8 @@ local function get_predictions(env, prev_commit)
     if #history >= 2 then 
         local u0 = history[#history - 1]
         local u1 = history[#history]
-        local len_u0 = #get_utf8_chars(u0)
-        local len_u1 = #get_utf8_chars(u1)
+        local len_u0 = u0 and utf8_len(u0) or 0
+        local len_u1 = u1 and utf8_len(u1) or 0
         
         -- 对齐写入时的条件：u1不超过4，且总和不超过5
         if len_u1 <= 4 and (len_u0 + len_u1) <= 5 then
@@ -340,12 +317,14 @@ local P = {}
 function P.init(env)
     load_config(env) 
     local db = get_db(env)
-    sweep_expired_data(db)
+
     env.need_push = false 
     env.last_written_keys = {}
     env.just_committed = false
     
     env.commit_cb = function(ctx)
+        shared_reverted_code = ""
+        shared_max_input_code = ""
         local text = ctx:get_commit_text()
         if not s_match(text, "^[0-9]+$") then
             is_after_number = false
@@ -530,9 +509,32 @@ function P.init(env)
     end
     
     env.update_cb = function(ctx)
-        local input = ctx.input
-        if not input then return end
-        
+        local input = ctx.input or ""
+        if input == "/clean" then
+            ctx:clear()
+            local now = os_time()
+            local deleted_count = 0
+            for k, v in db:query(""):iter() do
+                if s_sub(k, 1, 1) ~= "\1" and s_sub(k, 1, 1) ~= "\0" then
+                    local _, ts_str = s_match(v, "^([^|]+)|?(.*)$")
+                    local ts = tonumber(ts_str) or 0
+                    local is_p_gram = (s_sub(k, 1, 2) == "P\t")
+                    local limit = is_p_gram and CONFIG.P_EXPIRY_SECONDS or CONFIG.EXPIRY_SECONDS
+                    
+                    if ts == 0 then ts = now - limit - 1 end
+                    
+                    if (now - ts) > limit then
+                        if db.erase then db:erase(k) else db:update(k, "") end
+                        deleted_count = deleted_count + 1
+                    end
+                end
+            end
+            
+            reset_memory_chain(env, "手动清理结束")
+            -- 上屏提示信息，让用户知道清理了多少条垃圾
+            env.engine:commit_text("【预测数据库清理完成：共清除 " .. deleted_count .. " 条过期记忆】")
+            return
+        end
         if input == "/outpredict" then
             ctx:clear()
             local sync_path = rime_api.get_user_data_dir() .. "/predict_export.txt"
@@ -617,14 +619,28 @@ function P.func(key, env)
     if not input then return 2 end
     if key:release() then return 2 end
     local repr = key:repr()
-    if env.just_committed and repr ~= "BackSpace" and not s_match(repr, "Shift") and not s_match(repr, "Control") and not s_match(repr, "Alt") then
+    if repr == "BackSpace" then
+        if not shared_is_backspacing and ctx:is_composing() then
+            local current_input = ctx.input or ""
+            if current_input ~= "" then
+                if shared_reverted_code == current_input then
+                    shared_reverted_code = "" 
+                else
+                    shared_reverted_code = current_input
+                end
+            end
+        end
+        shared_is_backspacing = true
+    elseif not s_find(repr, "Shift", 1, true) and not s_find(repr, "Control", 1, true) and not s_find(repr, "Alt", 1, true) then
+        shared_is_backspacing = false
+    end
+
+    if env.just_committed and repr ~= "BackSpace" and not s_find(repr, "Shift", 1, true) and not s_find(repr, "Control", 1, true) and not s_find(repr, "Alt", 1, true) then
         env.just_committed = false
     end
     
     if repr == "BackSpace" then
         local current_time = (rime_api and rime_api.get_time_ms) and rime_api.get_time_ms() or (os_time() * 1000)
-        
-        -- 仅在“输入框完全为空”或者“只有联想占位符”时，才允许撤销数据库，彻底防范打拼音时误删！
         local is_safe_to_undo = (not ctx:is_composing() or is_predicting)
         
         if is_safe_to_undo and env.undo_stack and #env.undo_stack > 0 then
@@ -799,15 +815,49 @@ local F = {}
 
 local f_last_commit = ""
 local f_reorder_map = nil
+local shared_boosted = {}
+local shared_normal = {}
+local boosted_obj_pool = {}
+local boosted_pool_idx = 0
 
-function F.init(env)
-    -- 占位
+function F.init(env) end
+
+local function stable_sort(a, b)
+    if a.rank == b.rank then return a.index < b.index end
+    return a.rank < b.rank
+end
+
+local function flush_yield(b_list, b_cnt, n_list, n_cnt, fallback)
+    if not fallback then
+        for i = 1, b_cnt do yield(b_list[i].cand) end
+        for i = 1, n_cnt do yield(n_list[i]) end
+    else
+        if b_cnt >= 2 then
+            yield(b_list[2].cand); yield(b_list[1].cand)
+            for i = 3, b_cnt do yield(b_list[i].cand) end
+            for i = 1, n_cnt do yield(n_list[i]) end
+        elseif b_cnt == 1 and n_cnt >= 1 then
+            yield(n_list[1]); yield(b_list[1].cand)
+            for i = 2, n_cnt do yield(n_list[i]) end
+        elseif b_cnt == 0 and n_cnt >= 2 then
+            yield(n_list[2]); yield(n_list[1])
+            for i = 3, n_cnt do yield(n_list[i]) end
+        else
+            if b_cnt == 1 then yield(b_list[1].cand) end
+            if n_cnt == 1 then yield(n_list[1]) end
+        end
+    end
 end
 
 function F.func(input, env)
     local ctx = env.engine.context
     
-    if not ctx:get_option("prediction") or not CONFIG.ENABLE_CONTEXT_REORDER or s_match(ctx.input or "", "^[›]+$") then
+    if not ctx:get_option("prediction") or s_match(ctx.input or "", "^[›]+$") then
+        for cand in input:iter() do yield(cand) end
+        return
+    end
+
+    if not CONFIG.ENABLE_CONTEXT_REORDER and not CONFIG.ENABLE_FALLBACK_REORDER then
         for cand in input:iter() do yield(cand) end
         return
     end
@@ -816,18 +866,15 @@ function F.func(input, env)
         f_last_commit = last_commit
         f_reorder_map = nil
         
-        -- 防止单字造成的调频异常波动
         local is_context_valid = false
-        local u1_len = #get_utf8_chars(last_commit)
+        local u1_len = utf8_len(last_commit) or 0
         
         if #history >= 2 then
-            -- 历史有2个词以上时：前后加起来必须 >= 3 个字
-            local u0_len = #get_utf8_chars(history[#history - 1])
+            local u0_len = utf8_len(history[#history - 1]) or 0
             if (u0_len + u1_len) >= 3 then
                 is_context_valid = true
             end
         else
-            -- 历史只有1个词（刚开始输入）：这一个词必须 >= 2 个字（如“家族”）
             if u1_len >= 2 then
                 is_context_valid = true
             end
@@ -844,77 +891,96 @@ function F.func(input, env)
         end
     end
 
-    -- 两个权限判断
     local do_reorder = f_reorder_map and next(f_reorder_map)
     local do_classifier = is_after_number and CLASSIFIER_LOOKUP and next(CLASSIFIER_LOOKUP)
     
-    if (not do_reorder and not do_classifier) or (ctx.input or "") == "" then
+    local current_input = ctx.input or ""
+    local do_fallback = CONFIG.ENABLE_FALLBACK_REORDER and current_input == shared_reverted_code and shared_reverted_code ~= ""
+    
+    if (not do_reorder and not do_classifier and not do_fallback) or current_input == "" then
         for cand in input:iter() do yield(cand) end
         return
     end
 
-    local boosted = {}
-    local normal = {}
-    local count = 0
-    local max_scan = 50
-    local stop_scanning = false
-    local target_len = 0 
-
-    local function stable_sort(a, b)
-        if a.rank == b.rank then return a.index < b.index end
-        return a.rank < b.rank
-    end
-
-    for cand in input:iter() do
-        if stop_scanning then
-            yield(cand)
-        else
-            count = count + 1
-            local text = cand.text or ""
-            local current_len = #get_utf8_chars(text)
-            
-            if count == 1 then target_len = current_len end
-            
-            local length_mismatch_stop = false
-            if do_classifier then
-                if count > 1 and current_len < target_len then length_mismatch_stop = true end
+    -- 极速旁路通道 (0 运算，0 分配)
+    if not do_reorder and not do_classifier and do_fallback then
+        local idx = 0
+        local c1 = nil
+        for cand in input:iter() do
+            idx = idx + 1
+            if idx == 1 then
+                c1 = cand
+            elseif idx == 2 then
+                yield(cand)
+                yield(c1)
             else
-                if count > 1 and current_len ~= target_len then length_mismatch_stop = true end
-            end
-
-            if cand.type == "raw" or cand.type == "english" or s_match(text, "^[a-zA-Z]+$") or length_mismatch_stop then
-                stop_scanning = true
-                sort(boosted, stable_sort)
-                for _, b in ipairs(boosted) do yield(b.cand) end
-                for _, n in ipairs(normal) do yield(n) end
-                yield(cand) 
-            else
-                local rank = f_reorder_map and f_reorder_map[text]
-                local is_classifier = do_classifier and CLASSIFIER_LOOKUP[text]
-                
-                if (rank or is_classifier) and current_len == target_len then
-                    local final_rank = rank or 0
-                    if is_classifier then final_rank = -1 end 
-                    insert(boosted, { cand = cand, rank = final_rank, index = count })
-                else
-                    insert(normal, cand)
-                end
-
-                if count >= max_scan then
-                    stop_scanning = true
-                    sort(boosted, stable_sort)
-                    for _, b in ipairs(boosted) do yield(b.cand) end
-                    for _, n in ipairs(normal) do yield(n) end
-                end
+                yield(cand)
             end
         end
+        if idx == 1 and c1 then yield(c1) end
+        return
     end
+
+    boosted_pool_idx = 0
+    local b_cnt = 0
+    local n_cnt = 0
     
-    if not stop_scanning then
-        sort(boosted, stable_sort)
-        for _, b in ipairs(boosted) do yield(b.cand) end
-        for _, n in ipairs(normal) do yield(n) end
+    local count = 0
+    local max_scan = 20
+    local target_len = 0
+
+    for cand in input:iter() do
+        count = count + 1
+        local text = cand.text or ""
+        local current_len = utf8_len(text) or 0
+        
+        if count == 1 then target_len = current_len end
+        
+        local length_mismatch_stop = false
+        if do_classifier then
+            if count > 1 and current_len < target_len then length_mismatch_stop = true end
+        else
+            if count > 1 and current_len ~= target_len then length_mismatch_stop = true end
+        end
+
+        if cand.type == "raw" or cand.type == "english" or s_find(text, "^[a-zA-Z]+$") or length_mismatch_stop or count > max_scan then
+            for i = b_cnt + 1, #shared_boosted do shared_boosted[i] = nil end
+            for i = n_cnt + 1, #shared_normal do shared_normal[i] = nil end
+            sort(shared_boosted, stable_sort)
+            flush_yield(shared_boosted, b_cnt, shared_normal, n_cnt, do_fallback)
+            yield(cand)
+            for rest_cand in input:iter() do yield(rest_cand) end
+            return
+        end
+
+        -- 分类与排名逻辑
+        local rank = f_reorder_map and f_reorder_map[text]
+        local is_classifier = do_classifier and CLASSIFIER_LOOKUP[text]
+        
+        if (rank or is_classifier) and current_len == target_len then
+            local final_rank = rank or 0
+            if is_classifier then final_rank = -1 end 
+            boosted_pool_idx = boosted_pool_idx + 1
+            if not boosted_obj_pool[boosted_pool_idx] then
+                boosted_obj_pool[boosted_pool_idx] = {}
+            end
+            local b_obj = boosted_obj_pool[boosted_pool_idx]
+            b_obj.cand = cand
+            b_obj.rank = final_rank
+            b_obj.index = count
+            b_cnt = b_cnt + 1
+            shared_boosted[b_cnt] = b_obj
+        else
+            n_cnt = n_cnt + 1
+            shared_normal[n_cnt] = cand
+        end
     end
+
+    for i = b_cnt + 1, #shared_boosted do shared_boosted[i] = nil end
+    for i = n_cnt + 1, #shared_normal do shared_normal[i] = nil end
+    
+    sort(shared_boosted, stable_sort)
+    flush_yield(shared_boosted, b_cnt, shared_normal, n_cnt, do_fallback)
 end
 
 function F.fini(env) end
