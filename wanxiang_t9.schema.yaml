@@ -510,8 +510,9 @@ speller:
     - abbrev/^([a-z])a$/$1/
     - derive/^([nl])ve$/$1ue/
     - derive/^([jqxy])u/$1v/
-    - derive/([aoei])ng/$1g/
-    - derive/([aoei])ng/$1n/
+    - derive/([aoei])ng$/$1g/
+    - derive/([aoei])ng$/$1n/
+    - derive/^([zcs])h/$1/
     - xlit/abcdefghijklmnopqrstuvwxyz/22233344455566677778889999/
 
 
