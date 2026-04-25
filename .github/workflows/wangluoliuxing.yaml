@@ -49,6 +49,24 @@ jobs:
           mv -f wangluoliuxing.dict.yaml ../rime_wanxiang/dicts/
           mv -f wangluoliuxing_en.dict.yaml ../rime_wanxiang/dicts/
 
+      # 4. 在 rime_wanxiang 目录完成推送
+      - name: Commit and Push to wanxiang Branch
+        run: |
+          cd rime_wanxiang
+          
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 添加 dicts 目录下的新文件
+          git add dicts/wangluoliuxing.dict.yaml dicts/wangluoliuxing_en.dict.yaml
+          
+          if git diff --staged --quiet; then
+            echo "No changes in dictionaries today."
+          else
+            git commit -m "Auto update dicts: $(date +'%Y-%m-%d')"
+            git push origin wanxiang
+          fi
+
       # 在 github action 里使用默认的 token 进行 push 后，不会触发 bump-version.yml 执行，所以在这里手动改一下。
       - name: Bump version
         run: |
@@ -67,20 +85,13 @@ jobs:
             exit 1
           fi
 
-      # 4. 在 rime_wanxiang 目录完成推送
-      - name: Commit and Push to wanxiang Branch
+      - name: Commit & Push
         run: |
           cd rime_wanxiang
-          
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          
-          # 添加 dicts 目录下的新文件
-          git add dicts/wangluoliuxing.dict.yaml dicts/wangluoliuxing_en.dict.yaml wanxiang_version
-          
-          if git diff --staged --quiet; then
-            echo "No changes in dictionaries today."
-          else
-            git commit -m "Auto update dicts: $(date +'%Y-%m-%d')"
-            git push origin wanxiang
-          fi
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add wanxiang_version
+          git commit -m "chore: bump version to $(cat wanxiang_version)" || exit 0
+          git push
