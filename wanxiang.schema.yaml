@@ -120,7 +120,7 @@ grammar:
   collocation_penalty: -5
   non_collocation_penalty: -5
   weak_collocation_penalty: -35
-  rear_penalty: -12
+  rear_penalty: -5
 
 super_comment:                  # 超级注释模块，子项配置 true 开启，false 关闭
   candidate_length: 2           # 候选词辅助码提醒的生效长度，0为关闭  但同时清空其它，应当使用上面开关来处理
@@ -670,7 +670,7 @@ punctuator:
 
 # 从 default 继承快捷键
 key_binder:
-  import_preset: default  # 从 default.yaml 继承通用的
+  #import_preset: default  # 从 default.yaml 继承通用的
   # Lua 配置: shijian.lua 的引导符，涉及：日期、时间、节日、节气、生日、问候模板等功能
   shijian_keys: ["/", "o", "v"]
   bindings:               # 也可以再增加方案专有的
