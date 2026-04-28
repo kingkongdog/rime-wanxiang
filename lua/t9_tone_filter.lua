@@ -139,7 +139,7 @@ local function t9_tone_filter(input, env)
     local group_comment = ""
 
     local max_length = 0
-    local pure_input = raw_input:match("^(.*)0")  -- 去掉末尾的声调或首字母筛选符
+    local pure_input = raw_input:match("^(.*)[01]")  -- 去掉末尾的声调或首字母筛选符
     local pure_input_length = #pure_input
 
     for cand in input:iter() do
