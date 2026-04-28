@@ -142,6 +142,7 @@ local function t9_tone_filter(input, env)
     local pure_input = raw_input:match("^(.*)[01]")  -- 去掉末尾的声调或首字母筛选符
     local pure_input_length = #pure_input
 
+    local index = 1
     for cand in input:iter() do
         local comment = cand.comment
         local pinyin = comment:gsub("%s+", "")
@@ -153,9 +154,9 @@ local function t9_tone_filter(input, env)
 
         local group = all_cands_by_comment[group_comment]
         if group then
-            table.insert(group.cands, cand)
+            table.insert(group.cands, { cand, index })
         else
-            all_cands_by_comment[comment] = { comment = comment, pinyin_length = pinyin_length, cands = { cand } }
+            all_cands_by_comment[comment] = { comment = comment, pinyin_length = pinyin_length, cands = { { cand, index } } }
         end
 
         if target_tone_prefix_0 or target_first_letter_prefix_0 then
@@ -163,14 +164,24 @@ local function t9_tone_filter(input, env)
                 max_length = pinyin_length
             end
         end
+
+        index = index + 1
     end
 
+    local filtered_cands = {}
     for _, group in pairs(all_cands_by_comment) do
         if should_reserve_group(group, max_length, target_tone, target_first_letter) then
-            for _, cand in ipairs(group.cands) do
-                yield(cand)
+            for _, cand_with_index in ipairs(group.cands) do
+                table.insert(filtered_cands, cand_with_index)
             end
         end
+    end
+    table.sort(filtered_cands, function(a, b)
+        return a[2] < b[2]
+    end)
+
+    for _, cand in ipairs(filtered_cands) do
+        yield(cand[1])
     end
 end
 
