@@ -46,7 +46,7 @@ local function t9_tone_filter(input, env)
 
         is_wanted = true
 
-        if is_wanted and target_pinyin_length > 0 and cand_pinyin_length ~= target_pinyin_length then
+        if is_wanted and target_pinyin_length and target_pinyin_length > 0 and cand_pinyin_length ~= target_pinyin_length then
             comment_map[cand_comment] = false
             return false
         end
