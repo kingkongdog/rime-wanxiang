@@ -125,7 +125,7 @@ local function t9_tone_filter(input, env)
         local comment = cand.comment
         if comment == "" and is_cand_wanted then
             yield(cand)
-        else if comment ~= "" then
+        elseif comment ~= "" then
             is_cand_wanted = check_cand_wanted(comment, cand_pinyin_length, target_pinyin_length, target_tone_array, target_first_letter_array)
             if is_cand_wanted then
                 yield(cand)
