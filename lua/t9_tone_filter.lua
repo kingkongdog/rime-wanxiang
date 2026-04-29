@@ -38,16 +38,14 @@ local function t9_tone_filter(input, env)
     end
 
 
-    local function should_reserve_group(group, max_length, target_tone_array, target_first_letter_array)
-        local comment = group.comment
-        local pinyin_length = group.pinyin_length
+    local function yield_cand_by_tone_and_first_letter(cand, target_tone_array, target_first_letter_array)
         local reserve = true
 
-        if reserve and max_length > 0 and pinyin_length ~= max_length then
-            return false
+        if not cand.comment or cand.comment == "" then
+            return
         end
 
-        local pinyin_array = split_by_space(comment)
+        local pinyin_array = split_by_space(cand.comment)
 
         if reserve and target_tone_array then
             for i, target_tone in ipairs(target_tone_array) do
@@ -57,7 +55,7 @@ local function t9_tone_filter(input, env)
 
                 local cand_vowel = pinyin_array[i]:match("[%z\128-\255][\128-\191]*")
                 if not cand_vowel then
-                    cand_vowel = comment:match("([aoeiu])")    -- 注意 ü 在上面匹配到 -- 注意这个元音字母的排列顺序可是有讲究的。
+                    cand_vowel = cand.comment:match("([aoeiu])")    -- 注意 ü 在上面匹配到 -- 注意这个元音字母的排列顺序可是有讲究的。
                 end
                 local cand_tone = cand_vowel and vowel_tone_map[cand_vowel] or nil
                 -- 声调匹配校验
@@ -84,7 +82,9 @@ local function t9_tone_filter(input, env)
             end
         end
 
-        return reserve
+        if reserve then
+            yield(cand)
+        end
     end
 
     local function get_target_tone_array(input, prefix)
@@ -131,57 +131,35 @@ local function t9_tone_filter(input, env)
         for cand in input:iter() do
             yield(cand)
         end
-        return
     end
 
-    -- emoji 没有 comment，需要对全部候选词进行分组，把 emoji 和前面的汉字候选词放到同一个组里
-    local all_cands_by_comment = {}
-    local group_comment = ""
-
-    local max_length = 0
-    local pure_input = raw_input:match("^(.*)[01]")  -- 去掉末尾的声调或首字母筛选符
-    local pure_input_length = #pure_input
-
-    local index = 1
-    for cand in input:iter() do
-        local comment = cand.comment
-        local pinyin = comment:gsub("%s+", "")
-        local pinyin_length = utf8.len(pinyin)
-
-        if comment ~= "" then
-            group_comment = comment
-        end
-
-        local group = all_cands_by_comment[group_comment]
-        if group then
-            table.insert(group.cands, { cand, index })
-        else
-            all_cands_by_comment[comment] = { comment = comment, pinyin_length = pinyin_length, cands = { { cand, index } } }
-        end
-
-        if target_tone_prefix_0 or target_first_letter_prefix_0 then
-            if pinyin_length > max_length and pinyin_length <= pure_input_length then  -- 有时候候选词长度会大于 input 长度，比如想输入囧， 按下 54664
-                max_length = pinyin_length
+    -- 获取最长的候选词拼音长度
+    if target_tone_prefix_0 or target_first_letter_prefix_0 then 
+        local maxLength = 0
+        local cands = {}
+        local pure_input = raw_input:match("^(.*)0")  -- 去掉末尾的声调或首字母筛选符
+        local pure_input_length = #pure_input
+        for cand in input:iter() do
+            local pinyin = cand.comment:gsub("%s+", "")
+            local length = utf8.len(pinyin)
+            table.insert(cands, {cand, length})
+            if length > maxLength and length <= pure_input_length then  -- 有时候候选词长度会大于 input 长度，比如想输入囧， 按下 54664
+                maxLength = length
             end
         end
 
-        index = index + 1
-    end
-
-    local filtered_cands = {}
-    for _, group in pairs(all_cands_by_comment) do
-        if should_reserve_group(group, max_length, target_tone, target_first_letter) then
-            for _, cand_with_index in ipairs(group.cands) do
-                table.insert(filtered_cands, cand_with_index)
+        for i, cand in ipairs(cands) do
+            -- 计算 pinyin 长度不能用 #pinyin，否则带声调的元音的长度计算错误
+            if cand[2] == maxLength then
+                yield_cand_by_tone_and_first_letter(cand[1], target_tone, target_first_letter)
             end
         end
     end
-    table.sort(filtered_cands, function(a, b)
-        return a[2] < b[2]
-    end)
 
-    for _, cand in ipairs(filtered_cands) do
-        yield(cand[1])
+    if target_tone_prefix_1 or target_first_letter_prefix_1 then
+        for cand in input:iter() do
+            yield_cand_by_tone_and_first_letter(cand, target_tone, target_first_letter)
+        end
     end
 end
 
