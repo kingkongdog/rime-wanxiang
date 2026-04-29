@@ -118,7 +118,7 @@ local function t9_sorter(input)
 
     if first_len > 1 then
      -- yield(Candidate("raw", l[1]._start, l[1]._end, "================ 高频单字 ================", ""))
-        yield(Candidate("raw", l[1]._start, l[1]._end, "#", ""))
+        yield(Candidate("raw", l[1]._start, l[1]._end, "#️⃣", ""))
     end
 
     -- 高频单字去重
