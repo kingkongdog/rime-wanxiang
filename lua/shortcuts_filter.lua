@@ -8,7 +8,8 @@ local jianma = {
   n = "呢",
   m = "吗",
   z = "在",
-  s = "是"
+  s = "是",
+  w = "我"
 }
 
 local function deal_with_jianma(input, segment)
