@@ -1,5 +1,31 @@
 # Changelog
 
+## [15.9.7](https://github.com/amzxyz/rime_wanxiang/compare/v15.9.6...v15.9.7) (2026-05-04)
+
+
+### 📚 词库更新
+
+* 词库调整 ([01463ac](https://github.com/amzxyz/rime_wanxiang/commit/01463ac13c12c964e72472c8661447162b0d7e03))
+* 词库调整 ([945e264](https://github.com/amzxyz/rime_wanxiang/commit/945e264b253714feaecf015894fe29efe95d9183))
+
+
+### 🐛 Bug 修复
+
+* 修复可能存在的句子塌陷问题 ([43dd51c](https://github.com/amzxyz/rime_wanxiang/commit/43dd51c64dfef7e5b6ffac01aa747bd04508b4e5))
+* 修复英文造词斜杠可能会储存进数据库的问题 ([767fe32](https://github.com/amzxyz/rime_wanxiang/commit/767fe3235b51c2901798cdac02568d846f16e55c))
+
+## [15.9.6](https://github.com/amzxyz/rime_wanxiang/compare/v15.9.5...v15.9.6) (2026-05-02)
+
+
+### 📚 词库更新
+
+* 词库多音字词频 ([583b6fc](https://github.com/amzxyz/rime_wanxiang/commit/583b6fcee95f5af3023239ec2dfb653367d4a3cc))
+
+
+### 🐛 Bug 修复
+
+* 修复R0.3型写法的解析错误 ([abbba02](https://github.com/amzxyz/rime_wanxiang/commit/abbba023f6a502751ed56fa40f4146e0fbb873ed))
+
 ## [15.9.5](https://github.com/amzxyz/rime_wanxiang/compare/v15.9.4...v15.9.5) (2026-04-30)
 
 
