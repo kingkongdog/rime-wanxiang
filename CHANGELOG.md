@@ -1,5 +1,20 @@
 # Changelog
 
+## [15.9.10](https://github.com/amzxyz/rime_wanxiang/compare/v15.9.9...v15.9.10) (2026-05-05)
+
+
+### 📚 词库更新
+
+* 词库调整 ([5af128b](https://github.com/amzxyz/rime_wanxiang/commit/5af128b6e6042e20fd4c852cb4790f9e5921ca4b))
+* 词库错音错词库的词频 ([d73c67e](https://github.com/amzxyz/rime_wanxiang/commit/d73c67ebbe0b65292e6bbc89f493b286fc0c43e9))
+
+## [15.9.9](https://github.com/amzxyz/rime_wanxiang/compare/v15.9.8...v15.9.9) (2026-05-04)
+
+
+### 📚 词库更新
+
+* 词库调整 ([0ee8e3c](https://github.com/amzxyz/rime_wanxiang/commit/0ee8e3cc895a882f6f5cd514c8062d9121161d41))
+
 ## [15.9.8](https://github.com/amzxyz/rime_wanxiang/compare/v15.9.7...v15.9.8) (2026-05-04)
 
 
