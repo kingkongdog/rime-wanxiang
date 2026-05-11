@@ -709,10 +709,20 @@ function P.func(key, env)
         if CONFIG.ENABLE_PREDICT_SPACE then
             -- enable_predict_space: true
             if key.keycode == 0x20 then
-                ctx:clear()
-                reset_memory_chain(env, "空格打断联想并上屏")
-                env.engine:commit_text(" ")
-                return 1
+                local current_input = ctx.input or ""
+                local is_predict_placeholder = (current_input ~= "") and s_find(current_input, "^" .. PH_CHAR .. "+$")
+
+                if is_predicting and is_predict_placeholder then
+                    ctx:clear()
+                    reset_memory_chain(env, "空格打断联想并上屏")
+                    env.engine:commit_text(" ")
+                    return 1
+                else
+                    is_predicting = false
+                    predict_count = 0
+                    pending_cands = nil
+                    return 2 -- 放行空格，让原生处理
+                end
             elseif is_alt_key then
                 ctx:clear()
                 reset_memory_chain(env, "替身键打断联想")
