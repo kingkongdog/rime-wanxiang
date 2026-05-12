@@ -35,7 +35,6 @@ local CONFIG = {
     MAX_PREDICTIONS     = 3,             
     EXPIRY_SECONDS      = 90 * 24 * 3600,
     P_EXPIRY_SECONDS    = 30 * 24 * 3600,
-    ACTIVATION_SECONDS  = 7 * 24 * 3600, 
     MAX_MEMORY_BRANCHES = 15,            
     DECAY_RATE          = 0.85,          
     SCAN_LIMIT          = 80,            
@@ -87,7 +86,6 @@ local function load_config(env)
         CONFIG.MAX_CANDIDATES      = config:get_int("user_predict/max_candidates") or 5
         CONFIG.MAX_PREDICTIONS     = config:get_int("user_predict/max_predictions") or 3
         CONFIG.EXPIRY_SECONDS      = (config:get_int("user_predict/expiry_days") or 90) * 86400
-        CONFIG.ACTIVATION_SECONDS  = (config:get_int("user_predict/activation_days") or 7) * 86400
         CONFIG.MAX_MEMORY_BRANCHES = config:get_int("user_predict/max_memory_branches") or 15
         CONFIG.DECAY_RATE          = config:get_double("user_predict/decay_rate") or 0.85
         local ps_val = config:get_bool("user_predict/enable_predict_space")
@@ -317,7 +315,32 @@ local P = {}
 function P.init(env)
     load_config(env) 
     local db = get_db(env)
+    local now = os_time()
+    local CLEAN_INTERVAL = 259200  --3天
+    
+    local last_clean_str = db:fetch("\0last_clean_time")
+    local last_clean_time = tonumber(last_clean_str) or 0
 
+    if (now - last_clean_time) > CLEAN_INTERVAL then
+        local deleted_count = 0
+        for k, v in db:query(""):iter() do
+            if s_sub(k, 1, 1) ~= "\1" and s_sub(k, 1, 1) ~= "\0" then
+                local _, ts_str = s_match(v, "^([^|]+)|?(.*)$")
+                local ts = tonumber(ts_str) or 0
+                local is_p_gram = (s_sub(k, 1, 2) == "P\t")
+                local limit = is_p_gram and CONFIG.P_EXPIRY_SECONDS or CONFIG.EXPIRY_SECONDS
+                if ts == 0 then ts = now - limit - 1 end
+                if (now - ts) > limit then
+                    if db.erase then db:erase(k) else db:update(k, "") end
+                    deleted_count = deleted_count + 1
+                end
+            end
+        end
+        db:update("\0last_clean_time", tostring(now))
+        if deleted_count > 0 then
+            log.info("【用户预测库自动维护】距上次清理已超3天，本次静默扫除 " .. deleted_count .. " 条过期记忆。")
+        end
+    end
     env.need_push = false 
     env.last_written_keys = {}
     env.just_committed = false
@@ -360,16 +383,15 @@ function P.init(env)
             env.last_written_keys[key] = val or ""
             
             if not val or val == "" then
-                if is_tone then db:update(key, "1|" .. tostring(now)) else db:update(key, "0|" .. tostring(now)) end
+                db:update(key, "1|" .. tostring(now))
             else
                 local c_str, ts_str = s_match(val, "^([^|]+)|?(.*)$")
                 local count = tonumber(c_str) or 0
                 local ts = tonumber(ts_str) or 0
                 local age = now - ts
+                
                 if age > CONFIG.EXPIRY_SECONDS then
-                    db:update(key, "0|" .. tostring(now))
-                elseif count == 0 then
-                    if age <= CONFIG.ACTIVATION_SECONDS then db:update(key, "1|" .. tostring(now)) else db:update(key, "0|" .. tostring(now)) end
+                    db:update(key, "1|" .. tostring(now))
                 else
                     db:update(key, tostring(count + 1) .. "|" .. tostring(now))
                 end
@@ -718,9 +740,6 @@ function P.func(key, env)
                     env.engine:commit_text(" ")
                     return 1
                 else
-                    is_predicting = false
-                    predict_count = 0
-                    pending_cands = nil
                     return 2 -- 放行空格，让原生处理
                 end
             elseif is_alt_key then
@@ -740,8 +759,8 @@ function P.func(key, env)
         
         if repr == "Return" then
             ctx:clear()
-            reset_memory_chain(env, "打断键清除预测") 
-            return 1
+            reset_memory_chain(env, "回车键打断预测并输入回车") 
+            return 2
         end
     end
 
@@ -906,14 +925,19 @@ function F.func(input, env)
     
     local current_input = ctx.input or ""
     local do_fallback = CONFIG.ENABLE_FALLBACK_REORDER and current_input == shared_reverted_code and shared_reverted_code ~= ""
+
+    if do_fallback then
+        do_reorder = false
+        do_classifier = false
+    end
     
     if (not do_reorder and not do_classifier and not do_fallback) or current_input == "" then
         for cand in input:iter() do yield(cand) end
         return
     end
 
-    -- 极速旁路通道 (0 运算，0 分配)
-    if not do_reorder and not do_classifier and do_fallback then
+    -- 极速旁路通道 (0 运算，0 分配，专供回头码使用)
+    if do_fallback then
         local idx = 0
         local c1 = nil
         for cand in input:iter() do
@@ -921,7 +945,8 @@ function F.func(input, env)
             if idx == 1 then
                 c1 = cand
             elseif idx == 2 then
-                if c1.type ~= "sentence" and c1._end == cand._end then
+                local is_cand_valid = cand.type ~= "raw" and cand.type ~= "english" and not s_find(cand.text or "", "^[a-zA-Z]+$")
+                if c1.type ~= "sentence" and is_cand_valid and c1._end == cand._end then
                     yield(cand)
                     yield(c1)
                 else
