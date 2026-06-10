@@ -340,6 +340,8 @@ function M.init(env)
     if wanxiang and wanxiang.get_input_method_type then
         env.input_type = wanxiang.get_input_method_type(env)
     end
+
+    env.is_t9 = env.input_type == "t9"
     
     local chain_val = cfg_root and cfg_root:get_value("chain")
     env.chain = chain_val and chain_val:get_bool() or false
@@ -684,6 +686,28 @@ function M.func(input, env)
     local always_cands = {}
     local lazy_cands = {}
 
+    local function yield_cand(cand)
+        local key = cand.text
+        if env.is_t9 then
+            key = key .. (cand.comment or "")
+        end
+
+        if not global_yielded[key] then
+            global_yielded[key] = true
+            yield(cand)
+            yield_count = yield_count + 1 
+        end
+    end
+
+    local function get_dedup_key(cand)
+        local key = cand.text
+        if env.is_t9 then
+            key = key .. (cand.comment or "")
+        end
+
+        return key
+    end
+
     for _, t in ipairs(rules) do
         if t.mode == "abbrev" then
             local is_active = false
@@ -755,7 +779,7 @@ function M.func(input, env)
                 item.yielded = true
                 local processed = process_rules(item.cand)
                 for _, pc in ipairs(processed) do
-                    local dedup_key = trim_space(pc.text)
+                    local dedup_key = get_dedup_key(pc)
                     if not global_yielded[dedup_key] then
                         global_yielded[dedup_key] = true
                         yield(pc); yield_count = yield_count + 1 
@@ -769,7 +793,7 @@ function M.func(input, env)
                 cand.yielded = true
                 local processed = process_rules(cand)
                 for _, pc in ipairs(processed) do
-                    local dedup_key = trim_space(pc.text)
+                    local dedup_key = get_dedup_key(pc)
                     if not global_yielded[dedup_key] then
                         global_yielded[dedup_key] = true
                         yield(pc); yield_count = yield_count + 1
@@ -818,7 +842,7 @@ function M.func(input, env)
     while cand do
         local processed_cands = process_rules(cand)
         for _, pc in ipairs(processed_cands) do
-            local dedup_key = trim_space(pc.text)
+            local dedup_key = get_dedup_key(pc)
 
             if not global_yielded[dedup_key] then
                 local c_type = cand.type or ""
@@ -843,7 +867,7 @@ function M.func(input, env)
                             item.yielded = true
                             local ac_processed = process_rules(item.cand)
                             for _, apc in ipairs(ac_processed) do
-                                local apc_key = trim_space(apc.text)
+                                local apc_key = get_dedup_key(apc)
                                 if not global_yielded[apc_key] then
                                     global_yielded[apc_key] = true
                                     yield(apc); yield_count = yield_count + 1 
