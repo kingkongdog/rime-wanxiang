@@ -7034,7 +7034,6 @@ billy	billy
 billycock	billycock
 biloxi	biloxi
 Biltmore	Biltmore
-BIM	BIM
 bimag	bimag
 bimanous	bimanous
 bimbo	bimbo
@@ -12612,7 +12611,6 @@ clyster	clyster
 Clytemnestra	Clytemnestra
 CMake	CMake
 cmd	cmd
-CMYK	CMYK
 cmdline	cmdline
 cmi	cmi
 CMOS	CMOS
@@ -15943,7 +15941,7 @@ cstar	cstar
 csv	csv
 CTO	CTO
 Chief Technology Officer	CTO
-Ctrl	Ctrl
+ctrl	ctrl
 ctty	ctty
 cub	cub
 Cuba	Cuba
@@ -28840,8 +28838,6 @@ gyrus	gyrus
 gyve	gyve
 gzip	gzip
 ha	ha
-HSB	HSB
-HSL	HSL
 Haag	Haag
 Haas	Haas
 habanera	habanera
@@ -34573,10 +34569,10 @@ jauntiness	jauntiness
 jaunts	jaunts
 jaunty	jaunty
 Java	Java
-JavaScript	JavaScript
 Java Development Kit	JavaDevelopmentKit
 Java EE	JavaEE
 Javanese	Javanese
+JavaScript	JavaScript
 Java Virtual Machine	JavaVirtualMachine
 javelin	javelin
 javelins	javelins
@@ -50896,6 +50892,7 @@ pygmy	pygmy
 pyjamas	pyjamas
 Pyle	Pyle
 pylon	pylon
+pypinyin	pypinyin
 pyloric	pyloric
 pylorus	pylorus
 Pyongyang	Pyongyang
@@ -57543,13 +57540,6 @@ shielded	shielded
 shielding	shielding
 Shields	Shields
 shies	shies
-GoldenDB	GoldenDB
-GoldenDB Lite	GoldenDBLite
-TaurusDB	TaurusDB
-PolarDB	PolarDB
-GaussDB	GaussDB
-TeleDB	TeleDB
-DolphinDB	DolphinDB
 shift	shift
 shifted	shifted
 shifter	shifter
@@ -59487,10 +59477,6 @@ sorts	sorts
 sorus	sorus
 SOS	SOS
 sot	sot
-SOTA	SOTA
-non-SOTA	non-SOTA
-SOTA model	SOTAmodel
-non-SOTA model	non-SOTAmodel
 sottish	sottish
 souffle	souffle
 soufflé	soufflé
@@ -63980,7 +63966,6 @@ textured	textured
 textures	textures
 TextWrangler	TextWrangler
 tga	tga
-TRPG	TRPG
 Thai	Thai
 Thailand	Thailand
 thalamus	thalamus
@@ -66411,7 +66396,6 @@ Tzeltal	Tzeltal
 tzigane	tzigane
 UA	UA
 UOM	UOM
-UOS	UOS
 uber	uber
 ubiety	ubiety
 ubiquitous	ubiquitous
@@ -71141,6 +71125,7 @@ Xhosa	Xhosa
 XHTML	XHTML
 eXtensible HyperText Markup Language	XHTML
 xi	xi
+Xime	Xime
 xiphoid	xiphoid
 xla	xla
 xls	xls

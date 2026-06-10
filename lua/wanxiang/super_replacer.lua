@@ -325,15 +325,14 @@ function M.init(env)
     -- 2. 读取基础配置
     local db_name_val = cfg_root and cfg_root:get_value("db_name")
     local db_name = db_name_val and db_name_val:get_string() or "lua/replacer"
-    
-    local delim_val = cfg_root and cfg_root:get_value("delimiter")
-    local delim = delim_val and delim_val:get_string() or "|"
-    env.delimiter = delim
+
+    env.delimiter = "\t"
+    env.split_pattern = "([^\t]+)"
     
     local comment_fmt_val = cfg_root and cfg_root:get_value("comment_format")
     env.comment_format = comment_fmt_val and comment_fmt_val:get_string() or "〔%s〕"
     
-    local current_version = "v0.0.1"
+    local current_version = "v0.0.2"
     if wanxiang and wanxiang.version then
         current_version = wanxiang.version
     end
@@ -342,20 +341,11 @@ function M.init(env)
         env.input_type = wanxiang.get_input_method_type(env)
     end
     
-    env.is_t9 = env.input_type == "t9"
-
     local chain_val = cfg_root and cfg_root:get_value("chain")
     env.chain = chain_val and chain_val:get_bool() or false
 
-    if delim == " " then 
-        env.split_pattern = "%S+"
-    else 
-        local esc = s_gsub(delim, "[%-%.%+%[%]%(%)%$%^%%%?%*]", "%%%1")
-        env.split_pattern = "([^" .. esc .. "]+)" 
-    end
-
     env.rules = {}
-    local tasks = {}
+    local tasks = {} 
 
     local function resolve_path(relative)
         if not relative then return nil end
@@ -513,9 +503,8 @@ function M.init(env)
     for _, t in ipairs(env.rules) do
         insert(config_sig_parts, tostring(t.t9_opt or false) .. (t.cand_type or ""))
     end
-    local config_sig = concat(config_sig_parts, "|")
 
-    -- 传入 env.fmm_cache
+    local config_sig = concat(config_sig_parts, "\t")
     env.db = connect_db(db_name, current_version, env.delimiter, tasks, config_sig, env.fmm_cache)
 end
 
@@ -689,32 +678,14 @@ function M.func(input, env)
         return results
     end
 
-    -- 流式拦截器 + 候车室 架构
     local yield_count = 0
-    local quality_dropped = false
-    local has_exact_phrase = false
     local seen_texts = {}
     local global_yielded = {}
     local always_cands = {}
     local lazy_cands = {}
-    local top_buffer = {}
 
-    local function yield_cand(cand)
-        local key = cand.text
-        if env.is_t9 then
-            key = key .. (cand.comment or "")
-        end
-
-        if not global_yielded[key] then
-            global_yielded[key] = true
-            yield(cand)
-            yield_count = yield_count + 1 
-        end
-    end
-
-    -- 第一步：提前提取简码候选，分配阵营
     for _, t in ipairs(rules) do
-        if t.mode == "abbrev" and env.input_type ~= "pinyin" then
+        if t.mode == "abbrev" then
             local is_active = false
             for _, trigger in ipairs(t.triggers) do
                 if trigger == true then is_active = true; break
@@ -728,28 +699,25 @@ function M.func(input, env)
                     if current_seg_tags[req_tag] then is_tag_match = true; break end
                 end
             end
+            
+            local query_code = input_code
+            if string.match(ctx.input, "^[a-zA-Z]+$") then query_code = ctx.input end
 
-            if is_active and is_tag_match and input_code ~= "" then 
-                local key = t.prefix .. input_code
-                local val = db:fetch(key) or (not s_match(input_code, "[A-Z]") and db:fetch(t.prefix .. s_upper(input_code)))
-                
+            if is_active and is_tag_match and query_code ~= "" then
+                local key = t.prefix .. query_code
+                local val = db:fetch(key) or (not s_match(query_code, "[A-Z]") and db:fetch(t.prefix .. s_upper(query_code)))
+
                 if val then
                     local count = 0
                     for p in s_gmatch(val, split_pat) do
-                        local item_text, item_preedit = parse_item(p, t.preedit_delim) 
-
+                        local item_text, item_preedit = parse_item(p, t.preedit_delim)
                         if not seen_texts[item_text] then
                             seen_texts[item_text] = true
-                            
                             local final_type = t.cand_type or "abbrev"
-                            local abbrev_cand = Candidate(final_type, seg and seg.start or 0, seg and seg._end or #input_code, item_text, "")
+                            local abbrev_cand = Candidate(final_type, seg and seg.start or 0, seg and seg._end or #ctx.input, item_text, "")
+                            if item_preedit and item_preedit ~= "" then abbrev_cand.preedit = item_preedit end
                             
-                            if item_preedit and item_preedit ~= "" then
-                                abbrev_cand.preedit = item_preedit
-                            end
-
                             count = count + 1
-                            
                             if count <= t.always_qty then
                                 abbrev_cand.quality = 999
                                 insert(always_cands, { cand = abbrev_cand, index = t.always_idx + (count - 1) })
@@ -766,88 +734,149 @@ function M.func(input, env)
 
     table.sort(always_cands, function(a, b) return a.index < b.index end)
 
-    -- 标准吐词函数（含精准定位插队）
-    local function output_cand(cand)
+    local function trim_space(str)
+        if not str then return "" end
+        return string.match(str, "^%s*(.-)%s*$")
+    end
+
+    local abbrev_lookup = {}
+    for _, item in ipairs(always_cands) do
+        local key = trim_space(item.cand.text)
+        abbrev_lookup[key] = { type = "always", ref = item }
+    end
+    for _, cand in ipairs(lazy_cands) do
+        local key = trim_space(cand.text)
+        abbrev_lookup[key] = { type = "lazy", ref = cand }
+    end
+
+    local function dump_all_abbrevs()
+        for _, item in ipairs(always_cands) do
+            if not item.yielded then
+                item.yielded = true
+                local processed = process_rules(item.cand)
+                for _, pc in ipairs(processed) do
+                    local dedup_key = trim_space(pc.text)
+                    if not global_yielded[dedup_key] then
+                        global_yielded[dedup_key] = true
+                        yield(pc); yield_count = yield_count + 1 
+                    end
+                end
+            end
+        end
+        
+        for _, cand in ipairs(lazy_cands) do
+            if not cand.yielded then
+                cand.yielded = true
+                local processed = process_rules(cand)
+                for _, pc in ipairs(processed) do
+                    local dedup_key = trim_space(pc.text)
+                    if not global_yielded[dedup_key] then
+                        global_yielded[dedup_key] = true
+                        yield(pc); yield_count = yield_count + 1
+                    end
+                end
+            end
+        end
+    end
+
+    local iter_func, state, iter_var = input:iter()
+    local lookahead_cache = {}
+    local has_phrase = false
+    local is_exhausted = false
+    
+    while #lookahead_cache < 30 do
+        iter_var = iter_func(state, iter_var)
+        if not iter_var then 
+            is_exhausted = true
+            break 
+        end
+        insert(lookahead_cache, iter_var)
+        
+        if iter_var.type == "phrase" then
+            has_phrase = true
+            break
+        end
+    end
+    local cache_idx = 1
+    local function get_next_cand()
+        if cache_idx <= #lookahead_cache then
+            local c = lookahead_cache[cache_idx]
+            cache_idx = cache_idx + 1
+            return c
+        elseif not is_exhausted then
+            iter_var = iter_func(state, iter_var)
+            if not iter_var then is_exhausted = true end
+            return iter_var
+        else
+            return nil
+        end
+    end
+
+    local cand = get_next_cand()
+    local next_always_ptr = 1
+
+    while cand do
         local processed_cands = process_rules(cand)
         for _, pc in ipairs(processed_cands) do
-            while #always_cands > 0 and (yield_count + 1) >= always_cands[1].index do
-                local ac = table.remove(always_cands, 1)
-                local ac_processed = process_rules(ac.cand)
-                for _, apc in ipairs(ac_processed) do
-                    yield_cand(apc)
-                end
-            end
+            local dedup_key = trim_space(pc.text)
 
-            yield_cand(pc)
-        end
-    end
+            if not global_yielded[dedup_key] then
+                local c_type = cand.type or ""
+                local is_user = (c_type == "user_phrase" or c_type == "user_table")
+                local is_regular = (c_type == "phrase") or (c_type == "table" and has_phrase)
 
-    -- 清空候车室机制
-    local function flush_buffer()
-        if has_exact_phrase then
-            for _, cand in ipairs(top_buffer) do
-                output_cand(cand)
-            end
-        else
-            for _, cand in ipairs(top_buffer) do
-                local processed_cands = process_rules(cand)
-                for _, pc in ipairs(processed_cands) do
+                local match_info = abbrev_lookup[dedup_key]
+                local is_reserved = match_info ~= nil
+
+                if is_user then
+                    if is_reserved then 
+                        match_info.ref.yielded = true
+                    end
+                    global_yielded[dedup_key] = true
+                    yield(pc)
+                    yield_count = yield_count + 1
                     
-                    yield_cand(pc)
+                elseif is_regular then
+                    while next_always_ptr <= #always_cands do
+                        local item = always_cands[next_always_ptr]
+                        if not item.yielded and (yield_count + 1) >= item.index then
+                            item.yielded = true
+                            local ac_processed = process_rules(item.cand)
+                            for _, apc in ipairs(ac_processed) do
+                                local apc_key = trim_space(apc.text)
+                                if not global_yielded[apc_key] then
+                                    global_yielded[apc_key] = true
+                                    yield(apc); yield_count = yield_count + 1 
+                                end
+                            end
+                        else
+                            if item.yielded or (yield_count + 1) < item.index then
+                                break
+                            end
+                        end
+                        next_always_ptr = next_always_ptr + 1
+                    end
+                    
+                    if not is_reserved then
+                        global_yielded[dedup_key] = true
+                        yield(pc)
+                        yield_count = yield_count + 1
+                    end
+                    
+                else
+                    dump_all_abbrevs()
+                    
+                    if not is_reserved then
+                        global_yielded[dedup_key] = true
+                        yield(pc)
+                        yield_count = yield_count + 1
+                    end
                 end
             end
-            
-            while #always_cands > 0 do
-                local ac = table.remove(always_cands, 1)
-                local ac_processed = process_rules(ac.cand)
-                for _, apc in ipairs(ac_processed) do
-                    yield_cand(apc)
-                end
-            end
-            
-            for _, lc in ipairs(lazy_cands) do
-                local lc_processed = process_rules(lc)
-                for _, lpc in ipairs(lc_processed) do
-                    yield_cand(lpc)
-                end
-            end
-            lazy_cands = {}
         end
-        top_buffer = {}
+        cand = get_next_cand()
     end
-
-    -- 第二步：遍历底层流
-    for cand in input:iter() do
-        if cand.type == "phrase" or cand.type == "user_phrase" then
-            has_exact_phrase = true 
-        end
-        local q = cand.quality or 0
-
-        if not quality_dropped then
-            if q >= 99 then
-                insert(top_buffer, cand)
-            else
-                quality_dropped = true
-                flush_buffer()
-                output_cand(cand)
-            end
-        else
-            output_cand(cand)
-        end
-    end
-
-    -- 第三步：如果流从头到尾都没跌破 99
-    if not quality_dropped then
-        flush_buffer()
-    end
-
-    -- 清理残余
-    while #always_cands > 0 do
-        local ac = table.remove(always_cands, 1)
-        local ac_processed = process_rules(ac.cand)
-        for _, apc in ipairs(ac_processed) do
-            yield_cand(apc)
-        end
-    end
+    
+    dump_all_abbrevs()
 end
 return M
