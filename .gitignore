@@ -12,3 +12,4 @@ user.yaml
 !others/**/*.custom.yaml
 wanxiang-lts-zh-hans.gram
 privacy.lua
+.DS_Store

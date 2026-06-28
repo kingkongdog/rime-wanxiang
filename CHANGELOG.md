@@ -1,5 +1,116 @@
 # Changelog
 
+## [15.16.0](https://github.com/amzxyz/rime-wanxiang/compare/v15.15.4...v15.16.0) (2026-06-28)
+
+
+### ✨ 新特性
+
+* 万象英文新增replacer，可以使用emoji和翻译为中文的配置 ([3058da5](https://github.com/amzxyz/rime-wanxiang/commit/3058da53dc77f01ecfaf2807e12fc1fdc501b5db))
+
+
+### 📚 词库更新
+
+* 词库调整 ([785638c](https://github.com/amzxyz/rime-wanxiang/commit/785638ce3722a78c69ab4b1c9e31dfd7bf2d574b))
+* 词库调整 ([f0c2803](https://github.com/amzxyz/rime-wanxiang/commit/f0c2803bac1d2fd1b7182889b3840f988d64dbb1))
+
+
+### 🐛 Bug 修复
+
+* 优化字符集过滤兜底性能 ([0910f4a](https://github.com/amzxyz/rime-wanxiang/commit/0910f4a7beeb49b386d5e9c5bde23ea535f4ac01))
+
+## [15.15.4](https://github.com/amzxyz/rime-wanxiang/compare/v15.15.3...v15.15.4) (2026-06-27)
+
+
+### 🐛 Bug 修复
+
+* 优化回车以拦截并输出换行 ([bfb8325](https://github.com/amzxyz/rime-wanxiang/commit/bfb8325a062104808510fee2161efac2cf6efa41))
+* 回车以拦截并输出换行来尝试 ([395ac0e](https://github.com/amzxyz/rime-wanxiang/commit/395ac0e77b97e4ee3d5e1bbda4f237fc70ddc3d8))
+* 紧急变更预测方案去掉了lua关于符号的拦截，改为通过key_binder处理 ([d9defd0](https://github.com/amzxyz/rime-wanxiang/commit/d9defd08d3fd47003b8c4cc081ee6530915809f0))
+
+## [15.15.3](https://github.com/amzxyz/rime-wanxiang/compare/v15.15.2...v15.15.3) (2026-06-27)
+
+
+### 📚 词库更新
+
+* 词库调整 ([fa43128](https://github.com/amzxyz/rime-wanxiang/commit/fa431281aa5ee76dc38cc9267d1e942c7d6f4d71))
+* 词库调整 ([260e32a](https://github.com/amzxyz/rime-wanxiang/commit/260e32a61290141237896185564c21d937b3106e))
+* 词库调整 ([8bbfebb](https://github.com/amzxyz/rime-wanxiang/commit/8bbfebb3f5abfd3c6e2d5fcafed2517ffb7032c7))
+* 词库调整 ([ab6a982](https://github.com/amzxyz/rime-wanxiang/commit/ab6a98288ecb24ee14892c45d539e6e51cfa3126))
+
+
+### 🐛 Bug 修复
+
+* 优化预测S级导入的保护策略 ([a28c698](https://github.com/amzxyz/rime-wanxiang/commit/a28c6986982f1814c3841ca0d7a6c1949a307022))
+* 优化预测的时候允许逗号句号顿号等直接上屏不带上预测候选 ([fc89f6f](https://github.com/amzxyz/rime-wanxiang/commit/fc89f6f98f722cd287c3c9920a0c799e818e3f8e))
+* 调整模型参数 ([f0ab68f](https://github.com/amzxyz/rime-wanxiang/commit/f0ab68f0094a87df5bfb61b19dc7487799f1b923))
+
+## [15.15.2](https://github.com/amzxyz/rime-wanxiang/compare/v15.15.1...v15.15.2) (2026-06-25)
+
+
+### 📚 词库更新
+
+* 词库调整 ([ec42183](https://github.com/amzxyz/rime-wanxiang/commit/ec42183f5a55e7f7e516dbc07e000467567c0798))
+* 词库调整 ([d65d1d0](https://github.com/amzxyz/rime-wanxiang/commit/d65d1d0e6c8f29ebe736018bff870c6995a63583))
+* 词库调整 ([0d64c32](https://github.com/amzxyz/rime-wanxiang/commit/0d64c3288d70302b31cfb31cace33d83c4586ad1))
+* 词库调整 ([2260df9](https://github.com/amzxyz/rime-wanxiang/commit/2260df9014228882a2d7d0a20ca0f03080c0908f))
+* 词库调整 ([9572bdb](https://github.com/amzxyz/rime-wanxiang/commit/9572bdbbecd156df331a10523a58d19089afa42c))
+* 词库调整 ([6321002](https://github.com/amzxyz/rime-wanxiang/commit/6321002890d647108df0eb2cbfdae18a4e13cdb5))
+
+
+### 🐛 Bug 修复
+
+* 优化字符集过滤 ([94b0059](https://github.com/amzxyz/rime-wanxiang/commit/94b0059501cd7d3f4194bbbcca85fc662d3250a9))
+* 修复replacer若干bug ([ed92349](https://github.com/amzxyz/rime-wanxiang/commit/ed923499fab643c9c791757238e05bdc525912c0))
+* 移除an纠错转写 ([d35658c](https://github.com/amzxyz/rime-wanxiang/commit/d35658c5e7511cf8dfacfa781a54176043bdaa0a))
+* 移除三码两字类型简码 ([3994a56](https://github.com/amzxyz/rime-wanxiang/commit/3994a5639eb902c105482f63aa4f0fbc71a4ed02))
+
+## [15.15.1](https://github.com/amzxyz/rime-wanxiang/compare/v15.15.0...v15.15.1) (2026-06-24)
+
+
+### 🐛 Bug 修复
+
+* 恢复误删除函数 ([05cc3bd](https://github.com/amzxyz/rime-wanxiang/commit/05cc3bd69be5b11d5984a91f6e83c3375e3698c2))
+
+## [15.15.0](https://github.com/amzxyz/rime-wanxiang/compare/v15.14.4...v15.15.0) (2026-06-24)
+
+
+### ✨ 新特性
+
+* **super_lookup:** base新增针对两字词组的直接辅助筛选，默认关闭，类似手心的直接辅助选项，但是只提供开关不提供对某个字辅助，因为实践中往往是any，支持任意字的单码、双码，以及两个字首码组成的双码 ([97de6d8](https://github.com/amzxyz/rime-wanxiang/commit/97de6d84314bb8cf671429ac0a18b88504993714))
+* **super_replacer:** 新增针对流水线转换节点中，输入类型的控制参数only_types,exclude_types 可选，解决一直以来一个严重的问题，对于全拼如果匹配简码实际上是在干扰自己本身的简码，所以基本上必须置顶，而双拼则要单字优先简码应该出现在次选或更后面的位置，这一冲突导致默认的1,6前置参数只适用于双拼。第二处修改是当有一个被前置的情形下其他的直接丢弃，避免干扰自然排序被拖到后面，只有在需要完全兜底的情形下三个简码才一次性释放 ([e196220](https://github.com/amzxyz/rime-wanxiang/commit/e1962207c4c4bf7fab431a7de3711b332e4ae42a))
+
+
+### 📚 词库更新
+
+* 测试结束恢复top进jichu词库 ([9be1b9a](https://github.com/amzxyz/rime-wanxiang/commit/9be1b9a039cc82ec841ef1fb570c5d7b2f43a47c))
+* 词库调整 ([178b728](https://github.com/amzxyz/rime-wanxiang/commit/178b728e7a2221089f78a790ad0aa6b5e02fd2e0))
+* 词库调整 ([42084aa](https://github.com/amzxyz/rime-wanxiang/commit/42084aaeacb5d05838783e211d56a94466e824ec))
+* 词库调整 ([06bb782](https://github.com/amzxyz/rime-wanxiang/commit/06bb7822fba3f2ea0eee84a8f6544ec4a971db50))
+* 词库调整 ([479ca51](https://github.com/amzxyz/rime-wanxiang/commit/479ca512c57b620f38c900decaa9876918028d26))
+* 词库调整 ([954182e](https://github.com/amzxyz/rime-wanxiang/commit/954182e91ab207c799de0879a7f0e7a79bb47fd4))
+* 词库调整 ([5dda3c2](https://github.com/amzxyz/rime-wanxiang/commit/5dda3c24f2b81591d5b647f908aa1fddb4eb7823))
+* 词库调整 ([998bff5](https://github.com/amzxyz/rime-wanxiang/commit/998bff50d236236c063cc2489b4557a9f53025f0))
+* 词库调整 ([ba1a40d](https://github.com/amzxyz/rime-wanxiang/commit/ba1a40d854f972d7a757452f3d250f49cc612706))
+* 词库调整 ([b3881d0](https://github.com/amzxyz/rime-wanxiang/commit/b3881d02b8f417a3af39f8fe0bd8697f67c39ef2))
+* 词库调整 ([2a470ef](https://github.com/amzxyz/rime-wanxiang/commit/2a470ef42f5f94fe551956f9d8f5a1f05d0f9a0a))
+* 词库调整 ([3011b36](https://github.com/amzxyz/rime-wanxiang/commit/3011b3602e749ee47a0119820985fc512bc2185d))
+* 词库调整 ([7580fa4](https://github.com/amzxyz/rime-wanxiang/commit/7580fa4212bc70e406074d5426bfe5658e134118))
+* 词库调整 ([3285e7c](https://github.com/amzxyz/rime-wanxiang/commit/3285e7cd864b329e7d0f470b340d94a9d12bba2c))
+
+
+### 🐛 Bug 修复
+
+* lookup fix ([345654c](https://github.com/amzxyz/rime-wanxiang/commit/345654cb485f6caef99f7ed957215e0e07e98d67))
+* **super_lookup:** 修复全拼状态下zhi jie这类输入的情况下e被错误判定为辅助码的问题 ([3fdd2d9](https://github.com/amzxyz/rime-wanxiang/commit/3fdd2d9a9fcef3ed01228784d58b50ae7194d520))
+* 增加清空表后主动gc ([70d4aa9](https://github.com/amzxyz/rime-wanxiang/commit/70d4aa93fca79c29f4585de3d5387c712b4350a5))
+* 添加流水线排除项 ([7e229ef](https://github.com/amzxyz/rime-wanxiang/commit/7e229eff6ec8253ec59d71513184f5b043468a2c))
+* 移除全拼ian-iam的模糊 ([e0ea8e0](https://github.com/amzxyz/rime-wanxiang/commit/e0ea8e04f07e1a79923d8bbdfd468925704ee2cf))
+
+
+### 🤖 持续集成
+
+* 同文自动打包不打包模型，需单独下载 ([3e199da](https://github.com/amzxyz/rime-wanxiang/commit/3e199da6feade4e68e697f2181b5536762c8a772))
+
 ## [15.14.4](https://github.com/amzxyz/rime-wanxiang/compare/v15.14.3...v15.14.4) (2026-06-18)
 
 

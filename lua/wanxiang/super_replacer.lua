@@ -845,13 +845,7 @@ function M.func(input, env)
                         global_yielded[dedup_key] = true
                         yield(pc)
                         yield_count = yield_count + 1
-                    else
-                        match_info.ref.yielded = true
-                        if match_info.type == "always" then
-                            group_fronted[match_info.ref.group_key] = true 
-                        end
                     end
-                    
                 else
                     dump_all_abbrevs()
                     
@@ -859,8 +853,6 @@ function M.func(input, env)
                         global_yielded[dedup_key] = true
                         yield(pc)
                         yield_count = yield_count + 1
-                    else
-                        match_info.ref.yielded = true
                     end
                 end
             end
