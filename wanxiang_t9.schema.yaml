@@ -76,18 +76,15 @@ engine:
     - punct_segmentor                           #标识符号段落〔键入标点符号用〕加上 punct 这个 tag
     - fallback_segmentor                        #标识其他未标识段落，必须放在最后帮助tag模式切换后回退重新处理
   translators:
-    - punct_translator                     #配合 punct_segmentor 转换标点符号
-    - script_translator                    #脚本翻译器，用于拼音、粤拼等基于音节表的输入方案
-    # - lua_translator@*wanxiang.user_predict*T       #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
-    # - lua_translator@*wanxiang.version_display      #输入'/wx'，显示万象项目网址和当前版本号
-    - lua_translator@*wanxiang.shijian              #农历、日期、节气、节日、时间、周、问候模板等等，触发清单看下文
-    # - lua_translator@*wanxiang.super_calculator     #超级计算器，Lua内查看高级用法
-    # - lua_translator@*wanxiang.input_statistics     #一个输入统计的脚本，以日、周、月、年等维度的统计
-    # - lua_translator@*wanxiang.number_translator    #数字、金额大写，通过输入大写R1234获得候选输出
-    # - reverse_lookup_translator@wanxiang_reverse    #挂接部件组字和笔画反查
-    - table_translator@wanxiang_english    #英文词汇表导入
-    - table_translator@wanxiang_mixedcode  #混合编码词汇表导入
-    - lua_translator@*force_gc           # 暴力 GC
+    - punct_translator  #配合 punct_segmentor 转换标点符号
+    - script_translator  #脚本翻译器，用于拼音、粤拼等基于音节表的输入方案
+    - lua_translator@*wanxiang.user_predict*T  #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
+    - lua_translator@*wanxiang.version_display  #输入'/wx'，显示万象项目网址和当前版本号
+    - lua_translator@*wanxiang.shijian  #农历、日期、节气、节日、时间、周、问候模板等等，触发清单看下文
+    - lua_translator@*wanxiang.super_calculator  #超级计算器，Lua内查看高级用法
+    - lua_translator@*wanxiang.input_statistics  #一个输入统计的脚本，以日、周、月、年等维度的统计
+    - lua_translator@*wanxiang.number_translator  #数字、金额大写，通过输入大写R1234获得候选输出
+    - reverse_lookup_translator@wanxiang_reverse  #挂接部件组字和笔画反查
   filters:
     - lua_filter@*english_filter                    # 输入 2 个及 2 个以上英文字母才显示英文候选词。不加这个的话，输入第一个字母的时候挺卡的。
     # - lua_filter@*wanxiang.super_lookup                      #字词输入中反查辅助筛选
