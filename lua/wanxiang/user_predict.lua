@@ -40,9 +40,8 @@ local CONFIG = {
     MAX_MEMORY_BRANCHES = 15,            
     DECAY_RATE          = 0.85,          
     SCAN_LIMIT          = 80,            
-    ENABLE_PREDICT_SPACE = false,  
     CONTEXT_TIMEOUT_MS  = 5000,
-    PREDICT_STYLE       = "post",
+    PREDICT_STYLE       = "off",
     ENABLE_FALLBACK_REORDER = true,
 }
 local is_after_number = false  --量词调频状态
@@ -89,12 +88,15 @@ local function load_config(env)
         CONFIG.EXPIRY_SECONDS      = (config:get_int("user_predict/expiry_days") or 90) * 86400
         CONFIG.MAX_MEMORY_BRANCHES = config:get_int("user_predict/max_memory_branches") or 15
         CONFIG.DECAY_RATE          = config:get_double("user_predict/decay_rate") or 0.85
-        local ps_val = config:get_bool("user_predict/enable_predict_space")
-        if ps_val ~= nil then CONFIG.ENABLE_PREDICT_SPACE = ps_val end
         local timeout_val = config:get_int("user_predict/context_timeout")
         if timeout_val ~= nil then CONFIG.CONTEXT_TIMEOUT_MS = timeout_val end
-        local style_val = config:get_string("user_predict/predict_style")
-        if style_val ~= nil then CONFIG.PREDICT_STYLE = style_val end
+        -- 移动端用 mobile_predict_style，PC端默认 reorder 调频
+        if wanxiang.is_mobile_device() then
+            local mobile_style = config:get_string("user_predict/mobile_predict_style")
+            if mobile_style ~= nil then CONFIG.PREDICT_STYLE = mobile_style end
+        else
+            CONFIG.PREDICT_STYLE = "reorder"
+        end
         local fallback_val = config:get_bool("user_predict/enable_fallback_reorder")
         if fallback_val ~= nil then CONFIG.ENABLE_FALLBACK_REORDER = fallback_val end
         local custom_node = config:get_item("user_predict/custom_classifiers")
@@ -749,84 +751,25 @@ function P.func(key, env)
     end
     
     if is_predicting then
-        local is_alt_key = (repr == "Tab" or repr == "Alt" or repr == "Alt_L" or repr == "Alt_R")
-        -- 根据选词范围分流数字键
+        -- 数字键打断联想并上屏数字
         if s_match(repr, "^[0-9]$") or s_match(repr, "^KP_[0-9]$") then
-            -- 九宫格(T9): 数字键是音节编码, 续写时放行给 speller 起新音节。
             if env.is_t9 then
+                -- T9: 数字键是编码，放行
                 env.engine.context:clear()
-                if reset_memory_chain then
-                    reset_memory_chain(env, "T9数字放行起音节")
-                end
+                reset_memory_chain(env, "T9数字放行起音节")
                 return 2
             end
             local digit = s_match(repr, "%d")
-            local d = tonumber(digit)
-            if d == 0 then d = 10 end
-            local config = env.engine.schema.config
-            local page_size = config:get_int("menu/page_size")
-            
-            local ctx = env.engine.context
-            local comp = ctx.composition
-            local seg = (comp and not comp:empty()) and comp:back() or nil
-            
-            local is_valid_candidate = false
-            
-            if seg then
-                local current_page = math.floor(seg.selected_index / page_size)
-                local target_index = current_page * page_size + (d - 1)
-                if seg:get_candidate_at(target_index) then
-                    is_valid_candidate = true
-                end
-            end
-            if d > page_size or not is_valid_candidate then
-                -- 在预测状态下，如果数字不对应有效候选，应该回到 RIME 默认处理
-                -- 而不是强行上屏数字，这样可以避免预测候选数量不足时数字被直接上屏的问题
-                ctx:clear()
-                if reset_memory_chain then
-                    reset_memory_chain(env, "非选词数字打断联想")
-                end
-                -- 改为 return 2，让 RIME 继续处理，而不是直接上屏数字
-                return 2
-            else
-                return 2
-            end
-        end
-
-        if CONFIG.ENABLE_PREDICT_SPACE then
-            -- enable_predict_space: true
-            if key.keycode == 0x20 then
-                local current_input = ctx.input or ""
-                local is_predict_placeholder = (current_input ~= "") and s_find(current_input, "^" .. PH_CHAR .. "+$")
-
-                if is_predicting and is_predict_placeholder then
-                    ctx:clear()
-                    reset_memory_chain(env, "空格打断联想并上屏")
-                    env.engine:commit_text(" ")
-                    return 1
-                else
-                    return 2 -- 放行空格，让原生处理
-                end
-            elseif is_alt_key then
-                ctx:clear()
-                reset_memory_chain(env, "替身键打断联想")
-                return 1
-            end
-        else
-            -- enable_predict_space: false
-            if is_alt_key then
-                ctx:clear()
-                reset_memory_chain(env, "替身键打断联想并上屏空格")
-                env.engine:commit_text(" ")
-                return 1
-            end
+            ctx:clear()
+            reset_memory_chain(env, "数字打断联想并上屏")
+            env.engine:commit_text(digit)
+            return 1
         end
         
-        if repr == "Return" then
-            ctx:clear()
-            reset_memory_chain(env, "回车键打断预测并输入回车") 
-            return 2
-        end
+        -- 任何其他按键都打断联想
+        ctx:clear()
+        reset_memory_chain(env, "按键打断联想")
+        return 2
     end
 
     if not ctx:is_composing() then
