@@ -46,7 +46,7 @@ function M.init(env)
 
             local preedit = ctx:get_preedit().text
             if not preedit:match("%d") then
-                local code = ctx.input
+                local code = ctx.input:match("^([2-9]+)[01].*$")
                 local text = preedit:gsub("‸$", "")
 
                 env.engine:commit_text(text)
