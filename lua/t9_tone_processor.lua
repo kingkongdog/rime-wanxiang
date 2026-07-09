@@ -48,7 +48,7 @@ function M.init(env)
             if not preedit:match("%d") then
                 ctx:commit()
                 -- env.engine:commit_text(preedit:gsub("‸$", ""))
-                -- ctx:clear()
+                ctx:clear()
             end
         end
     end)
