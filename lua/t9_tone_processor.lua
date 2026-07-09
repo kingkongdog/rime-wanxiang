@@ -50,6 +50,7 @@ function M.init(env)
                 local text = preedit:gsub("‸$", "")
 
                 env.engine:commit_text(text)
+                ctx:clear()
 
 		        local entry = DictEntry()
                 entry.text = text
@@ -57,8 +58,6 @@ function M.init(env)
                 -- 更新用户词典。参数 1 是增加的词频权重，"" 是前缀（通常留空）
                 -- 如果是自造词，直接写入，如果是词典中的词，更新词频权重
                 env.mem:update_userdict(entry, 1, "")
-
-                ctx:clear()
             end
         end
     end)
