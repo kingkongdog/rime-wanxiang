@@ -145,8 +145,8 @@ translator:
   #disable_user_dict_for_patterns:  #如果你开启调频，需要一并考虑这个配置是否需要，基本的6码3字不调频，你可以自定义，目前的逻辑是依然记录用户词但满足规则的不输出不被使用
   #  - "^[a-z]{1,6}"
   preedit_format:
-    - xform/(1).*$/壹/
-    - xform/(0).*$/零/
+    - xform/1(.*)$/壹$1/
+    - xform/0(.*)$/零$1/
 
 # 中文、英文、数字、符号等混合词汇
 wanxiang_english:
