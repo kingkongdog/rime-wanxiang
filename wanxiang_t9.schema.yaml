@@ -224,10 +224,10 @@ speller:
     - abbrev/^([a-z])a$/$1/
     - derive/^([nl])ve$/$1ue/
     - derive/^([jqxy])u/$1v/
-    - derive/([aeiu])n$/$1/
+    # - derive/([aeiu])n$/$1/
     - derive/([aoei])ng$/$1g/
-    - derive/([aoei])ng$/$1n/
-    - derive/^([zcs])h/$1/
+    # - derive/([aoei])ng$/$1n/
+    # - derive/^([zcs])h/$1/
     - xlit/abcdefghijklmnopqrstuvwxyz/22233344455566677778889999/
 
 # 处理符合特定规则的输入码，如网址、反查
