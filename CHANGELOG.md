@@ -1,5 +1,127 @@
 # Changelog
 
+## [16.2.3](https://github.com/amzxyz/rime-wanxiang/compare/v16.2.2...v16.2.3) (2026-07-23)
+
+
+### 📚 词库更新
+
+* 词库调整 ([b4dae7c](https://github.com/amzxyz/rime-wanxiang/commit/b4dae7ccbdb3b35c91e6498e2bae5b5362f390d6))
+
+
+### 🐛 Bug 修复
+
+* 删除英文候选后面的派生逻辑已经迁移到english对应lua，这里移除相关逻辑 ([4c696bd](https://github.com/amzxyz/rime-wanxiang/commit/4c696bd15d9f5616dd39023b7fcd0383fedd9c9f))
+* 删除英文相关逻辑继续优化 ([2efddd9](https://github.com/amzxyz/rime-wanxiang/commit/2efddd937d29d896bd2e13ed7e6ff4edf5dabe9e))
+* 在确认英文靠前的情形下干掉无效的补全候选 ([0221fcf](https://github.com/amzxyz/rime-wanxiang/commit/0221fcfdff171fabb0c99e31aff8a50812b2f271))
+* 完善英文符号引用 ([6ab2b45](https://github.com/amzxyz/rime-wanxiang/commit/6ab2b458926096457a62b17e6273a2df98232131))
+* 完善英文符号引用 ([ea451a2](https://github.com/amzxyz/rime-wanxiang/commit/ea451a2a2cb5c6e02405ffd65a786543f2830bf8))
+* 移除PR造成的句号问号作为编码的配置 ([8800663](https://github.com/amzxyz/rime-wanxiang/commit/8800663b29a9ef15b340a996e2c76a15cecae1df))
+* 英文方案增加全角半角开关 ([3ac622b](https://github.com/amzxyz/rime-wanxiang/commit/3ac622b7b301e8ed21580a181a04b562464ab797))
+* 英文方案添加符号处理器 ([0e4be46](https://github.com/amzxyz/rime-wanxiang/commit/0e4be462bc4f3df8c9cf4b8d697dbae02054f6e4))
+* 默认注释掉元书t9处理器，现在九键前端增多，使用者自己patch开启 ([16cd5a0](https://github.com/amzxyz/rime-wanxiang/commit/16cd5a08003ad582763cdaf74a4a6e43a543963c))
+
+
+### 💅 重构
+
+* 重构英文限流位置提升性能 ([f01947d](https://github.com/amzxyz/rime-wanxiang/commit/f01947d59d06c5d7d572ea98e301c78c34235591))
+
+## [16.2.2](https://github.com/amzxyz/rime-wanxiang/compare/v16.2.1...v16.2.2) (2026-07-22)
+
+
+### 🐛 Bug 修复
+
+* 优化lookup直接辅助的性能细节 ([ed4025f](https://github.com/amzxyz/rime-wanxiang/commit/ed4025f03e9d917517746b339aeed34e3f1ae849))
+* 优化lookup表的创建和复用 ([b017fd4](https://github.com/amzxyz/rime-wanxiang/commit/b017fd4f1e0e7793ef0d78ce48783e3f376367c4))
+* 优化英文句子的一些问题 ([281ccad](https://github.com/amzxyz/rime-wanxiang/commit/281ccad98e20931d9928e3fb4a4b448f7d5dc5d2))
+* 回退英文造句在中文中的使用，还是有很多问题存在，不能做到100%完美 ([86b6225](https://github.com/amzxyz/rime-wanxiang/commit/86b6225227c7efad8494903a81963184a215a623))
+* 移除太极相关代码 ([adf0fb0](https://github.com/amzxyz/rime-wanxiang/commit/adf0fb0e129f088a7da43f86b9fa6a257fb76a75))
+
+## [16.2.1](https://github.com/amzxyz/rime-wanxiang/compare/v16.2.0...v16.2.1) (2026-07-22)
+
+
+### 🐛 Bug 修复
+
+* 先修复一个版本英文在中文中句子问题，其他问题后续再修复 ([c7c748d](https://github.com/amzxyz/rime-wanxiang/commit/c7c748d0bf981a3130d2a5af6b4b9c8baa57621a))
+
+## [16.2.0](https://github.com/amzxyz/rime-wanxiang/compare/v16.1.4...v16.2.0) (2026-07-21)
+
+
+### ✨ 新特性
+
+* **lua:** add super symbols module based on typst/codex ([7dab289](https://github.com/amzxyz/rime-wanxiang/commit/7dab2890d493e709c1c545c16e2bbd36f970ff70))
+* 英文词库加了词频前面忘记说了，现在英文lua也能帮助在中文状态下输入英文句子了，能正确解构好中文句子和英文句子的删除和留存问题 ([ba44a97](https://github.com/amzxyz/rime-wanxiang/commit/ba44a97838cc40fb72728a917ea49b06d70b9e35))
+
+
+### 📚 词库更新
+
+* 词库调整 ([1da3b32](https://github.com/amzxyz/rime-wanxiang/commit/1da3b32ab386894f89a8bc9b52f6ec168e06d5c0))
+
+
+### 🐛 Bug 修复
+
+* use func field for RIME translator export ([7cf08ef](https://github.com/amzxyz/rime-wanxiang/commit/7cf08eff2dce607074932e5c1b1a2fbedb440690))
+* 修复英文句子的分隔符兜底问题 ([2e66d86](https://github.com/amzxyz/rime-wanxiang/commit/2e66d867201f5930ef75e4d8dcd68cd52fb2e4e5))
+* 修复虎码问题 ([d28375a](https://github.com/amzxyz/rime-wanxiang/commit/d28375a1fc21dfed189719d82cc750e5980f9bf6))
+* 恢复快符制表符 ([3ea80ef](https://github.com/amzxyz/rime-wanxiang/commit/3ea80efc173c2cfa8faa4bd8eb1d3dd10423e7d4))
+* 英文造句时包含分隔符的处理逻辑 ([d861539](https://github.com/amzxyz/rime-wanxiang/commit/d861539df1ae75a8ebcbd677a463921966636829))
+
+
+### 💅 重构
+
+* **super_symbols:** add configurable triggers and fix modifier parsing ([06e136b](https://github.com/amzxyz/rime-wanxiang/commit/06e136bb161251f3021e8d4226bc578e8007378d))
+* **super_symbols:** optimize data loading and matching logic ([0fc7d0f](https://github.com/amzxyz/rime-wanxiang/commit/0fc7d0f3a270fc8b45f7863a2a5158871da4990b))
+* **super_symbols:** remove comments and load data in init ([a9582c4](https://github.com/amzxyz/rime-wanxiang/commit/a9582c4e2b50d1758eba9c463da09ade4c51d9ba))
+* **super_symbols:** rewrite matching with dot-chained order-independent logic ([4873781](https://github.com/amzxyz/rime-wanxiang/commit/4873781636d11b8063695d7d7c909547eff30b73))
+
+## [Unreleased]
+
+
+### ✨ 新特性
+
+* **超级符号库 super_symbols**：基于 [typst/codex](https://github.com/typst/codex) 引入数千个 Unicode 符号的「按名输入」能力
+  - 触发方式：`/sym.<name>[.<mod>...]` 精确查找、`/sym?<keyword>` 或 `/sym/<keyword>` 模糊搜索（两种语法等价）；`/emoji.*` 同理
+  - 支持 codex 的 best_match 模糊匹配算法（修饰符可省略、顺序无关）
+  - 嵌套模块支持：`/sym.chess.king.white` → ♔，`/sym.gender.male` → ♂
+  - **简化数据格式**：标识符为 Typst 写法全文（如 `arrow.r.double`），只有一个字段 `typst_name<TAB>char`
+  - 候选注释显示完整 Typst 代码（即 typst_name 本身），**强制显示**（不受"注释关"开关影响）
+  - **修复 `\vs{1}` 等 Variation Selector 数字形式**的解析（支持 `\vs{1}`~`\vs{16}` 全部 16 种）
+  - **tips 全部纯中文**，手动翻译，不含 Typst 代码
+  - **模式提示**：仅输入 `/sym` `/sym.` `/sym?` `/sym/` `/emoji` 等前缀时，候选区显示引导文案（如「超级符号：直输」「超级表情：搜索」）
+  - **模块命名 super_symbols**：翻译器文件 `lua/wanxiang/super_symbols.lua`，配置块 `super_symbols:`，candidate type `super_sym`/`super_emoji`
+  - 新增 `lua/wanxiang/super_symbols.lua` 翻译器（~340 行）
+  - 新增 `lua/data/codex_sym.txt`（1211 条）和 `lua/data/codex_emoji.txt`（1386 条）
+  - 新增 `lua/data/codex_tips_sym.txt`（1090 条手动翻译）和 `lua/data/codex_tips_emoji.txt`（341 条手动翻译）
+  - 中文 tips 合并到 `lua/data/tips_show.txt`（新增 1431 条，已去重）
+  - 修改 `lua/wanxiang/super_comment_preedit.lua`：识别 `super_sym`/`super_emoji` 类型并跳过注释清空
+  - 新增 `docs/doc/super_symbols.md` 用户文档
+  - 同步更新标准版与 Pro 版 schema
+
+## [16.1.4](https://github.com/amzxyz/rime-wanxiang/compare/v16.1.3...v16.1.4) (2026-07-20)
+
+
+### 📚 词库更新
+
+* 词库调整 ([4cebe48](https://github.com/amzxyz/rime-wanxiang/commit/4cebe4835ca6db0ab16a88bcaf274a8c7c3bf14f))
+* 词库调整 ([da90335](https://github.com/amzxyz/rime-wanxiang/commit/da90335a69351df90bb1002142755e0affb2a41d))
+* 词库调整 ([4fac09b](https://github.com/amzxyz/rime-wanxiang/commit/4fac09b9b56514427fb92bf67210c4811bbd032f))
+* 词库调整 ([d9cc946](https://github.com/amzxyz/rime-wanxiang/commit/d9cc9464d1b20594e61af93e7064943556183db6))
+* 词库调整 ([c6da94e](https://github.com/amzxyz/rime-wanxiang/commit/c6da94e0c8de2d0a9825692452838f5502dc8869))
+* 词库调整 ([4d4a5eb](https://github.com/amzxyz/rime-wanxiang/commit/4d4a5eb6a83fdb27eb722b0e1781a3aa7baaa0fc))
+* 词库调整 ([ef9b78c](https://github.com/amzxyz/rime-wanxiang/commit/ef9b78ccf2ac6ebe802c8d16a145a57d46714a5d))
+* 词库调整 ([affbb11](https://github.com/amzxyz/rime-wanxiang/commit/affbb115becc8f3aac8873c4e0238afe2dfc1bf4))
+* 词库调整 ([2ca821d](https://github.com/amzxyz/rime-wanxiang/commit/2ca821d5174a985bcf2ed4aeab55f2f0a1868a25))
+* 词库调整 ([09ee15c](https://github.com/amzxyz/rime-wanxiang/commit/09ee15cf34ff8ec6c1e0d71b0847f1fe5bdc5671))
+
+
+### 🐛 Bug 修复
+
+* **lookup:** 优化代码 ([f0b7094](https://github.com/amzxyz/rime-wanxiang/commit/f0b7094148772c910339b3b2aeda6013598735d7))
+* the issue of the delete function not working in Input Cobra Method. ([5988f47](https://github.com/amzxyz/rime-wanxiang/commit/5988f47223886abbaca6af8e678136012a509866))
+* 优化英文智能加空格逻辑 ([85ceceb](https://github.com/amzxyz/rime-wanxiang/commit/85cecebea6346552b2265c43b73b1818b9cdb859))
+* 优化辅助码及拆分储存方式 ([5fc8b5b](https://github.com/amzxyz/rime-wanxiang/commit/5fc8b5bbd25fba4b11dc21d91d49193435ba98cb))
+* 添加元书pc信息 ([11c2f5e](https://github.com/amzxyz/rime-wanxiang/commit/11c2f5ef6a43e6285aa71c93f210c74aeb8c0ae3))
+* 转写规则同步首道变更 ([5526229](https://github.com/amzxyz/rime-wanxiang/commit/552622954c2059d64d01ac869da692446db04b18))
+
 ## [16.1.3](https://github.com/amzxyz/rime-wanxiang/compare/v16.1.2...v16.1.3) (2026-07-16)
 
 
