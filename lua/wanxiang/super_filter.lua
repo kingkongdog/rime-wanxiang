@@ -663,11 +663,11 @@ function M.func(input, env)
     local suppress_set = {}
     local wrap_limit = env.page_size * 2
     local eager_buffer = {}
-    local candKey = getKey(cand)
-
+    
     for cand in input:iter() do
         idx = idx + 1
         local text = cand.text
+        local candKey = getKey(cand)
 
         -- 首选特殊处理
         if idx == 1 then
@@ -704,6 +704,7 @@ function M.func(input, env)
     for cand in input:iter() do
         idx = idx + 1
         local text = cand.text
+        local candKey = getKey(cand)
         local should_skip = false
 
         if suppress_set[candKey] then
