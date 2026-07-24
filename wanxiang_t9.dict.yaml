@@ -14,9 +14,14 @@ version: "LTS"
 sort: by_weight  #字典初始排序，可選original或by_weight
 use_preset_vocabulary: false
 import_tables:
-  # 1. 先完整引入 wanxiang.dict.yaml 中的 import_tables 列表
-  __include: wanxiang.dict:/import_tables
-
-  # 2. 将索引为 0 的第一项直接覆盖重写为新路径
-  /[0]: dicts/zi_level1_3500
+  - dicts/zi_level1_3500            #字表，包含了所有带拼音的汉字
+  - dicts/jichu         #基础词库，2-3字词汇
+  - dicts/lianxiang     #联想词库，5字以上词汇，多用于输入前半段第二候选可以出来整段
+  - dicts/cuoyin        #错音错字，支持错音和错字输入的兼容，同时供超级注释lua使用会在输入错误音节打出的时候给予提示
+  - dicts/duoyin        #兼容词库，是基础词库的扩充，收录了多场景多种读音的词组
+  - dicts/shici         #诗词
+  - dicts/diming        #地名
+  - dicts/wangluoliuxing  #网络流行新词
+#  - dicts/wuzhong       #物种多样性,在线供应：https://github.com/amzxyz/rime_wanxiang/tree/wanxiang/dicts
+#  - dicts/renming       #人名,在线供应：https://github.com/amzxyz/rime_wanxiang/tree/wanxiang/dicts
 ...
