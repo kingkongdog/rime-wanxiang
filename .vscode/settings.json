@@ -1,3 +1,7 @@
 {
-    "git.autofetch": false
+    "git.autofetch": false,
+    "[lua]": {
+        "editor.defaultFormatter": "JohnnyMorganz.stylua",
+        "editor.formatOnSave": true
+    }
 }

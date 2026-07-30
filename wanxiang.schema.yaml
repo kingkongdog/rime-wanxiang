@@ -113,6 +113,7 @@ engine:
     # - lua_filter@*wanxiang.user_predict*F           #用于输入编码后的上下文调频
     - lua_filter@*with_dot_filter                   #jd.com
     - lua_filter@*shortcuts_filter                   
+    - lua_filter@*prepend_digit_filter2                   
     - uniquifier                                    #去重,必须在最后
 
 grammar:
