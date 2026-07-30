@@ -102,11 +102,7 @@ local function release_db(env)
     if entry.refs > 0 then return end
 
     DB_POOL[env.stats_db_name] = nil
-    collectgarbage("collect")
-
-    if entry.db and entry.db:loaded() then
-        pcall(function() entry.db:close() end)
-    end
+    if entry.db and entry.db:loaded() then entry.db:close() end
 end
 
 -- 在统计业务层生成稳定的 UserDb raw key。
@@ -675,7 +671,10 @@ local function on_commit(context, env)
     local chars = chinese_length(text)
     if chars == 0 then return end
 
-    local code_length = #(context.input or "")
+    local code = context.input or ""
+    if code == "" then code = env.last_observed_input or "" end
+
+    local code_length = #code
     record_stats(env, chars, code_length > 0 and code_length or chars * 2)
     try_flush(env)
 end
@@ -707,7 +706,6 @@ local function init(env)
     env.last_flush_ts, env.titles = os.time(), nil
     env.last_observed_input = ""
     reset_session(env)
-    acquire_db(env)
 
     env.triggers = {
         local_total=config:get_string("input_stats/triggers/local_total") or "/btj",
