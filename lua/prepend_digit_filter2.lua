@@ -32,15 +32,15 @@ local function filter(input, env)
 
 	for cand in input:iter() do
 		count = count + 1
-		-- 如果到了第 2 位且尚未插入，先 yield 自定义符号
-		if count == 2 then
+		-- 如果到了第 6 位且尚未插入，先 yield 自定义符号
+		if count == 6 then
 			yield(symbol_cand)
 		end
 		yield(cand)
 	end
 
-	-- 边缘情况处理：如果原候选词总数少于 1 个（例如 0 个或 1 个），确保符号依然能被输出
-	if count < 2 then
+	-- 边缘情况处理：如果原候选词总数少于 6 个，确保符号依然能被输出
+	if count < 6 then
 		yield(symbol_cand)
 	end
 end
