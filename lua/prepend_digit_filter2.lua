@@ -34,7 +34,7 @@ local function filter(input, env)
   for cand in input:iter() do
     count = count + 1
     -- 如果到了第 2 位且尚未插入，先 yield 自定义符号
-    if count == 2 and not inserted then
+    if count == 2 then
       yield(symbol_cand)
       inserted = true
     end
