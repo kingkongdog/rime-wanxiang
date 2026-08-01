@@ -19,11 +19,19 @@ local s_upper = string.upper
 local t_sort = table.sort
 local type = type
 local tonumber = tonumber
-local DB_FORMAT_VERSION = "7"
+local DB_FORMAT_VERSION = "1"
 local MERGED_SCHEMA_IDS = {"wanxiang_pro", "wanxiang", "wanxiang_english", "wanxiang_t9"}
 local FILE_KEYS = {"files", "file"}
-local db_instances = {}
-local db_refs = {}
+local DB_POOL_KEY = "__wanxiang_super_replacer_db_pool"
+local db_pool = rawget(_G, DB_POOL_KEY)
+
+if not db_pool then
+    db_pool = {instances = {}, refs = {}}
+    rawset(_G, DB_POOL_KEY, db_pool)
+end
+
+local db_instances = db_pool.instances
+local db_refs = db_pool.refs
 local file_signature_cache = {}
 local RECORD_SEPARATOR = " \t"
 local RECORD_TAIL = "c=0 d=0 t=0"
@@ -202,7 +210,7 @@ local function enabled_schema_ids(env, user_dir)
     local enabled = {}
     local current = env.engine.schema.schema_id or ""
 
-    local config = Config(user_dir .. "/build/default.yaml")
+    local config = Config("default")
     local list = config and config:get_list("schema_list")
 
     if list then
@@ -350,6 +358,7 @@ local function fetch_aggregate(db, key)
         break
     end
 
+    -- 最后一个数据库使用者退出时由 release_db 统一强制回收。
     accessor = nil
     return value, raw_key
 end
@@ -360,9 +369,31 @@ local function update_aggregate(db, key, value)
     return db:update(key .. RECORD_SEPARATOR .. encode_record_value(value), RECORD_TAIL)
 end
 
--- 重建数据库：每个业务 key 只能出现一行，重复 key 保留第一次并跳过后续行。
+-- 给一行中的每个候选分别附加原始编码，避免多候选只标记最后一项。
+local function append_preedit(value, delimiter, original_key)
+    if not delimiter or delimiter == "" then return value end
+
+    local parts = {}
+    local count = 0
+
+    for item in s_gmatch(value, "[^\t]+") do
+        count = count + 1
+        if not s_find(item, delimiter, 1, true) then
+            item = item .. delimiter .. original_key
+        end
+        parts[count] = item
+    end
+
+    return concat(parts, "\t", 1, count)
+end
+
+-- 重建数据库：
+-- 1. 同一原始业务 key 重复出现时仍只保留第一次；
+-- 2. 不同字母 key 经 T9 转换后落到同一数字 key 时，按出现顺序合并为一行。
 local function rebuild(tasks, db)
-    local seen_keys = {}
+    local seen_source_keys = {}
+    local merged_values = {}
+    local merged_order = {}
     local duplicate_count = 0
     local invalid_count = 0
 
@@ -376,24 +407,32 @@ local function rebuild(tasks, db)
 
                     if key and value then
                         local original_key = key
-                        if task.conversion then key = s_gsub(key, ".", task.conversion) end
-                        value = s_match(value, "^%s*(.-)%s*$")
+                        local task_mode = task.conversion and "t9" or "plain"
+                        local source_key = concat({
+                            task.prefix, task_mode, original_key
+                        }, "\0")
 
-                        if task.preedit_delim
-                            and task.preedit_delim ~= ""
-                            and not s_find(value, task.preedit_delim, 1, true)
-                        then
-                            value = value .. task.preedit_delim .. original_key
-                        end
-
-                        local db_key = task.prefix .. key
-                        if seen_keys[db_key] then
+                        if seen_source_keys[source_key] then
                             duplicate_count = duplicate_count + 1
                         else
-                            seen_keys[db_key] = true
-                            if not update_aggregate(db, db_key, value) then
-                                close()
-                                return false
+                            seen_source_keys[source_key] = true
+
+                            if task.conversion then
+                                key = s_gsub(key, ".", task.conversion)
+                            end
+
+                            value = s_match(value, "^%s*(.-)%s*$")
+                            value = append_preedit(
+                                value, task.preedit_delim, original_key
+                            )
+
+                            local db_key = task.prefix .. key
+                            if merged_values[db_key] then
+                                merged_values[db_key] =
+                                    merged_values[db_key] .. "\t" .. value
+                            else
+                                merged_values[db_key] = value
+                                merged_order[#merged_order + 1] = db_key
                             end
                         end
                     else
@@ -406,10 +445,16 @@ local function rebuild(tasks, db)
         end
     end
 
+    for _, db_key in ipairs(merged_order) do
+        if not update_aggregate(db, db_key, merged_values[db_key]) then
+            return false
+        end
+    end
+
     if log and log.warning then
         if duplicate_count > 0 then
             log.warning(s_format(
-                "super_replacer: 已跳过 %d 行重复业务 key，仅保留第一次出现",
+                "super_replacer: 已跳过 %d 行重复原始业务 key，仅保留第一次出现",
                 duplicate_count
             ))
         end
@@ -485,8 +530,13 @@ local function connect_db(
 )
     local cached = db_instances[db_name]
     if cached then
-        retain_db(db_name)
-        return cached
+        if cached:loaded() then
+            retain_db(db_name)
+            return cached
+        end
+
+        db_instances[db_name] = nil
+        db_refs[db_name] = nil
     end
 
     local db = userdb.LevelDb(db_name)
@@ -561,57 +611,90 @@ local function release_db(env)
 
     db_refs[db_name] = nil
     if db_instances[db_name] == db then db_instances[db_name] = nil end
-    db:close()
+
+    -- DbAccessor 没有显式析构接口。fetch_aggregate 和 fetch_fmm_bucket
+    -- 已先将 accessor 置空；最后一个使用者退出时强制回收，再关闭 LevelDb。
+    collectgarbage()
+    if db:loaded() then db:close() end
 end
 
--- FMM 分词转换算法：复用 offsets/result_parts，避免热点路径反复分配临时表
+-- 当前输入生命周期内缓存“两字前缀桶”；匹配结论仍按每个新起点重新判断。
+local function fetch_fmm_bucket(db, prefix, stem, fmm_cache)
+    local cache_key = prefix .. "\0" .. stem
+    local bucket = fmm_cache[cache_key]
+    if bucket then return bucket end
+
+    bucket = {}
+    local query_prefix = prefix .. stem
+    local query_len = #query_prefix
+    local prefix_len = #prefix
+    local accessor = db:query(query_prefix)
+
+    if accessor then
+        for raw_key, _ in accessor:iter() do
+            if s_sub(raw_key, 1, query_len) ~= query_prefix then break end
+
+            local sep_pos = s_find(raw_key, RECORD_SEPARATOR, query_len + 1, true)
+            if sep_pos then
+                local source = s_sub(raw_key, prefix_len + 1, sep_pos - 1)
+                bucket[#bucket + 1] = {
+                    source,
+                    decode_record_value(s_sub(raw_key, sep_pos + #RECORD_SEPARATOR)),
+                    utf8.len(source) or 0
+                }
+            end
+        end
+
+        -- 最后一个数据库使用者退出时由 release_db 统一强制回收。
+        accessor = nil
+    end
+
+    t_sort(bucket, function(a, b) return a[3] > b[3] end)
+    fmm_cache[cache_key] = bucket
+    return bucket
+end
+
+-- 每个新起点用当前两字选桶，从长到短验证；命中后直接跳过完整词条。
 local function segment_convert(text, db, prefix, split_pat, fmm_cache, offsets, result_parts)
     local char_count = get_utf8_offsets(text, offsets)
     clear_array(result_parts)
 
     local i, result_count = 1, 0
-    local MAX_LOOKAHEAD = 6
 
     while i <= char_count do
         local start_byte = offsets[i]
-        local matched = false
-        local max_j = i + MAX_LOOKAHEAD
-        if max_j > char_count + 1 then max_j = char_count + 1 end
+        local source = s_sub(text, start_byte, offsets[i + 1] - 1)
+        local output = nil
+        local step = 1
 
-        for j = max_j, i + 2, -1 do
-            local sub_text = s_sub(text, start_byte, offsets[j] - 1)
-            local cache_key = prefix .. sub_text
-            local val = fmm_cache[cache_key]
+        if i < char_count then
+            local stem = s_sub(text, start_byte, offsets[i + 2] - 1)
 
-            if val == nil then
-                val = fetch_aggregate(db, cache_key) or false
-                fmm_cache[cache_key] = val
-            end
-
-            if val then
-                result_count = result_count + 1
-                result_parts[result_count] = s_match(val, split_pat) or sub_text
-                i = j - 1
-                matched = true
-                break
+            for _, entry in ipairs(fetch_fmm_bucket(db, prefix, stem, fmm_cache)) do
+                if s_find(text, entry[1], start_byte, true) == start_byte then
+                    source = entry[1]
+                    output = s_match(entry[2], split_pat) or source
+                    step = entry[3]
+                    break
+                end
             end
         end
 
-        if not matched then
-            local single_char = s_sub(text, start_byte, offsets[i + 1] - 1)
-            local cache_key = prefix .. single_char
-            local val = fmm_cache[cache_key]
+        if not output then
+            local cache_key = prefix .. "\1" .. source
+            local value = fmm_cache[cache_key]
 
-            if val == nil then
-                val = fetch_aggregate(db, cache_key) or false
-                fmm_cache[cache_key] = val
+            if value == nil then
+                value = fetch_aggregate(db, prefix .. source) or false
+                fmm_cache[cache_key] = value
             end
 
-            result_count = result_count + 1
-            result_parts[result_count] = val and (s_match(val, split_pat) or single_char) or single_char
+            output = value and (s_match(value, split_pat) or source) or source
         end
 
-        i = i + 1
+        result_count = result_count + 1
+        result_parts[result_count] = output
+        i = i + step
     end
 
     return concat(result_parts, "", 1, result_count)
@@ -619,6 +702,8 @@ end
 
 -- 模块接口
 function M.init(env)
+    if env.db then release_db(env) end
+
     env.fmm_cache = {}
     env.fmm_offsets = {}
     env.fmm_parts = {}
@@ -1060,6 +1145,8 @@ function M.func(input, env)
     local always_cands = {}
     local lazy_cands = {}
     local group_fronted = {}
+    local abbrev_start = seg and seg.start or 0
+    local abbrev_end = seg and seg._end or #ctx.input
 
     local function yield_cand(cand)
         local key = cand.text
@@ -1083,16 +1170,25 @@ function M.func(input, env)
         return key
     end
 
-    local query_code = s_gsub(input_code, env.speller_delimiter, "")
-    if s_match(ctx.input, "^[a-zA-Z]+$") then
-        query_code = s_gsub(ctx.input, env.speller_delimiter, "")
+    local function make_abbrev_candidate(item)
+        local cand = Candidate(item.cand_type, abbrev_start, abbrev_end, item.text, "")
+        cand.quality = item.quality
+        if item.preedit then cand.preedit = item.preedit end
+        return cand
     end
+
+    local query_source = s_match(ctx.input, "^[a-zA-Z]+$") and ctx.input or input_code
+    local query_code = s_gsub(query_source, env.speller_delimiter, "")
+    local query_has_upper = s_find(query_code, "[A-Z]") ~= nil
+    local upper_query = nil
 
     if query_code ~= "" then
         for _, t in ipairs(active_abbrev_rules) do
             local val = fetch_cached(t.prefix .. query_code)
-            if not val and not s_match(query_code, "[A-Z]") then
-                val = fetch_cached(t.prefix .. s_upper(query_code))
+
+            if not val and not query_has_upper then
+                if not upper_query then upper_query = s_upper(query_code) end
+                val = fetch_cached(t.prefix .. upper_query)
             end
 
             if val then
@@ -1103,33 +1199,23 @@ function M.func(input, env)
                     local item_text, item_preedit = parse_item(p, t.preedit_delim)
                     if not seen_texts[item_text] then
                         seen_texts[item_text] = true
-
-                        local final_type = t.cand_type or "abbrev"
-                        local abbrev_cand = Candidate(
-                            final_type,
-                            seg and seg.start or 0,
-                            seg and seg._end or #ctx.input,
-                            item_text,
-                            ""
-                        )
-                        if item_preedit and item_preedit ~= "" then abbrev_cand.preedit = item_preedit end
-
                         count = count + 1
+
+                        local item = {
+                            text = item_text,
+                            preedit = item_preedit and item_preedit ~= "" and item_preedit or nil,
+                            cand_type = t.cand_type or "abbrev",
+                            group_key = group_key
+                        }
+
                         if count <= t.always_qty then
-                            abbrev_cand.quality = 999
-                            always_cands[#always_cands + 1] = {
-                                cand = abbrev_cand,
-                                index = t.always_idx + count - 1,
-                                group_key = group_key,
-                                yielded = false
-                            }
+                            item.quality = 999
+                            item.index = t.always_idx + count - 1
+                            item.is_always = true
+                            always_cands[#always_cands + 1] = item
                         else
-                            abbrev_cand.quality = 98
-                            lazy_cands[#lazy_cands + 1] = {
-                                cand = abbrev_cand,
-                                group_key = group_key,
-                                yielded = false
-                            }
+                            item.quality = 98
+                            lazy_cands[#lazy_cands + 1] = item
                         end
                     end
                 end
@@ -1138,7 +1224,11 @@ function M.func(input, env)
     end
 
     local function trim_space(str)
-        if not str then return "" end
+        if not str or str == "" then return "" end
+
+        local first = s_byte(str, 1)
+        local last = s_byte(str, #str)
+        if first > 32 and last > 32 then return str end
         return s_match(str, "^%s*(.-)%s*$")
     end
 
@@ -1160,10 +1250,10 @@ function M.func(input, env)
 
     local abbrev_lookup = {}
     for _, item in ipairs(always_cands) do
-        abbrev_lookup[trim_space(item.cand.text)] = { type = "always", ref = item }
+        abbrev_lookup[trim_space(item.text)] = item
     end
     for _, item in ipairs(lazy_cands) do
-        abbrev_lookup[trim_space(item.cand.text)] = { type = "lazy", ref = item }
+        abbrev_lookup[trim_space(item.text)] = item
     end
 
     local abbrevs_dumped = false
@@ -1174,7 +1264,7 @@ function M.func(input, env)
         for _, item in ipairs(always_cands) do
             if not item.yielded then
                 item.yielded = true
-                local processed = process_rules(item.cand, aux_results)
+                local processed = process_rules(make_abbrev_candidate(item), aux_results)
                 for _, pc in ipairs(processed) do
                     local dedup_key = trim_space(pc.text)
                     if not global_yielded[dedup_key] then
@@ -1190,7 +1280,7 @@ function M.func(input, env)
             if not item.yielded then
                 item.yielded = true
                 if not group_fronted[item.group_key] then
-                    local processed = process_rules(item.cand, aux_results)
+                    local processed = process_rules(make_abbrev_candidate(item), aux_results)
                     for _, pc in ipairs(processed) do
                         local dedup_key = trim_space(pc.text)
                         if not global_yielded[dedup_key] then
@@ -1244,23 +1334,23 @@ function M.func(input, env)
     local next_always_ptr = 1
 
     while cand do
+        local c_type = cand.type or ""
+        local is_user = c_type == "user_phrase" or c_type == "user_table"
+        local is_regular = c_type == "phrase" or (c_type == "table" and has_phrase)
         local processed_cands = process_rules(cand, main_results)
 
         for _, pc in ipairs(processed_cands) do
             local dedup_key = get_dedup_key(pc)
 
             if not global_yielded[dedup_key] then
-                local c_type = cand.type or ""
-                local is_user = c_type == "user_phrase" or c_type == "user_table"
-                local is_regular = c_type == "phrase" or (c_type == "table" and has_phrase)
-                local match_info = abbrev_lookup[dedup_key]
-                local is_reserved = match_info ~= nil
+                local match_item = abbrev_lookup[dedup_key]
+                local is_reserved = match_item ~= nil
 
                 if is_user then
                     if is_reserved then
-                        match_info.ref.yielded = true
-                        if match_info.type == "always" then
-                            group_fronted[match_info.ref.group_key] = true
+                        match_item.yielded = true
+                        if match_item.is_always then
+                            group_fronted[match_item.group_key] = true
                         end
                     end
 
@@ -1277,7 +1367,7 @@ function M.func(input, env)
                             item.yielded = true
                             group_fronted[item.group_key] = true
 
-                            local ac_processed = process_rules(item.cand, aux_results)
+                            local ac_processed = process_rules(make_abbrev_candidate(item), aux_results)
                             for _, apc in ipairs(ac_processed) do
                                 local apc_key = trim_space(apc.text)
                                 if not global_yielded[apc_key] then

@@ -1,17 +1,14 @@
 # Rime schema
 # encoding: utf-8
 schema:
-  schema_id: wanxiang_t9
-  name: 好好吃饭
+  schema_id: wanxiang_t9i
+  name: 万象九键(元书)
   version: "LTS"
   author:
     - amzxyz
   description: |
-    万象拼音九宫格公共方案
+    万象拼音九宫格方案，适用于iOS元书、仓输入法的技术路线
   dependencies:
-    #- wanxiang_reverse      # 部件拆字，反查及辅码
-    - wanxiang_mixedcode    #混合编码
-    - wanxiang_english      #英文
 
 # 开关
 # reset: 默认状态。注释掉后，切换窗口时不会重置到默认状态。
@@ -26,87 +23,70 @@ switches:
     states: [半角, 全角]
   - name: emoji  #候选出现emoji滤镜，会显示在相应的候选后面，万象侧重于tips提示，避免候选被占用，因此默认为reset: 0，归属opencc emoji滤镜
     states: [表情关, 表情开]
+  - name: chinese_english  #候选进入翻译模式滤镜，会显示在相应的候选后面，万象侧重于tips提示，避免候选被占用，归属opencc 翻译滤镜
+    states: [翻译关, 翻译开]
+  - name: charset_filter  #字符集过滤，默认开启8105通规显示，即小字集，可通过开关实时开启全字集，快捷键配套ctrl+g,归属：super_filter.lua
+    states: [大字集, 小字集]
     reset: 0
-  - name: chinese_english               #候选进入翻译模式滤镜，会显示在相应的候选后面，万象侧重于tips提示，避免候选被占用，归属opencc 翻译滤镜
-    states: [ 翻译关, 翻译开 ]
-  - name: charset_filter               #字符集过滤，默认开启8105通规显示，即小字集，可通过开关实时开启全字集，快捷键配套ctrl+g,归属：super_filter.lua
-    states: [ 大字集, 小字集 ]
-    reset: 1
   - name: prediction
-    states: [ 预测关, 预测开 ]            # 这个名称能用于插件也能用于万象的lua实现，用来开启关闭预测功能
-    reset: 0
-  - options: [ raw_input, tone_display, full_pinyin ]   #开启后在输入编码的位置实时转换为带声调全拼或者不带声调全拼，不开启则采用系统配置原始编码，影响的是preedit_format,归属：super_preedit.lua
-    states: [ 原编码, 有声调, 无声调 ]
-    reset: 0     #对于开关组从0开始数，第几个就reset几可设为默认
-  - options: [ s2s, s2t, s2hk, s2tw ]   # 简繁转换开关组，可以在一个空选项和多个实际“- simplifier@s2hk”引入的项目之前切换，这是一个开关组，你可以将其中任意一个s2s等设置为toggle快捷键，多次按下将轮询
-    states: [ 简体, 通繁, 港繁, 臺繁 ]
-  - options: [comment_off, tone_hint, toneless_hint]                     #开启后在候选的注释里面实时显示全拼声调，不开启则采用系统配置，影响的是comment_format，归属：super_comment.lua
-    states: [ 注释关, 有声调, 无声调 ]
-    reset: 1     #对于9键，仓、元书用这个参数选择拼音，所以固定为无声调输出，其他前端用户可以适当patch修改
-  - name: super_tips                    #开启后在输入编码后面的提示区显示实时的提示数据，受tips数据库影响，表情、翻译、车牌、符号等对应关系数据，并可实现句号上屏，不开启则默认，影响的是segment.prompt参数，归属：super_tips.lua
-    states: [ 提示关, 提示开 ]
-    reset: 0
+    states: [预测关, 预测开]  # 这个名称能用于插件也能用于万象的lua实现，用来开启关闭预测功能
+  - options: [raw_input, tone_display, full_pinyin]  #开启后在输入编码的位置实时转换为带声调全拼或者不带声调全拼，不开启则采用系统配置原始编码，影响的是preedit_format,归属：super_preedit.lua
+    states: [原编码, 有声调, 无声调]
+    reset: 2  #对于开关组从0开始数，第几个就reset几可设为默认
+  - options: [s2s, s2t, s2hk, s2tw]  # 简繁转换开关组，可以在一个空选项和多个实际“- simplifier@s2hk”引入的项目之前切换，这是一个开关组，你可以将其中任意一个s2s等设置为toggle快捷键，多次按下将轮询
+    states: [简体, 通繁, 港繁, 臺繁]
+  - options: [comment_off, tone_hint, toneless_hint]  #开启后在候选的注释里面实时显示全拼声调，不开启则采用系统配置，影响的是comment_format，归属：super_comment.lua
+    states: [注释关, 有声调, 无声调]
+    reset: 2  #对于9键，仓、元书用这个参数选择拼音，所以固定为无声调输出，其他前端用户可以适当patch修改
+  - name: super_tips  #开启后在输入编码后面的提示区显示实时的提示数据，受tips数据库影响，表情、翻译、车牌、符号等对应关系数据，并可实现句号上屏，不开启则默认，影响的是segment.prompt参数，归属：super_tips.lua
+    states: [提示关, 提示开]
+    reset: 1
   - name: abbrev
     states: [简码关, 简码开]
-    reset: 0
+    reset: 1
 
 # 输入引擎
 engine:
   processors:
-    - lua_processor@*t9_tone_processor
-    # - lua_processor@*t9_tone_input_length_processor
-    # - lua_processor@*wanxiang.user_predict*P    #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
-    # - lua_processor@*wanxiang.super_processor   #KP小键盘、字母选词、符号快打、超强分词、重复限制、退格限制、声调回退、以词定字
-    # - t9_processor                              #元书T9处理器
-    # - lua_processor@*wanxiang.super_tips        #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
-    # - lua_processor@*wanxiang.super_sequence*P  #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+l 移除位移  ctrl+p 置顶
-    - ascii_composer                            #处理英文模式及中英文切换
-    - recognizer                                #与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
-    - key_binder                                #在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页、开关快捷键等
-    # - lua_processor@*wanxiang.key_binder        #绑定按键扩展能力，支持正则扩展将按键生效情景更加细化
-    - lua_processor@*force_digit_input_processor  #解决偶发数字上屏问题。这个位置不要动，再往下移问题依然存在，再往上移自动造词等功能将失效。
-    - speller                                   #拼写处理器，接受字符按键，编辑输入
-    - punctuator                                #符号处理器，将单个字符按键直接映射为标点符号或文字
-    - selector                                  #选字处理器，处理数字选字键〔可以换成别的哦〕、上、下候选定位、换页
-    - navigator                                 #处理输入栏内的光标移动
-    - express_editor                            #编辑器，处理空格、回车上屏、回退键
+    - lua_processor@*wanxiang.user_predict*P  #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
+    - lua_processor@*wanxiang.super_processor  #KP小键盘、字母选词、符号快打、超强分词、重复限制、退格限制、声调回退、以词定字
+    - t9_processor  #元书T9处理器
+    - lua_processor@*wanxiang.super_tips  #超级提示模块：表情、简码、翻译、化学式、等等靠你想象
+    - ascii_composer  #处理英文模式及中英文切换
+    - recognizer  #与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
+    - key_binder  #在特定条件下将按键绑定到其他按键，如重定义逗号、句号为候选翻页、开关快捷键等
+    - lua_processor@*wanxiang.key_binder  #绑定按键扩展能力，支持正则扩展将按键生效情景更加细化
+    - speller  #拼写处理器，接受字符按键，编辑输入
+    - punctuator  #符号处理器，将单个字符按键直接映射为标点符号或文字
+    - selector  #选字处理器，处理数字选字键〔可以换成别的哦〕、上、下候选定位、换页
+    - navigator  #处理输入栏内的光标移动
+    - express_editor  #编辑器，处理空格、回车上屏、回退键
   segmentors:
-    - ascii_segmentor                           #标识英文段落〔譬如在英文模式下〕字母直接上屛
-    - matcher                                   #配合 recognizer 标识符合特定规则的段落，如网址、反查等，加上特定 tag
-    - abc_segmentor                             #标识常规的文字段落，加上 abc 这个 tag
-    # - affix_segmentor@wanxiang_reverse          #反查 tag
-    - punct_segmentor                           #标识符号段落〔键入标点符号用〕加上 punct 这个 tag
-    - fallback_segmentor                        #标识其他未标识段落，必须放在最后帮助tag模式切换后回退重新处理
+    - ascii_segmentor  #标识英文段落〔譬如在英文模式下〕字母直接上屛
+    - matcher  #配合 recognizer 标识符合特定规则的段落，如网址、反查等，加上特定 tag
+    - abc_segmentor  #标识常规的文字段落，加上 abc 这个 tag
+    - affix_segmentor@wanxiang_reverse  #反查 tag
+    - punct_segmentor  #标识符号段落〔键入标点符号用〕加上 punct 这个 tag
+    - fallback_segmentor  #标识其他未标识段落，必须放在最后帮助tag模式切换后回退重新处理
   translators:
-    - punct_translator                     #配合 punct_segmentor 转换标点符号
-    - script_translator                    #脚本翻译器，用于拼音、粤拼等基于音节表的输入方案
-    # - lua_translator@*wanxiang.user_predict*T       #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
-    # - lua_translator@*wanxiang.version_display      #输入'/wx'，显示万象项目网址和当前版本号
-    - lua_translator@*wanxiang.shijian              #农历、日期、节气、节日、时间、周、问候模板等等，触发清单看下文
-    # - lua_translator@*wanxiang.super_calculator     #超级计算器，Lua内查看高级用法
-    # - lua_translator@*wanxiang.input_statistics     #一个输入统计的脚本，以日、周、月、年等维度的统计
-    # - lua_translator@*wanxiang.number_translator    #数字、金额大写，通过输入大写R1234获得候选输出
-    # - reverse_lookup_translator@wanxiang_reverse    #挂接部件组字和笔画反查
-    - table_translator@wanxiang_english    #英文词汇表导入
-    - table_translator@wanxiang_mixedcode  #混合编码词汇表导入
-    - lua_translator@*force_gc           # 暴力 GC
+    - punct_translator  #配合 punct_segmentor 转换标点符号
+    - script_translator  #脚本翻译器，用于拼音、粤拼等基于音节表的输入方案
+    - lua_translator@*wanxiang.user_predict*T  #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
+    - lua_translator@*wanxiang.version_display  #输入'/wx'，显示万象项目网址和当前版本号
+    - lua_translator@*wanxiang.shijian  #农历、日期、节气、节日、时间、周、问候模板等等，触发清单看下文
+    - lua_translator@*wanxiang.super_calculator  #超级计算器，Lua内查看高级用法
+    - lua_translator@*wanxiang.input_statistics  #一个输入统计的脚本，以日、周、月、年等维度的统计
+    - lua_translator@*wanxiang.number_translator  #数字、金额大写，通过输入大写R1234获得候选输出
+    - reverse_lookup_translator@wanxiang_reverse  #挂接部件组字和笔画反查
   filters:
-    - lua_filter@*english_filter                    # 输入 2 个及 2 个以上英文字母才显示英文候选词。不加这个的话，输入第一个字母的时候挺卡的。
-    # - lua_filter@*wanxiang.super_lookup                      #字词输入中反查辅助筛选
-    # - lua_filter@*wanxiang.charset_filter                    #放replacer前面,全方位自定义的字符集过滤器，支持繁体字符集开放
-    # - lua_filter@*wanxiang.super_comment_preedit             #超级注释模块、超级preedit，支持错词提示、辅助码显示，部件组字读音注释，有声调、无声调全拼编码的转换，支持个性化配置和关闭相应的功能，详情搜索super_comment_preedit进行详细配置
-    # - lua_filter@*wanxiang.super_replacer                    #OpenCC替代器，更灵活的处理方式，更自由的自定义方式，支持简繁转换、简码模式、支持候选替换、注释替换、候选派生等等
-    # - lua_filter@*wanxiang.super_filter                      #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
-    # - lua_filter@*wanxiang.super_sequence*F                  #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
-    # - lua_filter@*wanxiang.user_predict*F                    #用于输入编码后的上下文调频
-    # - lua_filter@*t9_input_length_filter            # input 以 1 结尾时，要求候选词的拼音长度为 input.length - 1
-    - lua_filter@*t9_tone_filter                    # 元音声调筛选
-    # - uniquifier                                    # 去重
-    - lua_filter@*t9_uniquifier                   # uniquifier 在去重时，会把 肖(xiāo) 和 肖(xiǎo) 去重，所以要改成自定义的去重
-    - lua_filter@*t9_sorter                         # 万象T9排序器，根据首个候选词长度动态调整后续单字排序方式：1️⃣ 第一个候选词是单个汉字或者表情的，从第9个候选词开始按拼音升序排序，2️⃣ 第一个候选词是多个汉字的，已知单个汉字的候选词都排在后面，从第一个单字候选词开始按拼音排序。https://gemini.google.com/share/efd91333894c
-    - lua_filter@*shortcuts_filter                   
-    - lua_filter@*prepend_digit_filter
-    - lua_filter@*put_input_in_cand_list_when_empty_filter  #没有候选词时把 input 放入候选词，比如输入手机号码
+    - lua_filter@*wanxiang.super_lookup  #字词输入中反查辅助筛选
+    - lua_filter@*wanxiang.user_predict*F  #用于输入编码后的上下文调频
+    - lua_filter@*wanxiang.charset_filter  #放replacer前面,全方位自定义的字符集过滤器，支持繁体字符集开放
+    - lua_filter@*wanxiang.super_comment_preedit  #超级注释模块、超级preedit，支持错词提示、辅助码显示，部件组字读音注释，有声调、无声调全拼编码的转换，支持个性化配置和关闭相应的功能，详情搜索super_comment_preedit进行详细配置
+    - lua_filter@*wanxiang.super_replacer  #OpenCC替代器，更灵活的处理方式，更自由的自定义方式，支持简繁转换、简码模式、支持候选替换、注释替换、候选派生等等
+    - lua_filter@*wanxiang.super_filter  #replacer后面，先进行转换后过滤，这样能繁体继承简体权重。本质功能相关功能见Lua文件
+    - uniquifier  # 去重
+
 
 grammar:
   language: wanxiang-lts-zh-hans
@@ -119,7 +99,7 @@ grammar:
 
 # 主翻译器，拼音
 translator:
-  dictionary: wanxiang_t9  # 挂载主词库
+  dictionary: wanxiang  # 挂载主词库
   #  packs: user                  #导入根目录下名称为user.dict.yaml的自定义固定词典
   prism: wanxiang_t9  # 多方案共用一个词库时，为避免冲突，需要用 prism 指定一个名字。
   enable_completion: true  # 启用候选词补全
@@ -139,34 +119,7 @@ translator:
   comment_format:
   #disable_user_dict_for_patterns:  #如果你开启调频，需要一并考虑这个配置是否需要，基本的6码3字不调频，你可以自定义，目前的逻辑是依然记录用户词但满足规则的不输出不被使用
   #  - "^[a-z]{1,6}"
-  # preedit_format: 没有效果，注释掉，改为修改 trime 源码
-  #   - xform/1(.*)$/壹$1/
-  #   - xform/0(.*)$/零$1/
 
-# 中文、英文、数字、符号等混合词汇
-wanxiang_english:
-  dictionary: wanxiang_english
-  user_dict: en
-  enable_completion: true
-  enable_sentence: true
-  initial_quality: 2.1
-  comment_format:  #这里很重要如果残留带声调字母，剩余编码提示计算出错引发程序崩溃
-    - xform/^~.+$//
-  #英文自动加空格，除关闭外共有3种模式可供选择
-  #off: 关闭; before: 总是前加; after: 总是后加; 
-  #smart: 智能模式连续输入英文时第二个单词前开始加空格，非输入状态的回车与空格都能打断加空格状态
-  #支持设置延时销毁加空格状态，单位秒,0不超时，大于0为超时时间，极大的保证了连续输入的体验。
-  english_spacing: smart
-  spacing_timeout: 5
-
-wanxiang_mixedcode:
-  dictionary: wanxiang_mixedcode
-  db_class: stabledb
-  enable_completion: true
-  enable_sentence: false
-  initial_quality: 2
-  comment_format:  #这里很重要如果残留带声调字母，剩余编码提示计算出错引发程序崩溃
-    - xform/.*//
 
 wanxiang_lookup:  #设置归属于super_lookup.lua
   tags: [abc]  # 检索当前tag的候选
@@ -180,23 +133,10 @@ speller:
   #  auto_select: true
   #  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射，alphabet就是将字符纳入输入编码的范畴
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210`/\›@
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210`/\›
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210›
   delimiter: " '"  # 系统配置，第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
-  # visual_delimiter: " "  # super_preedit.lua配置：是否让分隔符号跟着一起转换，例如nǐ'hǎo 在实际使用中表现出视觉拥挤，我们可以让delimiter平时是'转换为拼音的时候使用空格nǐ hǎo，更符合实际。
-  tone_isolate: true     # super_preedit.lua配置：是否将数字声调从转换后拼音中隔离出来（true=隔离， false 直接参与转换）例如：nǐ3
-  # algebra:
-  #   - xform/ⅱ//  #用于Lua判断输入类型的标记
-  #   - xform/^(.*);.*$/$1/
-  #   - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüńňǹḿm̀/aaaaooooeeeeiiiiuuuuvvvvvnnnmmm/
-  #   - derive/^ng$/eng/
-  #   - xform/^n$/en/
-  #   - xform/^m$/me/
-  #   - derive/^([nl])ve$/$1ue/
-  #   - derive/^([jqxy])u/$1v/
-  #   - derive/^(.*)$/\U$1/
-  #   - abbrev/^([A-Z])A$/$1/
-  #   - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
+  tone_isolate: true  # super_preedit.lua配置：是否将数字声调从转换后拼音中隔离出来（true=隔离， false 直接参与转换）例如：nǐ3
   algebra:
     - xform/ⅱ//  #用于Lua判断输入类型的标记
     - xform/^(.*);.*$/$1/
@@ -204,19 +144,18 @@ speller:
     - derive/^ng$/eng/
     - xform/^n$/en/
     - xform/^m$/me/
-    # - derive/^(.*)$/\U$1/
-    # - abbrev/^([A-Z])[AOE]+$/$1/
-    # - derive/^([NL])VE$/$1UE/
-    # - derive/^([JQXY])U/$1V/
-    # - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
-    - abbrev/^([a-z])a$/$1/
+    - derive/^(.*)$/\U$1/
     - derive/^([nl])ve$/$1ue/
+    - derive/^([NL])VE$/$1UE/
+    - derive/ong$/on/
+    - derive/iong$/ion/
+    - derive/eng$/en/
+    - derive/ONG$/ON/
+    - derive/IONG$/ION/
+    - derive/ENG$/EN/
     - derive/^([jqxy])u/$1v/
-    # - derive/([aeiu])n$/$1/
-    - derive/([aoei])ng$/$1g/
-    # - derive/([aoei])ng$/$1n/
-    # - derive/^([zcs])h/$1/
-    - xlit/abcdefghijklmnopqrstuvwxyz/22233344455566677778889999/
+    - derive/^([JQXY])U/$1V/
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/22233344455566677778889999/
 
 # 处理符合特定规则的输入码，如网址、反查
 recognizer:
@@ -241,32 +180,28 @@ recognizer:
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"  # URL
 
 punctuator:
-  digit_separators: ""  #数字分隔符，系统逻辑是在中文状态下输入数字后继续输入句号按下两次即输入半角状态
+  digit_separators: ",."  #数字分隔符，系统逻辑是在中文状态下输入数字后继续输入句号按下两次即输入半角状态
   __include: wanxiang_symbols:/symbol_table         # 从 wanxiang_symbols.yaml 导入所有符号配置
   __patch:
     - wanxiang_symbols:/symbols
     - t9_sym
-    
 t9_sym:
   half_shape/+:
-    # "1": [1, "@", ".", "/", ":", "_", "-", "#"]
-    "1": [".", ",", "-", "_", ":", "#", "$", "%", "&", "*", "@", "/", "^"]
-    # "@": [1, "@", ！, ：, 、, ……, ～]
-    "@": ["@", "@qq.com", "@gmail.com", "kingkongdog@gmail.com"]
-    # "#": [0, "#", "$", "%", "^", "&", "*", "(", ")"]
-
+    "1": [1, "@", ".", "/", ":", "_", "-", "#"]
+    "@": [1, "@", ！, ：, 、, ……, ～]
+    "#": [0, "#", "$", "%", "^", "&", "*", "(", ")"]
 # 从 default 继承快捷键
 key_binder:
   import_preset: default  # 从 default.yaml 继承通用的
   # Lua 配置: shijian.lua 的引导符，涉及：日期、时间、节日、节气、生日、问候模板等功能
-  shijian_keys: ["/", "6", "o", "8", "v"]
-  bindings:               # 也可以再增加方案专有的
-    # - { when: has_menu, accept: 1, send: apostrophe }
+  shijian_keys: ["/", "6"]
+  bindings:  # 也可以再增加方案专有的
+    - {when: has_menu, accept: 1, send: apostrophe}
+    #当tab第一个字补码正确后，可以使用Ctrl+tab进行上屏并依次补码
+    - {when: composing, accept: "Control+Tab", send_sequence: '{Home}{Shift+Right}{1}{Shift+Right}'}
+    - {match: "^.*`$", accept: "`", send_sequence: '{BackSpace}{Home}{`}{`}{End}'}
+    - {when: composing, accept: Return, send: "Shift+Return",}  #t9没有上屏数字的必要，但preedit有可能
 
-#当tab第一个字补码正确后，可以使用Ctrl+tab进行上屏并依次补码
-    - { when: composing, accept: "Control+Tab", send_sequence: '{Home}{Shift+Right}{1}{Shift+Right}' }
-    - { match: "^.*`$", accept: "`", send_sequence: '{BackSpace}{Home}{`}{`}{End}' }
-    # - { when: composing, accept: Return, send: "Shift+Return" } #t9没有上屏数字的必要，但preedit有可能
 
 super_comment:  # 超级注释模块，子项配置 true 开启，false 关闭
   candidate_length: 15  # 候选词辅助码提醒的生效长度，0为关闭  但同时清空其它，应当使用上面开关来处理
@@ -327,7 +262,7 @@ charset:
   - option: charset_filter
     base: a  #可以填入多个类别如aj
     addlist:
-      - "诶濛硷氽尛躝〇冇吔咗囧屌鲶芶咲畑垅𰻝𰻞龍朙艹卍卐奼哔"
+      - "诶濛硷氽尛躝〇冇吔磺咗囧屌鲶芶咲畑垅𰻝𰻞龍朙頔雲"
     blacklist: []
   - option: s2t
     base: fa
@@ -444,6 +379,7 @@ input_stats:
 #    - "500000:掌控法则·化神期"
 #    - "1000000:破碎虚空·渡劫期"
 
+
 super_replacer:
   db_name: replacer
   comment_format: "〔%s〕"
@@ -507,7 +443,7 @@ super_replacer:
       # 前置数量2，前置位置3,数量说的是你维护得数据库编码后面分割了几个词前几个要前置显示,位置说的是你要前置到第二候选还是第几
       # 然后空码或只有英文等自定义词组的时候直接全部兜底显示,这个新的设计简化的应用层面,我们只需要维护一个数据库即可.
       t9_optimization: true  #t9优化,从txt里编码转换为实际打字需要的编码，例如九键维护用字母加载数据库变数字,源编码
-      prefix: "_abr_"
+      prefix: "_abbr_"
       files:
         - lua/data/t9_abbrev.txt  # 格式：zm\t怎么|在吗
         #- lua/data/t9_custom.txt #你可以这样patch一个新的文本代替根目录custom_phrase.txt，九键就有了自己的自定义词典
