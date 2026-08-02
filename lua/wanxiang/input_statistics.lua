@@ -2,12 +2,8 @@
 -- input_stats.lua：分设备统计 / 最近速度 / 峰速格式去重 / 历史查询
 local userdb = require("wanxiang/userdb")
 local wanxiang = require("wanxiang/wanxiang")
-local DB_POOL_NAME = "__wanxiang_input_stats_db_pool"
-local DB_POOL = rawget(_G, DB_POOL_NAME)
-if not DB_POOL then
-    DB_POOL = {}
-    rawset(_G, DB_POOL_NAME, DB_POOL)
-end
+-- 模块私有数据库池：同名数据库共享包装器和生命周期。
+local DB_POOL = {}
 
 local SOFTWARE_NAME = rime_api.get_distribution_code_name()
 local RECORD_SEPARATOR = " \t"
@@ -105,7 +101,7 @@ local function acquire_db(env)
     end
 
     entry.refs = entry.refs + 1
-    env.stats_db, env.stats_db_entry = entry.db, entry
+    env.stats_db = entry.db
     env.stats_db_error = nil
     return entry.db
 end
@@ -115,21 +111,22 @@ local function get_db(env)
 end
 
 local function release_db(env)
-    local entry = env.stats_db_entry
-    env.stats_db, env.stats_db_entry = nil, nil
-    if not entry then return end
+    local db, db_name = env.stats_db, env.stats_db_name
+    env.stats_db = nil
+
+    local entry = db_name and DB_POOL[db_name]
+    if not db or not entry or entry.db ~= db then return end
 
     entry.refs = math.max(0, entry.refs - 1)
     if entry.refs > 0 then return end
+
+    DB_POOL[db_name] = nil
 
     -- DbAccessor 没有显式析构接口。所有局部访问器先置空，再执行一次
     -- 完整垃圾回收，确保其先于所引用的 LevelDb 释放。
     collectgarbage()
 
-    if DB_POOL[env.stats_db_name] == entry then
-        DB_POOL[env.stats_db_name] = nil
-    end
-    if entry.db and entry.db:loaded() then entry.db:close() end
+    if db:loaded() then db:close() end
     entry.db = nil
 end
 
@@ -248,16 +245,31 @@ local function new_stats()
 end
 
 local function pending_add(env, key, amount)
+    local db = get_db(env)
+    if env.stats_db_error or not db or not db:loaded() then return false end
     env.pending_stats[key] = (env.pending_stats[key] or 0) + amount
+    return true
 end
 
 local function flush_pending(env)
     if not next(env.pending_stats) then return true end
     local db = get_db(env)
-    if not db or not db:loaded() then return false end
-    for key, amount in pairs(env.pending_stats) do
-        if not db_add(db, key, env.device_id, amount) then return false end
+
+    if db and db:loaded() then
+        for key, amount in pairs(env.pending_stats) do
+            if not db_add(db, key, env.device_id, amount) then
+                db = nil
+                break
+            end
+        end
     end
+
+    if not db then
+        env.pending_stats = {}; env.pending_characters = 0
+        env.stats_db_error = true
+        return false
+    end
+
     env.pending_stats = {}
     env.pending_characters = 0
     env.last_flush_ts = os.time()
@@ -397,7 +409,7 @@ local function record_stats(env, characters, code_length, speed_code_length)
     local timestamp_ms = monotonic_ms()
     local day = day_id()
     local prefix = DAY_PREFIX .. day .. "/"
-    pending_add(env, prefix .. "text/characters", characters)
+    if not pending_add(env, prefix .. "text/characters", characters) then return end
     pending_add(env, prefix .. "text/commits", 1)
     pending_add(env, prefix .. "text/keystrokes", code_length)
     env.pending_characters = env.pending_characters + characters
@@ -742,8 +754,8 @@ end
 local function init(env)
     local config = env.engine.schema.config
     env.schema_name = env.engine.schema.schema_name or "万象方案"
-    env.stats_db_name = config:get_string("input_stats/db_name") or "lua/stats"
-    if env.stats_db_name == "" then env.stats_db_name = "lua/stats" end
+    env.stats_db_name = config:get_string("input_stats/db_name") or "stats"
+    if env.stats_db_name == "" then env.stats_db_name = "stats" end
     env.device_id = get_device_id(config)
     env.continuous_gap_ms = bounded_int(config, "input_stats/continuous_gap_ms",
         DEFAULT_CONTINUOUS_GAP_MS, 200, 5000)
