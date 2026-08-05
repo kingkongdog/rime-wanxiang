@@ -1,5 +1,47 @@
 # Changelog
 
+## [17.2.2](https://github.com/amzxyz/rime-wanxiang/compare/v17.2.1...v17.2.2) (2026-08-05)
+
+
+### 🐛 Bug 修复
+
+* 修复历史残留的t9模式判断错误 ([581ae39](https://github.com/amzxyz/rime-wanxiang/commit/581ae394347e57a89f95e910cf39bd6f9cce0228))
+* 添加user_table为字符集过滤豁免 ([8620bfb](https://github.com/amzxyz/rime-wanxiang/commit/8620bfb64c5a5c869f81d4c3022ab7bede3872f2))
+
+## [17.2.1](https://github.com/amzxyz/rime-wanxiang/compare/v17.2.0...v17.2.1) (2026-08-05)
+
+
+### 📚 词库更新
+
+* 词库调整 ([72a2a1f](https://github.com/amzxyz/rime-wanxiang/commit/72a2a1fed25a4f9fb7b20634c2a1380456555055))
+
+
+### 🐛 Bug 修复
+
+* 修复字符级过滤句子兜底的一个错误 ([14cc722](https://github.com/amzxyz/rime-wanxiang/commit/14cc72296e16448ddfcd56dfab1739ae7706bab3))
+* 还是通过lua open读取default拿清单这样既能避免旧版本librime不可用也能避免W日志的频繁输出 ([49d5689](https://github.com/amzxyz/rime-wanxiang/commit/49d56893b1324b12ad502c39e0afe474b8e77ea5))
+
+## [17.2.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.1.0...v17.2.0) (2026-08-05)
+
+
+### ✨ 新特性
+
+* 添加大牛双拼 ([2b31fd9](https://github.com/amzxyz/rime-wanxiang/commit/2b31fd941a3c4b109bfe28c892fef82072f2fb08))
+* 预测新增对S级别的内容进行前缀回退扫描，应对诗句类型的拆句，例如储存数据为：墙角数枝梅，凌寒独自开，输入墙角会补充预测数枝梅，选择后整体还能匹配凌寒独自开 ([6192550](https://github.com/amzxyz/rime-wanxiang/commit/6192550d2e58affb6033e4b36505232706d0cbff))
+
+
+### 📚 词库更新
+
+* 词库调整 ([89d6538](https://github.com/amzxyz/rime-wanxiang/commit/89d653871fc9992d5b7c695fdabaaf32126e293e))
+* 词库调整 ([4b3bf2b](https://github.com/amzxyz/rime-wanxiang/commit/4b3bf2be28857ef5e1f19c7a26874b46cd5b404a))
+
+
+### 🐛 Bug 修复
+
+* config读取default改成了schema直接验证id，对比之前不存在的方案会报W不存在，但相比一些低版本无法使用Config方法要好很多 ([dc56713](https://github.com/amzxyz/rime-wanxiang/commit/dc56713b0cfef075b0cb256bab66f14a0eeb18a9))
+* 优化两个辅助函数 ([00758d8](https://github.com/amzxyz/rime-wanxiang/commit/00758d8eddf3eb062dbad2ebb603ce92f5c2b7f3))
+* 字符集过滤性能优化 ([2cc3c04](https://github.com/amzxyz/rime-wanxiang/commit/2cc3c046aacfb15cd5c80ab8b45575f2cc257da7))
+
 ## [17.1.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.0.3...v17.1.0) (2026-08-03)
 
 
