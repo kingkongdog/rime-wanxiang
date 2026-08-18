@@ -3590,18 +3590,21 @@ english:
 #使用方案跟在拼写运算后面
 18jian:
   __append:
-    - xlit/qwertyuiopasdfghjklzxcvbnm/qwwrryuiipassffhjjlzxxvbbm
+    - derive/(.*)/\U$1/
+    - xlit/QWERTYUIOPASDFGHJKLZXCVBNM/qwwrryuiipassffhjjlzxxvbbm
 14jian:
   __append:
-    - xlit/qwertyuiopasdfghjklzxcvbnm/qqeettuuooaaddggjjlzzccbbm
+    - derive/(.*)/\U$1/
+    - xlit/QWERTYUIOPASDFGHJKLZXCVBNM/qqeettuuooaaddggjjlzzccbbm
 9jian:
   __append:
     - xform/ⅱ//  # 用于 Lua 判断输入类型的标记
     - xform/^(.*);.*$/$1/
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüńňǹḿm̀/aaaaooooeeeeiiiiuuuuvvvvvnnnmmm/  # 剥离声调
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüńňǹ/aaaaooooeeeeiiiiuuuuvvvvvnnn/
+    - xform/ḿ/me/
+    - xform/m̀/me/
     - derive/^ng$/eng/
     - xform/^n$/en/
-    - xform/^m$/me/
     - derive/^(.*)$/\U$1/  # 转换为大写，为后续数字映射做准备
     - derive/^([nl])ve$/$1ue/
     - derive/^([NL])VE$/$1UE/

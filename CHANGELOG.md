@@ -1,5 +1,108 @@
 # Changelog
 
+## [17.5.2](https://github.com/amzxyz/rime-wanxiang/compare/v17.5.1...v17.5.2) (2026-08-18)
+
+
+### 📚 词库更新
+
+* 词库调整 ([477ecec](https://github.com/amzxyz/rime-wanxiang/commit/477ececf0b9fe2c02d39653781bd5d8d39a25a35))
+
+
+### 🐛 Bug 修复
+
+* 优化峰速统计和设备同步id ([cc58e06](https://github.com/amzxyz/rime-wanxiang/commit/cc58e06c3443f5caebcf17742e524c63b937addf))
+* 新增一个英文动态开关，这样通过开关就能关闭英文混输，更新一些词库 ([4afbc77](https://github.com/amzxyz/rime-wanxiang/commit/4afbc77d52d3bf7f9085fbfe1b11739df837adb2))
+* 梳理符号将emoji都以/e前缀表示，可能可以掌握的并不多，保障所有key不重合 ([2730e36](https://github.com/amzxyz/rime-wanxiang/commit/2730e36c0203c4d36c50733048c076d8ac8e0d85))
+
+## [17.5.1](https://github.com/amzxyz/rime-wanxiang/compare/v17.5.0...v17.5.1) (2026-08-17)
+
+
+### 📚 词库更新
+
+* 词库调整 ([239f5b9](https://github.com/amzxyz/rime-wanxiang/commit/239f5b953fda0eb1ad823e5f6ed16291d6a27007))
+
+
+### 🐛 Bug 修复
+
+* 移除正则转换改用boost正则直接处理 ([1b50c28](https://github.com/amzxyz/rime-wanxiang/commit/1b50c28507e0b19a710ff4521de82100d1a1c674))
+
+## [17.5.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.4.0...v17.5.0) (2026-08-16)
+
+
+### ✨ 新特性
+
+* (super_replacer): 新增derive模式，即：以词定词，一个由自定义前缀后缀定向生成删减前后缀的派生词，如台风山竹会接着跟着山竹，数据位于lua/data下面 ([833434a](https://github.com/amzxyz/rime-wanxiang/commit/833434acefae3b788769ddbc01905d1bd141c440))
+
+
+### 📚 词库更新
+
+* 词库调整 ([794893b](https://github.com/amzxyz/rime-wanxiang/commit/794893bf94bdc5e372a3362ca65a7de7516257d2))
+* 词库调整 ([c7e29d7](https://github.com/amzxyz/rime-wanxiang/commit/c7e29d77437f4a913ab981cf3fc79016ad8ebe3a))
+
+
+### 🐛 Bug 修复
+
+* 修复上次改版后超级preedit将zh无法转换成zāng的问题 ([f1d26d4](https://github.com/amzxyz/rime-wanxiang/commit/f1d26d42e957cbfdacea0549059c9abc1801e4fa))
+
+## [17.4.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.3.0...v17.4.0) (2026-08-16)
+
+
+### 📚 词库更新
+
+* 词库调整 ([a28c921](https://github.com/amzxyz/rime-wanxiang/commit/a28c9215726a853342c3483032fda3fc92651e61))
+* 词库调整 ([10be068](https://github.com/amzxyz/rime-wanxiang/commit/10be068191bc06c0930c3e29e80aec003a8a5949))
+
+
+### 🐛 Bug 修复
+
+* 14、18等转写新增保留26键内容方便拼音选择器选择 ([0056140](https://github.com/amzxyz/rime-wanxiang/commit/0056140ff71c0393a31de2b365a913f857192878))
+* pure版本默认使用自然码辅助词库，并默认开启间接辅助，从而全部兼容base简化体验，想要换辅助码直接换pro对应词库即可 ([3db4a74](https://github.com/amzxyz/rime-wanxiang/commit/3db4a7446598f35bb6a81576aaab307ae1d991e1))
+* 优化计算器 ([c3c094e](https://github.com/amzxyz/rime-wanxiang/commit/c3c094e47c8b369906736e3c04a4039630089260))
+* 变更字符级过滤兜底的preedit呈现形式统一逻辑 ([bafb5ed](https://github.com/amzxyz/rime-wanxiang/commit/bafb5ed4c216032f7a2c4f0c91b4729d6aee65ef))
+* 更新 wanxiang_pure.custom.yaml ([cec3334](https://github.com/amzxyz/rime-wanxiang/commit/cec3334284307981ae430a56bb72f80907896db8))
+* 细化punct正则 ([64de4aa](https://github.com/amzxyz/rime-wanxiang/commit/64de4aa7dc90d647cc30b84a4a329a0578f1af03))
+* 重新思考后将pr的复杂性较高的C引导合成compose符号序列改成了使用/模式symbol承载的方式，这样可以避免字母引导引发的冲突，可以复用/符号，最关键的是复用符号处理在整个逻辑序列里有着不好描述的得天独厚的逻辑解构，比lua实现存在更少的问题也不用把txt加载成lua表，总之很舒服 ([df2d63b](https://github.com/amzxyz/rime-wanxiang/commit/df2d63b1728fb2b057ab5e4ab882c5259dd378ae))
+
+
+### 💅 重构
+
+* 重构超级符号代码以及用法，在过去的使用中我发现分类对的展示与数字选择对于使用并没有什么提升，不知道还是不知道想要知道那些符号在哪个分类下是没有任何帮助的，所以输入触发按钮键后往往陷入被动，想清楚这是一个先学会才能用的功能，如果认识这些单词以及背后的含义，那么直接输入前缀获得自动补全是最优雅的用法，这也是本次新增的功能前缀自动补全，同时移除了P阶段的复杂实现，在触发/sym后也不再显示分类，因为几百分类显示几个又有什么意义呢，反而制造困惑 ([0ae9bad](https://github.com/amzxyz/rime-wanxiang/commit/0ae9badb3ac504d30372dfccebb2536de2dac49b))
+
+
+### 🏡 杂项
+
+* release 17.4.0 ([c4f6729](https://github.com/amzxyz/rime-wanxiang/commit/c4f67297eea8f546e4936da7a185514c13ebad6f))
+* 更新文档 ([5e1dace](https://github.com/amzxyz/rime-wanxiang/commit/5e1dace47243b39e4aa48731225d222bdbae7f59))
+
+## [17.3.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.2.5...v17.3.0) (2026-08-13)
+
+
+### 📚 词库更新
+
+* 词库调整 ([0f64c01](https://github.com/amzxyz/rime-wanxiang/commit/0f64c01c1fbf7ce6e1fa5d8291a5026b7f041519))
+* 词库调整 ([f7a63e4](https://github.com/amzxyz/rime-wanxiang/commit/f7a63e4ace5053a99f959f21e662fb0382a7531d))
+* 词库调整 ([4df40cf](https://github.com/amzxyz/rime-wanxiang/commit/4df40cfeb236173e7f6eded3b276574db6d9b3a7))
+* 词库调整 ([2272351](https://github.com/amzxyz/rime-wanxiang/commit/22723512903b45bf01d37fbb5541896f2590aa5e))
+* 词库调整 ([410920e](https://github.com/amzxyz/rime-wanxiang/commit/410920ee984d0ab3b839ad466eba06bdf94286d8))
+
+
+### 🐛 Bug 修复
+
+* 优化英文大写格式化中对于预设英文句子的正确处理 ([d18c21f](https://github.com/amzxyz/rime-wanxiang/commit/d18c21f2c2374278c400892db864c6180a518c44))
+* 恢复之前误删除的代码，删除英文句子后面派生的无意义句子 ([0da40dd](https://github.com/amzxyz/rime-wanxiang/commit/0da40dd0d44298fd0ad664d8edf8da850208e6fc))
+
+
+### 💅 重构
+
+* **shijian.lua:** 大规模重构代码质量，增强复用懒加载，新增/ed单独候选序列，新增全拼写单词月和前缀单词月变量，在ed中得到应用，同时其他sj、rq等也都可以通过配置设置新增候选样式 ([527069e](https://github.com/amzxyz/rime-wanxiang/commit/527069e75f94e99608a13411f8bf1f00690b1cbe))
+* 全新重构的U码转换功能 ([3ae7a90](https://github.com/amzxyz/rime-wanxiang/commit/3ae7a90897982f108b5b0af67749ea6c0422d8a3))
+* 金额大写全新重构为数字转换lua提供更多转换结果 ([a07d61e](https://github.com/amzxyz/rime-wanxiang/commit/a07d61eca1a7350b26c10ab9a2b4b575641cdfc2))
+
+
+### 🏡 杂项
+
+* release 17.3.0 ([d154250](https://github.com/amzxyz/rime-wanxiang/commit/d154250d4c5b5fe535702f281ed875163896e25f))
+
 ## [17.2.5](https://github.com/amzxyz/rime-wanxiang/compare/v17.2.4...v17.2.5) (2026-08-11)
 
 
