@@ -1,5 +1,36 @@
 # Changelog
 
+## [17.5.7](https://github.com/amzxyz/rime-wanxiang/compare/v17.5.6...v17.5.7) (2026-08-23)
+
+
+### 📚 词库更新
+
+* 词库调整 ([47c36c4](https://github.com/amzxyz/rime-wanxiang/commit/47c36c4ee64a33c8e051533f5beca2a7d6881e7c))
+* 词库调整 ([c785e4a](https://github.com/amzxyz/rime-wanxiang/commit/c785e4a66ece2b48d99766a81368175b9c2ffb43))
+* 词库调整 ([792e9c0](https://github.com/amzxyz/rime-wanxiang/commit/792e9c0967dd1dc08e4faa4604e8c14b69426b27))
+
+
+### 🐛 Bug 修复
+
+* 变更正则 ([d44e275](https://github.com/amzxyz/rime-wanxiang/commit/d44e2756be77f126b50e742ff18189e19287aca0))
+
+## [17.5.6](https://github.com/amzxyz/rime-wanxiang/compare/v17.5.5...v17.5.6) (2026-08-22)
+
+
+### 📚 词库更新
+
+* 根据ids补充大量组字 ([a9afc12](https://github.com/amzxyz/rime-wanxiang/commit/a9afc12db085385b061da6afd2a6a9100f265d74))
+* 词库调整 ([c286c07](https://github.com/amzxyz/rime-wanxiang/commit/c286c07a5f076594c69f2b5d865522215f5fb2b9))
+
+
+### 🐛 Bug 修复
+
+* /wx增加文档地址 ([3b5d3ee](https://github.com/amzxyz/rime-wanxiang/commit/3b5d3ee84597e4b0373b8685eb424bf127ad8079))
+* tips改成数组加载文件 ([c9478f2](https://github.com/amzxyz/rime-wanxiang/commit/c9478f229301bb94cc8060e6335b629a304cef79))
+* 优化符号hold范围保障-=[],.等翻页的正常工作 ([a4252c6](https://github.com/amzxyz/rime-wanxiang/commit/a4252c6936140c6228cd5ea9f35ffc40b1da792b))
+* 反查词库采用权重排序 ([8158f02](https://github.com/amzxyz/rime-wanxiang/commit/8158f021fb7db712b13ecb39a3ef6ce521f43f1d))
+* 缓存default方案清单的读取结果(当初是为了兼容低版本librime才读取的) ([35079a4](https://github.com/amzxyz/rime-wanxiang/commit/35079a49028b41579c8e9c25eeae37425428b592))
+
 ## [17.5.5](https://github.com/amzxyz/rime-wanxiang/compare/v17.5.4...v17.5.5) (2026-08-21)
 
 
