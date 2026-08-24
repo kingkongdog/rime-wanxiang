@@ -22,6 +22,7 @@ local DB_FORMAT_VERSION = "4"
 local MERGED_SCHEMA_IDS = {"wanxiang_pro", "wanxiang", "wanxiang_english", "wanxiang_t9", "wanxiang_t9i"}
 local file_signature_cache = {}
 local build_task_cache = {}
+local runtime_load_state = {}
 local RECORD_SEPARATOR = " \t"
 local VALUE_SEPARATOR = "\\t"
 local VALUE_SEPARATOR_LEN = #VALUE_SEPARATOR
@@ -524,12 +525,18 @@ local function connect_db(
         return nil
     end
 
+    -- 重新部署导致 Lua 状态销毁时，该标记自然丢失，再进入完整指纹校验。
+    if runtime_load_state[db_name] then
+        return db, false
+    end
+
     local files_sig = generate_files_signature(tasks)
 
     if database_matches(
         db, current_version, delimiter,
         files_sig, union_sig, scheme_sigs
     ) then
+        runtime_load_state[db_name] = os.time()
         return db, false
     end
 
@@ -551,6 +558,7 @@ local function connect_db(
     end
 
     clear_table(env_query_cache)
+    runtime_load_state[db_name] = os.time()
     return db, true
 end
 
@@ -811,6 +819,7 @@ function M.init(env)
                 triggers = triggers,
                 tags = target_tags,
                 prefix = prefix,
+                key_prefix = prefix,
                 mode  = mode,
                 always_qty = always_qty,
                 always_idx = always_idx,
@@ -954,12 +963,12 @@ function M.func(input, env)
             local query_text = is_chain and current_text or cand.text
             local val
 
-            local query_key = t.prefix .. query_text
+            local query_key = t.key_prefix .. query_text
             val = fetch_exact_cached(db, query_key, query_cache)
 
             if not val and s_find(query_text, "%u") then
                 query_text = s_lower(query_text)
-                query_key = t.prefix .. query_text
+                query_key = t.key_prefix .. query_text
                 val = fetch_exact_cached(db, query_key, query_cache)
             end
 
@@ -1152,11 +1161,11 @@ function M.func(input, env)
 
     if query_code ~= "" then
         for _, t in ipairs(active_abbrev_rules) do
-            local val = fetch_exact_cached(db, t.prefix .. query_code, query_cache)
+            local val = fetch_exact_cached(db, t.key_prefix .. query_code, query_cache)
 
             if not val and not query_has_upper then
                 if not upper_query then upper_query = s_upper(query_code) end
-                val = fetch_exact_cached(db, t.prefix .. upper_query, query_cache)
+                val = fetch_exact_cached(db, t.key_prefix .. upper_query, query_cache)
             end
 
             if val then
