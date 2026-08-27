@@ -2615,7 +2615,7 @@ sort: by_weight
 北电表演系	běi diàn biǎo yǎn xì	10
 被吊销执照	bèi diào xiāo zhí zhào	10
 北顶娘娘庙	běi dǐng niáng niáng miào	10
-被钉十字架	bèi dīng shí zì jià	10
+被钉十字架	bèi dìng shí zì jià	10
 被动变主动	bèi dòng biàn zhǔ dòng	10
 被动地接受	bèi dòng de jiē shòu	10
 被动的伤害	bèi dòng de shāng hài	10
@@ -14274,7 +14274,7 @@ sort: by_weight
 丁氏节孝坊	dīng shì jié xiào fāng	10
 丁氏流星锤	dīng shì liú xīng chuí	10
 丁氏润通茶	dīng shì rùn tōng chá	10
-钉死十字架	dīng sǐ shí zì jià	10
+钉死十字架	dìng sǐ shí zì jià	10
 丁斯特巴赫	dīng sī tè bā hè	10
 丁斯特比尔	dīng sī tè bǐ ěr	10
 丁斯特韦勒	dīng sī tè wéi lè	10
@@ -14341,7 +14341,7 @@ sort: by_weight
 定域子系统	dìng yù zǐ xì tǒng	10
 丁元新若水	dīng yuán xīn ruò shuǐ	10
 丁运载火箭	dīng yùn zài huǒ jiàn	10
-钉在耻辱柱	dīng zài chǐ rǔ zhù	10
+钉在耻辱柱	dìng zài chǐ rǔ zhù	10
 丁仔兰坑庄	dīng zǎi lán kēng zhuāng	10
 丁泽尔现象	dīng zé ěr xiàn xiàng	10
 丁泽尔效应	dīng zé ěr xiào yìng	10
@@ -22424,7 +22424,6 @@ sort: by_weight
 更接近真实	gèng jiē jìn zhēn shí	10
 更近的距离	gèng jìn de jù lí	10
 更近了一步	gèng jìn le yí bù	10
-更进了一步	gèng jìn le yí bù	10
 更进一杯酒	gèng jìn yì bēi jiǔ	10
 更进一步地	gèng jìn yí bù de	10
 更精微细节	gèng jīng wēi xì jié	10
@@ -22564,7 +22563,6 @@ sort: by_weight
 汞等重金属	gǒng děng zhòng jīn shǔ	10
 供弟弟上学	gōng dì di shàng xué	10
 工地试验室	gōng dì shì yàn shì	10
-工地实验室	gōng dì shí yàn shì	10
 供电可靠率	gōng diàn kě kào lǜ	10
 共点力平衡	gòng diǎn lì píng héng	10
 宫殿式建筑	gōng diàn shì jiàn zhù	10
@@ -36162,7 +36160,6 @@ sort: by_weight
 旧扎戈拉州	jiù zhā gē lā zhōu	10
 九寨千古情	jiǔ zhài qiān gǔ qíng	10
 九章算术注	jiǔ zhāng suàn shù zhù	10
-救赵挥金锤	jiù zhào huī jīn chuí	10
 就这么办吧	jiù zhè me bàn ba	10
 就这么呆着	jiù zhè me dāi zhe	10
 就这么着吧	jiù zhè me zhāo ba	10
@@ -40935,6 +40932,8 @@ sort: by_weight
 量累积曲线	liàng lěi jī qū xiàn	10
 亮丽的风景	liàng lì de fēng jǐng	10
 靓丽的美女	liàng lì de měi nǚ	10
+靓丽的名片	liàng lì de míng piàn	10
+亮丽的名片	liàng lì de míng piàn	10
 靓丽的容貌	liàng lì de róng mào	10
 靓丽的容颜	liàng lì de róng yán	10
 亮丽的色彩	liàng lì de sè cǎi	10
@@ -73251,6 +73250,7 @@ sort: by_weight
 小规模纳税	xiǎo guī mó nà shuì	10
 小规模试验	xiǎo guī mó shì yàn	10
 小归纳维数	xiǎo guī nà wéi shù	10
+小鬼坐龙庭	xiǎo guǐ zuò lóng tíng	40
 小果盾翅藤	xiǎo guǒ dùn chì téng	10
 效果更好哦	xiào guǒ gèng hǎo ó	10
 效果更佳哦	xiào guǒ gèng jiā ó	10
@@ -89420,6 +89420,8 @@ sort: by_weight
 猪主动脉瓣	zhū zhǔ dòng mài bàn	10
 主转动惯量	zhǔ zhuàn dòng guàn liàng	10
 逐桩坐标表	zhú zhuāng zuò biāo biǎo	10
+柱子比较多	zhù zi bǐ jiào duō	12
+竹子比较多	zhú zi bǐ jiào duō	10
 诸子均分制	zhū zǐ jūn fēn zhì	10
 著作权案件	zhù zuò quán àn jiàn	10
 著作权权属	zhù zuò quán quán shǔ	10
@@ -93328,7 +93330,7 @@ sort: by_weight
 被低估的球员	bèi dī gū de qiú yuán	10
 被点亮的星球	bèi diǎn liàng de xīng qiú	10
 杯电视快棋赛	bēi diàn shì kuài qí sài	10
-被钉在十字架	bèi dīng zài shí zì jià	10
+被钉在十字架	bèi dìng zài shí zì jià	10
 被动式节能屋	bèi dòng shì jié néng wū	10
 被动式太阳房	bèi dòng shì tài yáng fáng	10
 被动性肾充血	bèi dòng xìng shèn chōng xuè	10
@@ -100453,7 +100455,6 @@ sort: by_weight
 调查核实情况	diào chá hé shí qíng kuàng	10
 调查收集证据	diào chá shōu jí zhèng jù	10
 吊车升举容量	diào chē shēng jǔ róng liàng	10
-调的五度循环	diào de wǔ dù xún huán	10
 调度指挥中心	diào dù zhǐ huī zhōng xīn	10
 吊钩式抛丸机	diào gōu shì pāo wán jī	10
 调虎离山之计	diào hǔ lí shān zhī jì	10
@@ -100574,7 +100575,7 @@ sort: by_weight
 定压摩尔热容	dìng yā mó ěr rè róng	10
 定义在一个域	dìng yì zài yí gè yù	10
 定远级铁甲舰	dìng yuǎn jí tiě jiǎ jiàn	10
-钉在十字架上	dīng zài shí zì jià shàng	10
+钉在十字架上	dìng zài shí zì jià shàng	10
 顶着巨大压力	dǐng zhe jù dà yā lì	10
 顶着炎炎烈日	dǐng zhe yán yán liè rì	10
 定值保险契约	dìng zhí bǎo xiǎn qì yuē	10
@@ -102450,7 +102451,9 @@ sort: by_weight
 放他一条生路	fàng tā yì tiáo shēng lù	10
 方太抽油烟机	fāng tài chōu yóu yān jī	10
 仿碳纤维饰板	fǎng tàn xiān wéi shì bǎn	10
+方特东方神画	fāng tè dōng fāng shén huà	10
 方特欢乐世界	fāng tè huān lè shì jiè	10
+方特梦幻王国	fāng tè mèng huàn wáng guó	10
 方天画戟就是	fāng tiān huà jǐ jiù shì	10
 方田均税条约	fāng tián jūn shuì tiáo yuē	10
 防伪查询系统	fáng wěi chá xún xì tǒng	10
@@ -131113,6 +131116,7 @@ sort: by_weight
 条窗钩翅天蛾	tiáo chuāng gōu chì tiān é	10
 条大路通阴间	tiáo dà lù tōng yīn jiān	10
 挑大学选专业	tiāo dà xué xuǎn zhuān yè	10
+调的五度循环	tiáo de wǔ dù xún huán	10
 条顿骑士团国	tiáo dùn qí shì tuán guó	10
 条痕状混合岩	tiáo hén zhuàng hùn hé yán	10
 条件接收系统	tiáo jiàn jiē shōu xì tǒng	10
@@ -146554,7 +146558,6 @@ sort: by_weight
 嘴里念念有词	zuǐ lǐ niàn niàn yǒu cí	10
 最凉不过人心	zuì liáng bú guò rén xīn	10
 最亮的一颗星	zuì liàng de yì kē xīng	10
-最靓嘅猪腩肉	zuì liàng kǎi zhū nǎn ròu	10
 最亮眼的地方	zuì liàng yǎn de dì fāng	10
 最流行的发型	zuì liú xíng de fà xíng	10
 最流行的歌曲	zuì liú xíng de gē qǔ	10
@@ -152416,7 +152419,7 @@ sort: by_weight
 定期向社会公布	dìng qī xiàng shè huì gōng bù	10
 定容型反比通气	dìng róng xíng fǎn bǐ tōng qì	10
 定三分隆中决策	dìng sān fēn lóng zhōng jué cè	10
-钉十字架的耶稣	dīng shí zì jià de yē sū	10
+钉十字架的耶稣	dìng shí zì jià de yē sū	10
 定速巡航等配置	dìng sù xún háng děng pèi zhì	10
 定态薛定谔方程	dìng tài xuē dìng è fāng chéng	10
 顶天立地的汉子	dǐng tiān lì dì de hàn zi	10
@@ -153492,7 +153495,6 @@ sort: by_weight
 防锁死刹车系统	fáng suǒ sǐ shā chē xì tǒng	10
 方太水槽洗碗机	fāng tài shuǐ cáo xǐ wǎn jī	10
 方特欢乐世界站	fāng tè huān lè shì jiè zhàn	10
-方特梦幻王国东	fāng tè mèng huàn wáng guó dōng	10
 方位高度显示器	fāng wèi gāo dù xiǎn shì qì	10
 防卫省情报本部	fáng wèi shěng qíng bào běn bù	10
 防卫医科大学校	fáng wèi yī kē dà xué xiào	10

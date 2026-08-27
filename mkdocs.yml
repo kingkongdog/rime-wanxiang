@@ -111,7 +111,7 @@ nav:
       - 超级注释: doc/super_comment.md
       - 超级提示: doc/super_tips.md
       - 候选辅筛: doc/super_lookup.md
-      - 语境预测: doc/user_predict.md
+      - 下文调频: doc/context_reorder.md
       - 输入统计: doc/input_statistics.md
       - 超级替换: doc/super_replacer.md
       - 手动排序: doc/super_sequence.md
@@ -123,6 +123,7 @@ nav:
       - 候选切割: doc/candidate_slicer.md
       - 魔法字母: doc/RUNV.md
       - 性能评测: doc/profile-analysis.md
+      - 随机工具: doc/random_tools.md
 
   - 进阶配置:
       - Rime 工作机制: doc/Rime设计逻辑与配置哲学.md
@@ -137,7 +138,7 @@ nav:
       - 2026 年中词库报告: doc/2026-1.md
       - 2026 年中模型更新: doc/400+gram.md
 
-copyright: Copyright &copy; 2024 万象拼音 · 开源项目文档
+copyright: Copyright &copy; 2024-2026 万象拼音 · 开源项目文档
 
 extra:
   generator: false

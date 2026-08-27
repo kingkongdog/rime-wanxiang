@@ -1,5 +1,95 @@
 # Changelog
 
+## [17.7.1](https://github.com/amzxyz/rime-wanxiang/compare/v17.7.0...v17.7.1) (2026-08-27)
+
+
+### 📚 词库更新
+
+* 词库调整 ([be5f1be](https://github.com/amzxyz/rime-wanxiang/commit/be5f1be8db6f9acfb7938d13c16bb555a16c5db4))
+* 词库调整 ([5235267](https://github.com/amzxyz/rime-wanxiang/commit/5235267f0786661e4b0f1126a7e11f6324de3f76))
+
+
+### 🐛 Bug 修复
+
+* 优化正则排除斜杠 ([80873f4](https://github.com/amzxyz/rime-wanxiang/commit/80873f4fa45f306ac1a9032e72be954637591c16))
+* 修复清理顺序 ([d9a2117](https://github.com/amzxyz/rime-wanxiang/commit/d9a21177db0c4028411c3d01ab4429c0963d94db))
+* 修复随机工具配置读取 ([b715c29](https://github.com/amzxyz/rime-wanxiang/commit/b715c298a82ba2e20c3fd34ac1905822506e4d91))
+* 修改转写 ([94e5314](https://github.com/amzxyz/rime-wanxiang/commit/94e5314984f670cb5785a72f28ea837eb1f41cb1))
+* 小优化 ([984c09b](https://github.com/amzxyz/rime-wanxiang/commit/984c09bc502ab7bf5a5773801aea59dc33e8931c))
+* 小优化 ([a21a3b5](https://github.com/amzxyz/rime-wanxiang/commit/a21a3b50866cb5bc6a19bf1f306bcfea727d5f1c))
+* 测试完毕 ([9623260](https://github.com/amzxyz/rime-wanxiang/commit/9623260bcb56fa6201acacaa5271f4d5f7b18345))
+
+## [17.7.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.6.0...v17.7.0) (2026-08-27)
+
+
+### ✨ 新特性
+
+* 新增uuid4,uuid7,ulid,随机密码 ([25251f9](https://github.com/amzxyz/rime-wanxiang/commit/25251f9f2eb0b4ead1ecd0d9e66921fcb943952c))
+
+
+### 🔥 性能优化
+
+* 优化Lua 对象生命周期与内存占用，降低长期运行内存增长风险,来自最近Windows总是与Lua似乎兼容不好有的人没事有的人觉得卡，现在也是在找原因，如果代码可以规避我们就规避一下，虽然API写起来很简约优雅，rime/librime[#405](https://github.com/amzxyz/rime-wanxiang/issues/405), rime/librime[#1105](https://github.com/amzxyz/rime-wanxiang/issues/1105)，本次将采用发布式测试，希望更多的人反馈 ([6abcd07](https://github.com/amzxyz/rime-wanxiang/commit/6abcd07da52a11eb180ac4d5fd6e5c50e7582905))
+
+
+### 🐛 Bug 修复
+
+* t9将与lite一同打包 ([be17474](https://github.com/amzxyz/rime-wanxiang/commit/be174745df5ae41447ffa3b086ca527153c08326))
+* 弹出候选预测与上下文调频功能缩减成只有上下文调频+量词调频+回退再次输入掉头，Lua实现的弹出涉及到input占用多少还是不好用，权衡之下去掉了，有需要的朋友参考以前的可以继续用 ([9e81c71](https://github.com/amzxyz/rime-wanxiang/commit/9e81c710268b2d234225552a3d285e56f738af3f))
+* 移除无效参数 ([f92ddaf](https://github.com/amzxyz/rime-wanxiang/commit/f92ddafd6482b3a432d69bdcba53d799dbcb0bb5))
+
+
+### 🏡 杂项
+
+* 更新文档 ([209b1ba](https://github.com/amzxyz/rime-wanxiang/commit/209b1ba50e2d6b8efba2cb19e8ca8550b40d4e59))
+
+## [17.6.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.5.9...v17.6.0) (2026-08-26)
+
+
+### ✨ 新特性
+
+* 新增万象Lite方案版本 ([fc818c1](https://github.com/amzxyz/rime-wanxiang/commit/fc818c1f7f6aa857b3857dc8293d354c9724d43f))
+* 调整脚本引用 ([7043803](https://github.com/amzxyz/rime-wanxiang/commit/704380392a046c6089dfb8521ed07f6cc184e765))
+
+
+### 📚 词库更新
+
+* 词库调整 ([264e432](https://github.com/amzxyz/rime-wanxiang/commit/264e4325f114023039b56921487c8eacaa1fe5a0))
+
+
+### 🐛 Bug 修复
+
+* lite版本release引导 ([d3d3ccc](https://github.com/amzxyz/rime-wanxiang/commit/d3d3ccc45f63aa527aad72a503d511787f583d5e))
+* update ci ([943f395](https://github.com/amzxyz/rime-wanxiang/commit/943f395914af0e2912175ce9b27274d1c3026bff))
+* update custom ([959f2af](https://github.com/amzxyz/rime-wanxiang/commit/959f2af53343684cf547767da6172a39a92489c6))
+* 优化replacer ([035b14c](https://github.com/amzxyz/rime-wanxiang/commit/035b14c8d61601a3eda9402a6f0e3a17f75f2eca))
+* 优化super_comment以支持多种方案 ([1e4fed4](https://github.com/amzxyz/rime-wanxiang/commit/1e4fed412d65183cd29ef913100f3f47e974d42c))
+* 优化统计 ([a6be127](https://github.com/amzxyz/rime-wanxiang/commit/a6be12701b90505e73277750aef44ffabf835fd6))
+* 修正tips提示 ([6bdf902](https://github.com/amzxyz/rime-wanxiang/commit/6bdf902bcfcd603325b825d66ebae0592e852f0f))
+* 修正野鹤拆 ([146600e](https://github.com/amzxyz/rime-wanxiang/commit/146600ef7fe021e42fd8800ff0acffe86388d1ad))
+* 更新正则 ([af32687](https://github.com/amzxyz/rime-wanxiang/commit/af3268791913b13711e500eaa95f7223ab727536))
+
+
+### 🏡 杂项
+
+* update doc ([4d338a2](https://github.com/amzxyz/rime-wanxiang/commit/4d338a2151a238a16313b822e5cd8fc32705f0b7))
+* 完善文档 ([227b610](https://github.com/amzxyz/rime-wanxiang/commit/227b610b112cb93b3bf3e1934e3d863284e05531))
+
+## [17.5.9](https://github.com/amzxyz/rime-wanxiang/compare/v17.5.8...v17.5.9) (2026-08-24)
+
+
+### 🐛 Bug 修复
+
+* 移除super_replacer缓存 ([0107989](https://github.com/amzxyz/rime-wanxiang/commit/0107989ec8f2d625ab00abc41f4826779fce1845))
+* 给super_replacer加了一层全局部署标记，只在加载文件后填充值，有值就直接opendb，部署后销毁无值，则启动校验，如果数据没变依然能很快完成 ([5142dbb](https://github.com/amzxyz/rime-wanxiang/commit/5142dbb3ace721f12ed0a4194b2a432964dd1497))
+* 给super_tips加了一层全局部署标记，只在加载文件后填充值，有值就直接opendb，部署后销毁无值，则启动校验，如果数据没变依然能很快完成 ([e7f08f6](https://github.com/amzxyz/rime-wanxiang/commit/e7f08f64f48076a07df265289d7beb401fd9fd34))
+
+
+### 🏡 杂项
+
+* doc update ([4459a27](https://github.com/amzxyz/rime-wanxiang/commit/4459a27e1cb0d9895890a5cfaff63c000198ba70))
+* update doc ([15243dd](https://github.com/amzxyz/rime-wanxiang/commit/15243dd3833f7fe4bd029209625d48efb0e0646d))
+
 ## [17.5.8](https://github.com/amzxyz/rime-wanxiang/compare/v17.5.7...v17.5.8) (2026-08-23)
 
 

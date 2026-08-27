@@ -351,6 +351,13 @@ local function clone_candidate(c)
     nc.quality = c.quality
     return nc
 end
+
+local function clear_array(t)
+    if not t then return end
+    for i = #t, 1, -1 do
+        t[i] = nil
+    end
+end
 --  包裹映射
 local default_wrap_map = {
     -- 单字母：常用成对括号/引号（每项恰好两个字符）
@@ -565,39 +572,30 @@ function M.init(env)
             end
         end
     end
-
-    env.is_t9 = false
-    if wanxiang.get_input_method_type then
-        local im_type = wanxiang.get_input_method_type(env)
-        if im_type == "t9" then
-            env.is_t9 = true
-        end
-    end
 end
 
 function M.fini(env)
+    clear_array(env.page_cache)
+    env.page_cache = nil
     env.wrap_map = nil
     env.wrap_parts = nil
+    env.wrap_delimiter = nil
+    env.symbol = nil
+    env.page_size = nil
+    env.cand_type_symbols = nil
     env.last_2code_char = nil
+
+    -- _G.WanxiangSharedState 是排序器与本过滤器的通信通道，不能在这里销毁。
 end
 
 function M.func(input, env)
     local ctx = env and env.engine and env.engine.context or nil
     local code = ctx and (ctx.input or "") or ""
     local comp = ctx and ctx.composition or nil
-
-    local function getKey(cand)
-        if env.is_t9 then
-            return cand.text .. cand.comment
-        else
-            return cand.text
-        end
-    end
-
     -- 1. 空环境清理
     if not code or code == "" or (comp and comp:empty()) then
         env.last_2code_char = nil
-        env.page_cache = {}
+        clear_array(env.page_cache)
         for cand in input:iter() do
             yield(cand)
         end
@@ -622,8 +620,14 @@ function M.func(input, env)
     local symbol_pos = symbol and sym_len > 0 and find(code, symbol, 1, true)
     local code_has_symbol = symbol_pos and symbol_pos > 1 or false
 
+    -- 连续输入两个触发符表示取消包裹；先更新状态，再清理上一轮锁定快照。
+    local is_double = (code_len >= sym_len * 2) and (sub(code, -(sym_len * 2)) == symbol .. symbol)
+    if is_double then
+        code_has_symbol = false
+    end
+
     if not code_has_symbol then
-        env.page_cache = {}
+        clear_array(env.page_cache)
     end
 
     local wrap_key = nil
@@ -633,12 +637,6 @@ function M.func(input, env)
         if key ~= "" and env.wrap_map[key] then
             wrap_key = key
         end
-    end
-
-    -- 检查是否连续打出双斜杠 \\（取消包裹）
-    local is_double = (code_len >= sym_len * 2) and (sub(code, -(sym_len * 2)) == symbol .. symbol)
-    if is_double then
-        code_has_symbol = false
     end
 
     -- 定位排序脚本是否存活并获取目标缓存
@@ -706,7 +704,6 @@ function M.func(input, env)
 
         idx = idx + 1
         local text = cand.text
-        local candKey = getKey(cand)
 
         -- 首选特殊处理
         if idx == 1 then
@@ -723,8 +720,8 @@ function M.func(input, env)
             end
         end
 
-        if not (drop_sentence and fast_type(cand) == "sentence") and not suppress_set[candKey] then
-            suppress_set[candKey] = true
+        if not (drop_sentence and fast_type(cand) == "sentence") and not suppress_set[text] then
+            suppress_set[text] = true
 
             local formatted_cand = format_and_autocap(cand, env)
             if not code_has_symbol then
@@ -746,15 +743,14 @@ function M.func(input, env)
 
         idx = idx + 1
         local text = cand.text
-        local candKey = getKey(cand)
 
-        if not (drop_sentence and fast_type(cand) == "sentence") and not suppress_set[candKey] then
-            suppress_set[candKey] = true
+        if not (drop_sentence and fast_type(cand) == "sentence") and not suppress_set[text] then
+            suppress_set[text] = true
             yield(format_and_autocap(cand, env))
         end
     end
     -- PHASE 3: 三码空候选兜底
-    if idx == 0 and seg_len == 3 and not wanxiang.is_special_mode(ctx) then
+    if idx == 0 and seg_len == 3 and sub(code, 1, 1) ~= "/" and not wanxiang.is_special_mode(ctx) then
         local fallback_text = env.last_2code_char
 
         if fallback_text then

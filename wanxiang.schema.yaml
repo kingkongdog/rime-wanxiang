@@ -63,6 +63,7 @@ engine:
     - lua_processor@*with_dot_processor         #由于在 alphabet 里加入了句号，需要手动处理上屏
     # - lua_processor@*wanxiang.user_predict*P  #靠自己养的专属预测联想处理器，不再依赖前端插件以及固定数据
     - lua_processor@*wanxiang.super_processor  #KP小键盘、字母选词、符号快打、超强分词、重复限制、退格限制、声调回退、以词定字
+    - lua_processor@*wanxiang.context_reorder*P  #靠自己养的专属上下文调频工具
     - lua_processor@*wanxiang.super_english*P  #英文只能加空格捕获按键操作
     - lua_processor@*wanxiang.partial_commit  #通过ctrl+1~0局部提交10个字以内的句子的前几个字（一般为正确的前几个）使用时要遵循合理的分词结构能促进后续编码打出正确的词汇
     - lua_processor@*wanxiang.super_sequence*P  #手动排序，高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+l 移除位移  ctrl+p 置顶
@@ -104,14 +105,14 @@ engine:
     - script_translator@user_dict_set      #使用自造词
     - lua_translator@*force_gc           # 暴力 GC
   filters:
-    # - lua_filter@*wanxiang.user_predict*F           #用于输入编码后的上下文调频
-    - lua_filter@*wanxiang.auto_phrase              #无感造词,英文造词
-    # - lua_filter@*wanxiang.super_lookup             #字词输入中反查辅助筛选
-    - lua_filter@*wanxiang.charset_filter           #放replacer前面,全方位自定义的字符集过滤器，支持繁体字符集开放
-    - lua_filter@*wanxiang.super_comment_preedit    #放其他需要注释处理器后面,会有清空注释的操作,超级注释模块，支持错词提示、辅助码显示，部件组字读音注释，支持个性化配置和关闭相应的功能，详情搜索super_comment进行详细配置
-    - lua_filter@*wanxiang.super_replacer           #OpenCC替代器，更灵活的处理方式，更自由的自定义方式，支持简繁转换、简码模式、支持候选替换、注释替换、候选派生等等
-    - lua_filter@*wanxiang.super_filter             #先进行字符过滤后简繁转换，这样能繁体继承简体权重。本质功能相关功能见Lua文件
-    - lua_filter@*wanxiang.super_english*F  #放replacer前面,单词变大写后应该能在替换中命中数据,负责英文方案及中英混输中英文单词格式化，语句流，自动加空格等策略
+    - lua_filter@*wanxiang.context_reorder*F  #用于输入编码后的上下文调频
+    - lua_filter@*wanxiang.auto_phrase  #无感造词,英文造词
+    # - lua_filter@*wanxiang.super_lookup  #字词输入中反查辅助筛选
+    - lua_filter@*wanxiang.charset_filter  #放replacer前面,全方位自定义的字符集过滤器，支持繁体字符集开放
+    - lua_filter@*wanxiang.super_comment_preedit  #放其他需要注释处理器后面,会有清空注释的操作,超级注释模块，支持错词提示、辅助码显示，部件组字读音注释，支持个性化配置和关闭相应的功能，详情搜索super_comment进行详细配置
+    - lua_filter@*wanxiang.super_replacer  #OpenCC替代器，更灵活的处理方式，更自由的自定义方式，支持简繁转换、简码模式、支持候选替换、注释替换、候选派生等等
+    - lua_filter@*wanxiang.super_filter  #先进行字符过滤后简繁转换，这样能繁体继承简体权重。本质功能相关功能见Lua文件
+    - lua_filter@*wanxiang.super_english*F  #负责英文方案及中英混输中英文单词格式化，语句流，自动加空格等策略
     - lua_filter@*wanxiang.super_sequence*F  #放去重前,接管排序索引固定,手动排序，对高亮候选 ctrl+j左移动 ctrl+k 右移动 ctrl+0 移除位移
     - lua_filter@*with_dot_filter                   #jd.com
     - lua_filter@*shortcuts_filter                   
@@ -237,7 +238,7 @@ speller:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射，alphabet就是将字符纳入输入编码的范畴
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1234567890`;\›.
   # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
-  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA/›
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA/
   delimiter: " '"  # 系统配置，第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
   algebra:
     __patch:
@@ -249,7 +250,7 @@ recognizer:
   import_preset: default  # 从 default.yaml 继承通用的
   patterns:  # 再增加方案专有的：
     # 排除 /sym /emoji 开头（含单独 /sym /emoji），交给 super_sym / super_emoji tag 处理
-    punct: "^/(?:(?:[aA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][\"(*,\\-;>^_`aejouvy~]?[)\\-./]?|[bA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][!,.AEGIOUadeghiou]?[AEmavze)\\-./]?|[cA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][\"',./<=ACDEGHIKLNORSTUZacdeghijklnorstuz|]?[Uu)\\-./]?|[dA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][,\\-.<=bdhinvwyz]?[)\\-./]?|[eA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][\"',\\-.1;<=>^_`b-nqstuwxyz]?[7b-mp-su-z)\\-./]?|[fA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][.Sfhijklns]?[il)\\-./]?|[gA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][(,.Utvz)\\-./]?|[hA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][,=bjvwxz]?[a-z)\\-./]?|[iA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][\"',\\-.;>^_`hjr~]?[)\\-./]?|[jA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}]['a-z]?[abehinoqstuwy)\\-./]?|[kA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][,kx]?[)\\-./]?|[lA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][',\\-/<jlmstvxz]?[ds)\\-./]?|[mA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][./ju)]?[)\\-./]?|[nA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][',<gju~]?[m)\\-./]?|[oA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][\"',\\-/;>AU^_`aceiorsuwxy~]?[)\\-./]?|[pA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][!.=jkopy]?[dmo)\\-./]?|[qA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}]p?[)\\-./]?|[rA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][',<=f]?[)\\-./]?|[sA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][!',.;<bcdjmosxyz]?[cdghmqswxz)\\-./]?|[tA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][,\\-./;<cghmstuxz]?[fj)\\-./]?|[uA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][\"'*\\-/;>AEGIOU^_`abdegijouxz~]?[cdghqswxz)\\-./]?|[vA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][/ACDEGHIKNORSTUZa-z|]?[aeghinoru)\\-./]?|[wA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][^jw]?[x)\\-./]?|[xA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][bfhloqxyz]?[cdgmtwxz)\\-./]?|[yA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}][\"'=^bdfrwy]?[)\\-./]?|[zA-Z!\"#%'()*+,\\-.:;<=>?\\[\\\\\\]\\^_`{|~}]['.<hmy]?[hq)\\-./]?)|iro|---|--\\.|[0-9]|10|11|110|0[3*~]|1[2-9^]|2[35^]|3[458^]|45|5[68]|78|88|\\*0|<3|\\^[0-9]|_[0-9]|~0|\\((?:[0-9]|[1-4][0-9]|50)\\)?)$"
+    punct: "^/(?!/)(?:[A-Za-z]+|[!-/:-@\\[-`{-~][!-/:-~]?[A-Za-z]?|[A-Za-z][!-\\+/:-<>-@\\\\\\^-`{-~][A-Za-z]?|[ADEIKLOTUadeilotu]-[A-Za-z]?|[CEHLNPRTWYc-ehpry]=[A-Za-z]?|[AC-EG-IKLNOR-Ua-eg-iklnor-u],[A-Za-z]?|[B-GIMPS-UZb-gimpstz]\\.[A-Za-z]?|\\([)A-Za-z]\\)|--[-.]|\\\\o/|e1(?:7)?|[0-9]|0[3*~]|1(?:[0-9^]|10)|2[35^]|3[458^]|45|5[68]|78|88|\\*0|<3|\\^[0-9]|_[0-9]|~0|\\((?:[0-9]|[1-4][0-9]|50)\\)?)$"
     super_sym: "^/sym[.?/][A-Za-z.]+$"  # /sym.arrow.r.double 精确  /sym?keyword 或 /sym/keyword 模糊
     super_emoji: "^/emoji[.?/][A-Za-z.]+$"  # /emoji.apple.red  /emoji?keyword  /emoji/keyword
     super_sym_pre: "^/sym[.?/]?$"  # 仅 /sym /sym. /sym? /sym/ 模式提示
@@ -336,11 +337,7 @@ key_binder:
     #- { match: "^.*`$", accept: "`", send_sequence: '{BackSpace}{Home}{`}{`}{End}' }基础版暂时取消这个功能，
     #斜杠被占用引导符号，因此输入本身设置为双击
     - {match: "^/$", accept: "/", send_sequence: '{space}'}
-    #在预测符号状态下，按下斜杠提交清空与斜杠
-    - {match: "^›+$", accept: "backslash", send_sequence: '{Clear}{backslash}'}
-    - { match: "^›+$", accept: "comma",    send_sequence: '{Clear}{comma}'}
-    - { match: "^›+$", accept: "period",   send_sequence: '{Clear}{period}'}
-    - {match: "^›+$", accept: "Return", send_sequence: '{Clear}{Return}'}
+
 
 editor:
   bindings:
@@ -395,26 +392,19 @@ super_processor:
   # select_character: "[,]"                      # [ 上屏首字，] 上屏尾字（推荐）
   # select_character: "bracketleft, bracketright"  # [ 上屏首字，] 上屏尾字（英文全拼）
 
-user_predict:
-  db_name: predict  # 数据库名称（默认 predict，将生成 predict.userdb 文件夹）
-  mobile_predict_style: post   # 移动端联想模式："post"（上屏后弹出预测候选）| "reorder"（输入时调频）| "off"（关闭）
-  # 上面的开关是总开关，开启后pc端自动为上下文调频模式，不再有弹出模式。
-  enable_fallback_reorder: false  # 同码回删再输首次交换
-  max_candidates: 10  # 屏幕最多显示的联想词数量
-  max_predictions: 3  # 连续触发预测的最高次数限制
-  expiry_days: 90  # 绝对寿命（天）：不命中则物理销毁
-  max_memory_branches: 15  # 分支上限：单前缀最多保留15个后续预测
-  decay_rate: 0.85  # 衰减率：单日时间权重打 85 折
-  context_timeout: 5000  # 上文超时时间毫秒
-  custom_classifiers:  # 数字后量词调频，如平时chuan传，输入数字后，首选为串，结果如：1串，想关闭清空列表即可
-    - 个只名位口人头匹条群批伙多  # 人物动物
-    - 张把件台部块根颗粒滴片朵面扇顶栋座所辆艘架盏支枝杆  # 物品建筑
-    - 双对副套打串束排阵堆叠摞扎  # 成组集合
-    - 杯瓶盒包份碗锅盆桶袋罐盘  # 包装容器
-    - 次场局回趟顿番遍声项宗桩款步招  # 动作事件
-    - 年月天周岁秒分刻代期届任夜季  # 时间周期
-    - 本册篇首句段卷幅节堂门帖字行  # 文化作品
-    - 米寸尺里斤两吨克升元角毛笔百千万亿  # 度量货币
+context_reorder:
+  db_name: context_reorder
+  enable_fallback_reorder: false
+  context_timeout: 5000
+  custom_classifiers:
+    - 个只名位口人头匹条群批伙多
+    - 张把件台部块根颗粒滴片朵面扇顶栋座所辆艘架盏支枝杆
+    - 双对副套打串束排阵堆叠摞扎
+    - 杯瓶盒包份碗锅盆桶袋罐盘
+    - 次场局回趟顿番遍声项宗桩款步招
+    - 年月天周岁秒分刻代期届任夜季
+    - 本册篇首句段卷幅节堂门帖字行
+    - 米寸尺里斤两吨克升元角毛笔百千万亿
 
 super_tips:
   db_name: "tips"  # 可选字段，不写的话默认使用 "tips"，相对路径
@@ -434,6 +424,19 @@ super_sequence:  # Lua 配置：手动排序的快捷键 super_sequence.lua，�
   down: "Control+k"  # 下移
   reset: "Control+l"  # 重置
   pin: "Control+p"  # 置顶
+
+random_tools:
+  uuid: "/uuid"
+  uuid7: "/uuidq"
+  ulid: "/ulid"
+  password: "/mima"
+  password_special: "/mimas"
+  password_lengths: "6,8,10,16"
+  chars:
+    upper: "ABCDEFGHJKLMNPQRSTUVWXYZ"
+    lower: "abcdefghijkmnopqrstuvwxyz"
+    digit: "23456789"
+    special: "!@#$%^&*_-+"
 
 
 super_symbols:
