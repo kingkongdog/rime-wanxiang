@@ -1,5 +1,82 @@
 # Changelog
 
+## [17.9.2](https://github.com/amzxyz/rime-wanxiang/compare/v17.9.1...v17.9.2) (2026-08-31)
+
+
+### 📚 词库更新
+
+* 深化emoji ([657f793](https://github.com/amzxyz/rime-wanxiang/commit/657f7933fb667a222643e1fa6f846a94f15fe52d))
+* 词库调整 ([36d4770](https://github.com/amzxyz/rime-wanxiang/commit/36d47704cc24ca4b3b88ce4c8d9e79bcb6500723))
+
+
+### 🐛 Bug 修复
+
+* 动作里面包含option时锁定当前高亮在动作后恢复高亮位置 ([7f9bbac](https://github.com/amzxyz/rime-wanxiang/commit/7f9bbac8201e59c3bc11583ea1aae66a2d9e24c5))
+* 给上下文调频增加开关 ([425764d](https://github.com/amzxyz/rime-wanxiang/commit/425764dcf1f55c691f11add1fab7207f954bfd49))
+* 自动化打包t9时跟随lite版本的将简化开关 ([b0b9f23](https://github.com/amzxyz/rime-wanxiang/commit/b0b9f234aac0acb1b93232ca35003a517974b5d9))
+* 补充librime.lua接口描述 ([3a91ff5](https://github.com/amzxyz/rime-wanxiang/commit/3a91ff5094454a412517651a3c9b0d7bf7be3191))
+
+## [17.9.1](https://github.com/amzxyz/rime-wanxiang/compare/v17.9.0...v17.9.1) (2026-08-30)
+
+
+### 🐛 Bug 修复
+
+* super_replacer调用中新增lite版本 ([c7d2201](https://github.com/amzxyz/rime-wanxiang/commit/c7d2201109bf432643001edd1d04312155715783))
+
+## [17.9.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.8.2...v17.9.0) (2026-08-30)
+
+
+### ✨ 新特性
+
+* 新增Unicode反查，在正常输入汉字、反查汉字、/sym输入超级符号、表情等候选上按下ctrl+u跳转到U模式查询，重新按下快捷键可跳转回去 ([52191bd](https://github.com/amzxyz/rime-wanxiang/commit/52191bda74a628647480465567ceaacd46b9b0ac))
+
+
+### 📚 词库更新
+
+* 词库调整 ([fb7d749](https://github.com/amzxyz/rime-wanxiang/commit/fb7d74992528131c5771e3bea74290419accbf70))
+
+
+### 🐛 Bug 修复
+
+* 支持多码点字符 ([a11b614](https://github.com/amzxyz/rime-wanxiang/commit/a11b61469a7e49189e20504f34dadaca0a15ad55))
+* 移除九键多余的编码 ([dc4306a](https://github.com/amzxyz/rime-wanxiang/commit/dc4306a9c3c8467cfee3c0a1236dd9a828e9eb1f))
+* 给九键注释处新增一条删除辅助码的正则，避免有人配置辅助码类型的词库用于九键输入而不可用 ([c9db01a](https://github.com/amzxyz/rime-wanxiang/commit/c9db01acf07d3ae4fadc55183acaf6a0d125b944))
+
+
+### 🏡 杂项
+
+* 更新文档 ([67306e1](https://github.com/amzxyz/rime-wanxiang/commit/67306e1c60eb004c0ad4e0839634cd9a3613b46c))
+
+## [17.8.2](https://github.com/amzxyz/rime-wanxiang/compare/v17.8.1...v17.8.2) (2026-08-30)
+
+
+### 🐛 Bug 修复
+
+* 移除shift按下的快捷键设置干扰作为修饰键 ([ca572be](https://github.com/amzxyz/rime-wanxiang/commit/ca572be681be8b5f9c46baf976bb89dfd081e999))
+
+## [17.8.1](https://github.com/amzxyz/rime-wanxiang/compare/v17.8.0...v17.8.1) (2026-08-30)
+
+
+### 🐛 Bug 修复
+
+* 修复上下文调频删词动作干扰原生删词 ([d06f659](https://github.com/amzxyz/rime-wanxiang/commit/d06f65962276a12f15a0583b7bb5a0ac9fea0d14))
+
+## [17.8.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.7.2...v17.8.0) (2026-08-30)
+
+
+### ✨ 新特性
+
+* key_binder新增option状态扩展，现在可以在声调没开的状态下按下原有preedit上屏快捷键切换状态后发送原有内容，默认整成了上屏声调，有上屏其他类型的需求的如果感觉到占用了快捷键可以将其设置为ctrl+y这种类型也是可以的 ([515fad1](https://github.com/amzxyz/rime-wanxiang/commit/515fad12e9e451df326eaeb3a6a13f47ce63cf5c))
+
+
+### 🐛 Bug 修复
+
+* replacer小探索性優化 ([782ef14](https://github.com/amzxyz/rime-wanxiang/commit/782ef140b8adefced01d844961dfe8f56320cb8b))
+* 上下文调频中排序不变不增加c ([cccf9c6](https://github.com/amzxyz/rime-wanxiang/commit/cccf9c6298f081e02eb55faf1acfa34c7fab7b00))
+* 优化lookup修改句子的查询范围使用字符集过滤进行范围控制可更高效排除生僻字，从而减小句子修改的相同辅助码的碰撞概率 ([f6fe650](https://github.com/amzxyz/rime-wanxiang/commit/f6fe65003d210ca6548acc18d8ebeb8eb65f9286))
+* 优化lookup在简码形态下被触发和在编码大于6杯触发只看前100,这些场景下不再关心更靠后的生僻字 ([608e9dc](https://github.com/amzxyz/rime-wanxiang/commit/608e9dc95291a0248e037488e3d658b743509d20))
+* 插件小探索性優化 ([ab083bb](https://github.com/amzxyz/rime-wanxiang/commit/ab083bbbb2c2ef8988f28356d6a96fed2aaf20d1))
+
 ## [17.7.2](https://github.com/amzxyz/rime-wanxiang/compare/v17.7.1...v17.7.2) (2026-08-29)
 
 
