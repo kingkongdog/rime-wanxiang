@@ -43,6 +43,8 @@ extra_css:
 markdown_extensions:
   - admonition
   - attr_list
+  - toc:
+      permalink: true
   - md_in_html
   - pymdownx.details
 
@@ -92,6 +94,8 @@ nav:
           - 万象工具链: doc/tools.md
           - 东风破 Plum: doc/plum.md
           - 手动设置: doc/manual.md
+
+  - 常见问题: doc/faq.md
 
   - 特色功能:
       - 万象目录架构: doc/rime_tree.md
