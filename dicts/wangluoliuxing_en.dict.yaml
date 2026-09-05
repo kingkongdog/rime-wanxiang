@@ -3,7 +3,7 @@
 # https://github.com/kingkongdog/imewlconverter
 ---
 name: wangluoliuxing_en
-version: 2026-09-04 18:44:18
+version: 2026-09-05 17:50:33
 sort: by_weight
 ...
 阿尔忒弥斯ii	ā'ěr'tēi'mí'sī'ii
@@ -13,6 +13,9 @@ sort: by_weight
 阿sa	ā'sa
 埃及vs伊朗	āi'jí'vs'yī'lǎng
 奥克兰fc	ào'kè'lán'fc
+澳门站wtt赛事	ào'mén'zhàn'wtt'sài'shì
+澳门wtt冠军赛	ào'mén'wtt'guàn'jūn'sài
+澳门wtt赛事	ào'mén'wtt'sài'shì
 敖瑞鹏all	áo'ruì'péng'all
 敖闰cos	áo'rùn'cos
 澳洲cpi	ào'zhōu'cpi
@@ -36,6 +39,7 @@ sort: by_weight
 八贼diss	bā'zéi'diss
 巴中滨河世纪城a区	bā'zhōng'bīn'hé'shì'jì'chéng'a'qū
 百变兽boss	bǎi'biàn'shòu'boss
+百度a类股	bǎi'dù'a'lèi'gǔ
 百度app	bǎi'dù'app
 百花杀s加级	bǎi'huā'shā's'jiā'jí
 百联b股	bǎi'lián'b'gǔ
@@ -289,6 +293,7 @@ sort: by_weight
 法国vs波兰	fǎ'guó'vs'bō'lán
 法国vs美国	fǎ'guó'vs'měi'guó
 法国vs瑞典	fǎ'guó'vs'ruì'diǎn
+法国wsbk赛场	fǎ'guó'wsbk'sài'chǎng
 法老diss	fǎ'lǎo'diss
 范闲to签	fàn'xián'to'qiān
 樊a	fán'a
@@ -297,6 +302,7 @@ sort: by_weight
 方特npc	fāng'tè'npc
 放学bgm	fàng'xué'bgm
 飞常准app	fēi'cháng'zhǔn'app
+飞鸟主题mv	fēi'niǎo'zhǔ'tí'mv
 飞牛fnos	fēi'niú'fnos
 飞牛nas	fēi'niú'nas
 飞牛os	fēi'niú'os
@@ -418,6 +424,7 @@ sort: by_weight
 海信juos	hǎi'xìn'juos
 海信juos系统	hǎi'xìn'juos'xì'tǒng
 嗨milk	hāi'milk
+韩国艺人lisa	hán'guó'yì'rén'lisa
 韩国kospi指数	hán'guó'kospi'zhǐ'shù
 韩国kpop	hán'guó'kpop
 韩国sm娱乐	hán'guó'sm'yú'lè
@@ -429,6 +436,7 @@ sort: by_weight
 航班管家dast	háng'bān'guǎn'jiā'dast
 航空航天etf	háng'kōng'háng'tiān'etf
 航母mugem	háng'mǔ'mugem
+杭州浙ba赛事	háng'zhōu'zhè'ba'sài'shì
 昊铂埃安bu	hào'bó'āi'ān'bu
 昊铂hl预售	hào'bó'hl'yù'shòu
 昊灵cp	hào'líng'cp
@@ -509,6 +517,7 @@ sort: by_weight
 黄蜂vs勇士	huáng'fēng'vs'yǒng'shì
 黄金基金etf	huáng'jīn'jī'jīn'etf
 黄金etf	huáng'jīn'etf
+皇马tv	huáng'mǎ'tv
 皇马vs马竞	huáng'mǎ'vs'mǎ'jìng
 黄奕c位	huáng'yì'c'wèi
 惠普hpq	huì'pǔ'hpq
@@ -631,12 +640,14 @@ sort: by_weight
 卡文beacon	kǎ'wén'beacon
 卡bug	kǎ'bug
 卡bug了	kǎ'bug'le
+凯迪拉克srx	kǎi'dí'lā'kè'srx
 开放平台api	kāi'fàng'píng'tái'api
 凯言be了	kǎi'yán'be'le
 开源glm	kāi'yuán'glm
 看好we	kàn'hǎo'we
 看c罗	kàn'c'luó
 看ig	kàn'ig
+康欣xc	kāng'xīn'xc
 靠谱ai平台	kào'pǔ'ai'píng'tái
 科创半导体设备etf	kē'chuàng'bàn'dǎo'tǐ'shè'bèi'etf
 科创半导体etf	kē'chuàng'bàn'dǎo'tǐ'etf
@@ -644,6 +655,7 @@ sort: by_weight
 颗秒funk	kē'miǎo'funk
 嗑cp	kē'cp
 嗑cp大忌	kē'cp'dà'jì
+空壳类icp	kōng'ké'lèi'icp
 空ban	kōng'ban
 口算pk	kǒu'suàn'pk
 酷狗app	kù'gǒu'app
@@ -872,7 +884,9 @@ sort: by_weight
 暖阳无畏双c	nuǎn'yáng'wú'wèi'shuāng'c
 暖阳fmvp	nuǎn'yáng'fmvp
 虐泉hle	nuè'quán'hle
+挪威nbim	nuó'wēi'nbim
 挪威vs法国	nuó'wēi'vs'fǎ'guó
+女篮世界杯d组	nǚ'lán'shì'jiè'bēi'd'zǔ
 欧国联a级	ōu'guó'lián'a'jí
 欧莱雅pro	ōu'lái'yǎ'pro
 欧盟rohs指令	ōu'méng'rohs'zhǐ'lìng
@@ -891,6 +905,7 @@ sort: by_weight
 迫不得e	pò'bù'dé'e
 破军对战wb	pò'jūn'duì'zhàn'wb
 奇才vs骑士	qí'cái'vs'qí'shì
+启境gx	qǐ'jìng'gx
 骑士vs湖人	qí'shì'vs'hú'rén
 骑士vs活塞	qí'shì'vs'huó'sāi
 骑士vs篮网	qí'shì'vs'lán'wǎng
@@ -1013,6 +1028,7 @@ sort: by_weight
 上海ai训练中心	shàng'hǎi'ai'xùn'liàn'zhōng'xīn
 上海cpsp	shàng'hǎi'cpsp
 上海dq冰淇淋店	shàng'hǎi'dq'bīng'qí'lín'diàn
+上海gt赛车站	shàng'hǎi'gt'sài'chē'zhàn
 上交所跨境etf	shàng'jiāo'suǒ'kuà'jìng'etf
 上交所etf	shàng'jiāo'suǒ'etf
 上证e服务	shàng'zhèng'e'fú'wù
@@ -1159,6 +1175,7 @@ sort: by_weight
 嗵嗵x女娲补天	tōng'tōng'x'nǚ'wā'bǔ'tiān
 通信etf	tōng'xìn'etf
 通用航空etf	tōng'yòng'háng'kōng'etf
+通用agi	tōng'yòng'agi
 通胀指标pce	tōng'zhàng'zhǐ'biāo'pce
 投诚app	tóu'chéng'app
 头文字d	tóu'wén'zì'd
@@ -1332,6 +1349,7 @@ sort: by_weight
 泄露bp	xiè'lou'bp
 谢瑜vlog	xiè'yú'vlog
 信澳添利债券a	xìn'ào'tiān'lì'zhài'quàn'a
+新版本astra	xīn'bǎn'běn'astra
 新版qoder	xīn'bǎn'qoder
 新版siri	xīn'bǎn'siri
 新版siriai	xīn'bǎn'siriai
@@ -1357,6 +1375,8 @@ sort: by_weight
 新模型astra	xīn'mó'xíng'astra
 辛纳vs鲁内	xīn'nà'vs'lǔ'nèi
 新年快乐gogogo	xīn'nián'kuài'lè'gogogo
+新麒麟soc	xīn'qí'lín'soc
+新人人影视app	xīn'rén'rén'yǐng'shì'app
 新任ceo特纳斯	xīn'rèn'ceo'tè'nà'sī
 新任ceo特努斯	xīn'rèn'ceo'tè'nǔ'sī
 新生儿picc	xīn'shēng'ér'picc
@@ -1383,6 +1403,7 @@ sort: by_weight
 新ceo特努斯	xīn'ceo'tè'nǔ'sī
 新ep心室	xīn'ep'xīn'shì
 新macmini	xīn'macmini
+新mv飞鸟	xīn'mv'fēi'niǎo
 新qoder	xīn'qoder
 新vla	xīn'vla
 星光大赏vip之星	xīng'guāng'dà'shǎng'vip'zhī'xīng
@@ -1404,6 +1425,7 @@ sort: by_weight
 亚当pk人选	yà'dāng'pk'rén'xuǎn
 压力给到c罗	yā'lì'gěi'dào'c'luó
 亚马尔mvp	yà'mǎ'ěr'mvp
+亚太ai赋能中心	yà'tài'ai'fù'néng'zhōng'xīn
 轧戏全员he	yà'xì'quán'yuán'he
 亚预赛f组	yà'yù'sài'f'zǔ
 雅wink	yǎ'wink
@@ -1591,6 +1613,8 @@ sort: by_weight
 浙b	zhè'b
 浙b汪顺	zhè'b'wāng'shùn
 浙ba	zhè'ba
+浙ba城市争霸赛	zhè'ba'chéng'shì'zhēng'bà'sài
+浙ba啦啦队	zhè'ba'lā'lā'duì
 浙ba来了	zhè'ba'lái'le
 浙ba宁波赛区	zhè'ba'níng'bō'sài'qū
 浙c潘展乐	zhè'c'pān'zhǎn'lè
@@ -1615,6 +1639,7 @@ sort: by_weight
 支付宝bug	zhī'fù'bǎo'bug
 之后会火iu	zhī'hòu'huì'huǒ'iu
 智利vs巴西	zhì'lì'vs'bā'xī
+知名大v汤家凤	zhī'míng'dà'v'tāng'jiā'fèng
 智能体manus	zhì'néng'tǐ'manus
 智谱大模型api	zhì'pǔ'dà'mó'xíng'api
 智谱ai	zhì'pǔ'ai
@@ -1632,6 +1657,7 @@ sort: by_weight
 中国人保a股	zhōng'guó'rén'bǎo'a'gǔ
 中国私营pmi	zhōng'guó'sī'yíng'pmi
 中国天眼fast	zhōng'guó'tiān'yǎn'fast
+中国gt赛车赛场	zhōng'guó'gt'sài'chē'sài'chǎng
 中国up	zhōng'guó'up
 中国vs日本	zhōng'guó'vs'rì'běn
 中国vs印尼获胜	zhōng'guó'vs'yìn'ní'huò'shèng
@@ -1669,6 +1695,8 @@ sort: by_weight
 走进aie	zǒu'jìn'aie
 最好的地方ii	zuì'hǎo'de'dì'fāng'ii
 最强nba	zuì'qiáng'nba
+最新esg评级	zuì'xīn'esg'píng'jí
+最新gpt模型	zuì'xīn'gpt'mó'xíng
 尊界mpv	zūn'jiè'mpv
 尊隆纯债债券a	zūn'lóng'chún'zhài'zhài'quàn'a
 尊隆纯债债券c	zūn'lóng'chún'zhài'zhài'quàn'c
@@ -1740,6 +1768,7 @@ a股市场	a'gǔ'shì'chǎng
 a股市场爆发	a'gǔ'shì'chǎng'bào'fā
 a股收官之战	a'gǔ'shōu'guān'zhī'zhàn
 a股收评	a'gǔ'shōu'píng
+a股四大股指	a'gǔ'sì'dà'gǔ'zhǐ
 a股缩量	a'gǔ'suō'liàng
 a股缩量震荡	a'gǔ'suō'liàng'zhèn'dàng
 a股太强了	a'gǔ'tài'qiáng'le
@@ -1910,6 +1939,7 @@ ag租借小俞	ag'zū'jiè'xiǎo'yú
 ag最后一舞	ag'zuì'hòu'yī'wǔ
 agal夺冠	agal'duó'guàn
 agent大会	agent'dà'huì
+agi级	agi'jí
 agi时代	agi'shí'dài
 agvs狼队	agvs'láng'duì
 ai安全	ai'ān'quán
@@ -1928,6 +1958,9 @@ ai产业领域	ai'chǎn'yè'lǐng'yù
 ai产业生态链	ai'chǎn'yè'shēng'tài'liàn
 ai长剧概念	ai'cháng'jù'gài'niàn
 ai长剧后西游记	ai'cháng'jù'hòu'xī'you'jì
+ai创业计划	ai'chuàng'yè'jì'huá
+ai创业三年计划	ai'chuàng'yè'sān'nián'jì'huá
+ai创业支持计划	ai'chuàng'yè'zhī'chí'jì'huá
 ai创造营	ai'chuàng'zào'yíng
 ai创作大赛	ai'chuàng'zuò'dà'sài
 ai打分	ai'dǎ'fēn
@@ -1974,6 +2007,7 @@ ai焦虑症	ai'jiāo'lǜ'zhèng
 ai救我狗命	ai'jiù'wǒ'gǒu'mìng
 ai剧	ai'jù
 ai剧后西游记	ai'jù'hòu'xī'you'jì
+ai科创企业	ai'kē'chuàng'qǐ'yè
 ai恐慌	ai'kǒng'huāng
 ai李现	ai'lǐ'xiàn
 ai李想	ai'lǐ'xiǎng
@@ -2011,6 +2045,7 @@ ai手机领域	ai'shǒu'jī'lǐng'yù
 ai数据中心	ai'shù'jù'zhōng'xīn
 ai数贸综试区	ai'shù'mào'zōng'shì'qū
 ai水果短剧	ai'shuǐ'guǒ'duǎn'jù
+ai素养培训	ai'sù'yǎng'péi'xùn
 ai苏州年度大会	ai'sū'zhōu'nián'dù'dà'huì
 ai算力租赁业务	ai'suàn'lì'zū'lìn'yè'wù
 ai算命	ai'suàn'mìng
@@ -2070,6 +2105,7 @@ ai制图骗局	ai'zhì'tú'piàn'jú
 ai终极对决	ai'zhōng'jí'duì'jué
 ai中小创业公司	ai'zhōng'xiǎo'chuàng'yè'gōng'sī
 ai中小企业	ai'zhōng'xiǎo'qǐ'yè
+ai中医药	ai'zhōng'yī'yào
 ai助手	ai'zhù'shǒu
 ai作画	ai'zuò'huà
 aigc大模型	aigc'dà'mó'xíng
@@ -2102,6 +2138,7 @@ al亚军	al'yà'jūn
 al要稳住	al'yào'wěn'zhù
 al野辅续约	al'yě'fǔ'xù'yuē
 al也回来了	al'yě'huí'lái'le
+al战队	al'zhàn'duì
 al战胜ig	al'zhàn'shèng'ig
 al战胜up	al'zhàn'shèng'up
 al战胜we	al'zhàn'shèng'we
@@ -2119,6 +2156,7 @@ angel萱萱ia	angel'xuān'xuān'ia
 anna好美	anna'hǎo'měi
 apex英雄	apex'yīng'xióng
 apm直播	apm'zhí'bō
+app片源	app'piàn'yuán
 apt翻唱	apt'fān'chàng
 apt好听	apt'hǎo'tīng
 apt好洗脑	apt'hǎo'xǐ'nǎo
@@ -2137,6 +2175,7 @@ ats北京	ats'běi'jīng
 aura来了	aura'lái'le
 aurizona金矿	aurizona'jīn'kuàng
 b超里的我们	b'chāo'lǐ'de'wǒ'men
+b端验证模式	b'duān'yàn'zhèng'mó'shì
 b费	b'fèi
 b费破门	b'fèi'pò'mén
 b萌	b'méng
@@ -2407,6 +2446,7 @@ cube娱乐	cube'yú'lè
 cursor联创	cursor'lián'chuàng
 cv天空晒照	cv'tiān'kōng'shài'zhào
 cxl技术方案	cxl'jì'shù'fāng'àn
+cxl模块	cxl'mó'kuài
 cxl芯片	cxl'xīn'piàn
 d牌	d'pái
 d社	d'shè
@@ -2505,6 +2545,7 @@ esg评级平台	esg'píng'jí'píng'tái
 esg评级详情	esg'píng'jí'xiáng'qíng
 esg评级bbb	esg'píng'jí'bbb
 esg评级c	esg'píng'jí'c
+esg评级ccc	esg'píng'jí'ccc
 esg双标	esg'shuāng'biāo
 esim手机	esim'shǒu'jī
 etc赣通宝	etc'gàn'tōng'bǎo
@@ -2617,6 +2658,8 @@ go主打高端	go'zhǔ'dǎ'gāo'duān
 goat杯	goat'bēi
 gopro公司	gopro'gōng'sī
 gopro股票	gopro'gǔ'piào
+gpt模型	gpt'mó'xíng
+gpt系列模型	gpt'xì'liè'mó'xíng
 gq版权	gq'bǎn'quán
 gq出图	gq'chū'tú
 gq大合影	gq'dà'hé'yǐng
@@ -2633,6 +2676,8 @@ gr新队标	gr'xīn'duì'biāo
 gr战队	gr'zhàn'duì
 gr战队冠军	gr'zhàn'duì'guàn'jūn
 gr战胜fl	gr'zhàn'shèng'fl
+gt赛车上海站	gt'sài'chē'shàng'hǎi'zhàn
+gt赛事组别	gt'sài'shì'zǔ'bié
 gta罪恶都市	gta'zuì'è'dū'shì
 guy卡点舞	guy'kǎ'diǎn'wǔ
 gw对战gr	gw'duì'zhàn'gr
@@ -2722,6 +2767,7 @@ ig赛后群像	ig'sài'hòu'qún'xiàng
 ig十七强	ig'shí'qī'qiáng
 ig时尚大片	ig'shí'shàng'dà'piàn
 ig首发	ig'shǒu'fā
+ig首发名单	ig'shǒu'fā'míng'dān
 ig收官长文	ig'shōu'guān'cháng'wén
 ig收官发文	ig'shōu'guān'fā'wén
 ig团战	ig'tuán'zhàn
@@ -3238,6 +3284,7 @@ rng教练	rng'jiào'liàn
 rpg模拟器	rpg'mó'nǐ'qì
 rsg八冠王	rsg'bā'guàn'wáng
 rsg七冠王	rsg'qī'guàn'wáng
+rsv单抗	rsv'dān'kàng
 rsv单抗注射液	rsv'dān'kàng'zhù'shè'yè
 rsv新药	rsv'xīn'yào
 rv晚宴	rv'wǎn'yàn
@@ -3327,6 +3374,7 @@ st晨鸣b	st'chén'míng'b
 st萃华	st'cuì'huá
 st豆神股票	st'dòu'shén'gǔ'piào
 st福成	st'fú'chéng
+st富煌	st'fù'huáng
 st海王	st'hǎi'wáng
 st合纵锂电	st'hé'zòng'lǐ'diàn
 st合纵锂电板块	st'hé'zòng'lǐ'diàn'bǎn'kuài
@@ -3343,6 +3391,8 @@ st康佳a	st'kāng'jiā'a
 st康佳ab	st'kāng'jiā'ab
 st康佳ab证券	st'kāng'jiā'ab'zhèng'quàn
 st柯利达	st'kē'lì'dá
+st岭南	st'lǐng'nán
+st岭南公司	st'lǐng'nán'gōng'sī
 st路通股份	st'lù'tōng'gǔ'fèn
 st诺泰	st'nuò'tài
 st清越股份	st'qīng'yuè'gǔ'fèn
@@ -3355,6 +3405,7 @@ st西旅	st'xī'lǚ
 st香雪	st'xiāng'xuě
 st新华锦	st'xīn'huá'jǐn
 st新华锦控股	st'xīn'huá'jǐn'kòng'gǔ
+st兴业科技	st'xìng'yè'kē'jì
 st远智	st'yuǎn'zhì
 st远智直梯	st'yuǎn'zhì'zhí'tī
 ste公司	ste'gōng'sī
@@ -3673,9 +3724,14 @@ wish泡泡	wish'pào'pào
 wnba世界杯	wnba'shì'jiè'bēi
 wps崩了	wps'bēng'le
 wps父主题	wps'fù'zhǔ'tí
+wsbk排位赛	wsbk'pái'wèi'sài
+wsbk制造商	wsbk'zhì'zào'shāng
+wssp法国站	wssp'fǎ'guó'zhàn
+wssp排位赛	wssp'pái'wèi'sài
 wta美网	wta'měi'wǎng
 wti原油	wti'yuán'yóu
 wti原油期货	wti'yuán'yóu'qī'huò
+wtt阿拉木图站	wtt'ā'lā'mù'tú'zhàn
 wtt澳门冠军赛	wtt'ào'mén'guàn'jūn'sài
 wtt颁奖	wtt'bān'jiǎng
 wtt北京大满贯	wtt'běi'jīng'dà'mǎn'guàn
