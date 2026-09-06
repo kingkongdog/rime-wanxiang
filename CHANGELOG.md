@@ -1,5 +1,45 @@
 # Changelog
 
+## [17.9.8](https://github.com/amzxyz/rime-wanxiang/compare/v17.9.7...v17.9.8) (2026-09-05)
+
+
+### 🐛 Bug 修复
+
+* **english:** 不在反查等模式工作 ([ba8a06e](https://github.com/amzxyz/rime-wanxiang/commit/ba8a06e88f2e132402791acdd8536ae2f2292900))
+* **replacer:** 缓存表采用64固定槽位不销毁不重建避免Lua延迟gc ([3e0ab70](https://github.com/amzxyz/rime-wanxiang/commit/3e0ab702725ffeec790bce5959fdd8319fe4bf64))
+* 简纯皮肤增加几个快捷键 ([1952b8e](https://github.com/amzxyz/rime-wanxiang/commit/1952b8ee06e8cba7ba81d507fa4ccbe7fd68f06b))
+* 缓存表采用64固定槽位不销毁不重建避免Lua延迟gc ([74f4263](https://github.com/amzxyz/rime-wanxiang/commit/74f42631ee405d6f96e9d646c9728e7f398406d7))
+
+## [17.9.7](https://github.com/amzxyz/rime-wanxiang/compare/v17.9.6...v17.9.7) (2026-09-04)
+
+
+### 📚 词库更新
+
+* 词库调整 ([b935515](https://github.com/amzxyz/rime-wanxiang/commit/b935515d77c70a4d0249f3392180185652ba5135))
+
+
+### 🐛 Bug 修复
+
+* **wanxiang:** use projection backend for regex on openSUSE ([8ad8469](https://github.com/amzxyz/rime-wanxiang/commit/8ad84697cc711b2d7b6092e4432bf7a5a79c7bb8))
+
+
+### 💅 重构
+
+* unify regex matching with Projection ([6369abc](https://github.com/amzxyz/rime-wanxiang/commit/6369abc46ae9ec74746271badda43737a949b937))
+
+## [17.9.6](https://github.com/amzxyz/rime-wanxiang/compare/v17.9.5...v17.9.6) (2026-09-04)
+
+
+### 📚 词库更新
+
+* 词库调整 ([c7d11cc](https://github.com/amzxyz/rime-wanxiang/commit/c7d11ccddc81e85aeb34c00ff3b68f6f3c2c7cd5))
+
+
+### 🐛 Bug 修复
+
+* other.txt分隔符变更 ([4964c93](https://github.com/amzxyz/rime-wanxiang/commit/4964c93b94f4ecb2578a2b70f27b987f5908307d))
+* 优化九键读取数据策略 ([a94e820](https://github.com/amzxyz/rime-wanxiang/commit/a94e820e0e61cd9c87f46398d1bf7cff5f2447d9))
+
 ## [17.9.5](https://github.com/amzxyz/rime-wanxiang/compare/v17.9.4...v17.9.5) (2026-09-03)
 
 
