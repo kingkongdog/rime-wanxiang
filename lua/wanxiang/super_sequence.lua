@@ -190,6 +190,8 @@ local function get_sequence_state(env, config)
 end
 
 local function release_read_accessor(state)
+    -- DbAccessor 必须先于 LevelDb 失去引用。
+    -- 这里只解除 accessor 引用，不主动 close 共享 UserDb。
     if state then state.read_accessor = nil end
 end
 
@@ -201,6 +203,9 @@ local function get_read_accessor(state)
     local accessor = state.db:query("")
     if not accessor then return nil end
     state.read_accessor = accessor
+    -- DbAccessor 绑定 sequence_state：
+    -- 保证同一 composition 内候选移动/刷新仍复用同一个读视图。
+    -- 通过 commit、写入成功、fini 主动释放，避免长期持有。
     return accessor
 end
 
