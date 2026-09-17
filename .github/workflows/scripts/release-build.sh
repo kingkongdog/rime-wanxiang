@@ -21,6 +21,47 @@ python3 "$ROOT_DIR/.github/workflows/scripts/aux_go.py"
 echo "✅ PRO 分包完毕"
 echo
 
+
+build_opencc_wanxiang() {
+  OPENCC_DIR="$ROOT_DIR/opencc/wanxiang"
+
+  if [[ ! -d "$OPENCC_DIR" ]]; then
+    return
+  fi
+
+  if ! command -v opencc_dict >/dev/null 2>&1; then
+    sudo apt-get update
+    sudo apt-get install -y opencc
+  fi
+
+  cd "$OPENCC_DIR"
+
+  for f in *.txt; do
+    [[ -f "$f" ]] || continue
+
+    # 保留自定义文件，不转换不删除
+    case "$f" in
+      Custom_STPhrases.txt|Custom_Emoji.txt)
+        continue
+        ;;
+    esac
+
+    echo "build opencc: $f"
+
+    sed -i '/^#/d' "$f"
+
+    opencc_dict \
+      -i "$f" \
+      -o "${f%.txt}.ocd2" \
+      -f text \
+      -t ocd2
+
+    rm -f "$f"
+  done
+
+  cd "$ROOT_DIR"
+}
+
 package_schema_base() {
   OUT_DIR=$1
   rm -rf "$OUT_DIR"
@@ -47,6 +88,7 @@ package_schema_base() {
     --exclude='/dist/' \
     --exclude='/docs/' \
     --exclude='/mkdocs.yml' \
+    --exclude='custom_phrase.txt' \
     --exclude='/release-please-config.json' \
     --exclude='/pro-*-fuzhu-dicts' \
     --exclude='/CHANGELOG.md' \
@@ -166,6 +208,7 @@ package_schema_lite() {
     --exclude='.yamlfmt' \
     --exclude='/custom' \
     --exclude='/LICENSE' \
+    --exclude='custom_phrase.txt' \
     --exclude='/wanxiang.dict.yaml' \
     --exclude='/wanxiang.schema.yaml' \
     --exclude='/wanxiang_lite.dict.yaml' \
@@ -452,10 +495,14 @@ package_schema_pro() {
     --exclude='/docs/' \
     --exclude='/mkdocs.yml' \
     --exclude='.yamlfmt' \
+    --exclude='custom_phrase.txt' \
     --exclude='release-please-config.json' \
     --exclude='pro-*-fuzhu-dicts' \
     --exclude='wanxiang_t9.schema.yaml' \
     --exclude='wanxiang_t9i.schema.yaml' \
+    --exclude='wanxiang_abbrev_t9.dict.yaml' \
+    --exclude='wanxiang_abbrev_t9.schema.yaml' \
+    --exclude='wanxiang_phrase_t9.schema.yaml' \
     --exclude='CHANGELOG.md' \
     --exclude='wanxiang.dict.yaml' \
     --exclude='wanxiang.schema.yaml' \
@@ -506,6 +553,8 @@ package_schema_pure() {
     --exclude='wanxiang.custom.yaml' \
     --exclude='wanxiang.dict.yaml' \
     --exclude='wanxiang.schema.yaml' \
+    --exclude='wanxiang_abbrev.custom.yaml' \
+    --exclude='wanxiang_phrase.custom.yaml' \
     --exclude='wanxiang_pure.schema.yaml' \
     --exclude='wanxiang_pure.dict.yaml' \
     --exclude='wanxiang_mixedcode.custom.yaml' \
@@ -539,6 +588,13 @@ package_schema_pure() {
     --exclude='/wanxiang_reverse.schema.yaml' \
     --exclude='/wanxiang_t9.schema.yaml' \
     --exclude='wanxiang_t9i.schema.yaml' \
+    --exclude='wanxiang_abbrev_t9.dict.yaml' \
+    --exclude='wanxiang_abbrev_t9.schema.yaml' \
+    --exclude='wanxiang_phrase_t9.schema.yaml' \
+    --exclude='custom_phrase.dict.yaml' \
+    --exclude='wanxiang_abbrev.dict.yaml' \
+    --exclude='wanxiang_abbrev.schema.yaml' \
+    --exclude='wanxiang_phrase.schema.yaml' \
     --exclude='/CHANGELOG.md' \
     --exclude='.yamlfmt' \
     --exclude='/custom' \
@@ -550,6 +606,8 @@ package_schema_pure() {
 }
 
 package_schema() {
+  build_opencc_wanxiang
+
   SCHEMA_NAME="$1"
   echo "▶️ 开始打包方案：$SCHEMA_NAME"
 
