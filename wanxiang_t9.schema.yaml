@@ -222,11 +222,6 @@ s2tw:
   tips: none
   tags: [abc]
 
-sentence:
-  opencc_config: wanxiang_sentence.json
-  tips: none
-  tags: [abc]
-
 # 拼写设定
 speller:
   # table_translator翻译器，支持自动上屏。例如 “zmhu”可以自动上屏“怎么回事”
@@ -518,4 +513,10 @@ super_replacer:
       prefix: "_ot_"
       files:
         - lua/data/others.txt
-
+    - option: true
+      mode: append
+      sentence: true
+      tags: [abc]
+      prefix: "_ling_"
+      files:
+        - lua/data/sentence.txt

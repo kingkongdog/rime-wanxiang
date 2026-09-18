@@ -1,5 +1,62 @@
 # Changelog
 
+## [18.0.5](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.4...v18.0.5) (2026-09-18)
+
+
+### 📚 词库更新
+
+* 词库调整 ([aa0c7b1](https://github.com/amzxyz/rime-wanxiang/commit/aa0c7b15de3cab2e1e430c61be0babf92935082c))
+
+
+### 🐛 Bug 修复
+
+* set_schema不再无辜覆盖附属custom文件 ([f1db912](https://github.com/amzxyz/rime-wanxiang/commit/f1db91273a4a946e06734f1f2c708e2a2d4aae30))
+
+## [18.0.4](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.3...v18.0.4) (2026-09-18)
+
+
+### 🤖 持续集成
+
+* 修复 ([4c238b3](https://github.com/amzxyz/rime-wanxiang/commit/4c238b3f2126d93e6130665b44529448c0ba5bf4))
+
+## [18.0.3](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.2...v18.0.3) (2026-09-18)
+
+
+### 🐛 Bug 修复
+
+* 优化用户词输出逻辑 ([a885dd6](https://github.com/amzxyz/rime-wanxiang/commit/a885dd6190f18db140ab57b7108c0a6ac1e5c1fc))
+* 忘记了OpenCC不能派生句子移除掉 ([6000474](https://github.com/amzxyz/rime-wanxiang/commit/6000474cc2e9d41696b11e2c47b47a952e0b97bf))
+
+## [18.0.2](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.1...v18.0.2) (2026-09-17)
+
+
+### 🐛 Bug 修复
+
+* 修复跳过原始候选的问题 ([688346c](https://github.com/amzxyz/rime-wanxiang/commit/688346c83cf69e11eb3a30e5138ed24d6fc81e15))
+
+## [18.0.1](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.0...v18.0.1) (2026-09-17)
+
+
+### 🐛 Bug 修复
+
+* 全拼限制外来简词输出 ([d78c5a0](https://github.com/amzxyz/rime-wanxiang/commit/d78c5a035320ac2609043c3a6b1326fc7b79497c))
+* 句子派生迁移OpenCC ([a530444](https://github.com/amzxyz/rime-wanxiang/commit/a530444b77dd2e508770d8ed362ce6ec08593b72))
+* 简繁转换emoji迁移到OpenCC，Custom_STPhrases.txt、Custom_Emoji.txt分别为预留的自定义文件，但他会被更新覆盖，因此选择这种方式请做好数据管理，或使用replacer处理自定义数据 ([a72207c](https://github.com/amzxyz/rime-wanxiang/commit/a72207c1e7d388daf726b93d7ee3bb394e0f0935))
+* 简词排序在table前面 ([43f8a3c](https://github.com/amzxyz/rime-wanxiang/commit/43f8a3c094a01f2df1df6e2bfaeb61ab0cf02914))
+
+
+### 🏡 杂项
+
+* 变更文档 ([8f1c75c](https://github.com/amzxyz/rime-wanxiang/commit/8f1c75c6ac60556aa3f9197ba5f8e46de7333a9c))
+* 变更文档 ([d55300e](https://github.com/amzxyz/rime-wanxiang/commit/d55300ec37d08063f55826f1765e4428f9378117))
+
+
+### 🤖 持续集成
+
+* 修复 ([d5ca273](https://github.com/amzxyz/rime-wanxiang/commit/d5ca2738c1bafbb0f69324d5ff4da46b667c0a54))
+* 修复 ([7390e08](https://github.com/amzxyz/rime-wanxiang/commit/7390e08e3981da0040028fc885d28c7f181e6de5))
+* 修复 ([5a75693](https://github.com/amzxyz/rime-wanxiang/commit/5a75693f450499b11e7d491169467dbbf62fe01d))
+
 ## [18.0.0](https://github.com/amzxyz/rime-wanxiang/compare/v17.10.3...v18.0.0) (2026-09-17)
 
 

@@ -106,7 +106,7 @@ function M.func(input, env)
     if custom_translation then
         for cand in custom_translation:iter() do
             local source = whole_phrase(cand, input_end)
-            if source and not reserved[cand.text] then
+            if source and cand.text and cand.text ~= "" and not reserved[cand.text] then
                 reserved[cand.text] = true
                 custom[#custom + 1] = prepare_candidate(cand, source, "custom_phrase")
             end
@@ -114,14 +114,10 @@ function M.func(input, env)
     end
 
     local selected = {}
-
-    -- 延迟生成 abbrev：
-    -- 必须先知道原始 idx0 类型，才能决定是否全量输出。
     local abbrev_loaded = false
-    local function load_abbrev(full_mode)
+    local function load_abbrev()
         if abbrev_loaded then return end
         abbrev_loaded = true
-
         if not abbrev_enabled then return end
 
         if not env.abbrev_translator then
@@ -129,22 +125,15 @@ function M.func(input, env)
         end
 
         local translation = env.abbrev_translator and env.abbrev_translator:query(code, seg)
-        if translation then
-            local seen = {}
-            local count = 0
-            for cand in translation:iter() do
-                local source = whole_phrase(cand, input_end)
-                local text = cand.text
-                if source and not seen[text] and not reserved[text] then
-                    seen[text] = true
-                    count = count + 1
-                    if full_mode or count <= env.max_candidates then
-                        selected[#selected + 1] = prepare_candidate(cand, source, "abbrev")
-                    end
-                    if not full_mode and count >= env.max_candidates then
-                        break
-                    end
-                end
+        if not translation then return end
+
+        local seen = {}
+        for cand in translation:iter() do
+            local source = whole_phrase(cand, input_end)
+            local text = cand.text
+            if source and text and text ~= "" and not seen[text] and not reserved[text] then
+                seen[text] = true
+                selected[#selected + 1] = prepare_candidate(cand, source, "abbrev")
             end
         end
     end
@@ -152,55 +141,55 @@ function M.func(input, env)
     local special_checked = false
     local special_first = false
     local emitted = 0
-    local custom_index = 0
-    local inserted = false
+    local custom_done = false      -- custom 是否已全量输出过
+    local abbrev_done = false      -- abbrev 是否已插入过（含受限/全量两种模式）
+    local has_original = false     -- 原始候选流是否非空（仅由 input:iter() 置位）
 
-    local function emit_special()
-        load_abbrev(true)
-
-        for i = 1,#custom do
+    local function emit_custom()
+        if custom_done then return end
+        custom_done = true
+        for i = 1, #custom do
             emitted = emitted + 1
             yield(custom[i])
         end
-
-        for i = 1,#selected do
-            emitted = emitted + 1
-            yield(selected[i])
-        end
     end
 
-    local function insert_selected()
-        load_abbrev(false)
-        inserted = true
-        local limit = env.max_candidates
-        for i = 1,#selected do
-            if i > limit then break end
+    local function emit_abbrev(full_mode)
+        if abbrev_done then return end
+        abbrev_done = true
+        load_abbrev()
+        local n = #selected
+        if not full_mode and n > env.max_candidates then
+            n = env.max_candidates
+        end
+        for i = 1, n do
             emitted = emitted + 1
             yield(selected[i])
         end
     end
 
     for cand in input:iter() do
+        has_original = true
+
         if not special_checked then
             special_checked = true
             special_first = env.special_types and env.special_types[cand.type] == true
+            emit_custom()
             if special_first then
-                emit_special()
+                emit_abbrev(true)
                 yield(cand)
                 goto continue
             end
         end
 
         if not special_first then
-            if custom_index < #custom then
-                custom_index = custom_index + 1
-                emitted = emitted + 1
-                yield(custom[custom_index])
-                goto continue
+            if not abbrev_done and emitted >= env.insert_position - 1 then
+                emit_abbrev(false)
             end
-            if not inserted and emitted >= env.insert_position - 1 then
-                insert_selected()
-            end
+        end
+
+        if cand.text and cand.text ~= "" and reserved[cand.text] then
+            goto continue
         end
 
         emitted = emitted + 1
@@ -208,9 +197,8 @@ function M.func(input, env)
         ::continue::
     end
 
-    if not special_first and not inserted then
-        insert_selected()
-    end
+    emit_custom()
+    emit_abbrev(not has_original or special_first)
 end
 
 function M.fini(env)
