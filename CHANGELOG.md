@@ -1,5 +1,26 @@
 # Changelog
 
+## [18.0.8](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.7...v18.0.8) (2026-09-19)
+
+
+### 🐛 Bug 修复
+
+* 添加自定义说明 ([291dec7](https://github.com/amzxyz/rime-wanxiang/commit/291dec79a06c3baeb9297884e7da2b81832b11f6))
+
+## [18.0.7](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.6...v18.0.7) (2026-09-19)
+
+
+### 🐛 Bug 修复
+
+* 添加自定义说明 ([87dc36c](https://github.com/amzxyz/rime-wanxiang/commit/87dc36cce62e6a04c889dd0a501c71291e0e5579))
+
+## [18.0.6](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.5...v18.0.6) (2026-09-19)
+
+
+### 🐛 Bug 修复
+
+* 英文前置迁入replacer ([b23057e](https://github.com/amzxyz/rime-wanxiang/commit/b23057e4b6af6721230c0a3d0b2ec8da42d82e97))
+
 ## [18.0.5](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.4...v18.0.5) (2026-09-18)
 
 
