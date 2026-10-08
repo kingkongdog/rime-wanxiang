@@ -1,5 +1,42 @@
 # Changelog
 
+## [18.1.1](https://github.com/amzxyz/rime-wanxiang/compare/v18.1.0...v18.1.1) (2026-10-08)
+
+
+### 📚 词库更新
+
+* 词库调整 ([49347f2](https://github.com/amzxyz/rime-wanxiang/commit/49347f27dc187d0c774276e86b3dbc5e34bdb2c0))
+* 词库调整 ([c9fec20](https://github.com/amzxyz/rime-wanxiang/commit/c9fec20aaa73e4e6eeff7fea3617220e2c43c369))
+
+
+### 🐛 Bug 修复
+
+* 优化自定义短语lua释放语义 ([18cf5b7](https://github.com/amzxyz/rime-wanxiang/commit/18cf5b78d5211a092a0d4ef0f727737a5b8f74de))
+* 修复缩进错误 ([e5d5d43](https://github.com/amzxyz/rime-wanxiang/commit/e5d5d4324ea73eb7ebbfaf37b30103e16326dac8))
+* 默认开启base、lite版本的基于模型的上下文调频，但如果你喜欢输入“的 基于”但是，开启上下文调频后，会：的 机遇，这是不同点要习惯习惯，但用户词本身在我看来就是乱跳，那么这样的算法对于base反而可能是个好事，因此默认开启听听反馈 ([11f31d4](https://github.com/amzxyz/rime-wanxiang/commit/11f31d42f24295a6a5a2ebdcac92240f65b7ca75))
+
+## [18.1.0](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.16...v18.1.0) (2026-10-05)
+
+
+### ✨ 新特性
+
+* 新增万象带调离散双拼测试版 ([fe1c0c2](https://github.com/amzxyz/rime-wanxiang/commit/fe1c0c23e6579482177dac7584f96520b84d09cf))
+
+
+### 📚 词库更新
+
+* 词库调整 ([e0d5cfe](https://github.com/amzxyz/rime-wanxiang/commit/e0d5cfe5d61f7211a949c38212ee9ee0404b9953))
+* 调整若干词频 ([1c4f28b](https://github.com/amzxyz/rime-wanxiang/commit/1c4f28be08c1119ba2f2d25bc496795e23fcee29))
+
+
+### 🐛 Bug 修复
+
+* pro版本增加万象双拼测试，同时优化set_schema ([fa82cb9](https://github.com/amzxyz/rime-wanxiang/commit/fa82cb9fb88b49370dcf72a2d59474a31f0a3255))
+* 修复整体替换导致的错误 ([64e4277](https://github.com/amzxyz/rime-wanxiang/commit/64e4277dd216ec656b070ed04146d0917fd70a9f))
+* 港繁预设文件分隔符错误 ([afb4d69](https://github.com/amzxyz/rime-wanxiang/commit/afb4d694e711acf4d46505eff3b74b7261109346))
+* 移除中文翻译英文数据 ([4f21216](https://github.com/amzxyz/rime-wanxiang/commit/4f21216a9cc2eea0fc884856467ac3a3a35c6ce8))
+* 调整一些配置 ([bad96d2](https://github.com/amzxyz/rime-wanxiang/commit/bad96d2d7ec4a47cdfd2bc6ab76b56159bbf294b))
+
 ## [18.0.16](https://github.com/amzxyz/rime-wanxiang/compare/v18.0.15...v18.0.16) (2026-10-03)
 
 
