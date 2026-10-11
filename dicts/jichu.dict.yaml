@@ -5,7 +5,6 @@ name: jichu
 version: "LTS"
 sort: by_weight
 ...
-攀	pān
 阿爸	ā bà	716
 阿坝	ā bà	207
 阿巴	ā bā	166
@@ -2614,8 +2613,8 @@ sort: by_weight
 办报	bàn bào	112
 半杯	bàn bēi	628
 版本	bǎn běn	119474
+半本	bàn běn	4471
 坂本	bǎn běn	857
-半本	bàn běn	471
 扳本	bān běn	348
 斑比	bān bǐ	1125
 板壁	bǎn bì	1069
@@ -23204,7 +23203,8 @@ sort: by_weight
 等着	děng zhe	22008
 瞪着	dèng zhe	1585
 等值	děng zhí	1617
-等至	děng zhì	981
+等职	děng zhí	981
+等至	děng zhì	211
 等重	děng zhòng	192
 登州	dēng zhōu	207
 邓州	dèng zhōu	197
@@ -52533,11 +52533,11 @@ sort: by_weight
 稽山	jī shān	48
 集善	jí shàn	38
 祭山	jì shān	30
+记上	jì shàng	2449
 系上	jì shàng	1482
 机上	jī shàng	678
 集上	jí shàng	540
 挤上	jǐ shàng	496
-记上	jì shàng	449
 击伤	jī shāng	357
 激赏	jī shǎng	182
 寄上	jì shàng	128
@@ -185287,6 +185287,8 @@ sort: by_weight
 爆照求	bào zhào qiú	252
 抱着吧	bào zhe ba	382
 抱着打	bào zhe dǎ	0
+抱着个	bào zhe gè	320
+报这个	bào zhè ge	183
 抱着狗	bào zhe gǒu	41
 抱着花	bào zhe huā	38
 抱着了	bào zhe le	518
@@ -783109,6 +783111,7 @@ sort: by_weight
 包尔沙克	bāo ěr shā kè	212
 宝尔势格	bǎo ěr shì gé	162
 鲍尔斯顿	bào ěr sī dùn	162
+薄而松弛	báo ér sōng chí	15
 鲍尔托克	bào ěr tuō kè	52
 鲍二媳妇	bào èr xí fù	202
 保二小学	bǎo èr xiǎo xué	50
@@ -791769,6 +791772,8 @@ sort: by_weight
 比较放心	bǐ jiào fàng xīn	1080
 比较费劲	bǐ jiào fèi jìn	846
 比较费力	bǐ jiào fèi lì	684
+比较费时	bǐ jiào fèi shí	152
+比较费事	bǐ jiào fèi shì	91
 比较分散	bǐ jiào fēn sǎn	806
 比较分析	bǐ jiào fēn xī	452
 比较封闭	bǐ jiào fēng bì	706
@@ -958052,7 +958057,7 @@ sort: by_weight
 胡为此堂	hú wéi cǐ táng	99
 互为促进	hù wéi cù jìn	306
 户为单位	hù wéi dān wèi	558
-互为倒数	hù wéi dǎo shù	454
+互为倒数	hù wéi dào shù	454
 互为对手	hù wéi duì shǒu	423
 互为呼应	hù wéi hū yìng	333
 互为犄角	hù wéi jī jiǎo	454
@@ -1197505,8 +1197510,10 @@ sort: by_weight
 水合肼氨	shuǐ hé jǐng ān	45
 水和空气	shuǐ hé kōng qì	675
 水合离子	shuǐ hé lí zǐ	392
+水和奶粉	shuǐ hé nǎi fěn	96
 谁和你在	shuí hé nǐ zài	207
 水和食物	shuǐ hé shí wù	796
+水和水泥	shuǐ hé shuǐ ní	29
 水褐铜矾	shuǐ hè tóng fán	45
 谁和我开	shuí hé wǒ kāi	50
 谁和我约	shuí hé wǒ yuē	76
@@ -1211494,7 +1211501,7 @@ sort: by_weight
 榻榻米床	tà tà mǐ chuáng	464
 榻榻米垫	tà tà mǐ diàn	306
 榻榻米房	tà tà mǐ fáng	554
-踏踏实实	tà tà shí shí	7492
+踏踏实实	tā tā shí shí	7492
 他太菜了	tā tài cài le	13
 他太难了	tā tài nán le	52
 她太难了	tā tài nán le	52
