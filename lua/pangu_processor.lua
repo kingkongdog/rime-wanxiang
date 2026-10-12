@@ -246,7 +246,11 @@ function M.func(key, env)
 		local current_str = get_punc_char(env, key)
 		if current_str ~= "" then -- 可见光标
 			local last_str = env.last_text
-			if last_str:match("^[0-9]$") and current_str == "。" then
+			if current_str == "/" then
+				engine:commit_text("/")
+				updateLastText(env, "/")
+				return 1
+			elseif last_str:match("^[0-9]$") and current_str == "。" then
 				engine:commit_text(".")
 				updateLastText(env, ".")
 				return 1
