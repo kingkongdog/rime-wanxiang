@@ -24108,12 +24108,10 @@ sort: by_weight
 宜丰县	yí fēng xiàn	448
 仪封镇	yí fēng zhèn	10
 蚁蜂镇	yǐ fēng zhèn	10
-一个县	yí gè xiàn	291
 易贡乡	yì gòng xiāng	10
 宜沟镇	yí gōu zhèn	10
 以古镇	yǐ gǔ zhèn	10
 彝海镇	yí hǎi zhèn	10
-一号站	yī hào zhàn	315
 义和镇	yì hé zhèn	10
 义合镇	yì hé zhèn	10
 义和庄	yì hé zhuāng	265
@@ -24214,9 +24212,7 @@ sort: by_weight
 伊吾镇	yī wú zhèn	580
 意溪镇	yì xī zhèn	10
 义县站	yì xiàn zhàn	225
-一乡镇	yī xiāng zhèn	100
 倚象镇	yǐ xiàng zhèn	10
-一小镇	yì xiǎo zhèn	100
 一心乡	yì xīn xiāng	2397
 宜兴市	yí xīng shì	424
 宜兴县	yí xīng xiàn	170
@@ -26192,7 +26188,7 @@ sort: by_weight
 中关镇	zhōng guān zhèn	10
 钟管镇	zhōng guǎn zhèn	10
 中观镇	zhōng guān zhèn	10
-中馆镇	zhōng guǎn zhèn	-1
+中馆镇	zhōng guǎn zhèn	1
 中国村	zhōng guó cūn	100
 中国站	zhōng guó zhàn	806
 中韩镇	zhōng hán zhèn	10
@@ -36699,6 +36695,8 @@ sort: by_weight
 傅家庄村	fù jiā zhuāng cūn	-1
 付家佐乡	fù jiā zuǒ xiāng	10
 付家佐镇	fù jiā zuǒ zhèn	10
+福建安溪	fú jiàn ān xī	603
+福建德化	fú jiàn dé huà	428
 福建福州	fú jiàn fú zhōu	10
 福建公园	fú jiàn gōng yuán	76
 福建建宁	fú jiàn jiàn níng	10
