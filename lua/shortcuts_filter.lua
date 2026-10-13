@@ -20,6 +20,13 @@ local function deal_with_jianma(input, segment)
 	end
 end
 
+local function deal_with_vsj(input, segment)
+	if input == "vsj" or input == "875" then
+		local now = os.date("%Y/%m/%d %H:%M:%S")
+		yield(Candidate("raw", segment._start, segment._end, now, ""))
+	end
+end
+
 local function deal_with_privacy(input, segment)
 	local arr = privacy[input]
 	if arr then
@@ -52,6 +59,8 @@ function M.func(input, env)
 		if not env.is_t9 then
 			deal_with_jianma(segment_input, segment)
 		end
+
+		deal_with_vsj(segment_input, segment)
 
 		deal_with_privacy(segment_input, segment)
 	end
