@@ -110,12 +110,9 @@ package_schema_base() {
   mkdir -p "$OUT_DIR/custom"
   rsync -av --prune-empty-dirs \
     --include='*/' \
-    --exclude='wanxiang_pro.custom.yaml' \
-    --exclude='wanxiang_pro.dict.yaml' \
-    --exclude='wanxiang_pro.schema.yaml' \
-    --exclude='wanxiang_pure.dict.yaml' \
-    --exclude='wanxiang_pure.schema.yaml' \
-    --exclude='wanxiang_pure.custom.yaml' \
+    --exclude='wanxiang_pro.*' \
+    --exclude='wanxiang_lite.*' \
+    --exclude='wanxiang_pure.*' \
     --include='*.yaml' --include='*.md' --include='*.jpg' --include='*.png' \
     --exclude='*' \
     "$CUSTOM_DIR/" "$OUT_DIR/custom/"
