@@ -36,10 +36,17 @@ jobs:
 
           mkdir -p target/dicts
 
-          for f in cuoyin daolu diming duoyin jichu \
-                   mingren renming shiti yiren zi; do
-            cp "source/dicts/${f}.dict.yaml" \
-               "target/dicts/${f}.dict.yaml"
+          for f in cuoyin diming duoyin jichu \
+                  mingren yiren zi; do
+            src="source/dicts/${f}.dict.yaml"
+            dst="target/dicts/${f}.dict.yaml"
+
+            if [ -f "$src" ]; then
+              cp "$src" "$dst"
+              echo "已复制：$src"
+            else
+              echo "跳过缺失文件：$src"
+            fi
           done
 
       - name: Commit and push to target repo

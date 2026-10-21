@@ -1,5 +1,78 @@
 # Changelog
 
+## [18.1.7](https://github.com/amzxyz/rime-wanxiang/compare/v18.1.6...v18.1.7) (2026-10-20)
+
+
+### 📚 词库更新
+
+* 词库调整 ([cdf0c90](https://github.com/amzxyz/rime-wanxiang/commit/cdf0c90cdc122db56c2d8cb02a4831001530cf00))
+* 词库调整 ([4b5b8ab](https://github.com/amzxyz/rime-wanxiang/commit/4b5b8abbeed73ae2bdcb45a84893c01f5153d8a5))
+* 词库调整 ([511da0c](https://github.com/amzxyz/rime-wanxiang/commit/511da0cdc38f64d29d4d962fef0ee54c287b4f40))
+* 词库调整 ([2f6a9e4](https://github.com/amzxyz/rime-wanxiang/commit/2f6a9e4deab964b74b29a51689ff56758ad13baf))
+
+
+### 🐛 Bug 修复
+
+* base、lite引用无感造词组件以保障反查过滤也能写入用户词 ([e61493e](https://github.com/amzxyz/rime-wanxiang/commit/e61493e1958077754c785bc99a72a858b3635309))
+* ci ([50b2ea9](https://github.com/amzxyz/rime-wanxiang/commit/50b2ea9a8ea689b698cb34e25822ef0c063d2270))
+* 对齐shadow_candidate传参 ([856207f](https://github.com/amzxyz/rime-wanxiang/commit/856207fdb79512af0f40cb6f9ab1a214643669e3))
+
+## [18.1.6](https://github.com/amzxyz/rime-wanxiang/compare/v18.1.5...v18.1.6) (2026-10-19)
+
+
+### 📚 词库更新
+
+* 词库调整 ([5e38fde](https://github.com/amzxyz/rime-wanxiang/commit/5e38fde647430a678f6c3ba64fd7747686a33859))
+* 词库调整 ([55fa463](https://github.com/amzxyz/rime-wanxiang/commit/55fa463b58395179ce6141a3379e60a9aa4169e1))
+
+
+### 🐛 Bug 修复
+
+* 词库调整 ([ac94ebd](https://github.com/amzxyz/rime-wanxiang/commit/ac94ebd6ae20d42e389bbc9b8eaaf7775ac10e99))
+
+## [18.1.5](https://github.com/amzxyz/rime-wanxiang/compare/v18.1.4...v18.1.5) (2026-10-18)
+
+
+### 📚 词库更新
+
+* 合并词库 ([ad6ca45](https://github.com/amzxyz/rime-wanxiang/commit/ad6ca45d9b08082484752e9463f84832b15076bb))
+* 词库调整 ([0e75027](https://github.com/amzxyz/rime-wanxiang/commit/0e750279ff249e63515357dd50ccfbf99a64b505))
+* 词库调整 ([355a070](https://github.com/amzxyz/rime-wanxiang/commit/355a0708919e06429ef866f662017b5f2271106f))
+* 词库调整 ([22f39ba](https://github.com/amzxyz/rime-wanxiang/commit/22f39baaf865a1470ceac440017609747eeef1ea))
+
+
+### 🏡 杂项
+
+* ci update ([e77338f](https://github.com/amzxyz/rime-wanxiang/commit/e77338f2feaf94643f7829dbe7945951b82e1090))
+* 变更部分说明 ([431c154](https://github.com/amzxyz/rime-wanxiang/commit/431c1546fdea437e25f0e5428dbdc6c5d7af6009))
+* 完善fcitx5-android导入数据说明 ([5ce13fe](https://github.com/amzxyz/rime-wanxiang/commit/5ce13fe7da1776efea4ef14db0e60460b43aed7b))
+* 完善plum安装说明 ([ed55bd5](https://github.com/amzxyz/rime-wanxiang/commit/ed55bd5c7f94dd06d333db0c51a7dbfe50cc9bd2))
+
+## [18.1.4](https://github.com/amzxyz/rime-wanxiang/compare/v18.1.3...v18.1.4) (2026-10-17)
+
+
+### 📚 词库更新
+
+* 合并词库 ([8d2f33a](https://github.com/amzxyz/rime-wanxiang/commit/8d2f33af246ca4baf53e2f59bd4df80c101766b1))
+* 合并词库 ([34d52b0](https://github.com/amzxyz/rime-wanxiang/commit/34d52b061aa35ed885a5a4c8243c777c7866666a))
+* 词库调整 ([d2068cd](https://github.com/amzxyz/rime-wanxiang/commit/d2068cd38c12e92d52a0debffdbfdf4bc625a71e))
+* 词库调整 ([2c317bf](https://github.com/amzxyz/rime-wanxiang/commit/2c317bf9fb8c2b6a970c7a233f95b9372fdc7f44))
+* 词库调整 ([aea87ae](https://github.com/amzxyz/rime-wanxiang/commit/aea87aeb3aa906485efd55f1d1c32de02480f549))
+* 词库调整 ([c26cda9](https://github.com/amzxyz/rime-wanxiang/commit/c26cda952b0a5a2cf5e6e9e96835bd6148836a75))
+* 词库调整 ([3d0a715](https://github.com/amzxyz/rime-wanxiang/commit/3d0a715ac4c3632ad8e1aab239ec8a42284c516a))
+* 道路已经炼化到模型无法炼化的留在基础词库 ([68a1111](https://github.com/amzxyz/rime-wanxiang/commit/68a1111956ae7461dd32b06d1639f09f4d8708e4))
+
+
+### 🐛 Bug 修复
+
+* 优化转写 ([720f795](https://github.com/amzxyz/rime-wanxiang/commit/720f795d4379974ced35324db09caed890d2f283))
+* 优化转写 ([2d62adc](https://github.com/amzxyz/rime-wanxiang/commit/2d62adc58635968c94522cfdc4103cef139e58dc))
+
+
+### 🏡 杂项
+
+* 修正ci ([cfabd2f](https://github.com/amzxyz/rime-wanxiang/commit/cfabd2f4967372ba707d67cecf027dcfc7812799))
+
 ## [18.1.3](https://github.com/amzxyz/rime-wanxiang/compare/v18.1.2...v18.1.3) (2026-10-16)
 
 

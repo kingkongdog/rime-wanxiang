@@ -14,6 +14,7 @@
 /pinyin   → 全拼
 /zrlong   → 自然龙(反查是全拼)
 /hxlong   → 汉心龙(反查是全拼)
+/wxsp     → 万象双拼
 /jjf      → 间接辅助
 /zjf      → 直接辅助
 ```
