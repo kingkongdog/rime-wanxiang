@@ -50,7 +50,7 @@ patch:
 
 * **两分/多分拆字**：输入 `ni` -> 按 ``` ` ``` -> 输入 `re` (亻尔) 或 `rfer`，精准筛出“你”。
 
-* **五笔画过滤**：输入 `ni` -> 按 ``` ` ``` -> 输入 `pspzhpd` (撇竖撇折横撇点)，也能筛出“你”。
+* **五笔画过滤**：输入 `ni` -> 按 ``` ` ``` -> 输入 `pspzspd` (撇竖撇折竖撇点)，也能筛出“你”。
 
 <div style="display: flex; gap: 20px; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-top: 1.5rem; margin-bottom: 1.5rem;">
     <div style="text-align: center; width: 45%; min-width: 250px;">
