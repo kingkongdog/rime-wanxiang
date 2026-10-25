@@ -67,7 +67,7 @@ nav:
 
   - 快速上手:
       - 方案介绍与版本对比: doc/intro.md
-
+      - 手动设置: doc/manual.md
       - Windows:
           - Weasel 小狼毫: doc/weasel.md
 
@@ -90,10 +90,8 @@ nav:
       - HarmonyOS NEXT:
           - 超越输入法: doc/chaoyue.md
 
-      - 进阶安装:
-          - 万象工具链: doc/tools.md
-          - 东风破 Plum: doc/plum.md
-          - 手动设置: doc/manual.md
+      - 万象工具链: doc/tools.md
+      - 东风破 Plum: doc/plum.md
 
   - 常见问题: doc/faq.md
 
