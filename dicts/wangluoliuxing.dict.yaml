@@ -3,22 +3,25 @@
 # https://github.com/kingkongdog/imewlconverter
 ---
 name: wangluoliuxing
-version: 2026-11-14 20:16:11
+version: 2026-11-15 20:41:50
 sort: by_weight
 ...
 阿坝州	ā bà zhōu	1
 阿宝	ā bǎo	1
-阿贝	ā bèi	1
+阿斌	ā bīn	1
 阿波罗	ā bō luó	1
 阿布	ā bù	1
 阿布扎比	ā bù zhā bǐ	1
 阿达	ā dá	1
 阿达西	ā dá xī	1
 阿道夫	ā dào fū	1
+阿豆	ā dòu	1
 阿尔巴尼亚	ā ěr bā ní yà	1
 阿尔法	ā ěr fǎ	1
+阿尔山	ā ěr shān	1
 阿芳	ā fāng	1
 阿飞	ā fēi	1
+阿凤	ā fèng	1
 阿福	ā fú	1
 阿富汗	ā fù hàn	1
 阿戈尔	ā gē ěr	1
@@ -44,20 +47,24 @@ sort: by_weight
 阿里	ā lǐ	1
 阿里云	ā lǐ yún	1
 阿联酋	ā lián qiú	1
-阿灵顿国家公墓	ā líng dùn guó jiā gōng mù	1
+阿罗拉	ā luó lā	1
 阿罗夏	ā luó xià	1
 阿洛伊西	ā luò yī xī	1
 阿玛尼	ā mǎ ní	1
 阿曼	ā màn	1
 阿曼湾	ā màn wān	1
 阿梅	ā méi	1
-阿姆鲁姆	ā mǔ lǔ mǔ	1
+阿嬷	ā mo	1
+阿穆尔州	ā mù ěr zhōu	1
+阿娜	ā nà	1
 阿努比斯	ā nǔ bǐ sī	1
 阿努廷	ā nǔ tíng	1
 阿帕次	ā pà cì	1
 阿强	ā qiáng	1
 阿萨拉	ā sà lā	1
+阿塞	ā sāi	1
 阿森纳	ā sēn nà	1
+阿司匹林	ā sī pǐ lín	1
 阿特拉斯	ā tè lā sī	1
 阿婷	ā tíng	1
 阿图什杯	ā tú shi bēi	1
@@ -65,17 +72,20 @@ sort: by_weight
 阿维塔	ā wéi tǎ	1
 阿信	ā xìn	1
 阿修罗	ā xiū luó	1
+阿旭	ā xù	1
 阿雅	ā yǎ	1
-阿耶莎	ā yē shā	1
+阿一	ā yī	1
 阿宇	ā yǔ	1
 艾达	ài dá	1
+艾达王	ài dá wáng	1
 哀悼	āi dào	1
 爱尔兰	ài ěr lán	1
-埃弗顿	āi fú dùn	1
 爱国	ài guó	1
 爱国者	ài guó zhě	1
 爱华	ài huá	1
 埃及	āi jí	1
+爱家	ài jiā	1
+艾克	ài kè	1
 爱可菲	ài kě fēi	1
 艾莉	ài lì	1
 爱莉希雅	ài lì xī yǎ	1
@@ -88,27 +98,38 @@ sort: by_weight
 埃森科特	āi sēn kē tè	1
 艾莎	ài shā	1
 爱师	ài shī	1
-埃斯波西托	āi sī bō xī tuō	1
 艾斯卡诺	ài sī kǎ nuò	1
+爱他美	ài tā měi	1
 艾薇儿	ài wēi ér	1
 爱笑	ài xiào	1
 爱心	ài xīn	1
+爱音	ài yīn	1
 艾因	ài yīn	1
+暗沉	àn chén	1
+安德列娃	ān dé liè wá	1
 安东尼	ān dōng ní	1
 暗广	àn guǎng	1
 安徽	ān huī	1
+安徽江淮汽车集团	ān huī jiāng huái qì chē jí tuán	1
+安徽省立医院	ān huī shěng lì yī yuàn	1
 安魂曲	ān hún qǔ	1
 安吉	ān jí	1
 案件	àn jiàn	1
+安姐	ān jiě	1
+暗金	àn jīn	1
 安康	ān kāng	1
 案例	àn lì	1
 安妮	ān nī	1
+安溥	ān pǔ	1
 安期	ān qī	1
+暗器	àn qì	1
 安琪拉	ān qí lā	1
 安乾镐	ān qián gǎo	1
+安切洛蒂	ān qiē luò dì	1
 安庆	ān qìng	1
 暗区突围	àn qū tū wéi	1
 安全箱	ān quán xiāng	1
+暗杀星	àn shā xīng	1
 鞍山	ān shān	1
 安踏	ān tà	1
 安塔利亚	ān tǎ lì yà	1
@@ -130,24 +151,31 @@ sort: by_weight
 奥地利	ào dì lì	1
 奥丁	ào dīng	1
 奥恩	ào ēn	1
+奥康	ào kāng	1
 奥克兰	ào kè lán	1
+奥拉	ào lā	1
 奥拉夫	ào lā fū	1
 熬老头	áo lǎo tóu	1
 奥利	ào lì	1
-奥利塞	ào lì sāi	1
 奥林匹克	ào lín pǐ kè	1
 傲慢之罪	ào màn zhī zuì	1
 澳门	ào mén	1
+澳门银河综艺馆	ào mén yín hé zōng yì guǎn	1
 澳门w盛典	ào mén shèng diǎn	1
+奥奇传说	ào qí chuán shuō	1
 敖瑞鹏	áo ruì péng	1
+凹三	āo sān	1
 奥术	ào shù	1
 奥斯卡	ào sī kǎ	1
 奥特曼	ào tè màn	1
 奥体	ào tǐ	1
 奥提斯	ào tí sī	1
+凹凸世界	āo tū shì jiè	1
 奥拓	ào tuò	1
 翱翔	áo xiáng	1
 奥义	ào yì	1
+敖隐	áo yǐn	1
+鏖战	áo zhàn	1
 袄子	ǎo zǐ	1
 巴旦木	bā dàn mù	1
 巴德	bā dé	1
@@ -155,12 +183,14 @@ sort: by_weight
 八段锦	bā duàn jǐn	1
 巴菲	bā fēi	1
 巴菲特	bā fēi tè	1
+八关	bā guān	1
 把黑夜点燃	bǎ hēi yè diǎn rán	1
 八花	bā huā	1
 巴基斯坦	bā jī sī tǎn	1
 巴克什	bā kè shén	1
 巴克十	bā kè shí	1
 巴拉圭	bā lā guī	1
+巴勒斯坦	bā lè sī tǎn	1
 巴黎	bā lí	1
 巴黎世家	bā lí shì jiā	1
 巴林	bā lín	1
@@ -169,10 +199,10 @@ sort: by_weight
 巴马	bā mǎ	1
 罢免	bà miǎn	1
 巴拿马	bā ná mǎ	1
-巴佩	bā pèi	1
 八强	bā qiáng	1
 巴萨	bā sà	1
 巴蜀	bā shǔ	1
+巴斯光年	bā sī guāng nián	1
 芭提雅	bā tí yǎ	1
 霸王	bà wáng	1
 霸王别姬	bà wáng bié jī	1
@@ -184,8 +214,12 @@ sort: by_weight
 八音	bā yīn	1
 八音窍	bā yīn qiào	1
 鲅鱼	bà yú	1
+白熬	bái áo	1
+败笔	bài bǐ	1
 白车	bái chē	1
 白城	bái chéng	1
+白吃	bái chī	1
+白帝	bái dì	1
 百度	bǎi dù	1
 白鹅潭	bái é tán	1
 白非空	bái fēi kōng	1
@@ -202,8 +236,10 @@ sort: by_weight
 白露	bái lù	1
 白鹿	bái lù	1
 百慕大	bǎi mù dà	1
+白拿	bái ná	1
 百年孤独	bǎi nián gū dú	1
 拜仁	bài rén	1
+百日谎言	bǎi rì huǎng yán	1
 白沙	bái shā	1
 白鲨	bái shā	1
 白山	bái shān	1
@@ -211,6 +247,7 @@ sort: by_weight
 百事	bǎi shì	1
 百事可乐	bǎi shì kě lè	1
 百世书	bǎi shì shū	1
+柏太阳神	bǎi tài yáng shén	1
 白条	bái tiáo	1
 百万撤离	bǎi wàn chè lí	1
 百万医	bǎi wàn yī	1
@@ -219,8 +256,8 @@ sort: by_weight
 白雪公主	bái xuě gōng zhǔ	1
 百业战	bǎi yè zhàn	1
 白银	bái yín	1
+白宇	bái yǔ	1
 白玉兰	bái yù lán	1
-白玉兰奖	bái yù lán jiǎng	1
 柏源	bǎi yuán	1
 白云区	bái yún qū	1
 白泽	bái zé	1
@@ -228,8 +265,11 @@ sort: by_weight
 百战成诗	bǎi zhàn chéng shī	1
 败者	bài zhě	1
 败者组	bài zhě zǔ	1
+白昼	bái zhòu	1
 白术	bái zhú	1
 办案	bàn àn	1
+版本答案	bǎn běn dá àn	1
+版本陷阱	bǎn běn xiàn jǐng	1
 半场	bàn chǎng	1
 半场开香槟	bàn chǎng kāi xiāng bīn	1
 半导体	bàn dǎo tǐ	1
@@ -244,15 +284,18 @@ sort: by_weight
 板块	bǎn kuài	1
 板蓝根	bǎn lán gēn	1
 办理	bàn lǐ	1
+半马	bàn mǎ	1
 半亩花田	bàn mǔ huā tián	1
 扳平	bān píng	1
 扳平了	bān píng le	1
 半期	bàn qī	1
+半区	bàn qū	1
+版权	bǎn quán	1
 半全场	bàn quán chǎng	1
-半设	bàn shè	1
 半生	bàn shēng	1
 半熟	bàn shú	1
 板书	bǎn shū	1
+版图	bǎn tú	1
 伴舞	bàn wǔ	1
 半血	bàn xuè	1
 板鸭	bǎn yā	1
@@ -262,6 +305,8 @@ sort: by_weight
 邦多利	bāng duō lì	1
 绑关系	bǎng guān xì	1
 帮会联赛	bāng huì lián sài	1
+棒球棒	bàng qiú bàng	1
+棒球棍	bàng qiú gùn	1
 榜首	bǎng shǒu	1
 报案	bào àn	1
 爆爆爆	bào bào bào	1
@@ -270,7 +315,10 @@ sort: by_weight
 保持联系	bǎo chí lián xì	1
 保持质疑	bǎo chí zhì yí	1
 宝船	bǎo chuán	1
+保单	bǎo dān	1
 爆单	bào dān	1
+爆弹	bào dàn	1
+爆蛋	bào dàn	1
 包的包的	bāo de bāo de	1
 暴跌	bào diē	1
 保定	bǎo dìng	1
@@ -279,29 +327,36 @@ sort: by_weight
 报废车	bào fèi chē	1
 爆缸	bào gāng	1
 宝格丽	bǎo gé lì	1
+报国	bào guó	1
 宝鸡	bǎo jī	1
 保加利亚	bǎo jiā lì yà	1
-保教	bǎo jiào	1
 爆金币	bào jīn bì	1
 报考	bào kǎo	1
 宝可梦	bǎo kě mèng	1
 爆拉	bào lā	1
 宝蓝	bǎo lán	1
 爆冷	bào lěng	1
+宝莲	bǎo lián	1
 宝莲灯	bǎo lián dēng	1
 爆料	bào liào	1
+保留节目	bǎo liú jié mù	1
 保罗乔治	bǎo luó qiáo zhì	1
 宝马	bǎo mǎ	1
 报名表	bào míng biǎo	1
 报名费	bào míng fèi	1
 宝能	bǎo néng	1
 保暖	bǎo nuǎn	1
+暴虐	bào nuè	1
+豹女	bào nǚ	1
 爆破	bào pò	1
+保人	bǎo rén	1
 鲍师傅	bào shī fù	1
 保时捷	bǎo shí jié	1
+保湿霜	bǎo shī shuāng	1
 报税	bào shuì	1
 保送	bǎo sòng	1
 包头	bāo tóu	1
+暴徒	bào tú	1
 鲍威尔	bào wēi ěr	1
 保卫战	bǎo wèi zhàn	1
 报喜鸟	bào xǐ niǎo	1
@@ -311,6 +366,7 @@ sort: by_weight
 保险箱	bǎo xiǎn xiāng	1
 暴雪	bào xuě	1
 保研	bǎo yán	1
+宝应	bǎo yìng	1
 暴雨	bào yǔ	1
 宝藏房	bǎo zàng fáng	1
 爆炸弹	bào zhà dàn	1
@@ -328,25 +384,30 @@ sort: by_weight
 被盗	bèi dào	1
 贝蒂斯	bèi dì sī	1
 北斗	běi dòu	1
+被对位	bèi duì wèi	1
 倍儿	bèi ér	1
 贝儿	bèi ér	1
+被翻	bèi fān	1
 北风	běi fēng	1
 被告	bèi gào	1
 北海	běi hǎi	1
 北海道	běi hǎi dào	1
 北航	běi háng	1
 北京	běi jīng	1
-北京高院	běi jīng gāo yuàn	1
-北京交通大学	běi jīng jiāo tōng dà xué	1
+北京女足	běi jīng nǚ zú	1
 北京人	běi jīng rén	1
 北京市	běi jīng shì	1
 北京时间	běi jīng shí jiān	1
+北京wb	běi jīng 	1
 北看台	běi kàn tái	1
 贝林	bèi lín	1
 被零封	bèi líng fēng	1
 倍率丹	bèi lǜ dān	1
 北美	běi měi	1
 北面	běi miàn	1
+悲悯	bēi mǐn	1
+北宁	běi níng	1
+倍诺达	bèi nuò dá	1
 北欧	běi ōu	1
 背屏	bèi píng	1
 北汽	běi qì	1
@@ -358,7 +419,6 @@ sort: by_weight
 贝斯特	bèi sī tè	1
 北宋	běi sòng	1
 杯套	bēi tào	1
-贝特利	bèi tè lì	1
 北体	běi tǐ	1
 杯贴	bēi tiē	1
 背头	bèi tóu	1
@@ -366,13 +426,14 @@ sort: by_weight
 北约	běi yuē	1
 杯子	bēi zǐ	1
 奔驰	bēn chí	1
-本菲卡	běn fēi kǎ	1
 本科线	běn kē xiàn	1
 奔跑吧	bēn pǎo ba	1
 奔四	bēn sì	1
 奔腾	bēn téng	1
 本溪	běn xī	1
 本源	běn yuán	1
+本质	běn zhì	1
+笨重	bèn zhòng	1
 本周	běn zhōu	1
 本周五	běn zhōu wǔ	1
 崩坏	bēng huài	1
@@ -385,19 +446,27 @@ sort: by_weight
 毕加索	bì jiā suǒ	1
 笔尖	bǐ jiān	1
 毕节	bì jié	1
+哔哩哔哩	bì lǐ bì lǐ	1
 比利时	bǐ lì shí	1
 碧螺春	bì luó chūn	1
+闭幕式	bì mù shì	1
 避难所	bì nán suǒ	1
 比萨	bǐ sà	1
+比赛	bǐ sài	1
+必胜	bì shèng	1
 笔试	bǐ shì	1
 碧水	bì shuǐ	1
 比特币	bǐ tè bì	1
 避险	bì xiǎn	1
+必选	bì xuǎn	1
 比亚迪	bǐ yà dí	1
+比亚迪法务部	bǐ yà dí fǎ wù bù	1
 毕业快乐	bì yè kuài lè	1
 庇佑者	bì yòu zhě	1
 毕宇航	bì yǔ háng	1
+碧云寺	bì yún sì	1
 币战	bì zhàn	1
+避战	bì zhàn	1
 边伯贤	biān bó xián	1
 边锋	biān fēng	1
 蝙蝠	biān fú	1
@@ -409,24 +478,31 @@ sort: by_weight
 变形计	biàn xíng jì	1
 编译	biān yì	1
 边狱巴士	biān yù bā shì	1
+变阵	biàn zhèn	1
 变种	biàn zhǒng	1
 变奏	biàn zòu	1
 标杆	biāo gǎn	1
 彪哥	biāo gē	1
 彪马	biāo mǎ	1
-飙马野郎	biāo mǎ yě láng	1
 标普	biāo pǔ	1
 标书	biāo shū	1
 表态	biǎo tài	1
 表演赛	biǎo yǎn sài	1
 标准版	biāo zhǔn bǎn	1
+别急	bié jí	1
 别克	bié kè	1
 别礼	bié lǐ	1
+别奶	bié nǎi	1
+斌大哥	bīn dà gē	1
+彬哥	bīn gē	1
+斌哥	bīn gē	1
 宾利	bīn lì	1
 殡仪馆	bìn yí guǎn	1
 滨州	bīn zhōu	1
 冰雹	bīng báo	1
+冰草	bīng cǎo	1
 冰尘	bīng chén	1
+饼大	bing dà	1
 饼大哥	bing dà gē	1
 冰岛	bīng dǎo	1
 冰点	bīng diǎn	1
@@ -436,6 +512,8 @@ sort: by_weight
 冰封列车	bīng fēng liè chē	1
 饼哥	bing gē	1
 冰柜	bīng guì	1
+病患	bìng huàn	1
+冰甲	bīng jiǎ	1
 病假	bìng jiǎ	1
 槟榔	bīng láng	1
 病例	bìng lì	1
@@ -452,19 +530,24 @@ sort: by_weight
 冰雪奇缘	bīng xuě qí yuán	1
 冰主	bīng zhǔ	1
 波比	bō bǐ	1
+波波	bō bō	1
+博彩	bó cǎi	1
 博德闪耀	bó dé shǎn yào	1
 剥夺	bō duó	1
 伯恩茅斯	bó ēn máo sī	1
 波尔津吉斯	bō ěr jīn jí sī	1
+铂尔曼	bó ěr màn	1
 博尔特	bó ěr tè	1
 伯哥	bó gē	1
 渤海	bó hǎi	1
+波黑	bō hēi	1
 薄肌	bò jī	1
 波杰姆斯基	bō jié mǔ sī jī	1
 博君一肖	bó jūn yī xiāo	1
 波兰	bō lán	1
 柏林	bó lín	1
 玻尿酸	bō niào suān	1
+波奇	bō qí	1
 波切蒂诺	bō qiē dì nuò	1
 般若	bō rě	1
 博人	bó rén	1
@@ -477,22 +560,26 @@ sort: by_weight
 伯牙绝铉	bó yá jué xuàn	1
 博越	bó yuè	1
 亳州	bó zhōu	1
+波子	bō zǐ	1
 不败金身	bù bài jīn shēn	1
+补兵	bǔ bīng	1
 补测	bǔ cè	1
 不存在的罪人	bù cún zài de zuì rén	1
 布袋	bù dài	1
+补刀	bǔ dāo	1
 补冬	bǔ dōng	1
 不动产	bù dòng chǎn	1
 不冻耳朵	bù dòng ěr duǒ	1
 不凡	bù fán	1
 捕风追影	bǔ fēng zhuī yǐng	1
 捕风捉影	bǔ fēng zhuō yǐng	1
+不负卿	bù fù qīng	1
 不负少年不负卿	bù fù shǎo nián bù fù qīng	1
+不负众望	bù fù zhòng wàng	1
 不规范	bù guī fàn	1
 不合时宜	bù hé shí yí	1
 捕获	bǔ huò	1
 捕获明光	bǔ huò míng guāng	1
-步佳文	bù jiā wén	1
 部件	bù jiàn	1
 补缴	bǔ jiǎo	1
 布克	bù kè	1
@@ -507,6 +594,9 @@ sort: by_weight
 部落	bù luò	1
 布洛芬	bù luò fēn	1
 部门	bù mén	1
+不眠夜	bù mián yè	1
+不眠之夜	bù mián zhī yè	1
+不妙	bù miào	1
 不怕不怕	bù pà bù pà	1
 不屈	bù qū	1
 哺乳动物	bǔ rǔ dòng wù	1
@@ -516,24 +606,29 @@ sort: by_weight
 补水	bǔ shuǐ	1
 补水啦	bǔ shuǐ lā	1
 不死途	bù sǐ tú	1
+不同步	bù tóng bù	1
 不想上学	bù xiǎng shàng xué	1
 不想睡的星期五	bù xiǎng shuì de xīng qī wǔ	1
 步行者	bù xíng zhě	1
 不朽	bù xiǔ	1
 部长	bù zhǎng	1
+不转播	bù zhuǎn bō	1
 补作业	bǔ zuò yè	1
 猜猜我是谁	cāi cāi wǒ shì shuí	1
 蔡晨	cài chén	1
 财大气粗	cái dà qì cū	1
 彩蛋	cǎi dàn	1
 菜单	cài dān	1
+菜刀	cài dāo	1
+采访	cǎi fǎng	1
 蔡哥	cài gē	1
 彩虹	cǎi hóng	1
 财经	cái jīng	1
 材料	cái liào	1
 材料包	cái liào bāo	1
-蔡琴	cài qín	1
+菜钱	cài qián	1
 财神	cái shén	1
+财神庙	cái shén miào	1
 财神爷	cái shén yé	1
 蔡司	cài sī	1
 踩踏	cǎi tà	1
@@ -544,31 +639,40 @@ sort: by_weight
 财务	cái wù	1
 蔡徐坤	cài xú kūn	1
 蔡依林	cài yī lín	1
-蔡英文	cài yīng wén	1
 财源滚滚	cái yuán gǔn gǔn	1
 彩云	cǎi yún	1
 财政	cái zhèng	1
 财政部	cái zhèng bù	1
+惨案	cǎn àn	1
 参保	cān bǎo	1
 残存的感性	cán cún de gǎn xìng	1
 参会	cān huì	1
 参赛	cān sài	1
+残疫	cán yì	1
+蚕蛹	cán yǒng	1
 残阵	cán zhèn	1
 藏海传	cáng hǎi chuán	1
 沧澜	cāng lán	1
 苍龙	cāng lóng	1
 苍南	cāng nán	1
 苍山	cāng shān	1
+仓央嘉措	cāng yāng jiā cuò	1
 沧元图	cāng yuán tú	1
+藏纸	cáng zhǐ	1
 沧州	cāng zhōu	1
 曹操	cáo cāo	1
 草稿箱	cǎo gǎo xiāng	1
 草根	cǎo gēn	1
 曹磊	cáo lěi	1
+操盘	cāo pán	1
+操盘手	cāo pán shǒu	1
+草坪	cǎo píng	1
 草神	cǎo shén	1
+草书	cǎo shū	1
 草台	cǎo tái	1
 草台班子	cǎo tái bān zǐ	1
 曹云金	cáo yún jīn	1
+策划书	cè huá shū	1
 侧身	cè shēn	1
 蹭局势	cèng jú shì	1
 曾舜晞	céng shùn xī	1
@@ -579,14 +683,18 @@ sort: by_weight
 差距	chà jù	1
 查理苏	chá lǐ sū	1
 刹那	chà nà	1
+插旗	chā qí	1
 茶酥	chá sū	1
 查无此人	chá wú cǐ rén	1
 茶颜悦色	chá yán yuè sè	1
+茶园	chá yuán	1
+拆墙	chāi qiáng	1
 柴油	chái yóu	1
+缠绕膜	chan rào mó	1
 铲雪	chǎn xuě	1
 产业	chǎn yè	1
+蝉蛹	chán yǒng	1
 常伴	cháng bàn	1
-常冰玉	cháng bīng yù	1
 长城	cháng chéng	1
 长城军工	cháng chéng jūn gōng	1
 长春	cháng chūn	1
@@ -604,48 +712,56 @@ sort: by_weight
 长离	cháng lí	1
 长矛	cháng máo	1
 长鸣	cháng míng	1
-长鸣玉	cháng míng yù	1
 昌平	chāng píng	1
+长崎	cháng qí	1
 长沙	cháng shā	1
+长沙马拉松	cháng shā mǎ lā sōng	1
 长沙市	cháng shā shì	1
 长沙县	cháng shā xiàn	1
 长生	cháng shēng	1
 长寿	cháng shòu	1
+长手	cháng shǒu	1
+常书铭	cháng shū míng	1
 唱跳	chàng tiào	1
 长汀	cháng tīng	1
-常卫魏	cháng wèi wèi	1
 长相思	cháng xiāng sī	1
 长鑫	cháng xīn	1
 长兴	cháng xìng	1
+常营	cháng yíng	1
 长征	cháng zhēng	1
 长治	cháng zhì	1
 常州	cháng zhōu	1
+超白	chāo bái	1
+潮虫	cháo chóng	1
 超大哥	chāo dà gē	1
 超导	chāo dǎo	1
 抄底	chāo dǐ	1
 超格	chāo gé	1
+超鬼	chāo guǐ	1
+超级兵	chāo jí bīng	1
 超临界	chāo lín jiè	1
 潮牌	cháo pái	1
+超期	chāo qī	1
 潮汕	cháo shàn	1
 超威	chāo wēi	1
 潮汐	cháo xī	1
 朝鲜	cháo xiān	1
+朝鲜人	cháo xiān rén	1
 抄写	chāo xiě	1
 潮阳	cháo yáng	1
 潮州	cháo zhōu	1
 车玻璃	chē bō lí	1
+撤单	chè dān	1
 车队	chē duì	1
 车夫	chē fū	1
 车企	chē qǐ	1
 车手	chē shǒu	1
 车厢	chē xiāng	1
-陈彬宇	chén bīn yǔ	1
 陈伯	chén bó	1
 陈博	chén bó	1
 晨晨	chén chén	1
 陈楚生	chén chǔ shēng	1
 陈都灵	chén dū líng	1
-陈福利	chén fú lì	1
 陈冠希	chén guàn xī	1
 陈昊	chén hào	1
 陈赫	chén hè	1
@@ -659,13 +775,18 @@ sort: by_weight
 陈粒	chén lì	1
 陈丽君	chén lì jūn	1
 陈立农	chén lì nóng	1
+陈梦	chén mèng	1
+陈清和	chén qīng hé	1
 陈情令	chén qíng lìng	1
 陈清洲	chén qīng zhōu	1
+陈睿	chén ruì	1
 陈思	chén sī	1
 陈思罕	chén sī hǎn	1
 陈婷	chén tíng	1
 陈伟霆	chén wěi tíng	1
 陈曦	chén xī	1
+陈先生	chén xiān shēng	1
+陈祥榕	chén xiáng róng	1
 陈晓	chén xiǎo	1
 陈小春	chén xiǎo chūn	1
 陈幸同	chén xìng tóng	1
@@ -678,11 +799,16 @@ sort: by_weight
 陈颖	chén yǐng	1
 晨宇	chén yǔ	1
 陈垣宇	chén yuán yǔ	1
+陈悦	chén yuè	1
 陈泽彬	chén zé bīn	1
+陈泽斌	chén zé bīn	1
 陈哲远	chén zhé yuǎn	1
+陈卓璇	chén zhuó xuán	1
+陈子涵	chén zǐ hán	1
 陈子奚	chén zǐ xī	1
 乘车	chéng chē	1
 丞丞	chéng chéng	1
+诚诚	chéng chéng	1
 承德	chéng dé	1
 成都	chéng dū	1
 成都车站	chéng dū chē zhàn	1
@@ -690,9 +816,9 @@ sort: by_weight
 成都蓉城	chéng dū róng chéng	1
 成都蓉城b队	chéng dū róng chéng duì	1
 成都市	chéng dū shì	1
-成都体育学院	chéng dū tǐ yù xué yuàn	1
-城固蜜桔	chéng gù mì jú	1
+乘风	chéng fēng	1
 城固蜜橘	chéng gù mì jú	1
+城轨	chéng guǐ	1
 成绩	chéng jì	1
 成交量	chéng jiāo liàng	1
 惩戒	chéng jiè	1
@@ -714,26 +840,37 @@ sort: by_weight
 持刀	chí dāo	1
 尺帝	chǐ dì	1
 赤峰	chì fēng	1
-赤峰黄金	chì fēng huáng jīn	1
 尺狗	chǐ gǒu	1
 吃饺子	chī jiǎo zǐ	1
+吃紧	chī jǐn	1
 赤练	chì liàn	1
 持枪	chí qiāng	1
 炽刃	chì rèn	1
+赤兔	chì tù	1
 持械入宋	chí xiè rù sòng	1
+炽阳神光	chì yáng shén guāng	1
 叱咤	chì zhà	1
 池州	chí zhōu	1
 尺子	chǐ zǐ	1
+重播	chóng bō	1
+宠儿	chǒng ér	1
 重返未来	chóng fǎn wèi lái	1
+冲击波	chōng jī bō	1
 崇明	chóng míng	1
 重庆	chóng qìng	1
 重庆市	chóng qìng shì	1
 重生	chóng shēng	1
+重生螳螂	chóng shēng táng láng	1
 重塑	chóng sù	1
 重阳	chóng yáng	1
 重映	chóng yìng	1
 冲战神	chōng zhàn shén	1
+冲阵	chōng zhèn	1
+重振	chóng zhèn	1
+重铸	chóng zhù	1
+虫子	chóng zǐ	1
 重组	chóng zǔ	1
+丑化	chǒu huà	1
 抽咖啡	chōu kā fēi	1
 抽签	chōu qiān	1
 抽陀螺	chōu tuó luó	1
@@ -742,17 +879,23 @@ sort: by_weight
 楚超	chǔ chāo	1
 出道快乐	chū dào kuài lè	1
 处分	chù fēn	1
+初见日	chū jiàn rì	1
 出局	chū jú	1
+楚钧	chǔ jūn	1
 出口	chū kǒu	1
 楚钦	chǔ qīn	1
+出清	chū qīng	1
+初赛	chū sài	1
 出生地	chū shēng dì	1
 初试	chū shì	1
 出题人	chū tí rén	1
+初体验	chū tǐ yàn	1
 除夕	chú xī	1
 出线	chū xiàn	1
 初雪	chū xuě	1
 除雪	chú xuě	1
 初遇	chū yù	1
+楚雨荨	chǔ yǔ xún	1
 出招	chū zhāo	1
 川菜馆	chuān cài guǎn	1
 传呼机	chuán hū jī	1
@@ -764,7 +907,10 @@ sort: by_weight
 传说	chuán shuō	1
 传统美德	chuán tǒng měi dé	1
 穿外套了	chuān wài tào le	1
+川西理小路	chuān xī lǐ xiǎo lù	1
+传谣	chuán yáo	1
 穿羽绒服了	chuān yǔ róng fú le	1
+穿越者	chuān yuè zhě	1
 船长	chuán zhǎng	1
 创新药	chuàng xīn yào	1
 创业板	chuàng yè bǎn	1
@@ -773,32 +919,43 @@ sort: by_weight
 吹倒了	chuī dǎo le	1
 锤石	chuí shí	1
 吹死了	chuī sǐ le	1
-吹杨	chuī yáng	1
+春哥	chūn gē	1
 春华	chūn huá	1
 春季赛	chūn jì sài	1
 春假	chūn jiǎ	1
+春决	chūn jué	1
+春莱	chūn lái	1
 纯妹妹	chún mèi mèi	1
 纯虐	chún nuè	1
 纯送	chún sòng	1
+纯钛	chún tài	1
+春天见	chūn tiān jiàn	1
 春晚	chūn wǎn	1
+纯血	chún xuè	1
 纯阳	chún yáng	1
-纯在虐	chún zài nuè	1
 纯稚	chún zhì	1
 纯种	chún zhǒng	1
+刺耳	cì ěr	1
 刺骨	cì gǔ	1
 次级	cì jí	1
+刺客	cì kè	1
+茨木	cí mù	1
 辞去	cí qù	1
 此沙	cǐ shā	1
 此时	cǐ shí	1
+磁石	cí shí	1
 慈溪	cí xī	1
+次选	cì xuǎn	1
 辞章	cí zhāng	1
 从头再来	cóng tóu zài lái	1
 凑单	còu dān	1
 凑企鹅	còu qǐ é	1
 醋意摇	cù yì yáo	1
+催产	cuī chǎn	1
 崔杋圭	cuī fán guī	1
 崔哥	cuī gē	1
 翠湖	cuì hú	1
+摧枯拉朽	cuī kū lā xiǔ	1
 淬炼	cuì liàn	1
 脆皮捏捏	cuì pí niē niē	1
 崔然竣	cuī rán jùn	1
@@ -806,7 +963,9 @@ sort: by_weight
 崔秀彬	cuī xiù bīn	1
 村霸	cūn bà	1
 村委会	cūn wěi huì	1
+存心	cún xīn	1
 痤疮	cuó chuāng	1
+搓麻	cuō má	1
 错题本	cuò tí běn	1
 大安	dà ān	1
 打暗区	dǎ àn qū	1
@@ -821,36 +980,51 @@ sort: by_weight
 大表哥	dà biǎo gē	1
 大冰	dà bīng	1
 大裁员	dà cái yuán	1
+大吵	dà chǎo	1
 大超	dà chāo	1
+打超体	dǎ chāo tǐ	1
 大成功	dà chéng gōng	1
 大虫子	dà chóng zǐ	1
+大川	dà chuān	1
+大穿	dà chuān	1
+大船	dà chuán	1
+答错	dá cuò	1
 达达利亚	dá dá lì yà	1
+大蛋	dà dàn	1
 大当家	dà dāng jiā	1
-大低开	dà dī kāi	1
 搭电	dā diàn	1
+大调	dà diào	1
 大跌	dà diē	1
 大鳄鱼	dà è yú	1
 大耳狗	dà ěr gǒu	1
+大飞	dà fēi	1
 大飞老师	dà fēi lǎo shī	1
-大非农	dà fēi nóng	1
 大肥鱼	dà féi yú	1
 大风	dà fēng	1
 达肤妍	dá fū yán	1
+大根	dà gēn	1
+大更新	dà gèng xīn	1
 打勾	dǎ gōu	1
 大国	dà guó	1
+大海捞针	dà hǎi lāo zhēn	1
 大汉	dà hàn	1
+大核	dà hé	1
 大和平	dà hé píng	1
 打和平	dǎ hé píng	1
 大黑塔	dà hēi tǎ	1
 大红砖	dà hóng zhuān	1
+大后期	dà hòu qī	1
 打虎	dǎ hǔ	1
 大化	dà huà	1
 大花轿	dà huā jiào	1
+大话王	dà huà wáng	1
 大黄	dà huáng	1
+大会员	dà huì yuán	1
 妲己	dá jǐ	1
 大鸡蛋	dà jī dàn	1
 打击感	dǎ jī gǎn	1
 打假	dǎ jiǎ	1
+打假赛	dǎ jiǎ sài	1
 大疆	dà jiāng	1
 大降温	dà jiàng wēn	1
 大降温了	dà jiàng wēn le	1
@@ -859,6 +1033,7 @@ sort: by_weight
 打卡点	dǎ kǎ diǎn	1
 达喀尔青奥会	dá kā ěr qīng ào huì	1
 大课间	dà kè jiān	1
+达拉崩吧	dá lā bēng ba	1
 大乐透	dà lè tòu	1
 大利	dà lì	1
 大李狗	dà lǐ gǒu	1
@@ -872,38 +1047,58 @@ sort: by_weight
 大连英博	dà lián yīng bó	1
 大连英博队	dà lián yīng bó duì	1
 大量出没	dà liàng chū mò	1
+大岭	dà lǐng	1
+大龙	dà lóng	1
+打龙	dǎ lóng	1
 大龙团	dà lóng tuán	1
 大陆	dà lù	1
+大乱斗	dà luàn dòu	1
 达洛特	dá luò tè	1
 大麻	dà má	1
 大麦	dà mài	1
+大满贯	dà mǎn guàn	1
+大帽	dà mào	1
 大美	dà měi	1
 大梦归	dà mèng guī	1
 大明宫	dà míng gōng	1
 大模型	dà mó xíng	1
+大闹天宫	dà nào tiān gōng	1
 达妮卡	dá nī kǎ	1
 大盘	dà pán	1
 大棚	dà péng	1
+打平	dǎ píng	1
+大屏幕	dà píng mù	1
 打破	dǎ pò	1
+大旗	dà qí	1
+大气层	dà qì céng	1
 大庆	dà qìng	1
+大清算	dà qīng suàn	1
+打人	dǎ rén	1
+大人头	dà rén tóu	1
+大赛软脚虾	dà sài ruǎn jiǎo xiā	1
 大山包	dà shān bāo	1
 大蛇丸	dà shé wán	1
 大胜	dà shèng	1
 大胜达	dà shèng dá	1
 大使	dà shǐ	1
+大师	dà shī	1
 大使馆	dà shǐ guǎn	1
 大师赛	dà shī sài	1
 大师作	dà shī zuò	1
 大树	dà shù	1
+打输	dǎ shū	1
 打太极	dǎ tài jí	1
 大唐	dà táng	1
 大唐ev	dà táng 	1
 大套	dà tào	1
 大同	dà tóng	1
 大通	dà tōng	1
+大同小异	dà tóng xiǎo yì	1
 大头儿子	dà tóu ér zǐ	1
 大头贴	dà tóu tiē	1
 大屠杀	dà tú shā	1
+大团	dà tuán	1
+打团	dǎ tuán	1
 大腕	dà wàn	1
 大湾区	dà wān qū	1
 大卫	dà wèi	1
@@ -911,8 +1106,15 @@ sort: by_weight
 大尾翼	dà wěi yì	1
 大物	dà wù	1
 大雾	dà wù	1
+大雾霾	dà wù mái	1
+大雾四起	dà wù sì qǐ	1
+大雾天	dà wù tiān	1
 大雾天气	dà wù tiān qì	1
+大雾预警	dà wù yù jǐng	1
 大西洋	dà xī yáng	1
+打线	dǎ xiàn	1
+大小龙	dà xiǎo lóng	1
+大心脏	dà xīn zāng	1
 大兴安岭	dà xìng ān lǐng	1
 大熊猫	dà xióng māo	1
 大熊雨林	dà xióng yǔ lín	1
@@ -923,20 +1125,29 @@ sort: by_weight
 大炎	dà yán	1
 大雁塔	dà yàn tǎ	1
 大冶	dà yě	1
+打野位	dǎ yě wèi	1
 大营	dà yíng	1
+打赢	dǎ yíng	1
+大优	dà yōu	1
 大优势	dà yōu shì	1
 大雨	dà yǔ	1
 大圆哥	dà yuán gē	1
 大闸蟹	dà zhá xiè	1
+大战	dà zhàn	1
 大涨	dà zhǎng	1
+大招	dà zhāo	1
+大折叠	dà zhé dié	1
+大阵	dà zhèn	1
 大震	dà zhèn	1
 大正	dà zhèng	1
 大众	dà zhòng	1
+大周	dà zhōu	1
 打洲	dǎ zhōu	1
 达州	dá zhōu	1
 大周末	dà zhōu mò	1
 代币	dài bì	1
 呆呆	dāi dāi	1
+戴妃	dài fēi	1
 戴冠	dài guàn	1
 代号鸢	dài hào yuān	1
 戴佳伟	dài jiā wěi	1
@@ -947,27 +1158,36 @@ sort: by_weight
 戴帽子的猫	dài mào zǐ de māo	1
 戴沐白	dài mù bái	1
 代拍	dài pāi	1
+带球	dài qiú	1
 代炜杰	dài wěi jié	1
 代言人影响力盛典	dài yán rén yǐng xiǎng lì shèng diǎn	1
 代孕	dài yùn	1
 诞辰	dàn chén	1
 单打	dān dǎ	1
+单带	dān dài	1
 蛋蛋黑	dàn dàn hēi	1
 单刀	dān dāo	1
 丹东	dān dōng	1
 弹反	dàn fǎn	1
+单方	dān fāng	1
+单防	dān fáng	1
+单挂	dān guà	1
 丹恒	dān héng	1
 弹壳	dàn ké	1
 丹麦	dān mài	1
+弹幕	dàn mù	1
 丹妮	dān nī	1
 丹尼	dān ní	1
 单人款	dān rén kuǎn	1
 单三	dān sān	1
 丹砂	dān shā	1
+单杀	dān shā	1
+丹神	dān shén	1
 弹头	dàn tóu	1
 单依纯	dān yī chún	1
 单元楼	dān yuán lóu	1
 蛋仔派对	dàn zǎi pài duì	1
+担责	dān zé	1
 儋州	dān zhōu	1
 档案	dàng àn	1
 铛铛	dāng dāng	1
@@ -990,16 +1210,24 @@ sort: by_weight
 道法	dào fǎ	1
 刀锋宝贝	dāo fēng bǎo bèi	1
 道哥	dào gē	1
+倒钩	dǎo gōu	1
+倒挂	dǎo guà	1
 刀郎	dāo láng	1
 悼念	dào niàn	1
 刀皮	dāo pí	1
 稻妻	dào qī	1
 倒三角	dǎo sān jiǎo	1
+盗圣	dào shèng	1
+刀塔	dāo tǎ	1
 导图	dǎo tú	1
+到贤	dào xián	1
+道县	dào xiàn	1
+道贤	dào xián	1
 到校	dào xiào	1
 道崽	dào zǎi	1
 刀宗	dāo zōng	1
 得宝	dé bǎo	1
+德超杯	dé chāo bēi	1
 德芙	dé fú	1
 德国	dé guó	1
 德黑兰	dé hēi lán	1
@@ -1009,19 +1237,23 @@ sort: by_weight
 德克萨斯	dé kè sà sī	1
 德莱文	dé lái wén	1
 德朗格	dé lǎng gé	1
+德玛西亚	dé mǎ xī yà	1
 德清	dé qīng	1
 德容	dé róng	1
 德文	dé wén	1
 德训鞋	dé xùn xié	1
 德阳	dé yáng	1
 德育处	dé yù chù	1
+德云社	dé yún shè	1
 德州	dé zhōu	1
 登场	dēng chǎng	1
 邓超	dèng chāo	1
 灯灯	dēng dēng	1
 等掉	děng diào	1
+登顶	dēng dǐng	1
 等风热吻你	děng fēng rè wěn nǐ	1
 登高	dēng gāo	1
+灯光秀	dēng guāng xiù	1
 灯火	dēng huǒ	1
 邓家佳	dèng jiā jiā	1
 邓佳鑫	dèng jiā xīn	1
@@ -1033,6 +1265,7 @@ sort: by_weight
 邓为	dèng wéi	1
 登月	dēng yuè	1
 邓紫棋	dèng zǐ qí	1
+迪奥拉	dí ào lā	1
 迪拜	dí bài	1
 迪班萨	dí bān sà	1
 低饱和	dī bǎo hé	1
@@ -1040,16 +1273,21 @@ sort: by_weight
 滴滴	dī dī	1
 蒂蒂	dì dì	1
 敌敌畏	dí dí wèi	1
+敌对	dí duì	1
+第二春	dì èr chūn	1
 第二阶段	dì èr jiē duàn	1
 第二局	dì èr jú	1
 地方专项	dì fāng zhuān xiang	1
+迪迦奥特曼	dí jiā ào tè màn	1
 低精力	dī jīng lì	1
 低开	dī kāi	1
 低空	dī kōng	1
 抵扣金	dǐ kòu jīn	1
+底裤	dǐ kù	1
 迪丽	dí lì	1
 地理老师	dì lǐ lǎo shī	1
 迪丽热巴	dí lì rè bā	1
+第六把	dì liù bǎ	1
 滴露	dī lù	1
 地平线	dì píng xiàn	1
 地球	dì qiú	1
@@ -1057,7 +1295,9 @@ sort: by_weight
 狄仁杰	dí rén jié	1
 第三间	dì sān jiān	1
 第三局	dì sān jú	1
+第三赛段	dì sān sài duàn	1
 迪桑特	dí sāng tè	1
+地生	dì shēng	1
 迪士尼	dí shì ní	1
 地鼠	dì shǔ	1
 第四局	dì sì jú	1
@@ -1067,51 +1307,70 @@ sort: by_weight
 第五人格	dì wǔ rén gé	1
 低胸	dī xiōng	1
 第一场雪	dì yī chǎng xuě	1
+第一打野	dì yī dǎ yě	1
 第一阶段	dì yī jiē duàn	1
 第一课	dì yī kè	1
+地狱归来	dì yù guī lái	1
 缔约方	dì yuē fāng	1
 地震	dì zhèn	1
 地震带	dì zhèn dài	1
 地震预警	dì zhèn yù jǐng	1
 地震云	dì zhèn yún	1
+地政	dì zhèng	1
 地质	dì zhì	1
 地租	dì zū	1
+典藏版	diǎn cáng bǎn	1
 滇池	diān chí	1
-电队	diàn duì	1
+电刀	diàn dāo	1
 巅峰对决	diān fēng duì jué	1
 巅峰对决了	diān fēng duì jué le	1
 巅峰挑战赛	diān fēng tiāo zhàn sài	1
 巅峰之夜	diān fēng zhī yè	1
 垫江	diàn jiāng	1
+电竞世俱杯	diàn jìng shì jù bēi	1
 点卷	diǎn juǎn	1
 典礼	diǎn lǐ	1
 电力	diàn lì	1
+电龙	diàn lóng	1
+电龙魂	diàn lóng hún	1
+颠沛流离	diān pèi liú lí	1
 点球	diǎn qiú	1
 点券	diǎn quàn	1
 电刑	diàn xíng	1
 电影票	diàn yǐng piào	1
+电影院	diàn yǐng yuàn	1
 电诈	diàn zhà	1
 电子	diàn zǐ	1
 电子版	diàn zǐ bǎn	1
+电子竞技	diàn zǐ jìng jì	1
 貂蝉	diāo chán	1
+掉点	diào diǎn	1
 雕哥	diāo gē	1
 掉面	diào miàn	1
+调取	diào qǔ	1
+吊图	diào tú	1
 钓鱼佬	diào yú lǎo	1
 谍报	dié bào	1
 叠层	dié céng	1
-跌幅	diē fú	1
+跌宕起伏	diē dàng qǐ fú	1
 跌停	diē tíng	1
 叠纸	dié zhǐ	1
 定榜	dìng bǎng	1
 丁程鑫	dīng chéng xīn	1
 叮当猫	dīng dāng māo	1
+盯防	dīng fáng	1
 顶富	dǐng fù	1
+定海神针	dìng hǎi shén zhēn	1
 顶流	dǐng liú	1
 町田	dīng tián	1
 定投	dìng tóu	1
 鼎曜	dǐng yào	1
 丁禹兮	dīng yǔ xī	1
+定责	dìng zé	1
 丁真	dīng zhēn	1
+定制冠军	dìng zhì guàn jūn	1
+定妆照	dìng zhuāng zhào	1
+钉子	dìng zǐ	1
 丢球	diū qiú	1
 丢子	diū zǐ	1
 冬安	dōng ān	1
@@ -1121,11 +1380,11 @@ sort: by_weight
 动笔	dòng bǐ	1
 懂车帝	dǒng chē dì	1
 东城	dōng chéng	1
+东川	dōng chuān	1
 东东	dōng dōng	1
 东方海洋	dōng fāng hǎi yáng	1
 东方红	dōng fāng hóng	1
 东方墨兰	dōng fāng mò lán	1
-东方日升	dōng fāng rì shēng	1
 东风	dōng fēng	1
 东莞	dōng guǎn	1
 东莞市第一人民法院	dōng guǎn shì dì yī rén mín fǎ yuàn	1
@@ -1133,10 +1392,12 @@ sort: by_weight
 东海	dōng hǎi	1
 东航	dōng háng	1
 冻河	dòng hé	1
+冬季赛	dōng jì sài	1
 冬季校服	dōng jì xiào fú	1
 东家	dōng jiā	1
 冻僵	dòng jiāng	1
 冬将至	dōng jiāng zhì	1
+东郊记忆	dōng jiāo jì yì	1
 东京	dōng jīng	1
 冻梨	dòng lí	1
 董路	dǒng lù	1
@@ -1147,18 +1408,20 @@ sort: by_weight
 东契奇	dōng qì qí	1
 懂球帝	dǒng qiú dì	1
 冬日	dōng rì	1
-东升西落	dōng shēng xī luò	1
 董事	dǒng shì	1
 董事会	dǒng shì huì	1
 冻手冻脚	dòng shǒu dòng jiǎo	1
 冻鼠	dòng shǔ	1
 董思成	dǒng sī chéng	1
 冬天	dōng tiān	1
+洞庭潮	dòng tíng cháo	1
 动物城	dòng wù chéng	1
+东玄	dōng xuán	1
 东映	dōng yìng	1
 董宇辉	dǒng yǔ huī	1
 动员	dòng yuán	1
 冬至	dōng zhì	1
+冬子	dōng zǐ	1
 动作游戏	dòng zuò you xì	1
 豆瓣	dòu bàn	1
 豆包	dòu bāo	1
@@ -1173,48 +1436,71 @@ sort: by_weight
 抖音商城	dǒu yīn shāng chéng	1
 斗子	dòu zǐ	1
 毒爆	dú bào	1
+镀层	dù céng	1
 堵车	dǔ chē	1
+杜杜	dù dù	1
 杜华	dù huá	1
 度假岛	dù jiǎ dǎo	1
 都江堰	dū jiāng yàn	1
+杜康	dù kāng	1
+杜拉拉	dù lā lā	1
 杜兰特	dù lán tè	1
-独立行情	dú lì háng qíng	1
 都灵	dū líng	1
 都灵之马	dū líng zhī mǎ	1
 杜妈	dù mā	1
 杜姆	dù mǔ	1
+毒奶	dú nǎi	1
+毒蛇	dú shé	1
 独行侠	dú xíng xiá	1
+毒牙	dú yá	1
 渡鸦	dù yā	1
 独一	dú yī	1
+督战	dū zhàn	1
+毒株	dú zhū	1
 端侧	duān cè	1
+段嘉许	duàn jiā xǔ	1
 短剧	duǎn jù	1
+端木	duān mù	1
+断手	duàn shǒu	1
+短手	duǎn shǒu	1
 端午	duān wǔ	1
 端午节	duān wǔ jié	1
 段永平	duàn yǒng píng	1
 断雨	duàn yǔ	1
+短轴	duǎn zhóu	1
+队标	duì biāo	1
+队服	duì fú	1
 对光	duì guāng	1
+对决	duì jué	1
 对口型	duì kǒu xíng	1
+队名	duì míng	1
+对位	duì wèi	1
+队伍	duì wǔ	1
+对线	duì xiàn	1
+对线期	duì xiàn qī	1
 队形	duì xíng	1
 堆雪人	duī xuě rén	1
 对弈	duì yì	1
+队长	duì zhǎng	1
+对阵	duì zhèn	1
 顿巴斯	dùn bā sī	1
 敦煌	dūn huáng	1
 敦煌英雄	dūn huáng yīng xióng	1
 炖奶	dùn nǎi	1
 盾山	dùn shān	1
+夺得	duó dé	1
 朵朵	duǒ duǒ	1
 夺冠	duó guàn	1
 夺冠吧	duó guàn ba	1
+夺冠啦	duó guàn lā	1
 多哈	duō hā	1
 多兰	duō lán	1
 朵莉亚	duǒ lì yà	1
-多模态	duō mó tài	1
-多片	duō piàn	1
+躲闪	duǒ shǎn	1
 多特	duō tè	1
 多喜一家人	duō xǐ yī jiā rén	1
 多效合一	duō xiào hé yī	1
 多云	duō yún	1
-厄锤	è chuí	1
 鄂尔多斯	è ěr duō sī	1
 厄尔尼诺	è ěr ní nuò	1
 俄方	é fāng	1
@@ -1225,7 +1511,6 @@ sort: by_weight
 恶灵	è líng	1
 俄罗斯	é luó sī	1
 俄罗斯列宁格勒州	é luó sī liè níng gé lè zhōu	1
-俄罗斯外交部	é luó sī wài jiāo bù	1
 鹅毛大雪	é máo dà xuě	1
 峨眉	é méi	1
 峨眉山	é méi shān	1
@@ -1233,6 +1518,7 @@ sort: by_weight
 恶魔叮	è mó dīng	1
 恶魔狼	è mó láng	1
 恶女	è nǚ	1
+恶犬	è quǎn	1
 俄乌	é wū	1
 俄油	é yóu	1
 鳄鱼	è yú	1
@@ -1244,39 +1530,49 @@ sort: by_weight
 恩施	ēn shī	1
 恩怨局	ēn yuàn jú	1
 恩佐	ēn zuǒ	1
+二车间	èr chē jiān	1
 二创	èr chuàng	1
 二搭	èr dā	1
 二当家	èr dāng jiā	1
 二等奖	èr děng jiǎng	1
 二号线	èr hào xiàn	1
+二号种子	èr hào zhǒng zǐ	1
 二虎	èr hǔ	1
 二魂	èr hún	1
 二阶段了	èr jiē duàn le	1
+二连	èr lián	1
+二路	èr lù	1
 二命	èr mìng	1
+二胖	èr pàng	1
 二审	èr shěn	1
 二试	èr shì	1
 二十届	èr shí jiè	1
 二十四味	èr shí sì wèi	1
+二塔	èr tǎ	1
 二限	èr xiàn	1
 二相乐园	èr xiāng lè yuán	1
 二巡	èr xún	1
 二游	èr you	1
 法案	fǎ àn	1
 发布会	fā bù huì	1
+法刺	fǎ cì	1
 法定	fǎ dìng	1
 法尔孔	fǎ ěr kǒng	1
 罚分	fá fēn	1
 法官	fǎ guān	1
 法国	fǎ guó	1
+法核	fǎ hé	1
+发挥	fā huī	1
 发掘	fā jué	1
 法考	fǎ kǎo	1
 发狂	fā kuáng	1
 发狂了	fā kuáng le	1
 法拉利	fǎ lā lì	1
 法兰克福	fǎ lán kè fú	1
-法兰克福站	fǎ lán kè fú zhàn	1
 法老	fǎ lǎo	1
+乏力	fá lì	1
 法罗	fǎ luó	1
+砝码	fǎ mǎ	1
 发卖	fā mài	1
 法涅斯	fǎ niè sī	1
 发票	fā piào	1
@@ -1286,10 +1582,11 @@ sort: by_weight
 发售	fā shòu	1
 法硕	fǎ shuò	1
 发条	fā tiáo	1
+法条	fǎ tiáo	1
+发条鸭	fā tiáo yā	1
 法庭	fǎ tíng	1
 发文	fā wén	1
 法务	fǎ wù	1
-发物料了	fā wù liào le	1
 法院	fǎ yuàn	1
 法治	fǎ zhì	1
 发作品了	fā zuò pǐn le	1
@@ -1298,6 +1595,8 @@ sort: by_weight
 反超	fǎn chāo	1
 凡尘	fán chén	1
 范丞丞	fàn chéng chéng	1
+反打	fǎn dǎ	1
+反观	fǎn guān	1
 翻过这座山	fān guò zhè zuò shān	1
 翻红	fān hóng	1
 繁华	fán huá	1
@@ -1306,19 +1605,22 @@ sort: by_weight
 饭卡	fàn kǎ	1
 返利	fǎn lì	1
 繁忙	fán máng	1
+翻盘点	fān pán diǎn	1
 凡人	fán rén	1
 凡人修仙传	fán rén xiū xiān zhuàn	1
 繁荣	fán róng	1
 翻山	fān shān	1
+反手	fǎn shǒu	1
 范思哲	fàn sī zhé	1
 凡拓	fán tuò	1
 范文	fàn wén	1
+反乌托邦	fǎn wū tuō bāng	1
 翻页	fān yè	1
+反战	fǎn zhàn	1
 樊振东	fán zhèn dōng	1
 反主	fǎn zhǔ	1
 方案	fāng àn	1
 方博	fāng bó	1
-防长	fáng cháng	1
 方程	fāng chéng	1
 方程豹	fāng chéng bào	1
 防城港	fáng chéng gǎng	1
@@ -1333,12 +1635,18 @@ sort: by_weight
 仿生	fǎng shēng	1
 仿生迷踪	fǎng shēng mí zōng	1
 仿生人	fǎng shēng rén	1
+防守	fáng shǒu	1
+防守反击	fáng shǒu fǎn jī	1
+放送禁止	fàng sòng jìn zhǐ	1
 访谈	fǎng tán	1
 防卫战	fáng wèi zhàn	1
 房屋	fáng wū	1
+放线	fàng xiàn	1
 放学	fàng xué	1
 方源	fāng yuán	1
 方舟	fāng zhōu	1
+防住	fáng zhù	1
+非常规	fēi cháng guī	1
 非诚勿扰	fēi chéng wù rǎo	1
 飞大哥	fēi dà gē	1
 飞大叔	fēi dà shū	1
@@ -1351,6 +1659,7 @@ sort: by_weight
 飞花	fēi huā	1
 肺活量	fèi huó liàng	1
 斐济	fěi jì	1
+飞机	fēi jī	1
 费加罗	fèi jiā luó	1
 飞克	fēi kè	1
 飞科	fēi kē	1
@@ -1360,16 +1669,17 @@ sort: by_weight
 菲林斯	fēi lín sī	1
 菲律宾	fēi lǜ bīn	1
 飞牛	fēi niú	1
-非农	fēi nóng	1
 菲欧妮	fēi ōu nī	1
 绯色	fēi sè	1
 飞天	fēi tiān	1
 肥虾	féi xiā	1
 飞行	fēi xíng	1
+飞行家	fēi xíng jiā	1
 飞行物	fēi xíng wù	1
 绯雪	fēi xuě	1
 飞雪	fēi xuě	1
 绯英	fēi yīng	1
+菲佣	fēi yōng	1
 费用	fèi yòng	1
 肥鱼	féi yú	1
 飞智	fēi zhì	1
@@ -1380,21 +1690,26 @@ sort: by_weight
 粉笔	fěn bǐ	1
 分差	fēn chà	1
 芬达	fēn dá	1
+份额	fèn é	1
 分管	fēn guǎn	1
 分行	fēn háng	1
 分局	fēn jú	1
+芬兰	fēn lán	1
 芬兰湾	fēn lán wān	1
 芬妮	fēn nī	1
 愤怒的老虎	fèn nù de lǎo hǔ	1
 分歧	fēn qí	1
 分水器	fēn shuǐ qì	1
+粉丝们	fěn sī men	1
 焚天	fén tiān	1
 氛围感	fēn wéi gǎn	1
 纷争	fēn zhēng	1
+风暴	fēng bào	1
 冯宝宝	féng bǎo bǎo	1
 封存	fēng cún	1
 风大	fēng dà	1
 风笛	fēng dí	1
+风电	fēng diàn	1
 凤冠	fèng guàn	1
 风滚草	fēng gǔn cǎo	1
 风好大	fēng hǎo dà	1
@@ -1402,9 +1717,10 @@ sort: by_weight
 风华	fēng huá	1
 凤凰传奇	fèng huáng chuán qí	1
 凤凰山	fèng huáng shān	1
+峰会	fēng huì	1
 烽火杯	fēng huǒ bēi	1
 风火轮	fēng huǒ lún	1
-冯建明	féng jiàn míng	1
+封疆	fēng jiāng	1
 风堇	fēng jǐn	1
 风巨大	fēng jù dà	1
 疯狂动物城	fēng kuáng dòng wù chéng	1
@@ -1414,55 +1730,67 @@ sort: by_weight
 风老大了	fēng lǎo dà le	1
 风雷	fēng léi	1
 锋龙	fēng lóng	1
+风龙	fēng lóng	1
+风龙魂	fēng lóng hún	1
+疯马秀	fēng mǎ xiù	1
+疯牛	fēng niú	1
+疯牛病	fēng niú bìng	1
+风起今朝	fēng qǐ jīn zhāo	1
+凤庆	fèng qìng	1
 封杀	fēng shā	1
 风沙	fēng shā	1
 凤山	fèng shān	1
+封神	fēng shén	1
 封神榜	fēng shén bǎng	1
 疯四	fēng sì	1
 丰台	fēng tái	1
 风套	fēng tào	1
 丰田	fēng tián	1
+蜂王	fēng wáng	1
 风息	fēng xī	1
 奉贤	fèng xián	1
 风雨无阻	fēng yǔ wú zǔ	1
 风语筑	fēng yǔ zhù	1
-冯忠华	féng zhōng huá	1
 佛山	fó shān	1
 福安	fú ān	1
 副班长	fù bān zhǎng	1
 伏笔	fú bǐ	1
+服兵役	fú bīng yì	1
 副部长	fù bù zhǎng	1
 傅成玉	fù chéng yù	1
 复仇者	fù chóu zhě	1
 复出	fù chū	1
 福鼎	fú dǐng	1
-复读生	fù dú shēng	1
+伏尔加格勒州	fú ěr jiā gé lè zhōu	1
 赋分	fù fēn	1
 复工	fù gōng	1
 副官	fù guān	1
 富瀚微	fù hàn wēi	1
 伏鹤	fú hè	1
+俘获	fú huò	1
+复活币	fù huó bì	1
 复活甲	fù huó jiǎ	1
-复活男	fù huó nán	1
 复活赛	fù huó sài	1
 附加遗产	fù jiā yí chǎn	1
 福建	fú jiàn	1
 福建省	fú jiàn shěng	1
 福建水泥	fú jiàn shuǐ ní	1
+福将	fú jiāng	1
 福克斯	fú kè sī	1
 弗拉格	fú lā gé	1
-弗拉泰西	fú lā tài xī	1
 弗莱堡	fú lái bǎo	1
 芙兰朵	fú lán duǒ	1
 斧老大	fǔ lǎo dà	1
 富勒姆	fù lè mǔ	1
 富丽达	fù lì dá	1
 福利金	fú lì jīn	1
+芙莉莲	fú lì lián	1
 复联	fù lián	1
 涪陵	fú líng	1
 福龙马	fú lóng mǎ	1
 傅隆生	fù lóng shēng	1
 弗洛洛	fú luò luò	1
+福马	fú mǎ	1
 覆面	fù miàn	1
 覆面系	fù miàn xì	1
 父母	fù mǔ	1
@@ -1478,41 +1806,54 @@ sort: by_weight
 复赛	fù sài	1
 釜山	fǔ shān	1
 釜山行	fǔ shān xíng	1
+浮士德	fú shì dé	1
 富士康	fù shì kāng	1
 富士山	fù shì shān	1
 副书记	fù shū jì	1
+附体	fù tǐ	1
 福田	fú tián	1
 福娃	fú wá	1
 赋完分	fù wán fēn	1
 副武器	fù wǔ qì	1
 服务期	fú wù qī	1
+服务区	fú wù qū	1
 阜新	fù xīn	1
 付雪梨	fù xuě lí	1
 富阳	fù yáng	1
 阜阳	fù yáng	1
 服役	fú yì	1
-付义涵	fù yì hán	1
 浮游世界	fú you shì jiè	1
 负责人	fù zé rén	1
+复制器	fù zhì qì	1
 抚州	fǔ zhōu	1
 福州	fú zhōu	1
+辅助	fǔ zhù	1
 附着	fù zhuó	1
 复奏	fù zòu	1
 嘎哒	gā dā	1
 嘎达嘎达	gā dá gā dá	1
+盖恩	gài ēn	1
+盖棺定论	gài guān dìng lùn	1
 概率论	gài lǜ lùn	1
 盖帽	gài mào	1
 改写	gǎi xiě	1
 盖章	gài zhāng	1
+干瘪	gàn biě	1
 干部	gàn bù	1
 感恩	gǎn ēn	1
 感恩节	gǎn ēn jié	1
+坩埚	gān guō	1
 赣惠保	gàn huì bǎo	1
+赶脚	gǎn jiǎo	1
 干冷	gàn lěng	1
+赣南	gàn nán	1
 擀皮	gǎn pí	1
 甘肃	gān sù	1
 甘肃省	gān sù shěng	1
 干碎	gàn suì	1
+感言	gǎn yán	1
+干噎	gàn yē	1
+肝硬化	gān yìng huà	1
 赣榆	gàn yú	1
 甘元彪	gān yuán biāo	1
 赣州	gàn zhōu	1
@@ -1520,6 +1861,7 @@ sort: by_weight
 钢巴	gāng bā	1
 港版	gǎng bǎn	1
 钢背	gāng bèi	1
+钢背兽	gāng bèi shòu	1
 钢壁	gāng bì	1
 钢臂	gāng bì	1
 港股	gǎng gǔ	1
@@ -1539,7 +1881,10 @@ sort: by_weight
 高尔夫	gāo ěr fū	1
 高梵	gāo fàn	1
 高峰期	gāo fēng qī	1
-高海宁	gāo hǎi níng	1
+高庚杓	gāo gēng biāo	1
+告黑	gào hēi	1
+高呼	gāo hū	1
+高街	gāo jiē	1
 高开	gāo kāi	1
 高开低走	gāo kāi dī zǒu	1
 高龄	gāo líng	1
@@ -1548,6 +1893,8 @@ sort: by_weight
 高铭阳	gāo míng yáng	1
 高启强	gāo qǐ qiáng	1
 高迁	gāo qiān	1
+高僧	gāo sēng	1
+高僧预测	gāo sēng yù cè	1
 高深	gāo shēn	1
 高盛	gāo shèng	1
 高市	gāo shì	1
@@ -1559,6 +1906,7 @@ sort: by_weight
 高翔	gāo xiáng	1
 高校	gāo xiào	1
 高校认证	gāo xiào rèn zhèng	1
+高杨	gāo yáng	1
 高阳	gāo yáng	1
 高叶	gāo yè	1
 高邮	gāo yóu	1
@@ -1577,16 +1925,21 @@ sort: by_weight
 歌姬	gē jī	1
 隔扣	gé kòu	1
 格力	gé lì	1
+格里芬	gé lǐ fēn	1
 格力技工学校	gé lì jì gōng xué xiào	1
 格力集团	gé lì jí tuán	1
 格林	gé lín	1
+格鲁吉亚	gé lǔ jí yà	1
 哥伦比亚	gē lún bǐ yà	1
 哥伦比娅	gē lún bǐ yà	1
 歌迷	gē mí	1
+个人能力	gè rén néng lì	1
 个人信息	gè rén xìn xī	1
+格瑞	gé ruì	1
 格什姆岛	gé shén mǔ dǎo	1
 歌手	gē shǒu	1
 个税	gè shuì	1
+哥谭	gē tán	1
 个体	gè tǐ	1
 个位	gè wèi	1
 个位数	gè wèi shù	1
@@ -1594,13 +1947,15 @@ sort: by_weight
 格纹	gé wén	1
 歌星	gē xīng	1
 个性化	gè xìng huà	1
+戈娅	gē yà	1
 葛叶	gě yè	1
+鸽子蛋	gē zǐ dàn	1
 给阿嬷的情书	gěi ā mo de qíng shū	1
 给机会了	gěi jī huì le	1
 给子	gěi zǐ	1
 跟唱	gēn chàng	1
-跟跌	gēn diē	1
-耿同学	gěng tóng xué	1
+根基	gēn jī	1
+哽咽	gěng yè	1
 共产主义	gòng chǎn zhǔ yì	1
 工程	gōng chéng	1
 共创	gòng chuàng	1
@@ -1622,6 +1977,7 @@ sort: by_weight
 共鸣者	gòng míng zhě	1
 共鸣之战	gòng míng zhī zhàn	1
 公墓	gōng mù	1
+功能性	gōng néng xìng	1
 公牛	gōng niú	1
 工商	gōng shāng	1
 工商管理	gōng shāng guǎn lǐ	1
@@ -1636,29 +1992,34 @@ sort: by_weight
 工位	gōng wèi	1
 公务	gōng wù	1
 公务员	gōng wù yuán	1
+恭喜	gōng xǐ	1
 共效	gòng xiào	1
 工信部	gōng xìn bù	1
-共研服	gòng yán fú	1
+巩义	gǒng yì	1
 公元	gōng yuán	1
 公章	gōng zhāng	1
 公职	gōng zhí	1
 工作室	gōng zuò shì	1
+工作证	gōng zuò zhèng	1
 狗洞	gǒu dòng	1
 勾兑	gōu duì	1
 狗狗	gǒu gǒu	1
+勾践	gōu jiàn	1
 购票	gòu piào	1
+够巧	gòu qiǎo	1
 狗特	gǒu tè	1
 购物节	gòu wù jié	1
 购物金	gòu wù jīn	1
 谷爱凌	gǔ ài líng	1
 古巴	gǔ bā	1
+古道	gǔ dào	1
 孤灯	gū dēng	1
 股东	gǔ dōng	1
+孤独颂	gū dú sòng	1
 古恩	gǔ ēn	1
 估分	gū fēn	1
 股份	gǔ fèn	1
 谷歌	gǔ gē	1
-古共	gǔ gòng	1
 故宫	gù gōng	1
 咕咕嘎嘎	gū gū gā gā	1
 骨灰	gǔ huī	1
@@ -1679,51 +2040,63 @@ sort: by_weight
 古天乐	gǔ tiān lè	1
 故乡	gù xiāng	1
 孤影	gū yǐng	1
+雇佣兵	gù yōng bīng	1
 谷雨	gǔ yǔ	1
 固原	gù yuán	1
-股灾	gǔ zāi	1
 估值	gū zhí	1
 古着	gǔ zhuó	1
+顾子尧	gù zǐ yáo	1
+刮板	guā bǎn	1
 刮风	guā fēng	1
 刮刮乐	guā guā lè	1
 挂历	guà lì	1
+怪东西	guài dōng xī	1
 拐力	guǎi lì	1
 怪美	guài měi	1
 怪兽来袭	guài shòu lái xí	1
-怪屋	guài wū	1
+观察力	guān chá lì	1
 观察室	guān chá shì	1
 官方	guān fāng	1
-官方通报	guān fāng tōng bào	1
+官方辟谣	guān fāng pì yáo	1
 灌风	guàn fēng	1
 观光客	guān guāng kè	1
 关怀	guān huái	1
 关键局	guān jiàn jú	1
+关键团	guān jiàn tuán	1
+关雎	guān jū	1
+冠绝	guàn jué	1
 冠军	guàn jūn	1
 官俊臣	guān jùn chén	1
 冠军点	guàn jūn diǎn	1
+冠军粉	guàn jūn fěn	1
 冠军皮	guàn jūn pí	1
 冠军皮肤	guàn jūn pí fū	1
 冠军赛	guàn jūn sài	1
 冠军相	guàn jūn xiāng	1
+惯例	guàn lì	1
 管理局	guǎn lǐ jú	1
 管理群	guǎn lǐ qún	1
 管理学	guǎn lǐ xué	1
+观鸟	guān niǎo	1
 观赛	guān sài	1
+观赏性	guān shǎng xìng	1
 冠位	guàn wèi	1
 关晓彤	guān xiǎo tóng	1
 官宣	guān xuān	1
+官窑	guān yáo	1
 观音	guān yīn	1
 观音桥	guān yīn qiáo	1
 管泽元	guǎn zé yuán	1
 观者	guān zhě	1
 关中	guān zhōng	1
+观众	guān zhòng	1
+观众席	guān zhòng xí	1
 官周	guān zhōu	1
 广安	guǎng ān	1
 广百	guǎng bǎi	1
 光标	guāng biāo	1
 广播站	guǎng bō zhàn	1
 光点	guāng diǎn	1
-广电总局	guǎng diàn zǒng jú	1
 广东	guǎng dōng	1
 广丰	guǎng fēng	1
 光伏	guāng fú	1
@@ -1731,9 +2104,11 @@ sort: by_weight
 光棍	guāng gùn	1
 光棍节	guāng gùn jié	1
 广交会	guǎng jiāo huì	1
+广阔	guǎng kuò	1
 光芒	guāng máng	1
 广汽	guǎng qì	1
 光圈	guāng quān	1
+广水	guǎng shuǐ	1
 光头强	guāng tóu qiáng	1
 广西	guǎng xī	1
 光洋	guāng yáng	1
@@ -1755,6 +2130,7 @@ sort: by_weight
 归档	guī dàng	1
 规范	guī fàn	1
 贵港	guì gǎng	1
+桂哥	guì gē	1
 鬼谷子	guǐ gǔ zǐ	1
 桂花	guì huā	1
 归寂	guī jì	1
@@ -1767,16 +2143,19 @@ sort: by_weight
 规模	guī mó	1
 归期	guī qī	1
 归期雨抄	guī qī yǔ chāo	1
+龟壳	guī qiào	1
 桂瑞	guì ruì	1
 鬼叔	guǐ shū	1
 归骰	guī tóu	1
 鬼王	guǐ wáng	1
 鬼武者	guǐ wǔ zhě	1
+桂霞	guì xiá	1
 鬼新娘	guǐ xīn niáng	1
 归墟	guī xū	1
 硅油	guī yóu	1
 贵重	guì zhòng	1
 贵州	guì zhōu	1
+贵州森林野生动物园	guì zhōu sēn lín yě shēng dòng wù yuán	1
 棍哥	gùn gē	1
 滚球	gǔn qiú	1
 滚雪球	gǔn xuě qiú	1
@@ -1792,6 +2171,7 @@ sort: by_weight
 国防	guó fáng	1
 郭富城	guō fù chéng	1
 国歌	guó gē	1
+蝈蝈	guō guō	1
 国航	guó háng	1
 国行	guó háng	1
 国会	guó huì	1
@@ -1800,13 +2180,12 @@ sort: by_weight
 国家电网	guó jiā diàn wǎng	1
 国家队	guó jiā duì	1
 国家发展改革委	guó jiā fā zhǎn gǎi gé wěi	1
-国家反诈中心	guó jiā fǎn zhà zhōng xīn	1
 国家疾控局	guó jiā jí kòng jú	1
 郭嘉昆	guō jiā kūn	1
-国家体育总局	guó jiā tǐ yù zǒng jú	1
 国家铁路局	guó jiā tiě lù jú	1
 国家卫健委	guó jiā wèi jiàn wěi	1
 国家医保	guó jiā yī bǎo	1
+国家医保局	guó jiā yī bǎo jú	1
 郭晶晶	guō jīng jīng	1
 国考	guó kǎo	1
 锅炉房	guō lú fáng	1
@@ -1818,21 +2197,24 @@ sort: by_weight
 郭宁宁	guō níng níng	1
 国乒	guó pīng	1
 国旗	guó qí	1
+过气	guò qì	1
+国士无双	guó shì wú shuāng	1
 国手	guó shǒu	1
 国泰	guó tài	1
 国台办	guó tái bàn	1
 果糖	guǒ táng	1
 国铁集团	guó tiě jí tuán	1
+国土	guó tǔ	1
 国网	guó wǎng	1
 国王球	guó wáng qiú	1
 国务院	guó wù yuàn	1
-国务院安委会办公室	guó wù yuàn ān wěi huì bàn gōng shì	1
 国务院国资委	guó wù yuàn guó zī wěi	1
 过线	guò xiàn	1
 国学	guó xué	1
 国宴	guó yàn	1
 国誉	guó yù	1
 国债	guó zhài	1
+过招	guò zhāo	1
 郭子	guō zǐ	1
 国足	guó zú	1
 哈宝	hā bǎo	1
@@ -1843,12 +2225,15 @@ sort: by_weight
 哈弗茨	hā fú cí	1
 哈夫克	hā fū kè	1
 哈工大	hā gōng dà	1
+哈卡宁	hā kǎ níng	1
 哈兰德	hā lán dé	1
 哈利波特	hā lì bō tè	1
 哈立德国王国际机场	hā lì dé guó wáng guó jì jī chǎng	1
 哈啰	hā luō	1
 哈马比	hā mǎ bǐ	1
+哈马斯	hā mǎ sī	1
 哈梅内伊	hā méi nèi yī	1
+哈人	hā rén	1
 哈萨克斯坦	hā sà kè sī tǎn	1
 哈斯	hā sī	1
 哈苏	hā sū	1
@@ -1859,32 +2244,35 @@ sort: by_weight
 海城	hǎi chéng	1
 海灯节	hǎi dēng jié	1
 海底捞	hǎi dǐ lāo	1
+海斗	hǎi dòu	1
 海尔	hǎi ěr	1
 海港	hǎi gǎng	1
 海关	hǎi guān	1
-海关总署	hǎi guān zǒng shǔ	1
 海口	hǎi kǒu	1
 海来阿木	hǎi lái ā mù	1
 海力士	hǎi lì shì	1
 海亮	hǎi liàng	1
 骇灵	hài líng	1
 海陵岛	hǎi líng dǎo	1
+海陆	hǎi lù	1
 海露	hǎi lù	1
 海陆空	hǎi lù kōng	1
 海马	hǎi mǎ	1
 海门	hǎi mén	1
 海沫	hǎi mò	1
 海南	hǎi nán	1
+海南航空	hǎi nán háng kōng	1
 海南自贸港	hǎi nán zì mào gǎng	1
+海涅	hǎi niè	1
 海宁	hǎi níng	1
 海牛	hǎi niú	1
 海鸥	hǎi ōu	1
 氦气	hài qì	1
+海森	hǎi sēn	1
 海事	hǎi shì	1
 海水过滤器	hǎi shuǐ guò lǜ qì	1
 海豚	hǎi tún	1
 海外仓	hǎi wài cāng	1
-海外链	hǎi wài liàn	1
 海王星	hǎi wáng xīng	1
 海文	hǎi wén	1
 海峡	hǎi xiá	1
@@ -1896,26 +2284,32 @@ sort: by_weight
 汉堡王	hàn bǎo wáng	1
 寒冰	hán bīng	1
 寒潮	hán cháo	1
+汉城	hàn chéng	1
 汉川	hàn chuān	1
 邯郸	hán dān	1
-韩股	hán gǔ	1
 韩国	hán guó	1
 韩国队	hán guó duì	1
+韩国队伍	hán guó duì wǔ	1
 韩国内战	hán guó nèi zhàn	1
 韩国人	hán guó rén	1
 寒寒	hán hán	1
 韩红	hán hóng	1
 韩红基金会	hán hóng jī jīn huì	1
 韩华	hán huá	1
+罕见	hǎn jiàn	1
 含金量	hán jīn liàng	1
+汉爵	hàn jué	1
 韩立	hán lì	1
 韩粱	hán liáng	1
 汉密尔顿	hàn mì ěr dùn	1
 瀚森	hàn sēn	1
 函授	hán shòu	1
+韩网	hán wǎng	1
 韩维辰	hán wéi chén	1
+韩文	hán wén	1
 寒武纪	hán wǔ jì	1
 韩信	hán xìn	1
+寒暄	hán xuān	1
 韩雪	hán xuě	1
 寒衣	hán yī	1
 寒衣节	hán yī jié	1
@@ -1928,13 +2322,19 @@ sort: by_weight
 航航	háng háng	1
 航空学院	háng kōng xué yuàn	1
 杭州	háng zhōu	1
+杭州互联网法院	háng zhōu hù lián wǎng fǎ yuàn	1
 杭州七号电竞俱乐部	háng zhōu qī hào diàn jìng jù lè bù	1
+杭州市儿童医院	háng zhōu shì ér tóng yī yuàn	1
 豪车	háo chē	1
 好大的雾	hǎo dà de wù	1
+好单	hǎo dān	1
 好当家	hǎo dāng jiā	1
 好汉歌	hǎo hàn gē	1
 豪华版	háo huá bǎn	1
+好急	hǎo jí	1
+好艰难	hǎo jiān nán	1
 号角	hào jiǎo	1
+好紧张	hǎo jǐn zhāng	1
 好剧	hǎo jù	1
 浩克	hào kè	1
 郝蕾	hǎo lěi	1
@@ -1951,22 +2351,27 @@ sort: by_weight
 好糖	hǎo táng	1
 好通透	hǎo tōng tòu	1
 好突然	hǎo tū rán	1
+好团	hǎo tuán	1
+好稳	hǎo wěn	1
 好媳妇	hǎo xí fù	1
 好想来	hǎo xiǎng lái	1
 好想你	hǎo xiǎng nǐ	1
 好兄弟	hǎo xiōng dì	1
 郝熠然	hǎo yì rán	1
 好友	hǎo yǒu	1
+昊宇	hào yǔ	1
 皓月	hào yuè	1
 好运连连	hǎo yùn lián lián	1
+豪宅	háo zhái	1
+好兆头	hǎo zhào tóu	1
 河北	hé běi	1
-河北省委	hé běi shěng wěi	1
 鹤壁	hè bì	1
 合成玉	hé chéng yù	1
 河池	hé chí	1
 鹤辞	hè cí	1
+河道	hé dào	1
+河道蟹	hé dào xiè	1
 核电站	hé diàn zhàn	1
-喝豆汁	hē dòu zhī	1
 赫尔城	hè ěr chéng	1
 赫尔佐格	hè ěr zuǒ gé	1
 合肥	hé féi	1
@@ -1974,6 +2379,7 @@ sort: by_weight
 合格考	hé gé kǎo	1
 赫格塞思	hè gé sāi sī	1
 何浩楠	hé hào nán	1
+贺贺	hè hè	1
 喝喝喝	hē hē hē	1
 合欢	hé huān	1
 荷甲	hé jiǎ	1
@@ -1981,6 +2387,7 @@ sort: by_weight
 贺峻霖	hè jùn lín	1
 贺卡	hè kǎ	1
 荷兰	hé lán	1
+贺兰	hè lán	1
 赫莲娜	hè lián nà	1
 河洛	hé luò	1
 盒马	hé mǎ	1
@@ -1989,26 +2396,25 @@ sort: by_weight
 河南	hé nán	1
 河南财经政法大学	hé nán cái jīng zhèng fǎ dà xué	1
 河南话	hé nán huà	1
-河南南阳市	hé nán nán yáng shì	1
-河南省纪委	hé nán shěng jì wěi	1
-河南省气象台	hé nán shěng qì xiàng tái	1
-河南省委	hé nán shěng wěi	1
 和平饭店	hé píng fàn diàn	1
 和平精英	hé píng jīng yīng	1
+何秋亊	hé qiū shì	1
 鹤山	hè shān	1
+和珅	hé shēn	1
 核实	hé shí	1
 和田	hé tián	1
 合同	hé tóng	1
+河童	hé tóng	1
 河头老街	hé tóu lǎo jiē	1
 贺图	hè tú	1
 河蟹	hé xiè	1
 核验	hé yàn	1
 合影	hé yǐng	1
 何与	hé yǔ	1
-禾与春时	hé yǔ chūn shí	1
 河源	hé yuán	1
 菏泽	hé zé	1
 赫则	hè zé	1
+合众	hé zhòng	1
 核子	hé zǐ	1
 黑豹	hēi bào	1
 黑潮	hēi cháo	1
@@ -2024,21 +2430,25 @@ sort: by_weight
 黑牛	hēi niú	1
 黑鲨	hēi shā	1
 黑山	hēi shān	1
+黑闪	hēi shǎn	1
 黑伤	hēi shāng	1
 黑哨	hēi shào	1
 黑蛇	hēi shé	1
 黑神话	hēi shén huà	1
 黑天鹅	hēi tiān é	1
+黑兔	hēi tù	1
+黑王	hēi wáng	1
 黑影	hēi yǐng	1
 黑鹰	hēi yīng	1
 黑羽	hēi yǔ	1
 黑子说话	hēi zǐ shuō huà	1
 黑钻	hēi zuàn	1
+很关键	hěn guān jiàn	1
 恨海情天	hèn hǎi qíng tiān	1
+很稳	hěn wěn	1
 恒大	héng dà	1
 亨德森	hēng dé sēn	1
 横店	héng diàn	1
-恒科	héng kē	1
 横梁	héng liáng	1
 恒铭	héng míng	1
 横琴	héng qín	1
@@ -2047,7 +2457,9 @@ sort: by_weight
 衡阳	héng yáng	1
 衡阳市	héng yáng shì	1
 红包雨	hóng bāo yǔ	1
+宏大	hóng dà	1
 弘凡	hóng fán	1
+红方	hóng fāng	1
 红房子	hóng fáng zǐ	1
 红光	hóng guāng	1
 红果	hóng guǒ	1
@@ -2070,22 +2482,33 @@ sort: by_weight
 红牌	hóng pái	1
 红皮	hóng pí	1
 红旗	hóng qí	1
+红色方	hóng sè fāng	1
+红色预警	hóng sè yù jǐng	1
 洪山	hóng shān	1
 洪山区	hóng shān qū	1
 红毯	hóng tǎn	1
 红头	hóng tóu	1
 红线	hóng xiàn	1
+红眼睛	hóng yǎn jīng	1
+红眼镜	hóng yǎn jìng	1
+弘扬	hóng yáng	1
 红鹰飞行表演队	hóng yīng fēi xíng biǎo yǎn duì	1
 红鱼	hóng yú	1
 红砖	hóng zhuān	1
-侯宝林	hóu bǎo lín	1
 后防	hòu fáng	1
 后会	hòu huì	1
 后会友期	hòu huì yǒu qī	1
+后两把	hòu liǎng bǎ	1
 侯明昊	hóu míng hào	1
+后排	hòu pái	1
+后期	hòu qī	1
+后期阵容	hòu qī zhèn róng	1
 侯森	hóu sēn	1
 后室	hòu shì	1
+后手	hòu shǒu	1
 后卫	hòu wèi	1
+后无来者	hòu wú lái zhě	1
+后选	hòu xuǎn	1
 候选人	hòu xuǎn rén	1
 侯耀文	hóu yào wén	1
 侯爷	hóu yé	1
@@ -2095,6 +2518,7 @@ sort: by_weight
 湖北省	hú běi shěng	1
 湖北省妇幼保健院	hú běi shěng fù yòu bǎo jiàn yuàn	1
 湖北省委	hú běi shěng wěi	1
+护臂	hù bì	1
 湖滨	hú bīn	1
 胡迪	hú dí	1
 蝴蝶	hú dié	1
@@ -2102,12 +2526,14 @@ sort: by_weight
 胡二妹	hú èr mèi	1
 胡歌	hú gē	1
 弧光	hú guāng	1
+护国	hù guó	1
 狐狐	hú hú	1
 呼呼吹	hū hū chuī	1
 户籍	hù jí	1
 虎鲸	hǔ jīng	1
 胡军	hú jūn	1
 糊咖	hú kā	1
+狐狸套	hú lí tào	1
 虎林	hǔ lín	1
 葫芦岛	hú lú dǎo	1
 葫芦娃	hú lú wá	1
@@ -2117,7 +2543,6 @@ sort: by_weight
 湖南省	hú nán shěng	1
 湖南卫视	hú nán wèi shì	1
 互能量	hù néng liàng	1
-护盘	hù pán	1
 互评	hù píng	1
 虎扑	hǔ pū	1
 湖人	hú rén	1
@@ -2129,37 +2554,47 @@ sort: by_weight
 胡先煦	hú xiān xù	1
 湖心	hú xīn	1
 胡旭	hú xù	1
+虎牙	hǔ yá	1
 护照	hù zhào	1
 湖州	hú zhōu	1
+湖州市南浔区人民法院	hú zhōu shì nán xún qū rén mín fǎ yuàn	1
+滑板车	huá bǎn chē	1
 滑板鞋	huá bǎn xié	1
 华北	huá běi	1
 花呗	huā bei	1
-华北电力大学	huá běi diàn lì dà xué	1
+华彩	huá cǎi	1
 画册	huà cè	1
 花车	huā chē	1
 华晨宇	huá chén yǔ	1
 花辞	huā cí	1
+花辞树	huā cí shù	1
+华帝	huá dì	1
 画地为牢	huà dì wéi láo	1
 化蝶	huà dié	1
+华东野战军	huá dōng yě zhàn jūn	1
 花都	huā dū	1
 华尔街	huá ěr jiē	1
 华发	huá fā	1
 花海	huā hǎi	1
 花合	huā hé	1
-华虹	huá hóng	1
 花滑	huā huá	1
 花花	huā huā	1
 华境	huá jìng	1
+划扣	huá kòu	1
 华莱士	huá lái shì	1
 花落	huā luò	1
+画面	huà miàn	1
 华南	huá nán	1
 华能	huá néng	1
 画皮	huà pí	1
+花圃	huā pǔ	1
 华强北	huá qiáng běi	1
 华人	huá rén	1
 花融	huā róng	1
+华容道	huá róng dào	1
 华润	huá rùn	1
 华山	huá shān	1
+花山街	huā shān jiē	1
 花少	huā shǎo	1
 花少北	huā shǎo běi	1
 花神	huā shén	1
@@ -2169,26 +2604,36 @@ sort: by_weight
 花坛	huā tán	1
 华为	huá wéi	1
 华为杯	huá wéi bēi	1
+华为手机	huá wéi shǒu jī	1
 华西	huá xī	1
 划线	huá xiàn	1
 花小蝶	huā xiǎo dié	1
+画心	huà xīn	1
 化学	huà xué	1
+滑雪场	huá xuě chǎng	1
 华野	huá yě	1
 华裔	huá yì	1
 花艺	huā yì	1
 花亦山	huā yì shān	1
 画之灵	huà zhī líng	1
+华中	huá zhōng	1
 花种	huā zhǒng	1
 华子	huá zǐ	1
 淮安	huái ān	1
 淮北	huái běi	1
+淮海	huái hǎi	1
+淮海战役	huái hǎi zhàn yì	1
 淮河	huái hé	1
 怀化	huái huà	1
 怀集	huái jí	1
 怀旧服	huái jiù fú	1
 淮南	huái nán	1
 怀柔	huái róu	1
+怀沙	huái shā	1
+怀真	huái zhēn	1
 换刀	huàn dāo	1
+欢呼	huān hū	1
+欢呼声	huān hū shēng	1
 换届	huàn jiè	1
 欢乐	huān lè	1
 幻棱	huàn léng	1
@@ -2196,20 +2641,21 @@ sort: by_weight
 幻神	huàn shén	1
 幻视任务	huàn shì rèn wù	1
 幻术	huàn shù	1
-幻丝	huàn sī	1
 桓台	huán tái	1
+换血	huàn xiě	1
 唤醒	huàn xǐng	1
 欢愉	huān yú	1
 换钻	huàn zuàn	1
 黄渤	huáng bó	1
-黄盾	huáng dùn	1
 黄蜂	huáng fēng	1
 黄盖	huáng gài	1
 皇岗	huáng gǎng	1
 黄冈	huáng gāng	1
+黄冠亨	huáng guàn hēng	1
 黄海	huáng hǎi	1
 黄河	huáng hé	1
 黄鹤楼	huáng hè lóu	1
+黄佳	huáng jiā	1
 黄建发	huáng jiàn fā	1
 黄金	huáng jīn	1
 黄金裔	huáng jīn yì	1
@@ -2221,9 +2667,11 @@ sort: by_weight
 黄敏珊	huáng mǐn shān	1
 黄明昊	huáng míng hào	1
 黄牛	huáng niú	1
+黄牌	huáng pái	1
 黄陂	huáng pí	1
 黄皮肤	huáng pí fū	1
 黄平	huáng píng	1
+黄浦警方	huáng pǔ jǐng fāng	1
 黄泉	huáng quán	1
 黄仁	huáng rén	1
 黄仁勋	huáng rén xūn	1
@@ -2231,18 +2679,21 @@ sort: by_weight
 黄石	huáng shí	1
 黄鼠狼	huáng shǔ láng	1
 黄滕酒	huáng téng jiǔ	1
+黄婷	huáng tíng	1
 黄婷婷	huáng tíng tíng	1
 黄伟	huáng wěi	1
-黄喜忠	huáng xǐ zhōng	1
 黄晓明	huáng xiǎo míng	1
 黄霄云	huáng xiāo yún	1
-黄崖关	huáng yá guān	1
+黄旭东	huáng xù dōng	1
+黄鸭	huáng yā	1
+黄岩	huáng yán	1
+黄垚钦	huáng yáo qīn	1
 黄友政	huáng yǒu zhèng	1
 黄猿	huáng yuán	1
 黄乐	huáng yuè	1
-黄正利	huáng zhèng lì	1
 黄忠	huáng zhōng	1
 黄种人	huáng zhǒng rén	1
+幌子	huǎng zǐ	1
 皇子	huáng zǐ	1
 黄子弘凡	huáng zǐ hóng fán	1
 黄子韬	huáng zǐ tāo	1
@@ -2253,15 +2704,18 @@ sort: by_weight
 回春	huí chūn	1
 回春丹	huí chūn dān	1
 惠发	huì fā	1
+会给谁	huì gěi shuí	1
+回归基本功	huí guī jī běn gōng	1
 会后	huì hòu	1
 绘卷	huì juǎn	1
 回力	huí lì	1
 回流	huí liú	1
 绘旅人	huì lǚ rén	1
+惠民	huì mín	1
 回南天	huí nán tiān	1
+会宁	huì níng	1
 会师	huì shī	1
 绘世	huì shì	1
-会师决赛	huì shī jué sài	1
 回溯	huí sù	1
 回温	huí wēn	1
 辉小哥超市	huī xiǎo gē chāo shì	1
@@ -2270,6 +2724,7 @@ sort: by_weight
 会意	huì yì	1
 会议	huì yì	1
 会泽	huì zé	1
+回正	huí zhèng	1
 惠州	huì zhōu	1
 回转	huí zhuǎn	1
 汇总	huì zǒng	1
@@ -2281,9 +2736,11 @@ sort: by_weight
 婚恋	hūn liàn	1
 浑南	hún nán	1
 魂师	hún shī	1
+婚书	hūn shū	1
 混刷	hún shuā	1
 混双	hún shuāng	1
 魂天帝	hún tiān dì	1
+昏头	hūn tóu	1
 混团	hún tuán	1
 婚宴	hūn yàn	1
 魂游	hún you	1
@@ -2291,23 +2748,31 @@ sort: by_weight
 昏招频出	hūn zhāo pín chū	1
 货币	huò bì	1
 货币战争	huò bì zhàn zhēng	1
+火车头	huǒ chē tóu	1
 火陈	huǒ chén	1
 火二	huǒ èr	1
+霍尔果斯	huò ěr guǒ sī	1
 霍尔海雅	huò ěr hǎi yǎ	1
 霍尔木兹海峡	huò ěr mù zī hǎi xiá	1
 火锅店	huǒ guō diàn	1
+火候	huǒ hòu	1
 霍家	huò jiā	1
 火箭	huǒ jiàn	1
 霍建华	huò jiàn huá	1
 火箭军	huǒ jiàn jūn	1
+获奖感言	huò jiǎng gǎn yán	1
 祸津神	huò jīn shén	1
 火流星	huǒ liú xīng	1
 火龙魂	huǒ lóng hún	1
+火女	huǒ nǚ	1
 火螃蟹	huǒ páng xiè	1
+火炮	huǒ pào	1
 霍启刚	huò qǐ gāng	1
 霍启山	huò qǐ shān	1
 活塞	huó sāi	1
 火星	huǒ xīng	1
+火星演唱会	huǒ xīng yǎn chàng huì	1
+霍伊伦	huò yī lún	1
 火影忍者	huǒ yǐng rěn zhě	1
 火影忍者手游	huǒ yǐng rěn zhě shǒu you	1
 火雨	huǒ yǔ	1
@@ -2326,14 +2791,16 @@ sort: by_weight
 基础班	jī chǔ bān	1
 鸡蛋	jī dàn	1
 鸡蛋仔	jī dàn zǎi	1
+基地	jī dì	1
+基地爆炸	jī dì bào zhà	1
 基点	jī diǎn	1
 机动车	jī dòng chē	1
 季度	jì dù	1
 极恶老大	jí è lǎo dà	1
 纪梵希	jì fàn xī	1
 计费	jì fèi	1
-积分卡	jī fēn kǎ	1
 基辅	jī fǔ	1
+吉格斯	jí gé sī	1
 济公	jì gōng	1
 机构	jī gòu	1
 机关	jī guān	1
@@ -2344,12 +2811,14 @@ sort: by_weight
 季候风	jì hòu fēng	1
 季后赛	jì hòu sài	1
 集会	jí huì	1
+集火	jí huǒ	1
 积极分子	jī jí fēn zǐ	1
+季季红	jì jì hóng	1
 技嘉	jì jiā	1
 纪检	jì jiǎn	1
 几阶段了	jǐ jiē duàn le	1
-集结篇	jí jié piān	1
 基金	jī jīn	1
+集锦	jí jǐn	1
 寂静岭	jì jìng lǐng	1
 季军	jì jūn	1
 集卡	jí kǎ	1
@@ -2360,6 +2829,7 @@ sort: by_weight
 吉利	jí lì	1
 吉林	jí lín	1
 吉林省	jí lín shěng	1
+吉林省气象台	jí lín shěng qì xiàng tái	1
 吉林市	jí lín shì	1
 吉隆坡	jí lóng pō	1
 纪录	jì lù	1
@@ -2368,27 +2838,35 @@ sort: by_weight
 基米	jī mǐ	1
 积木	jī mù	1
 济南	jì nán	1
+济南机场海关	jì nán jī chǎng hǎi guān	1
+技能书	jì néng shū	1
 基尼奇	jī ní qí	1
-吉尼斯世界纪录	jí ní sī shì jiè jì lù	1
 纪念日	jì niàn rì	1
 济宁	jì níng	1
+济宁市	jì níng shì	1
 奇偶	jī ǒu	1
+疾跑	jí pǎo	1
+机器猫	jī qì māo	1
 机器人	jī qì rén	1
 击球	jī qiú	1
 计入	jì rù	1
 吉赛尔	jí sài ěr	1
 及时行乐	jí shí xíng lè	1
 基数	jī shù	1
+技术部	jì shù bù	1
+技术暂停	jì shù zàn tíng	1
 极速退款	jí sù tuì kuǎn	1
 疾速追杀	jí sù zhuī shā	1
 计算机	jì suàn jī	1
 计算卡	jì suàn kǎ	1
+击碎	jī suì	1
 集体复刻	jí tǐ fù kè	1
 集团	jí tuán	1
 集团军	jí tuán jūn	1
 机尾	jī wěi	1
 纪委	jì wěi	1
 机洗	jī xǐ	1
+鸡西	jī xī	1
 极限挑战	jí xiàn tiāo zhàn	1
 吉祥	jí xiáng	1
 吉祥如意	jí xiáng rú yì	1
@@ -2409,13 +2887,16 @@ sort: by_weight
 济源	jì yuán	1
 记者	jì zhě	1
 记者节	jì zhě jié	1
+季中赛	jì zhōng sài	1
 济州岛	jì zhōu dǎo	1
 价保	jià bǎo	1
+嘉宾	jiā bīn	1
 夹饼	jiá bing	1
 贾冰	jiǎ bīng	1
 加补	jiā bǔ	1
 加仓	jiā cāng	1
 假唱	jiǎ chàng	1
+家长里短	jiā cháng lǐ duǎn	1
 加抵金	jiā dǐ jīn	1
 贾东普	jiǎ dōng pǔ	1
 加更	jiā gèng	1
@@ -2431,6 +2912,8 @@ sort: by_weight
 加宽	jiā kuān	1
 加里奥	jiā lǐ ào	1
 贾玲	jiǎ líng	1
+加码	jiā mǎ	1
+加冕	jiā miǎn	1
 贾明儒	jiǎ míng rú	1
 加木	jiā mù	1
 佳木斯	jiā mù sī	1
@@ -2444,9 +2927,14 @@ sort: by_weight
 家人们	jiā rén men	1
 加绒裤	jiā róng kù	1
 假赛	jiǎ sài	1
+加塞	jiā sāi	1
+加赛	jiā sài	1
+加沙	jiā shā	1
+假山	jiǎ shān	1
 嘉善	jiā shàn	1
 加时	jiā shí	1
 假条	jiǎ tiáo	1
+家庭套餐	jiā tíng tào cān	1
 家庭组	jiā tíng zǔ	1
 家委	jiā wěi	1
 嘉文	jiā wén	1
@@ -2461,32 +2949,41 @@ sort: by_weight
 加页	jiā yè	1
 加页手记	jiā yè shǒu jì	1
 加衣	jiā yī	1
+甲乙	jiǎ yǐ	1
+佳音	jiā yīn	1
 家有儿女	jiā yǒu ér nǚ	1
 加油站	jiā yóu zhàn	1
 嘉峪关	jiā yù guān	1
+家越	jiā yuè	1
 加州	jiā zhōu	1
 甲子	jiǎ zǐ	1
 家族款	jiā zú kuǎn	1
-建仓	jiàn cāng	1
+肩并肩	jiān bìng jiān	1
 尖草坪区	jiān cǎo píng qū	1
 检察院	jiǎn chá yuàn	1
 健次	jiàn cì	1
 健达	jiàn dá	1
 间谍	jiān dié	1
 鉴定	jiàn dìng	1
+坚定所信	jiān dìng suǒ xìn	1
 减肥针	jiǎn féi zhēn	1
+煎锅	jiān guō	1
 剑姬	jiàn jī	1
+碱基	jiǎn jī	1
 蒹葭	jiān jiā	1
 健健康康	jiàn jiàn kāng kāng	1
 尖叫之夜	jiān jiào zhī yè	1
+尖叫之夜阵容	jiān jiào zhī yè zhèn róng	1
 健康	jiàn kāng	1
 健康系统	jiàn kāng xì tǒng	1
 监考	jiān kǎo	1
 剑来	jiàn lái	1
 健力宝	jiàn lì bǎo	1
 剑灵	jiàn líng	1
+剪毛	jiǎn máo	1
 见面会	jiàn miàn huì	1
 剑魔	jiàn mó	1
+艰难	jiān nán	1
 柬埔寨	jiǎn pǔ zhài	1
 剑桥科技	jiàn qiáo kē jì	1
 建设银行	jiàn shè yín háng	1
@@ -2494,11 +2991,18 @@ sort: by_weight
 坚守	jiān shǒu	1
 简隋英	jiǎn suí yīng	1
 尖塔	jiān tǎ	1
+检验科	jiǎn yàn kē	1
 简阳	jiǎn yáng	1
 剪映	jiǎn yìng	1
+减员	jiǎn yuán	1
+见证历史	jiàn zhèng lì shǐ	1
+剑指	jiàn zhǐ	1
 剪纸	jiǎn zhǐ	1
+简中	jiǎn zhōng	1
 腱子肉	jiàn zǐ ròu	1
+尖嘴	jiān zuǐ	1
 酱爆	jiàng bào	1
+奖杯	jiǎng bēi	1
 姜饼人	jiāng bing rén	1
 姜饼屋	jiāng bing wū	1
 姜大哥	jiāng dà gē	1
@@ -2511,6 +3015,8 @@ sort: by_weight
 姜姜	jiāng jiāng	1
 蒋蒋	jiǎng jiǎng	1
 讲解石	jiǎng jiě shí	1
+讲解员	jiǎng jiě yuán	1
+浆料	jiāng liào	1
 蒋龙	jiǎng lóng	1
 江门	jiāng mén	1
 江南	jiāng nán	1
@@ -2518,6 +3024,7 @@ sort: by_weight
 僵尸	jiāng shī	1
 江苏	jiāng sū	1
 江苏省	jiāng sū shěng	1
+江苏省教育厅	jiāng sū shěng jiào yù tīng	1
 江苏卫视	jiāng sū wèi shì	1
 讲台	jiǎng tái	1
 将太郎	jiāng tài láng	1
@@ -2535,6 +3042,7 @@ sort: by_weight
 江油	jiāng yóu	1
 降雨	jiàng yǔ	1
 江原	jiāng yuán	1
+江月	jiāng yuè	1
 江浙沪	jiāng zhè hù	1
 教导	jiào dǎo	1
 校对	jiào duì	1
@@ -2548,6 +3056,7 @@ sort: by_weight
 教练组	jiào liàn zǔ	1
 剿灭	jiǎo miè	1
 教母	jiào mǔ	1
+胶黏	jiāo nián	1
 椒丘	jiāo qiū	1
 角球	jiǎo qiú	1
 椒人	jiāo rén	1
@@ -2555,21 +3064,20 @@ sort: by_weight
 教室	jiào shì	1
 教师	jiào shī	1
 教师节	jiào shī jié	1
-教师资格	jiào shī zī gé	1
 教师资格证	jiào shī zī gé zhèng	1
 教授	jiào shòu	1
 教书	jiào shū	1
-交通运输部	jiāo tōng yùn shū bù	1
+交通事故	jiāo tōng shì gù	1
 教务处	jiào wù chù	1
 教学楼	jiào xué lóu	1
 骄阳	jiāo yáng	1
 教育部	jiào yù bù	1
 教育局	jiào yù jú	1
 教员	jiào yuán	1
+焦灼	jiāo zhuó	1
 教资	jiào zī	1
 饺子	jiǎo zǐ	1
 饺子店	jiǎo zǐ diàn	1
-教资面试	jiào zī miàn shì	1
 饺子馅	jiǎo zǐ xiàn	1
 轿子雪山	jiào zǐ xuě shān	1
 焦作	jiāo zuò	1
@@ -2583,6 +3091,8 @@ sort: by_weight
 皆大欢喜	jiē dà huān xǐ	1
 借读	jiè dú	1
 解放军	jiě fàng jūn	1
+接管比赛	jiē guǎn bǐ sài	1
+接轨	jiē guǐ	1
 结婚照	jié hūn zhào	1
 接机	jiē jī	1
 解解	jiě jiě	1
@@ -2601,20 +3111,28 @@ sort: by_weight
 节日	jié rì	1
 节日快乐	jié rì kuài lè	1
 杰士邦	jié shì bāng	1
+结束语	jié shù yǔ	1
 结霜	jié shuāng	1
 结霜了	jié shuāng le	1
+解说	jiě shuō	1
+解说席	jiě shuō xí	1
 杰斯	jié sī	1
 解体	jiě tǐ	1
 借条	jiè tiáo	1
 捷途	jié tú	1
+接团	jiē tuán	1
 解围	jiě wéi	1
 介休	jiè xiū	1
 揭阳	jiē yáng	1
 解约	jiě yuē	1
+节奏	jié zòu	1
+金安哨兵	jīn ān shào bīng	1
 金币	jīn bì	1
 进博会	jìn bó huì	1
 进补	jìn bǔ	1
 金钗	jīn chāi	1
+金蝉	jīn chán	1
+进场	jìn chǎng	1
 金晨	jīn chén	1
 晋城	jìn chéng	1
 金城江	jīn chéng jiāng	1
@@ -2625,6 +3143,8 @@ sort: by_weight
 金刚狼	jīn gāng láng	1
 金哥	jīn gē	1
 金戈	jīn gē	1
+进攻型	jìn gōng xíng	1
+进攻压力	jìn gōng yā lì	1
 金谷	jīn gǔ	1
 金箍棒	jīn gū bàng	1
 金谷园	jīn gǔ yuán	1
@@ -2638,21 +3158,21 @@ sort: by_weight
 晋级	jìn jí	1
 金鸡	jīn jī	1
 金鸡奖	jīn jī jiǎng	1
-晋级四强	jìn jí sì qiáng	1
 金价	jīn jià	1
-金价下跌	jīn jià xià diē	1
-金健米业	jīn jiàn mǐ yè	1
 金角	jīn jiǎo	1
+进决赛	jìn jué sài	1
 金克丝	jīn kè sī	1
 金克斯	jīn kè sī	1
 近况	jìn kuàng	1
-禁令	jìn lìng	1
+尽力局	jìn lì jú	1
 金灵	jīn líng	1
 金马	jīn mǎ	1
 金门	jīn mén	1
 津门虎	jīn mén hǔ	1
 进面	jìn miàn	1
+筋膜	jīn mó	1
 金牛区	jīn niú qū	1
+金牛区委政法委	jīn niú qū wěi zhèng fǎ wěi	1
 金平	jīn píng	1
 金苹果	jīn píng guǒ	1
 锦旗	jǐn qí	1
@@ -2690,6 +3210,7 @@ sort: by_weight
 金项链	jīn xiang liàn	1
 尽孝	jìn xiào	1
 金星	jīn xīng	1
+金雪	jīn xuě	1
 金摇杆	jīn yáo gǎn	1
 金银花露	jīn yín huā lù	1
 金鹰	jīn yīng	1
@@ -2697,6 +3218,7 @@ sort: by_weight
 金枝	jīn zhī	1
 金智秀	jīn zhì xiù	1
 锦州	jǐn zhōu	1
+金珠	jīn zhū	1
 金主训	jīn zhǔ xùn	1
 金砖	jīn zhuān	1
 金子涵	jīn zǐ hán	1
@@ -2704,7 +3226,9 @@ sort: by_weight
 靖安	jìng ān	1
 警报	jǐng bào	1
 井柏然	jǐng bó rán	1
+精彩	jīng cǎi	1
 警车	jǐng chē	1
+精粹	jīng cuì	1
 镜的第三乐章	jìng de dì sān yuè zhāng	1
 景德镇	jǐng dé zhèn	1
 井底	jǐng dǐ	1
@@ -2712,7 +3236,6 @@ sort: by_weight
 京东	jīng dōng	1
 京东方	jīng dōng fāng	1
 京东全球购	jīng dōng quán qiú gòu	1
-京东外卖	jīng dōng wài mài	1
 精度	jīng dù	1
 精防	jīng fáng	1
 警方	jǐng fāng	1
@@ -2722,6 +3245,7 @@ sort: by_weight
 净汉	jìng hàn	1
 警号	jǐng hào	1
 惊魂迷影	jīng hún mí yǐng	1
+经济	jīng jì	1
 经济舱	jīng jì cāng	1
 经济差	jīng jì chà	1
 京介	jīng jiè	1
@@ -2730,19 +3254,25 @@ sort: by_weight
 鲸口脱险	jīng kǒu tuō xiǎn	1
 敬礼	jìng lǐ	1
 经理	jīng lǐ	1
+精灵球	jīng líng qiú	1
 荆门	jīng mén	1
 精密	jīng mì	1
 竞燃之夜	jìng rán zhī yè	1
 净胜球	jìng shèng qiú	1
 晶石	jīng shí	1
 警示片	jǐng shì piàn	1
-静水	jìng shuǐ	1
 景甜	jǐng tián	1
+惊险	jīng xiǎn	1
+镜像	jìng xiàng	1
+静香	jìng xiāng	1
+镜像对决	jìng xiàng duì jué	1
+惊心动魄	jīng xīn dòng pò	1
 景喻	jǐng yù	1
 鲸鱼	jīng yú	1
 景元	jǐng yuán	1
 靖远	jìng yuǎn	1
 景元元	jǐng yuán yuán	1
+精忠	jīng zhōng	1
 警钟	jǐng zhōng	1
 精忠报国	jīng zhōng bào guó	1
 警钟长鸣	jǐng zhōng cháng míng	1
@@ -2754,10 +3284,11 @@ sort: by_weight
 酒店	jiǔ diàn	1
 纠纷	jiū fēn	1
 酒红色	jiǔ hóng sè	1
+究极	jiū jí	1
+玖嘉久	jiǔ jiā jiǔ	1
 九九	jiǔ jiǔ	1
 舅舅家	jiù jiù jiā	1
 九科	jiǔ kē	1
-就立冬了	jiù lì dōng le	1
 久留美	jiǔ liú měi	1
 九龙坡	jiǔ lóng pō	1
 九门	jiǔ mén	1
@@ -2766,10 +3297,13 @@ sort: by_weight
 九三	jiǔ sān	1
 九色鹿	jiǔ sè lù	1
 酒神	jiǔ shén	1
-救市	jiù shì	1
 救死扶伤	jiù sǐ fú shāng	1
 酒桶	jiǔ tǒng	1
+旧图	jiù tú	1
 九尾	jiǔ wěi	1
+就位	jiù wèi	1
+揪心	jiū xīn	1
+就绪	jiù xù	1
 九月底	jiǔ yuè dǐ	1
 九寨沟	jiǔ zhài gōu	1
 久哲	jiǔ zhé	1
@@ -2787,20 +3321,26 @@ sort: by_weight
 剧烈	jù liè	1
 剧烈运动	jù liè yùn dòng	1
 橘猫	jú māo	1
+局面	jú miàn	1
 巨魔	jù mó	1
 剧目	jù mù	1
+巨幕	jù mù	1
 剧诗	jù shī	1
 局势	jú shì	1
+巨石	jù shí	1
+剧透贴	jù tòu tiē	1
 莒县	jǔ xiàn	1
 剧宣	jù xuān	1
 剧院	jù yuàn	1
 局长	jú zhǎng	1
+鞠振	jū zhèn	1
 锯子	jù zǐ	1
 剧组	jù zǔ	1
 决策	jué cè	1
 绝唱	jué chàng	1
 绝代	jué dài	1
 决定	jué dìng	1
+绝活	jué huó	1
 绝技	jué jì	1
 掘金	jué jīn	1
 绝境	jué jìng	1
@@ -2811,9 +3351,9 @@ sort: by_weight
 决赛	jué sài	1
 绝色	jué sè	1
 绝杀	jué shā	1
+决胜	jué shèng	1
 决胜局	jué shèng jú	1
 爵士	jué shì	1
-绝望罗	jué wàng luó	1
 绝弦	jué xián	1
 觉醒	jué xǐng	1
 绝学	jué xué	1
@@ -2826,8 +3366,11 @@ sort: by_weight
 均分	jūn fēn	1
 军工	jūn gōng	1
 君乐宝	jūn lè bǎo	1
+骏良	jùn liáng	1
+君少天	jūn shǎo tiān	1
+军事	jūn shì	1
 均势	jūn shì	1
-骏卫	jùn wèi	1
+军心	jūn xīn	1
 军需	jūn xū	1
 军训	jūn xùn	1
 君悦酒店	jūn yuè jiǔ diàn	1
@@ -2846,35 +3389,48 @@ sort: by_weight
 卡哥	kǎ gē	1
 卡姐	kǎ jiě	1
 卡卡罗	kǎ kǎ luó	1
-卡拉的审判	kǎ lā de shěn pàn	1
 卡乐比	kǎ lè bǐ	1
 卡里克	kǎ lǐ kè	1
+卡莉斯塔	kǎ lì sī tǎ	1
 卡利亚里	kǎ lì yà lǐ	1
+卡列	kǎ liè	1
 卡妈	kǎ mā	1
 卡门	kǎ mén	1
 卡密尔	kǎ mì ěr	1
+卡米尔	kǎ mǐ ěr	1
+卡蜜尔	kǎ mì ěr	1
 卡缪	kǎ miù	1
 卡尼	kǎ ní	1
+卡牌	kǎ pái	1
+卡戎	kǎ róng	1
 卡莎	kǎ shā	1
+卡神	kǎ shén	1
 卡塔尔	kǎ tǎ ěr	1
+卡位置	kǎ wèi zhì	1
 卡西米尔	kǎ xī mǐ ěr	1
 卡宴	kǎ yàn	1
+开场	kāi chǎng	1
+开场舞	kāi chǎng wǔ	1
 开抽	kāi chōu	1
+开打	kāi dǎ	1
 凯迪拉克	kǎi dí lā kè	1
-凯蒂猫	kǎi dì māo	1
 凯恩	kǎi ēn	1
 凯尔特人	kǎi ěr tè rén	1
 开阀门	kāi fá mén	1
-开封万岁山武侠城	kāi fēng wàn suì shān wǔ xiá chéng	1
 凯歌	kǎi gē	1
 开国	kāi guó	1
 开盒	kāi hé	1
 开化	kāi huà	1
+开机键	kāi jī jiàn	1
+开看	kāi kàn	1
+开考	kāi kǎo	1
+凯乐	kǎi lè	1
 凯乐石	kǎi lè shí	1
 凯莉	kǎi lì	1
 凯里	kǎi lǐ	1
 开门红	kāi mén hóng	1
 开门战	kāi mén zhàn	1
+开幕	kāi mù	1
 开幕式	kāi mù shì	1
 凯南	kǎi nán	1
 开盘	kāi pán	1
@@ -2882,10 +3438,13 @@ sort: by_weight
 开赛	kāi sài	1
 凯瑟琳	kǎi sè lín	1
 开蛇	kāi shé	1
+开始清算	kāi shǐ qīng suàn	1
 开送	kāi sòng	1
 开庭	kāi tíng	1
+开团	kāi tuán	1
 开拓	kāi tuò	1
 开拓者	kāi tuò zhě	1
+开香槟	kāi xiāng bīn	1
 开心果	kāi xīn guǒ	1
 凯亚	kǎi yà	1
 凯源	kǎi yuán	1
@@ -2893,6 +3452,7 @@ sort: by_weight
 开闸	kāi zhá	1
 看红果	kàn hóng guǒ	1
 坎肩	kǎn jiān	1
+看力竭了	kàn lì jié le	1
 坎宁安	kǎn níng ān	1
 坎诺特	kǎn nuò tè	1
 看守所	kàn shǒu suǒ	1
@@ -2902,7 +3462,6 @@ sort: by_weight
 侃爷	kǎn yé	1
 刊用	kān yòng	1
 抗打	kàng dǎ	1
-抗跌	kàng diē	1
 康定	kāng dìng	1
 亢奋	kàng fèn	1
 康哥	kāng gē	1
@@ -2911,21 +3470,24 @@ sort: by_weight
 康辉	kāng huī	1
 康康	kāng kāng	1
 抗美援朝	kàng měi yuán cháo	1
+康平路	kāng píng lù	1
 抗日	kàng rì	1
 康神	kāng shén	1
 康神开播了	kāng shén kāi bō le	1
 康师傅	kāng shī fù	1
 康特	kāng tè	1
 康熙	kāng xī	1
+抗压	kàng yā	1
 抗战	kàng zhàn	1
 烤肠	kǎo cháng	1
 考点	kǎo diǎn	1
 烤红薯	kǎo hóng shǔ	1
 烤火器	kǎo huǒ qì	1
 烤匠	kǎo jiàng	1
+考量	kǎo liàng	1
 烤肉店	kǎo ròu diàn	1
 考试费	kǎo shì fèi	1
-考文垂	kǎo wén chuí	1
+考题	kǎo tí	1
 考研人数	kǎo yán rén shù	1
 科比	kē bǐ	1
 课表	kè biǎo	1
@@ -2936,7 +3498,7 @@ sort: by_weight
 客单价	kè dān jià	1
 蝌蚪	kē dǒu	1
 科二	kē èr	1
-科尔	kē ěr	1
+克尔白	kè ěr bái	1
 客观	kè guān	1
 客户端	kè hù duān	1
 科技	kē jì	1
@@ -2954,6 +3516,7 @@ sort: by_weight
 克雷斯	kè léi sī	1
 克里斯	kè lǐ sī	1
 克烈	kè liè	1
+克林	kè lín	1
 科隆	kē lóng	1
 可露丽	kě lù lì	1
 可露希尔	kě lù xī ěr	1
@@ -2966,6 +3529,7 @@ sort: by_weight
 科三	kē sān	1
 科室	kē shì	1
 可颂猫	kě sòng māo	1
+科索沃	kē suǒ wò	1
 科维奇	kē wéi qí	1
 课文	kè wén	1
 科沃斯	kē wò sī	1
@@ -2975,27 +3539,35 @@ sort: by_weight
 肯德基	kěn dé jī	1
 肯恰那	kěn qià nà	1
 恐怖分子	kǒng bù fēn zǐ	1
-空仓	kōng cāng	1
 空城计	kōng chéng jì	1
+空大	kōng dà	1
+空耳	kōng ěr	1
+控分	kòng fēn	1
 控股	kòng gǔ	1
 恐慌	kǒng huāng	1
+控价	kòng jià	1
 空军	kōng jūn	1
 空空儿	kōng kōng ér	1
+控龙	kòng lóng	1
 空门	kōng mén	1
 孔明灯	kǒng míng dēng	1
 空气能	kōng qì néng	1
 空枪	kōng qiāng	1
 空投	kōng tóu	1
 空弦	kōng xián	1
+控制链	kòng zhì liàn	1
 孔子	kǒng zǐ	1
 空子	kōng zǐ	1
+口令码	kǒu lìng mǎ	1
 库车	kù chē	1
 库车市	kù chē shì	1
 库底	kù dǐ	1
 库迪	kù dí	1
+酷儿	kù ér	1
 库尔勒	kù ěr lè	1
 库克	kù kè	1
 库里	kù lǐ	1
+骷髅头	kū lóu tóu	1
 库洛	kù luò	1
 库洛米	kù luò mǐ	1
 酷洛米	kù luò mǐ	1
@@ -3003,22 +3575,23 @@ sort: by_weight
 库什纳	kù shi nà	1
 哭娃	kū wá	1
 夸定云	kuā dìng yún	1
+跨服要塞	kuà fú yào sāi	1
+跨行	kuà háng	1
 跨境	kuà jìng	1
 跨年场	kuà nián chǎng	1
-快查	kuài chá	1
-快船	kuài chuán	1
 会计	kuài jì	1
 会计师	kuài jì shī	1
 快乐	kuài lè	1
 蒯曼	kuǎi màn	1
-快慢刀	kuài màn dāo	1
 快手	kuài shǒu	1
+快鱼	kuài yú	1
 宽体	kuān tǐ	1
 狂潮	kuáng cháo	1
 狂风	kuáng fēng	1
 狂风大作	kuáng fēng dà zuò	1
 邝港杰	kuàng gǎng jié	1
 邝港智	kuàng gǎng zhì	1
+狂哥	kuáng gē	1
 旷课	kuàng kè	1
 哐哐响	kuāng kuāng xiǎng	1
 邝玲玲	kuàng líng líng	1
@@ -3028,20 +3601,30 @@ sort: by_weight
 狂妄	kuáng wàng	1
 匡威	kuāng wēi	1
 狂想	kuáng xiǎng	1
+狂想曲	kuáng xiǎng qǔ	1
+框住	kuàng zhù	1
+溃败	kuì bài	1
 亏麻	kuī má	1
+亏麻了	kuī má le	1
 奎桑提	kuí sāng tí	1
+亏贼	kuī zéi	1
 捆绑包	kǔn bǎng bāo	1
+困困兔	kùn kùn tù	1
 昆明	kūn míng	1
 昆山	kūn shān	1
+扩大	kuò dà	1
 阔直板	kuò zhí bǎn	1
 拉扯	lā chě	1
+拉法	lā fǎ	1
 拉菲	lā fēi	1
+拉菲尼亚	lā fēi ní yà	1
 拉风	lā fēng	1
 拉夫	lā fū	1
-拉红	lā hóng	1
-拉红了	lā hóng le	1
+垃圾话	lā jī huà	1
+垃圾时间	lā jī shí jiān	1
 拉克丝	lā kè sī	1
 拉拉队员	lā lā duì yuán	1
+拉莫斯	lā mò sī	1
 拉姆	lā mǔ	1
 拉普兰德	lā pǔ lán dé	1
 拉齐奥	lā qí ào	1
@@ -3054,18 +3637,23 @@ sort: by_weight
 徕芬	lái fēn	1
 徕卡	lái kǎ	1
 莱莱	lái lái	1
+来力	lái lì	1
 来临	lái lín	1
+莱纳	lái nà	1
 莱欧	lái ōu	1
 赖清德	lài qīng dé	1
 赖斯	lài sī	1
 莱塔尼亚	lái tǎ ní yà	1
 莱西	lái xī	1
+莱西奥	lái xī ào	1
 莱亚	lái yà	1
 来战	lái zhàn	1
+来者	lái zhě	1
 蓝桉	lán ān	1
 篮板	lán bǎn	1
 兰博	lán bó	1
 蓝盾	lán dùn	1
+蓝方	lán fāng	1
 蓝光	lán guāng	1
 兰桂坊	lán guì fāng	1
 蓝核	lán hé	1
@@ -3080,15 +3668,19 @@ sort: by_weight
 篮球队	lán qiú duì	1
 蓝染	lán rǎn	1
 蓝仁	lán rén	1
+烂肉	làn ròu	1
+蓝色方	lán sè fāng	1
 蓝色光标	lán sè guāng biāo	1
 蓝山	lán shān	1
 兰神	lán shén	1
 兰斯	lán sī	1
 岚图	lán tú	1
+篮网	lán wǎng	1
 兰溪	lán xī	1
 兰西雅	lán xī yǎ	1
 兰香	lán xiāng	1
 兰香如故	lán xiāng rú gù	1
+蓝原	lán yuán	1
 揽月	lan yuè	1
 蓝月亮	lán yuè liàng	1
 兰州	lán zhōu	1
@@ -3097,6 +3689,7 @@ sort: by_weight
 郎才女貌	láng cái nǚ mào	1
 狼队	láng duì	1
 廊坊	láng fāng	1
+狼狗	láng gǒu	1
 朗朗	lǎng lǎng	1
 朗姆	lǎng mǔ	1
 狼母	láng mǔ	1
@@ -3107,10 +3700,14 @@ sort: by_weight
 老板娘	lǎo bǎn niáng	1
 牢布	láo bù	1
 老成	lǎo chéng	1
+老党员	lǎo dǎng yuán	1
+老队员	lǎo duì yuán	1
 老凤祥	lǎo fèng xiáng	1
-老疯杨	lǎo fēng yáng	1
+老夫子	lǎo fū zǐ	1
 老干爹	lǎo gàn diē	1
 老干妈	lǎo gàn mā	1
+老顾	lǎo gù	1
+老黑	lǎo hēi	1
 老侯	lǎo hóu	1
 老狐狸	lǎo hú lí	1
 老虎滩	lǎo hǔ tān	1
@@ -3126,11 +3723,14 @@ sort: by_weight
 老狼	lǎo láng	1
 老乐	lǎo lè	1
 老乐乐	lǎo lè lè	1
+劳累	láo lèi	1
 劳力士	láo lì shì	1
 老李头	lǎo lǐ tóu	1
 老廖	lǎo liào	1
+老龙	lǎo lóng	1
 老卢	lǎo lú	1
 老美	lǎo měi	1
+老墨	lǎo mò	1
 老穆	lǎo mù	1
 老尼	lǎo ní	1
 牢帕	láo pà	1
@@ -3138,14 +3738,17 @@ sort: by_weight
 老婆饼	lǎo pó bing	1
 老千	lǎo qiān	1
 老钱	lǎo qián	1
+老枪	lǎo qiāng	1
 老人	lǎo rén	1
 老人味	lǎo rén wèi	1
+老桑	lǎo sāng	1
 崂山	láo shān	1
 老舍	lǎo shě	1
 老师您辛苦了	lǎo shī nín xīn kǔ le	1
 老手机	lǎo shǒu jī	1
 老鼠	lǎo shǔ	1
 劳斯莱斯	láo sī lái sī	1
+老叟	lǎo sǒu	1
 老特	lǎo tè	1
 老头环	lǎo tóu huán	1
 老挝	lǎo wō	1
@@ -3161,18 +3764,21 @@ sort: by_weight
 乐高	lè gāo	1
 乐扣	lè kòu	1
 乐山	lè shān	1
-勒沃库森	lè wò kù sēn	1
 雷德	léi dé	1
+泪滴	lèi dī	1
 类魂	lèi hún	1
 雷军	léi jūn	1
 雷龙	léi lóng	1
 蕾米	lěi mǐ	1
 雷鸣	léi míng	1
+泪目	lèi mù	1
 雷鸟	léi niǎo	1
+雷鸟眼镜	léi niǎo yǎn jìng	1
 泪桥	lèi qiáo	1
 镭射票	léi shè piào	1
 雷神	léi shén	1
 雷霆	léi tíng	1
+雷伊	léi yī	1
 雷州	léi zhōu	1
 雷子	léi zǐ	1
 雷总	léi zǒng	1
@@ -3191,6 +3797,7 @@ sort: by_weight
 里昂	lǐ áng	1
 里奥	lǐ ào	1
 李白	lǐ bái	1
+礼包码	lǐ bāo mǎ	1
 利比里亚	lì bǐ lǐ yà	1
 李斌	lǐ bīn	1
 荔波	lì bō	1
@@ -3218,6 +3825,7 @@ sort: by_weight
 利好	lì hǎo	1
 李昊	lǐ hào	1
 李浩然	lǐ hào rán	1
+李浩宇	lǐ hào yǔ	1
 李红	lǐ hóng	1
 李宏毅	lǐ hóng yì	1
 李华	lǐ huá	1
@@ -3225,21 +3833,26 @@ sort: by_weight
 例会	lì huì	1
 李辉	lǐ huī	1
 李嘉诚	lǐ jiā chéng	1
+李佳航	lǐ jiā háng	1
 李佳琦	lǐ jiā qí	1
 李佳琪	lǐ jiā qí	1
 李佳怡	lǐ jiā yí	1
 李健	lǐ jiàn	1
+李建	lǐ jiàn	1
 丽江	lì jiāng	1
+历届	lì jiè	1
 礼金	lǐ jīn	1
 李静	lǐ jìng	1
+李九	lǐ jiǔ	1
 离开家很过分打撒	lí kāi jiā hěn guò fēn dǎ sǎ	1
 李克杰	lǐ kè jié	1
 李克勤	lǐ kè qín	1
 利空	lì kōng	1
-利空出尽	lì kōng chū jìn	1
 李磊	lǐ lěi	1
 李李	lǐ lǐ	1
+狸狸	lí lí	1
 莉莉	lì lì	1
+黎黎	lí lí	1
 李连杰	lǐ lián jié	1
 李亮	lǐ liàng	1
 利率	lì lǜ	1
@@ -3256,14 +3869,17 @@ sort: by_weight
 利欧	lì ōu	1
 荔浦	lì pǔ	1
 李琦	lǐ qí	1
+李琪	lǐ qí	1
 李强	lǐ qiáng	1
 李沁	lǐ qìn	1
-李青蓉	lǐ qīng róng	1
+李青	lǐ qīng	1
 李清照	lǐ qīng zhào	1
 立秋	lì qiū	1
+礼泉	lǐ quán	1
 李荣	lǐ róng	1
 李荣浩	lǐ róng hào	1
 黎深	lí shēn	1
+历史记录	lì shǐ jì lù	1
 历史性	lì shǐ xìng	1
 李叔	lǐ shū	1
 李帅	lǐ shuài	1
@@ -3285,6 +3901,7 @@ sort: by_weight
 李想	lǐ xiǎng	1
 理想	lǐ xiǎng	1
 立项	lì xiang	1
+理想国	lǐ xiǎng guó	1
 李相赫	lǐ xiāng hè	1
 李小璐	lǐ xiǎo lù	1
 李小冉	lǐ xiǎo rǎn	1
@@ -3295,19 +3912,22 @@ sort: by_weight
 李雪	lǐ xuě	1
 李寻欢	lǐ xún huān	1
 利雅得	lì yǎ dé	1
-李彦宏	lǐ yàn hóng	1
 李洋	lǐ yáng	1
+立业	lì yè	1
 李一桐	lǐ yī tóng	1
 李艺彤	lǐ yì tóng	1
 李玉	lǐ yù	1
 李宇春	lǐ yǔ chūn	1
 李煜东	lǐ yù dōng	1
 李雨桐	lǐ yǔ tóng	1
+李雨欣	lǐ yǔ xīn	1
 璃月	lí yuè	1
+里约	lǐ yuē	1
 李昀锐	lǐ yún ruì	1
 李泽	lǐ zé	1
 礼赠	lǐ zèng	1
 李志	lǐ zhì	1
+荔枝味	lì zhī wèi	1
 理中客	lǐ zhōng kè	1
 李钟硕	lǐ zhōng shuò	1
 立住	lì zhù	1
@@ -3315,34 +3935,50 @@ sort: by_weight
 礼装	lǐ zhuāng	1
 离子	lí zǐ	1
 利兹联	lì zī lián	1
+李自威	lǐ zì wēi	1
+栗子味	lì zǐ wèi	1
 李子园	lǐ zǐ yuán	1
+廉斌	lián bīn	1
 连城	lián chéng	1
 连读	lián dú	1
 连放	lián fàng	1
 连根拔起	lián gēn bá qǐ	1
+连冠	lián guàn	1
 联合国	lián hé guó	1
+莲湖	lián hú	1
 炼化	liàn huà	1
 莲花楼	lián huā lóu	1
 廉江	lián jiāng	1
+炼金	liàn jīn	1
+连襟	lián jīn	1
 连金	lián jīn	1
 联络	lián luò	1
 连麻	lián má	1
+联盟	lián méng	1
+连扑	lián pū	1
 恋人	liàn rén	1
 涟水	lián shuǐ	1
 连锁反应	lián suǒ fǎn yìng	1
 联想	lián xiǎng	1
 连携	lián xié	1
 连携技	lián xié jì	1
+连赢	lián yíng	1
 恋与深空	liàn yǔ shēn kōng	1
 连云港	lián yún gǎng	1
+连斩	lián zhǎn	1
 连追	lián zhuī	1
+廉子文	lián zǐ wén	1
 恋综	liàn zōng	1
+两波团	liǎng bō tuán	1
 量产	liàng chǎn	1
 梁朝伟	liáng cháo wěi	1
 良辰	liáng chén	1
 良方	liáng fāng	1
+亮光	liàng guāng	1
+量级	liàng jí	1
 梁家辉	liáng jiā huī	1
 亮剑	liàng jiàn	1
+两路	liǎng lù	1
 两门	liǎng mén	1
 亮面	liàng miàn	1
 梁平	liáng píng	1
@@ -3350,12 +3986,18 @@ sort: by_weight
 两球	liǎng qiú	1
 凉山	liáng shān	1
 凉飕飕的	liáng sōu sōu de	1
+亮眼	liàng yǎn	1
+梁赞州	liáng zàn zhōu	1
 量子	liàng zǐ	1
 聊城	liáo chéng	1
+辽阔	liáo kuò	1
+寥寥无几	liáo liáo wú jǐ	1
 辽宁	liáo níng	1
+辽宁沈北禾丰女足	liáo níng shěn běi hé fēng nǚ zú	1
 獠犬	liáo quǎn	1
 辽阳	liáo yáng	1
 燎原	liáo yuán	1
+猎魔人	liè mó rén	1
 烈娜塔	liè nà tǎ	1
 列气	liè qì	1
 劣势	liè shì	1
@@ -3363,6 +4005,7 @@ sort: by_weight
 临安	lín ān	1
 林北	lín běi	1
 林晨	lín chén	1
+琳达	lín dá	1
 林黛玉	lín dài yù	1
 林丹	lín dān	1
 林德	lín dé	1
@@ -3373,15 +4016,19 @@ sort: by_weight
 磷光症	lín guāng zhèng	1
 临海	lín hǎi	1
 林海	lín hǎi	1
+林恒	lín héng	1
 林俊杰	lín jùn jié	1
 林克	lín kè	1
+林良铭	lín liáng míng	1
 林林	lín lín	1
 琳奈	lín nài	1
 临平	lín píng	1
 临清	lín qīng	1
 林神	lín shén	1
+林生斌	lín shēng bīn	1
 林树	lín shù	1
 临潼	lín tóng	1
+临武	lín wǔ	1
 林夕	lín xī	1
 林心如	lín xīn rú	1
 遴选	lín xuǎn	1
@@ -3392,6 +4039,7 @@ sort: by_weight
 林毓秀	lín yù xiù	1
 林昀儒	lín yún rú	1
 林芝	lín zhī	1
+林志玲	lín zhì líng	1
 林志炫	lín zhì xuàn	1
 林州	lín zhōu	1
 林子祥	lín zǐ xiáng	1
@@ -3399,14 +4047,18 @@ sort: by_weight
 陵城	líng chéng	1
 领导	lǐng dǎo	1
 领导人	lǐng dǎo rén	1
+领的人	lǐng de rén	1
 领地试炼	lǐng dì shì liàn	1
 灵动岛	líng dòng dǎo	1
+灵儿	líng ér	1
 零封	líng fēng	1
 零封了	líng fēng le	1
 绫华	líng huá	1
+领会员	lǐng huì yuán	1
 灵活就业	líng huó jiù yè	1
 领结	lǐng jié	1
 领克	lǐng kè	1
+玲玲	líng líng	1
 零命	líng mìng	1
 零跑	líng pǎo	1
 零钱通	líng qián tōng	1
@@ -3416,16 +4068,19 @@ sort: by_weight
 零食有鸣	líng shí yǒu míng	1
 灵寿	líng shòu	1
 陵水	líng shuǐ	1
+领土	lǐng tǔ	1
 灵犀互娱	líng xī hù yú	1
 零下	líng xià	1
 领先	lǐng xiān	1
 领袖	lǐng xiù	1
 领益智造	lǐng yì zhì zào	1
 凌源	líng yuán	1
+陵园	líng yuán	1
 零元面馆	líng yuán miàn guǎn	1
 灵知	líng zhī	1
 刘畅	liú chàng	1
 流程	liú chéng	1
+刘成云	liú chéng yún	1
 刘丹	liú dān	1
 刘德华	liú dé huá	1
 刘殿座	liú diàn zuò	1
@@ -3444,13 +4099,17 @@ sort: by_weight
 刘军	liú jūn	1
 刘凯	liú kǎi	1
 流浪地球	liú làng dì qiú	1
+六连胜	liù lián shèng	1
 溜溜梅	liū liū méi	1
 六命	liù mìng	1
-刘明月	liú míng yuè	1
+刘娜	liú nà	1
 刘念	liú niàn	1
 六盘水	liù pán shuǐ	1
 刘谦	liú qiān	1
+刘谦父亲	liú qiān fù qīn	1
+刘青松	liú qīng sōng	1
 刘若英	liú ruò yīng	1
+刘森	liú sēn	1
 刘禅	liú shàn	1
 六神	liù shén	1
 柳生	liǔ shēng	1
@@ -3471,7 +4130,6 @@ sort: by_weight
 刘学义	liú xué yì	1
 刘学志	liú xué zhì	1
 刘洋	liú yáng	1
-刘阳	liú yáng	1
 浏阳	liú yáng	1
 刘耀文	liú yào wén	1
 刘烨	liú yè	1
@@ -3479,6 +4137,7 @@ sort: by_weight
 刘勇	liú yǒng	1
 刘宇	liú yǔ	1
 刘宇宁	liú yǔ níng	1
+刘增艳	liú zēng yàn	1
 刘铮亮	liú zhēng liàng	1
 柳智敏	liǔ zhì mǐn	1
 柳州	liǔ zhōu	1
@@ -3487,22 +4146,30 @@ sort: by_weight
 龙餐馆	lóng cān guǎn	1
 龙丹	lóng dān	1
 龙飞	lóng fēi	1
+龙龟	lóng guī	1
+龙国	lóng guó	1
 龙魂	lóng hún	1
 龙魂团	lóng hún tuán	1
 龙甲	lóng jiǎ	1
 龙卷风	lóng juǎn fēng	1
 龙珏	lóng jué	1
 龙坑	lóng kēng	1
+笼梦	lóng mèng	1
 龙骑士	lóng qí shì	1
 龙诗	lóng shī	1
+龙田	lóng tián	1
 龙团	lóng tuán	1
 龙湾	lóng wān	1
 陇西	lǒng xī	1
+隆鑫	lóng xīn	1
 龙岩	lóng yán	1
+龙之队	lóng zhī duì	1
+龙之谷	lóng zhī gǔ	1
 龙之梦	lóng zhī mèng	1
 龙柱	lóng zhù	1
 龙珠	lóng zhū	1
 娄底	lóu dǐ	1
+漏税	lòu shuì	1
 楼外楼	lóu wài lóu	1
 娄希	lóu xī	1
 漏雨	lòu yǔ	1
@@ -3510,10 +4177,11 @@ sort: by_weight
 路霸	lù bà	1
 卢本伟	lú běn wěi	1
 卢比奥	lú bǐ ào	1
-鲁比奥	lǔ bǐ ào	1
 鲁大	lǔ dà	1
+鹿岛鹿角	lù dǎo lù jiǎo	1
 路灯	lù dēng	1
 鲁迪	lǔ dí	1
+路段	lù duàn	1
 卢浮宫	lú fú gōng	1
 鹿哥	lù gē	1
 卢广仲	lú guǎng zhòng	1
@@ -3521,7 +4189,6 @@ sort: by_weight
 路虎	lù hǔ	1
 路虎卫士	lù hǔ wèi shì	1
 陆家村	lù jiā cūn	1
-露肩羽绒服	lù jiān yǔ róng fú	1
 鹿角	lù jiǎo	1
 卢姐	lú jiě	1
 陆景和	lù jǐng hé	1
@@ -3529,31 +4196,33 @@ sort: by_weight
 卢拉	lú lā	1
 卢璐	lú lù	1
 橹橹	lǔ lǔ	1
+露露	lù lù	1
 卢米	lú mǐ	1
 鹿鸣	lù míng	1
 橹穆	lǔ mù	1
-鹿泉区	lù quán qū	1
 卢森堡	lú sēn bǎo	1
 炉石传说	lú shí chuán shuō	1
 露思	lù sī	1
-卢特尼克	lú tè ní kè	1
 路特斯	lù tè sī	1
 卢锡安	lú xī ān	1
 路西法	lù xī fǎ	1
 卢仙	lú xiān	1
+卤香	lǔ xiāng	1
+卢亚娜	lú yà nà	1
 鲁阳	lǔ yáng	1
-鲁阳节能	lǔ yáng jié néng	1
 卢昱晓	lú yù xiǎo	1
+路障	lù zhàng	1
 卤汁	lǔ zhī	1
 泸州	lú zhōu	1
 泸州市中级人民法院	lú zhōu shì zhōng jí rén mín fǎ yuàn	1
 陆濯	lù zhuó	1
 鹭卓	lù zhuó	1
+乱战	luàn zhàn	1
+轮次	lún cì	1
 伦德伯格	lún dé bó gé	1
 伦德博格	lún dé bó gé	1
 伦敦	lún dūn	1
 轮子妈	lún zǐ mā	1
-罗伯逊	luó bó xùn	1
 罗城	luó chéng	1
 罗大佑	luó dà yòu	1
 罗德岛	luó dé dǎo	1
@@ -3572,23 +4241,28 @@ sort: by_weight
 洛克	luò kè	1
 洛克贝	luò kè bèi	1
 洛克王国	luò kè wáng guó	1
+落款	luò kuǎn	1
 洛丽	luò lì	1
 罗丽	luó lì	1
 罗琳	luó lín	1
 罗罗	luó luó	1
 罗马	luó mǎ	1
 罗曼	luó màn	1
+罗曼城	luó màn chéng	1
 罗平	luó píng	1
 洛茜	luò qiàn	1
 裸枪	luǒ qiāng	1
 罗莎	luó shā	1
 洛杉矶	luò shān jī	1
+罗少英	luó shǎo yīng	1
 落实	luò shí	1
 罗斯	luó sī	1
 螺丝钉	luó sī dìng	1
 落汤鸡	luò tāng jī	1
+落体	luò tǐ	1
 洛天依	luò tiān yī	1
 骆驼	luò tuó	1
+落位	luò wèi	1
 罗文	luó wén	1
 罗小黑	luó xiǎo hēi	1
 螺旋丸	luó xuán wán	1
@@ -3596,11 +4270,13 @@ sort: by_weight
 落叶球	luò yè qiú	1
 罗伊	luó yī	1
 罗云熙	luó yún xī	1
+罗渽民	luó zāi mín	1
 洛竹	luò zhú	1
 吕布	lǚ bù	1
 吕成林	lǚ chéng lín	1
 绿道	lǜ dào	1
 吕洞宾	lǚ dòng bīn	1
+氯化钠	lǜ huà nà	1
 绿巨人	lǜ jù rén	1
 绿军	lǜ jūn	1
 绿凯	lǜ kǎi	1
@@ -3608,40 +4284,45 @@ sort: by_weight
 吕梁	lǚ liáng	1
 绿龙	lǜ lóng	1
 吕蒙	lǚ méng	1
+绿魔	lǜ mó	1
 绿泡泡	lǜ pào pào	1
 驴肉	lǘ ròu	1
 律师	lǜ shī	1
 律师费	lǜ shī fèi	1
 绿树	lǜ shù	1
 律所	lǜ suǒ	1
+铝型材	lǚ xíng cái	1
+旅行团	lǚ xíng tuán	1
 吕政熙	lǚ zhèng xī	1
 马鞍山	mǎ ān shān	1
 马刺	mǎ cì	1
 马岱	mǎ dài	1
 马德里	mǎ dé lǐ	1
 马丁	mǎ dīng	1
+马队	mǎ duì	1
 玛恩纳	mǎ ēn nà	1
 马尔代夫	mǎ ěr dài fū	1
 麻烦	má fán	1
+马飞	mǎ fēi	1
+马服	mǎ fú	1
 麻古	má gǔ	1
-马国明	mǎ guó míng	1
 马化腾	mǎ huà téng	1
 玛吉斯	mǎ jí sī	1
 马嘉祺	mǎ jiā qí	1
 麻将女王	má jiāng nǚ wáng	1
 马竞	mǎ jìng	1
 马俊	mǎ jùn	1
-马卡择	mǎ kǎ zé	1
 马克龙	mǎ kè lóng	1
-马科斯	mǎ kē sī	1
 马拉加	mǎ lā jiā	1
 马拉松	mǎ lā sōng	1
 麻辣王子	má là wáng zǐ	1
 马莱莱	mǎ lái lái	1
 马来西亚	mǎ lái xī yà	1
+马来西亚队	mǎ lái xī yà duì	1
 马雷斯卡	mǎ léi sī kǎ	1
 马丽	mǎ lì	1
 玛丽安	mǎ lì ān	1
+马良	mǎ liáng	1
 马林	mǎ lín	1
 马琳	mǎ lín	1
 马龙	mǎ lóng	1
@@ -3649,6 +4330,7 @@ sort: by_weight
 妈妈	mā mā	1
 马面裙	mǎ miàn qún	1
 马尼拉	mǎ ní lā	1
+马萨卡	mǎ sà kǎ	1
 马赛	mǎ sài	1
 马三立	mǎ sān lì	1
 玛莎拉蒂	mǎ shā lā dì	1
@@ -3661,6 +4343,7 @@ sort: by_weight
 马头	mǎ tóu	1
 马王	mǎ wáng	1
 玛薇卡	mǎ wēi kǎ	1
+马西西	mǎ xī xī	1
 马鑫	mǎ xīn	1
 马原	mǎ yuán	1
 马云	mǎ yún	1
@@ -3677,6 +4360,7 @@ sort: by_weight
 麦穗	mài suì	1
 买凶	mǎi xiōng	1
 买一送一	mǎi yī sòng yī	1
+埋葬	mái zàng	1
 慢倍速	màn bèi sù	1
 曼城	màn chéng	1
 曼德尔	màn dé ěr	1
@@ -3684,7 +4368,6 @@ sort: by_weight
 曼谷	màn gǔ	1
 满进	mǎn jìn	1
 曼联	màn lián	1
-曼妮	màn nī	1
 满人	mǎn rén	1
 曼陀罗	màn tuó luó	1
 漫蛙	màn wā	1
@@ -3700,7 +4383,6 @@ sort: by_weight
 芒果tv	máng guǒ 	1
 盲女	máng nǚ	1
 盲僧	máng sēng	1
-毛阿敏	máo ā mǐn	1
 毛不易	máo bù yì	1
 猫的树	māo de shù	1
 猫雷	māo léi	1
@@ -3715,6 +4397,7 @@ sort: by_weight
 猫眼	māo yǎn	1
 贸易理事会	mào yì lǐ shì huì	1
 冒雨	mào yǔ	1
+没白熬	méi bái áo	1
 梅奔	méi bēn	1
 每波	měi bō	1
 梅毒	méi dú	1
@@ -3723,22 +4406,27 @@ sort: by_weight
 梅尔	méi ěr	1
 美方	měi fāng	1
 美股	měi gǔ	1
+没冠军	méi guàn jūn	1
 没关系	méi guān xì	1
-美光	měi guāng	1
+玫瑰园	méi guī yuán	1
 玫瑰战争	méi guī zhàn zhēng	1
 美国	měi guó	1
 美国队	měi guó duì	1
-美国华盛顿特区	měi guó huá shèng dùn tè qū	1
+美国航空	měi guó háng kōng	1
 美国联邦航空管理局	měi guó lián bāng háng kōng guǎn lǐ jú	1
-美国证券交易委员会	měi guó zhèng quàn jiāo yì wěi yuán huì	1
+美国时间	měi guó shí jiān	1
 美国中期选举	měi guó zhōng qī xuǎn jǔ	1
 美国中央情报局	měi guó zhōng yāng qíng bào jú	1
-梅金斯基	méi jīn sī jī	1
+美国足协	měi guó zú xié	1
+梅河口	méi hé kǒu	1
 美军	měi jūn	1
+梅开二度	méi kāi èr dù	1
 妹扣	mèi kòu	1
 梅拉布	méi lā bù	1
+煤老板	méi lǎo bǎn	1
 美乐蒂	měi lè dì	1
 美联储	měi lián chǔ	1
+煤炉	méi lú	1
 美满	měi mǎn	1
 美琪	měi qí	1
 美区	měi qū	1
@@ -3750,9 +4438,11 @@ sort: by_weight
 美术课	měi shù kè	1
 煤炭	méi tàn	1
 媒体	méi tǐ	1
+美图秀秀	měi tú xiù xiù	1
 美团	měi tuán	1
 美团卡	měi tuán kǎ	1
 梅西	méi xī	1
+美亚	měi yà	1
 梅姨	méi yí	1
 美伊	měi yī	1
 美因茨	měi yīn cí	1
@@ -3766,12 +4456,12 @@ sort: by_weight
 门尼	mén ní	1
 门童	mén tóng	1
 门卫室	mén wèi shì	1
-门兴	mén xìng	1
 蒙版	méng bǎn	1
 蒙城	méng chéng	1
 蒙多	méng duō	1
 蒙古	méng gǔ	1
 蒙古包	méng gǔ bāo	1
+孟加拉	mèng jiā lā	1
 梦见月	mèng jiàn yuè	1
 孟姐	mèng jiě	1
 萌姐	méng jiě	1
@@ -3780,9 +4470,12 @@ sort: by_weight
 萌粒	méng lì	1
 猛龙	měng lóng	1
 萌萌	méng méng	1
+蒙娜丽莎	méng nà lì shā	1
 蒙牛	méng niú	1
+梦碎	mèng suì	1
 梦寻苏毗女儿国	mèng xún sū pí nǚ ér guó	1
 蒙犽	méng yà	1
+梦魇	mèng yǎn	1
 盟友	méng yǒu	1
 盟约	méng yuē	1
 梦之队	mèng zhī duì	1
@@ -3795,6 +4488,7 @@ sort: by_weight
 蜜罐	mì guàn	1
 米国	mǐ guó	1
 米哈游	mǐ hā you	1
+猕猴	mí hóu	1
 猕猴桃	mí hóu táo	1
 蜜獾	mì huān	1
 米姐	mǐ jiě	1
@@ -3803,6 +4497,7 @@ sort: by_weight
 米卡	mǐ kǎ	1
 密客	mì kè	1
 米垃圾	mǐ lā jī	1
+米莱	mǐ lái	1
 米兰	mǐ lán	1
 米勒	mǐ lè	1
 米利欧	mǐ lì ōu	1
@@ -3826,24 +4521,29 @@ sort: by_weight
 缅北	miǎn běi	1
 缅甸	miǎn diàn	1
 缅甸人	miǎn diàn rén	1
+免费吃食堂一年	miǎn fèi chī shí táng yī nián	1
 缅怀	miǎn huái	1
 棉毛裤	mián máo kù	1
 棉毛衫	mián máo shān	1
+免喷	miǎn pēn	1
+免喷权	miǎn pēn quán	1
 免票	miǎn piào	1
 面纱	miàn shā	1
 棉拖鞋	mián tuō xié	1
 棉鞋	mián xié	1
 绵阳	mián yáng	1
+秒表	miǎo biǎo	1
 秒跟	miǎo gēn	1
 秒没	miǎo méi	1
 秒切	miǎo qiē	1
 妙手	miào shǒu	1
 妙瓦底	miào wǎ dǐ	1
+灭霸	miè bà	1
 灭建国	miè jiàn guó	1
 闽发	mǐn fā	1
+民航	mín háng	1
 闽侯	mǐn hóu	1
 民进党	mín jìn dǎng	1
-民进党当局	mín jìn dǎng dāng jú	1
 民警	mín jǐng	1
 闽南	mǐn nán	1
 民事	mín shì	1
@@ -3853,12 +4553,15 @@ sort: by_weight
 民中	mín zhōng	1
 民主	mín zhǔ	1
 民主党	mín zhǔ dǎng	1
+敏子	mǐn zǐ	1
+命不该绝	mìng bù gāi jué	1
 鸣潮	míng cháo	1
 名单	míng dān	1
 明道	míng dào	1
 鸣笛	míng dí	1
 命定花种	mìng dìng huā zhǒng	1
 名额	míng é	1
+名副其实	míng fù qí shí	1
 冥古龙	míng gǔ lóng	1
 名古屋	míng gǔ wū	1
 明光	míng guāng	1
@@ -3866,13 +4569,17 @@ sort: by_weight
 明和	míng hé	1
 铭记	míng jì	1
 鸣金	míng jīn	1
+名利	míng lì	1
+鸣鸣	míng míng	1
 鸣鸣鸣	míng míng míng	1
 明末	míng mò	1
 名人	míng rén	1
 名人堂	míng rén táng	1
 明日方舟	míng rì fāng zhōu	1
+明日世界	míng rì shì jiè	1
 明日之后	míng rì zhī hòu	1
 明日之翼	míng rì zhī yì	1
+名宿	míng sù	1
 明太祖朱元璋	míng tài zǔ zhū yuán zhāng	1
 明天周五	míng tiān zhōu wǔ	1
 明天周一	míng tiān zhōu yī	1
@@ -3887,7 +4594,7 @@ sort: by_weight
 缪斯房	miù sī fáng	1
 默哀	mò āi	1
 魔道祖师	mó dào zǔ shī	1
-摩登兄弟	mó dēng xiōng dì	1
+莫得闲	mò dé xián	1
 摩的	mó dí	1
 摩尔	mó ěr	1
 墨尔本	mò ěr běn	1
@@ -3898,7 +4605,9 @@ sort: by_weight
 蘑菇屋	mó gū wū	1
 魔盒	mó hé	1
 魔戒	mó jiè	1
+魔警艾琳	mó jǐng ài lín	1
 默剧	mò jù	1
+魔抗	mó kàng	1
 莫兰特	mò lán tè	1
 茉莉奶白	mò lì nǎi bái	1
 茉莉雨	mò lì yǔ	1
@@ -3919,6 +4628,7 @@ sort: by_weight
 莫斯科	mò sī kē	1
 莫斯科地区	mò sī kē dì qū	1
 茉酸奶	mò suān nǎi	1
+魔腾	mó téng	1
 摩天轮	mó tiān lún	1
 末王	mò wáng	1
 莫文蔚	mò wén wèi	1
@@ -3932,10 +4642,10 @@ sort: by_weight
 魔咒	mó zhòu	1
 沫子	mò zǐ	1
 姆巴佩	mǔ bā pèi	1
+沐川	mù chuān	1
 牡丹江	mǔ dān jiāng	1
 慕蝶	mù dié	1
 暮蝶	mù dié	1
-穆赫比	mù hè bǐ	1
 母鸡卡	mǔ jī kǎ	1
 木剑	mù jiàn	1
 穆杰塔巴	mù jié tǎ bā	1
@@ -3943,15 +4653,21 @@ sort: by_weight
 牡蛎	mǔ lì	1
 暮年	mù nián	1
 母亲	mǔ qīn	1
+母狮	mǔ shī	1
+慕斯	mù sī	1
 沐小葵	mù xiǎo kuí	1
 牧羊人	mù yáng rén	1
+牧野	mù yě	1
+牧原股份	mù yuán gǔ fèn	1
 穆祉丞	mù zhǐ chéng	1
+那波	nà bō	1
 那不勒斯	nà bù lè sī	1
 纳尔	nà ěr	1
 那刻夏	nà kè xià	1
 钠离子	nà lí zǐ	1
+拿龙	ná lóng	1
+娜美	nà měi	1
 娜娜	nà nà	1
-纳努克	nà nǔ kè	1
 拿破仑	ná pò lún	1
 娜然	nà rán	1
 纳斯达克	nà sī dá kè	1
@@ -3959,7 +4675,9 @@ sort: by_weight
 娜维娅	nà wéi yà	1
 纳西	nà xī	1
 纳西妲	nà xī dá	1
+拿下	ná xià	1
 拿下拿下	ná xià ná xià	1
+纳亚菲利	nà yà fēi lì	1
 那艺娜	nà yì nà	1
 那英	nà yīng	1
 娜扎	nà zhā	1
@@ -3979,6 +4697,7 @@ sort: by_weight
 南丹	nán dān	1
 男单	nán dān	1
 南非	nán fēi	1
+南宫婉	nán gōng wǎn	1
 南瓜头	nán guā tóu	1
 南海	nán hǎi	1
 男孩	nán hái	1
@@ -3986,12 +4705,12 @@ sort: by_weight
 南极	nán jí	1
 南京	nán jīng	1
 南境	nán jìng	1
-南京警方	nán jīng jǐng fāng	1
 南京零元面馆	nán jīng líng yuán miàn guǎn	1
+南京市档案馆	nán jīng shì dàng àn guǎn	1
 南京照相馆	nán jīng zhào xiāng guǎn	1
+男爵	nán jué	1
 南柯	nán kē	1
 男篮	nán lán	1
-男练	nán liàn	1
 南美	nán měi	1
 男明星	nán míng xīng	1
 南宁	nán níng	1
@@ -3999,20 +4718,25 @@ sort: by_weight
 南三环	nán sān huán	1
 南沙	nán shā	1
 南山	nán shān	1
+南师附中	nán shī fù zhōng	1
 男双	nán shuāng	1
+难听话	nán tīng huà	1
 南通	nán tōng	1
 男童	nán tóng	1
 男团	nán tuán	1
 南下	nán xià	1
+男性向	nán xìng xiàng	1
 男演员	nán yǎn yuán	1
 南阳	nán yáng	1
+南漳	nán zhāng	1
 男子	nán zǐ	1
 男足	nán zú	1
 脑部	nǎo bù	1
-脑雾	nǎo wù	1
+脑溢血	nǎo yì xuè	1
 内部爱	nèi bù ài	1
 内场	nèi chǎng	1
 内地	nèi dì	1
+内定	nèi dìng	1
 内行	nèi háng	1
 内录	nèi lù	1
 内马尔	nèi mǎ ěr	1
@@ -4025,17 +4749,20 @@ sort: by_weight
 内务	nèi wù	1
 内战	nèi zhàn	1
 能夺冠	néng duó guàn	1
+能管	néng guǎn	1
 能见度	néng jiàn dù	1
-能量条	néng liàng tiáo	1
+能赢	néng yíng	1
 能源	néng yuán	1
+逆版本	nì bǎn běn	1
 尼泊尔	ní bó ěr	1
-你的微笑	nǐ de wēi xiào	1
+泥点子	ní diǎn zǐ	1
 霓虹	ní hóng	1
 妮姬	nī jī	1
 尼克斯	ní kè sī	1
 妮蔻	nī kòu	1
 妮丽雅	nī lì yǎ	1
 泥面人	ní miàn rén	1
+尼姆	ní mǔ	1
 倪妮	ní nī	1
 倪萍	ní píng	1
 逆水寒	nì shuǐ hán	1
@@ -4048,59 +4775,73 @@ sort: by_weight
 年度	nián dù	1
 年度总决赛	nián dù zǒng jué sài	1
 年番	nián fān	1
+黏糊	nián hú	1
 年级组	nián jí zǔ	1
 年锦	nián jǐn	1
 年内	nián nèi	1
 年限	nián xiàn	1
+碾压	niǎn yā	1
 年总	nián zǒng	1
 娘家人	niáng jiā rén	1
 尿布台	niào bù tái	1
 鸟巢	niǎo cháo	1
 鸟蛋	niǎo dàn	1
 鸟火	niǎo huǒ	1
+鸟狙	niǎo jū	1
 袅袅	niǎo niǎo	1
 鸟窝	niǎo wō	1
 涅槃	niè pán	1
 涅槃组	niè pán zǔ	1
 捏神	niē shén	1
+聂玮辰	niè wěi chén	1
 孽蜥	niè xī	1
 宁波	níng bō	1
 宁德	níng dé	1
 宁德时代	níng dé shí dài	1
-宁建平	níng jiàn píng	1
 宁静	níng jìng	1
 宁明	níng míng	1
 宁王	níng wáng	1
 宁夏	níng xià	1
 宁艺卓	níng yì zhuó	1
 凝脂手	níng zhī shǒu	1
+宁忠岩	níng zhōng yán	1
 扭蛋机	niǔ dàn jī	1
+牛姐	niú jiě	1
 纽卡	niǔ kǎ	1
 牛坤	niú kūn	1
 牛来	niú lái	1
 牛魔	niú mó	1
 牛肉面	niú ròu miàn	1
 牛肉丸	niú ròu wán	1
+牛头	niú tóu	1
+牛油	niú yóu	1
 纽约	niǔ yuē	1
+纽约轻质原油期货	niǔ yuē qīng zhì yuán yóu qī huò	1
 纽约时报	niǔ yuē shí bào	1
 农夫山泉	nóng fū shān quán	1
 农行	nóng háng	1
 浓厚	nóng hòu	1
 浓眉	nóng méi	1
 农业农村部	nóng yè nóng cūn bù	1
+农庄	nóng zhuāng	1
 努比亚	nǔ bǐ yà	1
 奴隶主	nú lì zhǔ	1
+怒气	nù qì	1
 怒焰	nù yàn	1
+暖大哥	nuǎn dà gē	1
 暖冬	nuǎn dōng	1
 暖风	nuǎn fēng	1
+暖黄	nuǎn huáng	1
 暖咖	nuǎn kā	1
 暖空调	nuǎn kōng tiáo	1
 暖暖	nuǎn nuǎn	1
+暖师傅	nuǎn shī fù	1
 暖心	nuǎn xīn	1
 暖阳	nuǎn yáng	1
 虐菜	nuè cài	1
 诺贝尔	nuò bèi ěr	1
 诺丁汉	nuò dīng hàn	1
+诺克	nuò kè	1
 诺里	nuò lǐ	1
 诺里斯	nuò lǐ sī	1
 糯米鸡	nuò mǐ jī	1
@@ -4108,6 +4849,7 @@ sort: by_weight
 挪威	nuó wēi	1
 诺威尔	nuò wēi ěr	1
 诺伊	nuò yī	1
+女超联赛	nǚ chāo lián sài	1
 女大十一变	nǚ dà shí yī biàn	1
 女单	nǚ dān	1
 女儿	nǚ ér	1
@@ -4117,25 +4859,27 @@ sort: by_weight
 女篮	nǚ lán	1
 女排	nǚ pái	1
 女枪	nǚ qiāng	1
+女神异闻录	nǚ shén yì wén lù	1
 女坦	nǚ tǎn	1
 女童	nǚ tóng	1
 女团	nǚ tuán	1
 女推	nǚ tuī	1
 女娲	nǚ wā	1
+女王陛下	nǚ wáng bì xià	1
 女武神	nǚ wǔ shén	1
 女鞋	nǚ xié	1
+女仔	nǚ zǎi	1
 女子	nǚ zǐ	1
 女子推理社	nǚ zǐ tuī lǐ shè	1
 女足	nǚ zú	1
 欧巴	ōu bā	1
+欧恩	ōu ēn	1
 欧冠	ōu guàn	1
 欧国联	ōu guó lián	1
 欧豪	ōu háo	1
 欧坤	ōu kūn	1
 欧坤呀	ōu kūn ya	1
 欧莱雅	ōu lái yǎ	1
-欧联	ōu lián	1
-欧罗巴	ōu luó bā	1
 欧美	ōu měi	1
 欧盟	ōu méng	1
 欧米伽	ōu mǐ gā	1
@@ -4143,7 +4887,10 @@ sort: by_weight
 欧舒丹	ōu shū dān	1
 欧文	ōu wén	1
 欧洲	ōu zhōu	1
+欧洲航空安保体系	ōu zhōu háng kōng ān bǎo tǐ xì	1
 帕尔	pà ěr	1
+帕金森	pà jīn sēn	1
+帕克	pà kè	1
 帕拉斯	pà lā sī	1
 帕姆	pà mǔ	1
 爬墙	pá qiáng	1
@@ -4156,12 +4903,17 @@ sort: by_weight
 排列五	pái liè wǔ	1
 牌牌琦	pái pái qí	1
 排球	pái qiú	1
+牌子猫	pái zǐ māo	1
 盘后	pán hòu	1
 盘锦	pán jǐn	1
 盘龙	pán lóng	1
 盘龙区	pán lóng qū	1
+潘鹏	pān péng	1
 盘前	pán qián	1
+叛忍	pàn rěn	1
 潘森	pān sēn	1
+磐石	pán shí	1
+盘丝洞	pán sī dòng	1
 潘甜甜	pān tián tián	1
 潘婷	pān tíng	1
 潘玮柏	pān wěi bó	1
@@ -4170,16 +4922,19 @@ sort: by_weight
 潘子	pān zǐ	1
 胖东来	pàng dōng lái	1
 胖哥俩	pàng gē liā	1
+膀胱	páng guāng	1
+膀胱局	páng guāng jú	1
 彷徨	páng huáng	1
 胖皇	pàng huáng	1
 胖橘	pàng jú	1
+庞然大物归来	páng rán dà wù guī lái	1
 庞镇	páng zhèn	1
 跑操	pǎo cāo	1
+炮车	pào chē	1
 泡沫箱	pào mò xiāng	1
 跑男	pǎo nán	1
 泡泡玛特	pào pào mǎ tè	1
 佩恩	pèi ēn	1
-佩莱格里尼	pèi lái gé lǐ ní	1
 佩丽卡	pèi lì kǎ	1
 配文	pèi wén	1
 佩泽希齐扬	pèi zé xī qí yáng	1
@@ -4196,6 +4951,7 @@ sort: by_weight
 碰杯	pèng bēi	1
 澎程	péng chéng	1
 彭德怀	péng dé huái	1
+彭金辉	péng jīn huī	1
 朋朋	péng péng	1
 碰一碰	pèng yī pèng	1
 朋友的酒	péng yǒu de jiǔ	1
@@ -4208,21 +4964,25 @@ sort: by_weight
 披哥	pī gē	1
 批假	pī jiǎ	1
 披荆斩棘	pī jīng zhǎn jí	1
+啤酒厂	pí jiǔ chǎng	1
 匹克球	pǐ kè qiú	1
 皮纳塔	pí nà tǎ	1
 匹诺曹	pǐ nuò cáo	1
 噼啪鸟	pī pā niǎo	1
 琵琶曲	pí pá qǔ	1
 琵琶行	pí pá xíng	1
+皮蓬	pí péng	1
+疲软	pí ruǎn	1
 辟谣	pì yáo	1
 漂泊	piāo bó	1
 飘带	piāo dài	1
 票房	piào fáng	1
 票价	piào jià	1
-票来	piào lái	1
 漂亮饭	piāo liàng fàn	1
 票数	piào shù	1
 票务	piào wù	1
+拼惩	pīn chéng	1
+拼惩戒	pīn chéng jiè	1
 拼刀	pīn dāo	1
 拼多多	pīn duō duō	1
 拼好饭	pīn hǎo fàn	1
@@ -4234,16 +4994,19 @@ sort: by_weight
 平安健康	píng ān jiàn kāng	1
 平安顺遂	píng ān shùn suì	1
 平安喜乐	píng ān xǐ lè	1
+平坝	píng bà	1
 平顶山	píng dǐng shān	1
+平谷法院	píng gǔ fǎ yuàn	1
 苹果	píng guǒ	1
 平湖	píng hú	1
 平将门	píng jiāng mén	1
 萍姐	píng jiě	1
 平凉	píng liáng	1
+评论席	píng lùn xí	1
+屏南	píng nán	1
 乒乓球	pīng pāng qiú	1
 平平	píng píng	1
 平其他	píng qí tā	1
-平山县	píng shān xiàn	1
 评审	píng shěn	1
 平时分	píng shí fēn	1
 平台券	píng tái quàn	1
@@ -4257,27 +5020,38 @@ sort: by_weight
 凭证	píng zhèng	1
 破冰船	pò bīng chuán	1
 破蛋	pò dàn	1
-破坏球	pò huài qiú	1
 珀莱雅	pò lái yǎ	1
 破轮	pò lún	1
 破面	pò miàn	1
+破片	pò piàn	1
+破碎感	pò suì gǎn	1
 鄱阳	pó yáng	1
+破绽	pò zhàn	1
+朴到贤	pǔ dào xián	1
 浦东	pǔ dōng	1
 浦和	pǔ hé	1
 普京	pǔ jīng	1
+普卡	pǔ kǎ	1
+普拉多	pǔ lā duō	1
 谱尼	pǔ ní	1
 普普	pǔ pǔ	1
 普瑞赛斯	pǔ ruì sài sī	1
 菩萨	pú sà	1
 葡萄牙	pú táo yá	1
+葡萄牙国家队	pú táo yá guó jiā duì	1
+葡萄牙足协	pú táo yá zú xié	1
 莆田	pú tián	1
 普天同庆	pǔ tiān tóng qìng	1
 普通班	pǔ tōng bān	1
+溥仪	pǔ yí	1
 蒲熠星	pú yì xīng	1
 朴元彬	pǔ yuán bīn	1
 普涨	pǔ zhǎng	1
 普追	pǔ zhuī	1
+奇兵	qí bīng	1
 奇才	qí cái	1
+戚长春	qī cháng chūn	1
+汽车人	qì chē rén	1
 起初	qǐ chū	1
 起大雾	qǐ dà wù	1
 启东	qǐ dōng	1
@@ -4292,6 +5066,8 @@ sort: by_weight
 綦江	qí jiāng	1
 起来重睡	qǐ lái chóng shuì	1
 契灵	qì líng	1
+七龙珠	qī lóng zhū	1
+綦美合	qí měi hé	1
 奇美拉	qí měi lā	1
 棋盘	qí pán	1
 旗袍	qí páo	1
@@ -4300,6 +5076,7 @@ sort: by_weight
 棋棋	qí qí	1
 气枪	qì qiāng	1
 齐秦	qí qín	1
+期权	qī quán	1
 奇人	qí rén	1
 七日世界	qī rì shì jiè	1
 奇瑞	qí ruì	1
@@ -4309,6 +5086,8 @@ sort: by_weight
 棋手战鹰	qí shǒu zhàn yīng	1
 齐淑玉	qí shū yù	1
 齐司礼	qí sī lǐ	1
+奇思妙想	qí sī miào xiǎng	1
+七台河	qī tái hé	1
 齐天	qí tiān	1
 齐天大圣	qí tiān dà shèng	1
 戚薇	qī wēi	1
@@ -4332,36 +5111,48 @@ sort: by_weight
 千代	qiān dài	1
 前档	qián dàng	1
 千岛湖	qiān dǎo hú	1
-千股	qiān gǔ	1
-千股跌停	qiān gǔ diē tíng	1
+遣返	qiǎn fǎn	1
 前海	qián hǎi	1
+千姬	qiān jī	1
 钎九	qiān jiǔ	1
 千珏	qiān jué	1
 千里	qiān lǐ	1
+前期	qián qī	1
 前三板	qián sān bǎn	1
 千山	qiān shān	1
+牵手希望小学	qiān shǒu xī wàng xiǎo xué	1
+前四	qián sì	1
 前滩	qián tān	1
 钱塘江	qián táng jiāng	1
 千问	qiān wèn	1
+前无古人	qián wú gǔ rén	1
 迁西	qiān xī	1
 千咲	qiān xiào	1
 千星	qiān xīng	1
 钱学森	qián xué sēn	1
+谦逊	qiān xùn	1
 前沿	qián yán	1
+千言万语	qiān yán wàn yǔ	1
 前腰	qián yāo	1
 千冶刃	qiān yě rèn	1
 千与千寻	qiān yǔ qiān xún	1
+签运	qiān yùn	1
+千早	qiān zǎo	1
 前瞻	qián zhān	1
+牵制	qiān zhì	1
+前中期	qián zhōng qī	1
 强队	qiáng duì	1
+枪哥	qiāng gē	1
 强国	qiáng guó	1
 强基	qiáng jī	1
 枪击	qiāng jī	1
 抢龙	qiǎng lóng	1
 抢票	qiǎng piào	1
 强盛	qiáng shèng	1
+强势	qiáng shì	1
+强势期	qiáng shì qī	1
 蔷薇	qiáng wēi	1
 抢先版	qiǎng xiān bǎn	1
-强震	qiáng zhèn	1
 抢周边	qiǎng zhōu biān	1
 强追	qiáng zhuī	1
 乔布斯	qiáo bù sī	1
@@ -4369,31 +5160,34 @@ sort: by_weight
 巧克力棒	qiǎo kè lì bàng	1
 乔馗	qiáo kuí	1
 乔迁	qiáo qiān	1
-乔兮	qiáo xī	1
 乔汐	qiáo xī	1
-乔西	qiáo xī	1
-乔欣	qiáo xīn	1
+侨心	qiáo xīn	1
 乔治	qiáo zhì	1
 切尔西	qiē ěr xī	1
 切糕	qiē gāo	1
-秦斌	qín bīn	1
-秦伯	qín bó	1
+切入	qiē rù	1
 秦彻	qín chè	1
 琴弓师	qín gōng shī	1
+秦海翔	qín hǎi xiáng	1
 秦皇岛	qín huáng dǎo	1
 秦桧	qín huī	1
 勤俭持家	qín jiǎn chí jiā	1
 琴酒	qín jiǔ	1
 秦岭	qín lǐng	1
 亲戚家	qīn qī jiā	1
+勤天	qín tiān	1
 钦州	qīn zhōu	1
+清白	qīng bái	1
 青白江	qīng bái jiāng	1
 清朝	qīng cháo	1
 倾城	qīng chéng	1
+青川	qīng chuān	1
 青岛	qīng dǎo	1
 庆典	qìng diǎn	1
+青冈	qīng gāng	1
 青钢影	qīng gāng yǐng	1
 轻功	qīng gōng	1
+轻工	qīng gōng	1
 庆功宴	qìng gōng yàn	1
 青海	qīng hǎi	1
 清华	qīng huá	1
@@ -4401,21 +5195,27 @@ sort: by_weight
 清华大学	qīng huá dà xué	1
 请假条	qǐng jiǎ tiáo	1
 请柬	qǐng jiǎn	1
+情久	qíng jiǔ	1
+晴朗	qíng lǎng	1
 清迈	qīng mài	1
 青鸟	qīng niǎo	1
+清平	qīng píng	1
 清气满乾坤	qīng qì mǎn qián kūn	1
 晴晴	qíng qíng	1
 清清	qīng qīng	1
 轻轻	qīng qīng	1
 清泉	qīng quán	1
+清荣	qīng róng	1
 清融	qīng róng	1
 青蛇	qīng shé	1
 庆生	qìng shēng	1
 清算	qīng suàn	1
+青蒜	qīng suàn	1
 清算了	qīng suàn le	1
 青藤	qīng téng	1
 清甜	qīng tián	1
 青天	qīng tiān	1
+青桐鸣	qīng tóng míng	1
 青蛙王子	qīng wā wáng zǐ	1
 请勿	qǐng wù	1
 轻享版	qīng xiǎng bǎn	1
@@ -4428,11 +5228,15 @@ sort: by_weight
 庆阳	qìng yáng	1
 青鱼	qīng yú	1
 清远	qīng yuǎn	1
+清者自清	qīng zhě zì qīng	1
 青稚	qīng zhì	1
 青雉	qīng zhì	1
+清粥	qīng zhōu	1
 琼海	qióng hǎi	1
+球棒	qiú bàng	1
 丘成桐	qiū chéng tóng	1
 球队	qiú duì	1
+秋哥	qiū gē	1
 秋假	qiū jiǎ	1
 秋裤	qiū kù	1
 球迷	qiú mí	1
@@ -4441,6 +5245,7 @@ sort: by_weight
 球探	qiú tàn	1
 囚徒	qiú tú	1
 球王	qiú wáng	1
+求稳	qiú wěn	1
 球星	qiú xīng	1
 秋衣秋裤	qiū yī qiū kù	1
 秋游	qiū you	1
@@ -4448,7 +5253,6 @@ sort: by_weight
 球员	qiú yuán	1
 秋装	qiū zhuāng	1
 曲阜	qǔ fù	1
-曲尽陈情	qǔ jìn chén qíng	1
 曲靖	qǔ jìng	1
 取款机	qǔ kuǎn jī	1
 去世	qù shì	1
@@ -4459,21 +5263,29 @@ sort: by_weight
 全北	quán běi	1
 权柄	quán bǐng	1
 拳补	quán bǔ	1
-全仓	quán cāng	1
 全场	quán chǎng	1
+权臣	quán chén	1
 全称	quán chēng	1
+全对	quán duì	1
 全队	quán duì	1
+全额	quán é	1
+全额退款	quán é tuì kuǎn	1
 全副武装	quán fù wǔ zhuāng	1
 全国	quán guó	1
+全国空管系统	quán guó kōng guǎn xì tǒng	1
+全国人大	quán guó rén dà	1
+全国人大环资委	quán guó rén dà huán zī wěi	1
 全国总工会	quán guó zǒng gōng huì	1
 全红	quán hóng	1
 全华	quán huá	1
 全华班	quán huá bān	1
 全家	quán jiā	1
 全家人	quán jiā rén	1
+全局	quán jú	1
 全军覆没	quán jūn fù mò	1
 全流程	quán liú chéng	1
 全美	quán měi	1
+全球	quán qiú	1
 全球购频道	quán qiú gòu pín dào	1
 全球总决赛	quán qiú zǒng jué sài	1
 券商	quàn shāng	1
@@ -4482,43 +5294,59 @@ sort: by_weight
 全市	quán shì	1
 全输	quán shū	1
 拳头	quán tóu	1
+拳头游戏	quán tóu you xì	1
 全文	quán wén	1
 全系列	quán xì liè	1
 全线	quán xiàn	1
+全赢	quán yíng	1
+全英雄	quán yīng xióng	1
+权志龙	quán zhì lóng	1
 权重	quán zhòng	1
 泉州	quán zhōu	1
 缺货	quē huò	1
-雀人	què rén	1
 确实冷	què shí lěng	1
 缺席	quē xí	1
+瘸子	qué zǐ	1
 群发	qún fā	1
 群群	qún qún	1
 群众	qún zhòng	1
+燃成	rán chéng	1
 冉家坝	rǎn jiā bà	1
+燃尽了	rán jìn le	1
 苒苒	rǎn rǎn	1
 染色体	rǎn sè tǐ	1
 燃烧弹	rán shāo dàn	1
 让二	ràng èr	1
 让二追三	ràng èr zhuī sān	1
+让三	ràng sān	1
+让一	ràng yī	1
+让一追二	ràng yī zhuī èr	1
+让一追三	ràng yī zhuī sān	1
+绕后	rào hòu	1
 绕梁	rào liáng	1
 热巴	rè bā	1
 热刺	rè cì	1
+热度	rè dù	1
 热工	rè gōng	1
 热火	rè huǒ	1
 热辣香骨鸡	rè là xiāng gǔ jī	1
+热泪盈眶	rè lèi yíng kuàng	1
 热卤	rè lǔ	1
 热奶茶	rè nǎi chá	1
 热闹	rè nào	1
 热苏斯	rè sū sī	1
 热线	rè xiàn	1
 人保	rén bǎo	1
+人才公园	rén cái gōng yuán	1
 仁川	rén chuān	1
 人大代表	rén dà dài biǎo	1
 人队	rén duì	1
 忍法帖	rěn fǎ tiē	1
+人工费	rén gōng fèi	1
 人工智能	rén gōng zhì néng	1
 仁怀	rén huái	1
 任嘉伦	rèn jiā lún	1
+人间烟火	rén jiān yān huǒ	1
 人教版	rén jiào bǎn	1
 任九	rèn jiǔ	1
 人力资源	rén lì zī yuán	1
@@ -4529,6 +5357,7 @@ sort: by_weight
 人民空军	rén mín kōng jūn	1
 人民日报	rén mín rì bào	1
 任命	rèn mìng	1
+人气	rén qì	1
 人情局	rén qíng jú	1
 人山人海	rén shān rén hǎi	1
 人社	rén shè	1
@@ -4537,20 +5366,21 @@ sort: by_weight
 任素汐	rèn sù xī	1
 任天堂	rèn tiān táng	1
 仁王	rén wáng	1
+人为	rén wéi	1
 任务点	rèn wù diǎn	1
 任贤齐	rèn xián qí	1
 人行	rén xíng	1
+韧性	rèn xìng	1
 日报	rì bào	1
 日本	rì běn	1
 日本参议院	rì běn cān yì yuàn	1
 日本队	rì běn duì	1
 日本男乒	rì běn nán pīng	1
-日本政府	rì běn zhèng fǔ	1
+日本羽毛球	rì běn yǔ máo qiú	1
 日产	rì chǎn	1
 日出东方	rì chū dōng fāng	1
 日海	rì hǎi	1
 日韩	rì hán	1
-日经	rì jīng	1
 日剧	rì jù	1
 日军	rì jūn	1
 日联杯	rì lián bēi	1
@@ -4562,13 +5392,16 @@ sort: by_weight
 容城	róng chéng	1
 蓉城	róng chéng	1
 熔断	róng duàn	1
-熔断了	róng duàn le	1
-荣海楼	róng hǎi lóu	1
+荣光	róng guāng	1
+融化	róng huà	1
 荣获	róng huò	1
+融洽	róng qià	1
 融融	róng róng	1
+荣升	róng shēng	1
 榕树	róng shù	1
 荣耀	róng yào	1
 荣耀典藏	róng yào diǎn cáng	1
+荣耀加冕	róng yào jiā miǎn	1
 荣耀水晶	róng yào shuǐ jīng	1
 荣誉	róng yù	1
 容祖儿	róng zǔ ér	1
@@ -4576,6 +5409,8 @@ sort: by_weight
 肉铺子	ròu pū zǐ	1
 肉丸	ròu wán	1
 柔造	róu zào	1
+肉粽	ròu zòng	1
+入场	rù chǎng	1
 入场费	rù chǎng fèi	1
 入党	rù dǎng	1
 入冬	rù dōng	1
@@ -4585,13 +5420,18 @@ sort: by_weight
 入口	rù kǒu	1
 入殓师	rù liàn shī	1
 入秋	rù qiū	1
+乳铁蛋白	rǔ tiě dàn bái	1
+入围赛	rù wéi sài	1
 入戏	rù xì	1
 儒意	rú yì	1
 如愿	rú yuàn	1
 如鸢	rú yuān	1
+如愿以偿	rú yuàn yǐ cháng	1
 如约而至	rú yuē ér zhì	1
 软辅	ruǎn fǔ	1
+软胶	ruǎn jiāo	1
 软脚	ruǎn jiǎo	1
+软胶囊	ruǎn jiāo náng	1
 软脚虾	ruǎn jiǎo xiā	1
 阮梅	ruǎn méi	1
 瑞安	ruì ān	1
@@ -4599,6 +5439,7 @@ sort: by_weight
 瑞尔	ruì ěr	1
 芮尔	ruì ěr	1
 睿哥	ruì gē	1
+瑞基奥仑赛	ruì jī ào lún sài	1
 瑞金	ruì jīn	1
 瑞丽	ruì lì	1
 瑞纳	ruì nà	1
@@ -4611,11 +5452,13 @@ sort: by_weight
 瑞芯微	ruì xīn wēi	1
 瑞幸	ruì xìng	1
 瑞雪兆丰年	ruì xuě zhào fēng nián	1
+锐因	ruì yīn	1
 瑞兹	ruì zī	1
 润建股份	rùn jiàn gǔ fèn	1
 润培	rùn péi	1
 弱悲	ruò bēi	1
 弱队	ruò duì	1
+若风	ruò fēng	1
 若娜瓦	ruò nà wǎ	1
 若若	ruò ruò	1
 若水	ruò shuǐ	1
@@ -4624,27 +5467,35 @@ sort: by_weight
 撒哈拉	sǎ hā lā	1
 萨勒芬妮	sà lè fēn nī	1
 萨摩耶	sà mó yē	1
+撒石阵	sǎ shí zhèn	1
 赛博朋克	sài bó péng kè	1
 赛场	sài chǎng	1
 塞车	sāi chē	1
 赛程	sài chéng	1
 赛点	sài diǎn	1
 赛点局	sài diǎn jú	1
+赛段	sài duàn	1
 塞恩	sāi ēn	1
 塞尔达	sāi ěr dá	1
 塞尔维亚	sāi ěr wéi yà	1
+赛后采访	sài hòu cǎi fǎng	1
 赛季球	sài jì qiú	1
 赛季任务	sài jì rèn wù	1
 塞拉斯	sāi lā sī	1
 赛力斯	sài lì sī	1
 塞伦盖提大草原	sāi lún gài tí dà cǎo yuán	1
+塞钱	sāi qián	1
+赛前	sài qián	1
 赛区	sài qū	1
 塞壬	sāi rén	1
 赛事	sài shì	1
 赛维里安	sài wéi lǐ ān	1
 塞维利亚	sāi wéi lì yà	1
 赛文	sài wén	1
+赛训	sài xùn	1
 赛制	sài zhì	1
+三板斧	sān bǎn fǔ	1
+三波	sān bō	1
 三乘三	sān chéng sān	1
 三抽	sān chōu	1
 三更	sān gèng	1
@@ -4653,6 +5504,7 @@ sort: by_weight
 三国演义	sān guó yǎn yì	1
 三号线	sān hào xiàn	1
 散户	sàn hù	1
+三环	sān huán	1
 三级跳	sān jí tiào	1
 三剑客	sān jiàn kè	1
 三江	sān jiāng	1
@@ -4663,9 +5515,12 @@ sort: by_weight
 三角洲行动	sān jiǎo zhōu xíng dòng	1
 三阶段	sān jiē duàn	1
 三阶段了	sān jiē duàn le	1
+三狼	sān láng	1
 三丽鸥	sān lì ōu	1
 三连败	sān lián bài	1
 三连冠	sān lián guàn	1
+三龙	sān lóng	1
+三路	sān lù	1
 三命	sān mìng	1
 三明	sān míng	1
 三姆斯	sān mǔ sī	1
@@ -4675,19 +5530,26 @@ sort: by_weight
 三球	sān qiú	1
 三人行	sān rén xíng	1
 三生三世	sān shēng sān shì	1
+三叔	sān shū	1
+三顺	sān shùn	1
 三限	sān xiàn	1
+三相	sān xiāng	1
 三星	sān xīng	1
 三星堆	sān xīng duī	1
 三亚	sān yà	1
 三叶	sān yè	1
+三语	sān yǔ	1
 三月七	sān yuè qī	1
 三月兽	sān yuè shòu	1
 三折叠	sān zhé dié	1
 三只羊	sān zhī yáng	1
+馓子	sǎn zǐ	1
+桑博	sāng bó	1
 桑德兰	sāng dé lán	1
 扫雪	sǎo xuě	1
 扫帚	sǎo zhou	1
 森林狼	sēn lín láng	1
+僧侣	sēng lǚ	1
 沙兵	shā bīng	1
 沙冰	shā bīng	1
 刹车	shā chē	1
@@ -4699,17 +5561,20 @@ sort: by_weight
 杀气改造	shā qì gǎi zào	1
 杀气塔	shā qì tǎ	1
 杀青	shā qīng	1
+沙丘	shā qiū	1
 杀人任务	shā rén rèn wù	1
 杀人书	shā rén shū	1
 莎莎	shā shā	1
 杀生丸	shā shēng wán	1
 沙特	shā tè	1
+沙特阿美	shā tè ā měi	1
 沙特外交大臣	shā tè wài jiāo dà chén	1
 莎头	shā tóu	1
 沙威玛	shā wēi mǎ	1
 沙一汀	shā yī tīng	1
 沙鹰	shā yīng	1
 鲨鱼妹	shā yú mèi	1
+杀招	shā zhāo	1
 杀猪刀	shā zhū dāo	1
 晒单	shài dān	1
 闪避	shǎn bì	1
@@ -4717,52 +5582,58 @@ sort: by_weight
 闪迪	shǎn dí	1
 山东	shān dōng	1
 山东省	shān dōng shěng	1
-山东省高级人民法院	shān dōng shěng gāo jí rén mín fǎ yuàn	1
 山东泰山	shān dōng tài shān	1
 山海关	shān hǎi guān	1
 山河图	shān hé tú	1
+珊瑚	shān hú	1
 山花	shān huā	1
 闪魂	shǎn hún	1
-山金国际	shān jīn guó jì	1
 闪灵	shǎn líng	1
 山姆	shān mǔ	1
 闪暖	shǎn nuǎn	1
+山山	shān shān	1
 闪身步	shǎn shēn bù	1
+山亭	shān tíng	1
 汕头	shàn tóu	1
 汕尾	shàn wěi	1
 山西	shān xī	1
 陕西	shǎn xī	1
 山西省	shān xī shěng	1
 单县	shàn xiàn	1
+闪现	shǎn xiàn	1
 山新	shān xīn	1
 闪耀哥	shǎn yào gē	1
 闪耀暖暖	shǎn yào nuǎn nuǎn	1
+善宇	shàn yǔ	1
+上把	shàng bǎ	1
 上半年	shàng bàn nián	1
 上半区	shàng bàn qū	1
 伤病	shāng bìng	1
+上波	shàng bō	1
 尚博勒	shàng bó lè	1
 伤残	shāng cán	1
+上场	shàng chǎng	1
+上单	shàng dān	1
 上坟了	shàng fén le	1
 尚公主	shàng gōng zhǔ	1
 上古卷轴	shàng gǔ juǎn zhóu	1
 上海	shàng hǎi	1
-上海交通大学医学院	shàng hǎi jiāo tōng dà xué yī xué yuàn	1
+伤害	shāng hài	1
+上海迪士尼	shàng hǎi dí shì ní	1
+上海和平饭店	shàng hǎi hé píng fàn diàn	1
 上海警方	shàng hǎi jǐng fāng	1
 上海市场监管	shàng hǎi shì chǎng jiān guǎn	1
-上海新华医院	shàng hǎi xīn huá yī yuàn	1
 商户	shāng hù	1
 上会	shàng huì	1
 商家	shāng jiā	1
-上交所	shàng jiāo suǒ	1
+上届	shàng jiè	1
 上阶	shàng jiē	1
 赏金	shǎng jīn	1
 尚可	shàng kě	1
 上路	shàng lù	1
 商洛	shāng luò	1
 上马	shàng mǎ	1
-尚美巴黎	shàng měi bā lí	1
 商南	shāng nán	1
-上汽集团	shàng qì jí tuán	1
 商丘	shāng qiū	1
 赏秋	shǎng qiū	1
 汤汤	shāng shāng	1
@@ -4772,19 +5643,23 @@ sort: by_weight
 上下学	shàng xià xué	1
 上野	shàng yě	1
 商业	shāng yè	1
+上野辅	shàng yě fǔ	1
 商业航天	shāng yè háng tiān	1
+上一场	shàng yī chǎng	1
 上早八	shàng zǎo bā	1
 上中	shàng zhōng	1
+上中下	shàng zhōng xià	1
 上中野	shàng zhōng yě	1
 上周末	shàng zhōu mò	1
 上周三	shàng zhōu sān	1
 上周四	shàng zhōu sì	1
 上周五	shàng zhōu wǔ	1
+伤转	shāng zhuǎn	1
 上嘴脸	shàng zuǐ liǎn	1
 少夫人	shǎo fū rén	1
 韶关	sháo guān	1
 邵佳一	shào jiā yī	1
-邵帅	shào shuài	1
+烧椒	shāo jiāo	1
 少侠	shǎo xiá	1
 绍兴	shào xìng	1
 邵阳	shào yáng	1
@@ -4794,8 +5669,10 @@ sort: by_weight
 社保	shè bǎo	1
 社保卡	shè bǎo kǎ	1
 社工	shè gōng	1
+舍利子	shě lì zǐ	1
 射门	shè mén	1
 涉密	shè mì	1
+蛇年	shé nián	1
 蛇女	shé nǚ	1
 舍人	shě rén	1
 蛇头	shé tóu	1
@@ -4804,10 +5681,13 @@ sort: by_weight
 社员	shè yuán	1
 社招	shè zhāo	1
 申报	shēn bào	1
-沈伯洋	shěn bó yáng	1
+沈北	shěn běi	1
+神兵天降	shén bīng tiān jiàng	1
 深大	shēn dà	1
 深度安静	shēn dù ān jìng	1
 神队	shén duì	1
+神罚	shén fá	1
+神鬼	shén guǐ	1
 神龟	shén guī	1
 深海漫游指南	shēn hǎi màn you zhǐ nán	1
 审核	shěn hé	1
@@ -4817,15 +5697,17 @@ sort: by_weight
 神剑	shén jiàn	1
 申京	shēn jīng	1
 深空当铺	shēn kōng dāng pū	1
+神来之笔	shén lái zhī bǐ	1
 深蓝鲸	shēn lán jīng	1
 神里绫华	shén lǐ líng huá	1
 什么意思夫妇	shén me yì sī fū fù	1
 沈梦溪	shěn mèng xī	1
-沈妙	shěn miào	1
+神牛	shén niú	1
 审判长	shěn pàn zhǎng	1
 神婆	shén pó	1
+神枪	shén qiāng	1
 申请表	shēn qǐng biǎo	1
-深深的	shēn shēn de	1
+肾上腺	shèn shàng xiàn	1
 身世	shēn shì	1
 神兽	shén shòu	1
 深塔	shēn tǎ	1
@@ -4841,59 +5723,69 @@ sort: by_weight
 神相	shén xiāng	1
 沈星回	shěn xīng huí	1
 沈阳	shěn yáng	1
+沈翊	shěn yì	1
 神域	shén yù	1
 深渊	shēn yuān	1
 深渊无间	shēn yuān wú jiān	1
 沈月	shěn yuè	1
+沈载伦	shěn zǎi lún	1
 深圳	shēn zhèn	1
 深圳国际会展中心	shēn zhèn guó jì huì zhǎn zhōng xīn	1
-深圳警方	shēn zhèn jǐng fāng	1
-深圳龙岗区外国语学校	shēn zhèn lóng gǎng qū wài guó yǔ xué xiào	1
 深圳市交通运输局	shēn zhèn shì jiāo tōng yùn shū jú	1
 深圳体育中心	shēn zhèn tǐ yù zhōng xīn	1
 深圳体育中心体育馆	shēn zhèn tǐ yù zhōng xīn tǐ yù guǎn	1
 深圳apec峰会	shēn zhèn fēng huì	1
 神之眼	shén zhī yǎn	1
 神中神	shén zhōng shén	1
+神装	shén zhuāng	1
 生财	shēng cái	1
+圣诞树	shèng dàn shù	1
 盛典	shèng diǎn	1
+胜负	shèng fù	1
 胜负关系	shèng fù guān xì	1
+胜负手	shèng fù shǒu	1
 升国旗	shēng guó qí	1
 声骸	shēng hái	1
-胜决	shèng jué	1
 省考	shěng kǎo	1
-圣龙宝藏	shèng lóng bǎo zàng	1
-生命树	shēng mìng shù	1
+胜利果实	shèng lì guǒ shí	1
+圣龙杯	shèng lóng bēi	1
+生米	shēng mǐ	1
 生命线	shēng mìng xiàn	1
 胜平	shèng píng	1
 升旗	shēng qí	1
+升起	shēng qǐ	1
 圣骑士	shèng qí shì	1
 升旗仪式	shēng qí yí shì	1
-省钱月卡	shěng qián yuè kǎ	1
 圣枪	shèng qiāng	1
 圣枪哥	shèng qiāng gē	1
 生日快乐	shēng rì kuài lè	1
 生日礼物	shēng rì lǐ wù	1
 生日信	shēng rì xìn	1
+胜胜	shèng shèng	1
 盛世	shèng shì	1
 生死局	shēng sǐ jú	1
 省委	shěng wěi	1
 省委书记	shěng wěi shū jì	1
+圣贤	shèng xián	1
+生涯	shēng yá	1
 省长	shěng zhǎng	1
 胜者	shèng zhě	1
 胜者组	shèng zhě zǔ	1
 生周	shēng zhōu	1
+生字	shēng zì	1
 事变	shì biàn	1
 石长姬	shí cháng jī	1
 市场监管总局	shì chǎng jiān guǎn zǒng jú	1
 时大漂亮	shí dà piāo liàng	1
 时代	shí dài	1
+时代广场	shí dài guǎng chǎng	1
 实德	shí dé	1
 史低	shǐ dī	1
 史蒂芬	shǐ dì fēn	1
 时隔	shí gé	1
 十个勤天	shí gè qín tiān	1
 试供暖	shì gòng nuǎn	1
+世冠	shì guàn	1
 时光代理人	shí guāng dài lǐ rén	1
 时光服	shí guāng fú	1
 时光机	shí guāng jī	1
@@ -4903,6 +5795,8 @@ sort: by_weight
 实机	shí jī	1
 事假	shì jiǎ	1
 时间里的爱人	shí jiān lǐ de ài rén	1
+时间无言	shí jiān wú yán	1
+时间线	shí jiān xiàn	1
 视界	shì jiè	1
 世界杯	shì jiè bēi	1
 世界波	shì jiè bō	1
@@ -4911,25 +5805,37 @@ sort: by_weight
 世界计划	shì jiè jì huá	1
 世界末日	shì jiè mò rì	1
 世界赛	shì jiè sài	1
+世界线	shì jiè xiàn	1
 世锦赛	shì jǐn sài	1
+势均力敌	shì jūn lì dí	1
 石凯	shí kǎi	1
 屎壳郎	shǐ ké láng	1
 失控的第七天	shī kòng de dì qī tiān	1
+时空警察	shí kōng jǐng chá	1
 实况足球	shí kuàng zú qiú	1
 史莱姆	shǐ lái mǔ	1
+石乐	shí lè	1
+失利	shī lì	1
 实力差距	shí lì chà jù	1
 十连	shí lián	1
-矢量咖啡	shǐ liàng kā fēi	1
+十六强	shí liù qiáng	1
 史密斯	shǐ mì sī	1
 市民	shì mín	1
 市民卡	shì mín kǎ	1
+市民中心	shì mín zhōng xīn	1
 使命召唤	shǐ mìng zhào huàn	1
+十年人间	shí nián rén jiān	1
+适配度	shì pèi dù	1
+适配器	shì pèi qì	1
 视频号	shì pín hào	1
 石破茂	shí pò mào	1
+士气	shì qì	1
 市情	shì qíng	1
 实权	shí quán	1
 十全十美	shí quán shí měi	1
 十日终焉	shí rì zhōng yān	1
+史上	shǐ shàng	1
+史上最强	shǐ shàng zuì qiáng	1
 师生	shī shēng	1
 事事	shì shì	1
 逝世	shì shì	1
@@ -4943,8 +5849,11 @@ sort: by_weight
 十万狂花入梦来	shí wàn kuáng huā rù mèng lái	1
 市委	shì wěi	1
 市委书记	shì wěi shū jì	1
+湿吻	shī wěn	1
 事务	shì wù	1
+失误	shī wù	1
 实务	shí wù	1
+史无前例	shǐ wú qián lì	1
 事务所	shì wù suǒ	1
 十五五	shí wǔ wǔ	1
 实习生	shí xí shēng	1
@@ -4957,8 +5866,12 @@ sort: by_weight
 十堰	shí yàn	1
 实验报告	shí yàn bào gào	1
 事宜	shì yí	1
+失意	shī yì	1
 世一上	shì yī shàng	1
+世一中	shì yī zhōng	1
+市一中	shì yī zhōng	1
 实用谷	shí yòng gǔ	1
+使用者	shǐ yòng zhě	1
 石油杯	shí yóu bēi	1
 失语症	shī yǔ zhèng	1
 十月初二	shí yuè chū èr	1
@@ -4971,21 +5884,33 @@ sort: by_weight
 实至名归	shí zhì míng guī	1
 时装	shí zhuāng	1
 试妆	shì zhuāng	1
+虱子	shī zǐ	1
 狮子座	shī zǐ zuò	1
 始祖鸟	shǐ zǔ niǎo	1
 守岸人	shǒu àn rén	1
+收彩礼	shōu cǎi lǐ	1
+手长	shǒu cháng	1
 首场	shǒu chǎng	1
 手抄报	shǒu chāo bào	1
 手持物	shǒu chí wù	1
+首创	shǒu chuàng	1
+手搓动画大赛	shǒu cuō dòng huà dà sài	1
+手大哥	shǒu dà gē	1
+收单	shōu dān	1
 手电钻	shǒu diàn zuàn	1
 首都医科大学	shǒu dū yī kē dà xué	1
 首尔	shǒu ěr	1
+首发名单	shǒu fā míng dān	1
 收费站	shōu fèi zhàn	1
+收割	shōu gē	1
+首个	shǒu gè	1
+首购	shǒu gòu	1
 收官	shōu guān	1
 首冠	shǒu guàn	1
 寿回	shòu huí	1
 收集者	shōu jí zhě	1
 售价	shòu jià	1
+手绢	shǒu juàn	1
 寿来	shòu lái	1
 受力	shòu lì	1
 手里剑	shǒu lǐ jiàn	1
@@ -4994,6 +5919,7 @@ sort: by_weight
 手捧繁星	shǒu pěng fán xīng	1
 手枪局	shǒu qiāng jú	1
 手球	shǒu qiú	1
+手神	shǒu shén	1
 手绳	shǒu shéng	1
 首胜	shǒu shèng	1
 兽兽	shòu shòu	1
@@ -5003,15 +5929,21 @@ sort: by_weight
 收听	shōu tīng	1
 手瓦	shǒu wǎ	1
 首席	shǒu xí	1
+首相	shǒu xiāng	1
 手写	shǒu xiě	1
 收心	shōu xīn	1
+手心手背	shǒu xīn shǒu bèi	1
 首秀	shǒu xiù	1
 兽医	shòu yī	1
 手印	shǒu yìn	1
 狩月	shòu yuè	1
 首赞	shǒu zàn	1
+收汁	shōu zhī	1
+手子哥	shǒu zǐ gē	1
 数额	shù é	1
 淑芬	shū fēn	1
+树挂	shù guà	1
+曙光	shǔ guāng	1
 赎回	shú huí	1
 书记	shū jì	1
 姝酱	shū jiàng	1
@@ -5021,12 +5953,15 @@ sort: by_weight
 数据中心	shù jù zhōng xīn	1
 数据组	shù jù zǔ	1
 舒客	shū kè	1
+枢纽	shū niǔ	1
 舒淇	shū qí	1
 抒情	shū qíng	1
 输球	shū qiú	1
 蜀山	shǔ shān	1
+舒适区	shū shì qū	1
 戍卫	shù wèi	1
 树屋	shù wū	1
+属性图	shǔ xìng tú	1
 数学	shù xué	1
 数学竞赛	shù xué jìng sài	1
 数学作业	shù xué zuò yè	1
@@ -5034,32 +5969,48 @@ sort: by_weight
 沭阳	shù yáng	1
 鼠疫	shǔ yì	1
 淑元	shū yuán	1
+数值怪	shù zhí guài	1
+赎罪	shú zuì	1
+刷屏	shuā píng	1
 刷异色	shuā yì sè	1
 刷砖	shuā zhuān	1
 帅呆了	shuài dāi le	1
 摔伤	shuāi shāng	1
 双城	shuāng chéng	1
+双程	shuāng chéng	1
 双床房	shuāng chuáng fáng	1
+双帝	shuāng dì	1
+双帝之战	shuāng dì zhī zhàn	1
 双冠	shuāng guàn	1
+双管	shuāng guǎn	1
+双冠王	shuāng guàn wáng	1
 双汇	shuāng huì	1
 双架	shuāng jià	1
 霜降	shuāng jiàng	1
+爽看	shuǎng kàn	1
+双可	shuāng kě	1
 双梦	shuāng mèng	1
 双女	shuāng nǚ	1
 双平	shuāng píng	1
 双强	shuāng qiáng	1
+双人包	shuāng rén bāo	1
 双人卡	shuāng rén kǎ	1
+双人舞	shuāng rén wǔ	1
+双人组	shuāng rén zǔ	1
 双色球	shuāng sè qiú	1
+双射手	shuāng shè shǒu	1
 双十二	shuāng shí èr	1
 双十一	shuāng shí yī	1
 爽玩	shuǎng wán	1
-双位置	shuāng wèi zhì	1
 双系统	shuāng xì tǒng	1
+双线	shuāng xiàn	1
 双形态	shuāng xíng tài	1
 双休	shuāng xiū	1
 双选会	shuāng xuǎn huì	1
+双鸭山	shuāng yā shān	1
 双一流	shuāng yī liú	1
 爽游	shuǎng you	1
+双招	shuāng zhāo	1
 水贝	shuǐ bèi	1
 水滴筹	shuǐ dī chóu	1
 水痘	shuǐ dòu	1
@@ -5067,13 +6018,16 @@ sort: by_weight
 税二	shuì èr	1
 水浒传	shuǐ hǔ zhuàn	1
 水晶	shuǐ jīng	1
+水晶哥	shuǐ jīng gē	1
 水晶宫	shuǐ jīng gōng	1
 水均益	shuǐ jūn yì	1
 水课	shuǐ kè	1
 水利	shuǐ lì	1
+水量	shuǐ liàng	1
 水龙魂	shuǐ lóng hún	1
 水门	shuǐ mén	1
 水鸟	shuǐ niǎo	1
+水深	shuǐ shēn	1
 税收	shuì shōu	1
 水卫士	shuǐ wèi shì	1
 税务	shuì wù	1
@@ -5081,6 +6035,7 @@ sort: by_weight
 税务师	shuì wù shī	1
 谁稀罕	shuí xī hǎn	1
 税一	shuì yī	1
+水银鞋	shuǐ yín xié	1
 水域	shuǐ yù	1
 水蒸气	shuǐ zhēng qì	1
 水蛭	shuǐ zhì	1
@@ -5097,11 +6052,13 @@ sort: by_weight
 硕士	shuò shì	1
 丝芭	sī bā	1
 斯巴达	sī bā dá	1
+四版	sì bǎn	1
+四比二	sì bǐ èr	1
 四川	sì chuān	1
 四川舰	sì chuān jiàn	1
 四川省	sì chuān shěng	1
 四词条	sì cí tiáo	1
-四大天王	sì dà tiān wáng	1
+斯大林	sī dà lín	1
 四渡赤水	sì dù chì shuǐ	1
 司法	sī fǎ	1
 司法部	sī fǎ bù	1
@@ -5112,21 +6069,23 @@ sort: by_weight
 四结局	sì jié jú	1
 思金神	sī jīn shén	1
 丝柯克	sī kē kè	1
+司空	sī kōng	1
+司空真	sī kōng zhēn	1
 司空震	sī kōng zhèn	1
+司空正	sī kōng zhèng	1
 私联	sī lián	1
 四六级	sì liù jí	1
+四龙	sì lóng	1
 斯洛伐克	sī luò fá kè	1
-司马师	sī mǎ shī	1
 斯玛特	sī mǎ tè	1
 司美格鲁肽	sī měi gé lǔ tài	1
-斯诺克冠中冠	sī nuò kè guàn zhōng guàn	1
 四强	sì qiáng	1
 四驱车	sì qū chē	1
+四杀	sì shā	1
 四圣	sì shèng	1
 私生	sī shēng	1
 死水	sǐ shuǐ	1
 丝塔芙	sī tǎ fú	1
-斯塔姆	sī tǎ mǔ	1
 斯坦丘	sī tǎn qiū	1
 斯图加特	sī tú jiā tè	1
 死亡禁区实录	sǐ wáng jìn qū shí lù	1
@@ -5135,6 +6094,7 @@ sort: by_weight
 泗县特警	sì xiàn tè jǐng	1
 四星皮	sì xīng pí	1
 思瑶	sī yáo	1
+丝印	sī yìn	1
 死因	sǐ yīn	1
 思政	sī zhèng	1
 四抓	sì zhuā	1
@@ -5149,7 +6109,9 @@ sort: by_weight
 嵩山	sōng shān	1
 宋威龙	sòng wēi lóng	1
 宋亚东	sòng yà dōng	1
+松雅湖	sōng yǎ hú	1
 宋亚轩	sòng yà xuān	1
+松阳	sōng yáng	1
 宋义进	sòng yì jìn	1
 宋雨琦	sòng yǔ qí	1
 松原	sōng yuán	1
@@ -5162,17 +6124,19 @@ sort: by_weight
 苏丹	sū dān	1
 速冻	sù dòng	1
 速冻饺子	sù dòng jiǎo zǐ	1
+速度滑冰世界杯北京站	sù dù huá bīng shì jiè bēi běi jīng zhàn	1
 速度快	sù dù kuài	1
 苏格兰	sū gé lán	1
 苏联	sū lián	1
 苏烈	sū liè	1
 速龙	sù lóng	1
 苏妈	sū mā	1
+素面	sù miàn	1
 宿迁	sù qiān	1
 苏三	sū sān	1
 苏轼	sū shì	1
 速通	sù tōng	1
-速通了	sù tōng le	1
+速效救心丸	sù xiào jiù xīn wán	1
 苏新皓	sū xīn hào	1
 苏醒	sū xǐng	1
 苏有朋	sū yǒu péng	1
@@ -5195,18 +6159,21 @@ sort: by_weight
 碎钻	suì zuàn	1
 孙膑	sūn bìn	1
 孙策	sūn cè	1
+孙海洋	sūn hǎi yáng	1
 孙红雷	sūn hóng léi	1
 孙俪	sūn lì	1
 孙楠	sūn nán	1
 孙女	sūn nǚ	1
 孙千	sūn qiān	1
 孙尚香	sūn shàng xiāng	1
+孙文	sūn wén	1
 孙悟空	sūn wù kōng	1
 孙修炜	sūn xiū wěi	1
 孙燕姿	sūn yàn zī	1
 孙怡	sūn yí	1
 孙颖莎	sūn yǐng shā	1
 孙宇	sūn yǔ	1
+孙悦	sūn yuè	1
 孙珍妮	sūn zhēn nī	1
 孙中山	sūn zhōng shān	1
 索道	suǒ dào	1
@@ -5214,6 +6181,8 @@ sort: by_weight
 锁卡	suǒ kǎ	1
 锁暝	suǒ míng	1
 索尼	suǒ ní	1
+索蓬	suǒ péng	1
+锁头	suǒ tóu	1
 梭鱼湾	suō yú wān	1
 所在地	suǒ zài dì	1
 缩招	suō zhāo	1
@@ -5225,7 +6194,9 @@ sort: by_weight
 他是这样的人	tā shì zhè yàng de rén	1
 獭兔	tǎ tù	1
 塔图姆	tǎ tú mǔ	1
+塔下	tǎ xià	1
 塌陷	tā xiàn	1
+塔赞	tǎ zàn	1
 塔子	tǎ zǐ	1
 塔子姐	tǎ zǐ jiě	1
 泰安	tài ān	1
@@ -5233,9 +6204,12 @@ sort: by_weight
 太仓	tài cāng	1
 太辰光	tài chén guāng	1
 太刀	tài dāo	1
+太顶	tài dǐng	1
 泰尔	tài ěr	1
 太妃	tài fēi	1
 台风	tái fēng	1
+泰丰	tài fēng	1
+泰腐	tài fǔ	1
 太公望	tài gōng wàng	1
 太谷	tài gǔ	1
 太关键了	tài guān jiàn le	1
@@ -5243,15 +6217,20 @@ sort: by_weight
 台海	tái hǎi	1
 太湖	tài hú	1
 台积电	tái jī diàn	1
+太精彩	tài jīng cǎi	1
 泰勒	tài lè	1
 太冷	tài lěng	1
 台历	tái lì	1
+太理	tài lǐ	1
 台林	tái lín	1
 泰奶	tài nǎi	1
 太奶奶	tài nǎi nǎi	1
+太能	tài néng	1
 太年轻	tài nián qīng	1
 泰诺	tài nuò	1
 太平洋	tài píng yáng	1
+台球桌	tái qiú zhuō	1
+太热爱	tài rè ài	1
 泰森	tài sēn	1
 台山	tái shān	1
 泰山	tài shān	1
@@ -5259,7 +6238,9 @@ sort: by_weight
 泰山区	tài shān qū	1
 太守	tài shǒu	1
 胎手	tāi shǒu	1
+泰坦	tài tǎn	1
 台湾	tái wān	1
+太想赢了	tài xiǎng yíng le	1
 太阳神	tài yáng shén	1
 太阳雨	tài yáng yǔ	1
 太原	tài yuán	1
@@ -5268,10 +6249,12 @@ sort: by_weight
 太子	tài zǐ	1
 太子妃	tài zǐ fēi	1
 碳板	tàn bǎn	1
+坦度	tǎn dù	1
 弹劾	tán hé	1
 檀健次	tán jiàn cì	1
 谭松韵	tán sōng yùn	1
 贪饕	tān tāo	1
+坦野	tǎn yě	1
 谭咏麟	tán yǒng lín	1
 摊主	tān zhǔ	1
 糖厂	táng chǎng	1
@@ -5281,11 +6264,14 @@ sort: by_weight
 唐哥	táng gē	1
 唐诡	táng guǐ	1
 糖葫芦	táng hú lú	1
+唐嘉年	táng jiā nián	1
 汤令山	tāng lìng shān	1
 唐山	táng shān	1
-唐山市政府	táng shān shì zhèng fǔ	1
+糖霜	táng shuāng	1
 唐唐	táng táng	1
 唐田	táng tián	1
+汤唯	tāng wéi	1
+溏心蛋	táng xīn dàn	1
 唐嫣	táng yān	1
 糖影	táng yǐng	1
 淘宝	táo bǎo	1
@@ -5296,6 +6282,7 @@ sort: by_weight
 桃花村	táo huā cūn	1
 淘金币	táo jīn bì	1
 桃李	táo lǐ	1
+桃绒	táo róng	1
 逃生	táo shēng	1
 淘汰	táo tài	1
 淘汰赛	táo tài sài	1
@@ -5306,6 +6293,7 @@ sort: by_weight
 特奥多罗	tè ào duō luó	1
 特别的人	tè bié de rén	1
 特步	tè bù	1
+特控线	tè kòng xiàn	1
 特朗普	tè lǎng pǔ	1
 特朗普政府	tè lǎng pǔ zhèng fǔ	1
 特雷杨	tè léi yáng	1
@@ -5313,6 +6301,7 @@ sort: by_weight
 特斯拉	tè sī lā	1
 特效药	tè xiào yào	1
 特制	tè zhì	1
+藤井	téng jǐng	1
 腾势	téng shì	1
 滕王阁	téng wáng gé	1
 腾讯	téng xùn	1
@@ -5320,6 +6309,7 @@ sort: by_weight
 藤原	téng yuán	1
 滕州	téng zhōu	1
 提宝	tí bǎo	1
+替补	tì bǔ	1
 体彩	tǐ cǎi	1
 体操	tǐ cāo	1
 剃刀	tì dāo	1
@@ -5330,29 +6320,33 @@ sort: by_weight
 提纲	tí gāng	1
 剃光头	tì guāng tóu	1
 鹈鹕	tí hú	1
-替来他明	tì lái tā míng	1
+提款	tí kuǎn	1
 提名	tí míng	1
 提纳里	tí nà lǐ	1
 提欧	tí ōu	1
 提前金	tí qián jīn	1
 缇塔	tí tǎ	1
+体坛	tǐ tán	1
 提瓦特	tí wǎ tè	1
 体验服	tǐ yàn fú	1
 体育部	tǐ yù bù	1
 体育课	tǐ yù kè	1
 体育中心	tǐ yù zhōng xīn	1
-体育组	tǐ yù zǔ	1
+替罪羊	tì zuì yáng	1
 天安门	tiān ān mén	1
+天邦食品	tiān bāng shí pǐn	1
 填报	tián bào	1
+天蚕土豆	tiān cán tǔ dòu	1
 天赐	tiān cì	1
 天道酬勤	tiān dào chóu qín	1
 天官赐福	tiān guān cì fú	1
 田国良	tián guó liáng	1
 天河城	tiān hé chéng	1
-田红	tián hóng	1
 天玑	tiān jī	1
+田忌赛马	tián jì sài mǎ	1
 天际线	tiān jì xiàn	1
 田嘉瑞	tián jiā ruì	1
+天降	tiān jiàng	1
 天界	tiān jiè	1
 天津	tiān jīn	1
 天津人	tiān jīn rén	1
@@ -5376,20 +6370,29 @@ sort: by_weight
 天气预报	tiān qì yù bào	1
 天人	tiān rén	1
 天神	tiān shén	1
+天神下凡	tiān shén xià fán	1
 天水	tiān shuǐ	1
 添添	tiān tiān	1
 甜甜糕	tián tián gāo	1
+天天姐	tiān tiān jiě	1
+天童	tiān tóng	1
+天王山	tiān wáng shān	1
 天文台	tiān wén tái	1
 田曦薇	tián xī wēi	1
 天下为公	tiān xià wéi gōng	1
 天下秀	tiān xià xiù	1
+田小娟	tián xiǎo juān	1
 田心	tián xīn	1
+甜心奶兔酱	tián xīn nǎi tù jiàng	1
 田栩宁	tián xǔ níng	1
+天旋地转	tiān xuán dì zhuǎn	1
 田阳	tián yáng	1
 添衣	tiān yī	1
 田一鸣	tián yī míng	1
 天佑	tiān yòu	1
 甜玉米	tián yù mǐ	1
+天悦	tiān yuè	1
+天照	tiān zhào	1
 天珠	tiān zhū	1
 挑杯	tiāo bēi	1
 调价	tiáo jià	1
@@ -5407,7 +6410,11 @@ sort: by_weight
 铁骑	tiě qí	1
 铁人	tiě rén	1
 铁树	tiě shù	1
+铁桶	tiě tǒng	1
+铁通	tiě tōng	1
+铁桶阵	tiě tǒng zhèn	1
 铁头	tiě tóu	1
+铁王八	tiě wáng bā	1
 铁衣	tiě yī	1
 铁斩波	tiě zhǎn bō	1
 铁证	tiě zhèng	1
@@ -5417,9 +6424,12 @@ sort: by_weight
 停服	tíng fú	1
 停氪	tíng kè	1
 停牌	tíng pái	1
+听牌	tīng pái	1
 听牌龙	tīng pái lóng	1
 婷婷	tíng tíng	1
 听雨	tīng yǔ	1
+听悦	tīng yuè	1
+听月	tīng yuè	1
 停运	tíng yùn	1
 厅长	tīng zhǎng	1
 通报	tōng bào	1
@@ -5427,6 +6437,8 @@ sort: by_weight
 通车	tōng chē	1
 同乘	tóng chéng	1
 铜川	tóng chuān	1
+同床	tóng chuáng	1
+通达	tōng dá	1
 通富	tōng fù	1
 通富微电	tōng fù wēi diàn	1
 通过率	tōng guò lǜ	1
@@ -5438,10 +6450,16 @@ sort: by_weight
 痛楼	tòng lóu	1
 铜牌	tóng pái	1
 同仁	tóng rén	1
+同天	tóng tiān	1
+通天代	tōng tiān dài	1
 瞳瞳	tóng tóng	1
+通威	tōng wēi	1
+同业	tóng yè	1
+同意	tóng yì	1
 统一	tǒng yī	1
 童禹坤	tóng yǔ kūn	1
 通知	tōng zhī	1
+统治力	tǒng zhì lì	1
 通州	tōng zhōu	1
 同奏	tóng zòu	1
 投标	tóu biāo	1
@@ -5451,10 +6469,12 @@ sort: by_weight
 透明度	tòu míng dù	1
 头脑风暴	tóu nǎo fēng bào	1
 投票	tóu piào	1
+投屏	tóu píng	1
 头球	tóu qiú	1
 头条	tóu tiáo	1
 偷偷藏不住	tōu tōu cáng bù zhù	1
 透心凉	tòu xīn liáng	1
+投影仪	tóu yǐng yí	1
 土豆兄弟	tǔ dòu xiōng dì	1
 土耳其	tǔ ěr qí	1
 途观	tú guān	1
@@ -5463,12 +6483,15 @@ sort: by_weight
 土龙	tǔ lóng	1
 土龙魂	tǔ lóng hún	1
 吐鲁番	tǔ lǔ fān	1
+荼靡	tú mí	1
 突破口	tū pò kǒu	1
 土枪	tǔ qiāng	1
 突然降温	tū rán jiàng wēn	1
 突如其来	tū rú qí lái	1
+途锐	tú ruì	1
 涂色	tú sè	1
 兔闪闪	tù shǎn shǎn	1
+徒孙	tú sūn	1
 土特产	tǔ tè chǎn	1
 突围	tū wéi	1
 图一	tú yī	1
@@ -5477,19 +6500,27 @@ sort: by_weight
 团粉	tuán fěn	1
 团伙	tuán huǒ	1
 团聚	tuán jù	1
+团灭	tuán miè	1
 团体	tuán tǐ	1
 团圆	tuán yuán	1
 团战	tuán zhàn	1
-推介会	tuī jiè huì	1
+推免	tuī miǎn	1
 退赛	tuì sài	1
 推送	tuī sòng	1
+推推棒	tuī tuī bàng	1
+推下	tuī xià	1
+推线	tuī xiàn	1
 退休金	tuì xiū jīn	1
 退展	tuì zhǎn	1
 囤积	tún jī	1
 豚豚剧	tún tún jù	1
+拓邦股份	tuò bāng gǔ fèn	1
 托福	tuō fú	1
+脱节	tuō jié	1
 陀螺	tuó luó	1
+拖米	tuō mǐ	1
 托尼	tuō ní	1
+拖沓	tuō tà	1
 拓竹	tuò zhú	1
 佤邦	wǎ bāng	1
 瓦房店	wǎ fáng diàn	1
@@ -5498,18 +6529,25 @@ sort: by_weight
 瓦库	wǎ kù	1
 瓦蕾莎	wǎ lěi shā	1
 瓦列里	wǎ liè lǐ	1
+瓦批	wǎ pī	1
 蛙趣蛙趣	wā qù wā qù	1
 瓦手	wǎ shǒu	1
 瓦瓦	wǎ wǎ	1
+瓦希迪	wǎ xī dí	1
 瓦学弟	wǎ xué dì	1
 瓦夜	wǎ yè	1
 外交	wài jiāo	1
 外交部	wài jiāo bù	1
 外卡	wài kǎ	1
 外卖柜	wài mài guì	1
+外卖卷	wài mài juǎn	1
+外卖券	wài mài quàn	1
 外屏	wài píng	1
+歪破	wāi pò	1
 外婆家	wài pó jiā	1
 外滩	wài tān	1
+外网	wài wǎng	1
+外援	wài yuán	1
 外战	wài zhàn	1
 完爆	wán bào	1
 万博	wàn bó	1
@@ -5525,11 +6563,13 @@ sort: by_weight
 万科	wàn kē	1
 晚课	wǎn kè	1
 顽刻	wán kè	1
+万力	wàn lì	1
 完美世界	wán měi shì jiè	1
+玩闹	wán nào	1
+顽强	wán qiáng	1
 晚秋	wǎn qiū	1
 湾区	wān qū	1
 完赛	wán sài	1
-晚山	wǎn shān	1
 万圣节	wàn shèng jié	1
 万事	wàn shì	1
 万事如意	wàn shì rú yì	1
@@ -5549,10 +6589,10 @@ sort: by_weight
 玩雪	wán xuě	1
 晚宴	wǎn yàn	1
 万载	wàn zǎi	1
+万丈	wàn zhàng	1
 万州	wàn zhōu	1
 挽昼	wǎn zhòu	1
 丸子	wán zǐ	1
-王安顺	wáng ān shùn	1
 王安宇	wáng ān yǔ	1
 王八池	wáng bā chí	1
 王宝强	wáng bǎo qiáng	1
@@ -5566,22 +6606,22 @@ sort: by_weight
 王栋	wáng dòng	1
 汪东城	wāng dōng chéng	1
 王队	wáng duì	1
+王多多	wáng duō duō	1
 王菲	wáng fēi	1
 王飞	wáng fēi	1
 汪峰	wāng fēng	1
 王扶之	wáng fú zhī	1
 王刚	wáng gāng	1
 网格	wǎng gé	1
-王国明	wáng guó míng	1
 王国之泪	wáng guó zhī lèi	1
 王浩	wáng hào	1
 王皓	wáng hào	1
 王浩然	wáng hào rán	1
 王浩宇	wáng hào yǔ	1
+王昊哲	wáng hào zhé	1
 王鹤棣	wáng hè dì	1
 王赫野	wáng hè yě	1
 王辉	wáng huī	1
-亡魂	wáng hún	1
 王嘉尔	wáng jiā ěr	1
 王佳怡	wáng jiā yí	1
 王健	wáng jiàn	1
@@ -5593,8 +6633,10 @@ sort: by_weight
 王俊	wáng jùn	1
 王军	wáng jūn	1
 王俊凯	wáng jùn kǎi	1
+王俊勇	wáng jùn yǒng	1
 王凯	wáng kǎi	1
 网口	wǎng kǒu	1
+王乐乐	wáng lè lè	1
 王磊	wáng lěi	1
 王力宏	wáng lì hóng	1
 王励勤	wáng lì qín	1
@@ -5609,28 +6651,39 @@ sort: by_weight
 王齐铭	wáng qí míng	1
 网球	wǎng qiú	1
 王秋明	wáng qiū míng	1
+王森旭	wáng sēn xù	1
+王上源	wáng shàng yuán	1
 王氏	wáng shì	1
 王帅	wáng shuài	1
 王烁然	wáng shuò rán	1
 王思聪	wáng sī cōng	1
+王思琪	wáng sī qí	1
 汪苏泷	wāng sū lóng	1
 王腾	wáng téng	1
+汪汪队	wāng wāng duì	1
 王伟	wáng wěi	1
 王威	wáng wēi	1
 王维	wáng wéi	1
+王薇薇	wáng wēi wēi	1
 王先生	wáng xiān shēng	1
 王欣	wáng xīn	1
 王心凌	wáng xīn líng	1
 王欣怡	wáng xīn yí	1
 王岩	wáng yán	1
 王艳	wáng yàn	1
+汪洋	wāng yáng	1
+网页端	wǎng yè duān	1
 王奕	wáng yì	1
 网易	wǎng yì	1
 王一博	wáng yī bó	1
+王一博工作室	wáng yī bó gōng zuò shì	1
+王艺涵	wáng yì hán	1
 王一珩	wáng yī héng	1
+王以太	wáng yǐ tài	1
 网银	wǎng yín	1
 王颖	wáng yǐng	1
 王勇	wáng yǒng	1
+王玉栋	wáng yù dòng	1
 王钰栋	wáng yù dòng	1
 王源	wáng yuán	1
 望月	wàng yuè	1
@@ -5653,10 +6706,12 @@ sort: by_weight
 魏大勋	wèi dà xūn	1
 韦德	wéi dé	1
 微电影	wēi diàn yǐng	1
+未定事件簿	wèi dìng shì jiàn bù	1
 维度	wéi dù	1
+卫队	wèi duì	1
 薇恩	wēi ēn	1
+威尔士	wēi ěr shì	1
 潍坊	wéi fāng	1
-潍坊峡山	wéi fāng xiá shān	1
 微分方程	wēi fēn fāng chéng	1
 微光	wēi guāng	1
 威海	wēi hǎi	1
@@ -5670,13 +6725,15 @@ sort: by_weight
 薇姐	wēi jiě	1
 危局	wēi jú	1
 未可	wèi kě	1
-韦克林	wéi kè lín	1
+维克多	wéi kè duō	1
 维克托	wéi kè tuō	1
 卫裤	wèi kù	1
 维拉	wéi lā	1
 蔚来	wèi lái	1
 未来往事	wèi lái wǎng shì	1
+卫兰	wèi lán	1
 蔚蓝档案	wèi lán dàng àn	1
+韦礼安	wéi lǐ ān	1
 微粒贷	wēi lì dài	1
 维里奈	wéi lǐ nài	1
 维琳娜	wéi lín nà	1
@@ -5684,10 +6741,13 @@ sort: by_weight
 维鲁斯	wéi lǔ sī	1
 韦鲁斯	wéi lǔ sī	1
 维密	wéi mì	1
+卫冕	wèi miǎn	1
 为你闪耀	wéi nǐ shǎn yào	1
+维尼修斯	wéi ní xiū sī	1
 威宁	wēi níng	1
 薇诺娜	wēi nuò nà	1
 尾盘	wěi pán	1
+卫青	wèi qīng	1
 魏娆	wèi ráo	1
 伟人	wěi rén	1
 微软	wēi ruǎn	1
@@ -5697,13 +6757,11 @@ sort: by_weight
 维什戴尔	wéi shén dài ěr	1
 卫视	wèi shì	1
 韦世豪	wéi shì háo	1
-伪史论	wěi shǐ lùn	1
 卫戍	wèi shù	1
 卫戍协议	wèi shù xié yì	1
 薇斯纳	wēi sī nà	1
 维斯塔潘	wéi sī tǎ pān	1
 威特科夫	wēi tè kē fū	1
-尾田	wěi tián	1
 薇薇安	wēi wēi ān	1
 魏无羡	wèi wú xiàn	1
 微信	wēi xìn	1
@@ -5721,18 +6779,23 @@ sort: by_weight
 畏罪自杀	wèi zuì zì shā	1
 文班	wén bān	1
 文班亚马	wén bān yà mǎ	1
+文波	wén bō	1
 温差	wēn chà	1
 汶川	wèn chuān	1
 问鼎	wèn dǐng	1
 温度	wēn dù	1
 问候	wèn hòu	1
+文姬	wén jī	1
 文吉儿	wén jí ér	1
 文件	wén jiàn	1
+稳健	wěn jiàn	1
 问界	wèn jiè	1
 温酒	wēn jiǔ	1
 文俊	wén jùn	1
+文君	wén jūn	1
 文俊辉	wén jùn huī	1
 文库	wén kù	1
+问路	wèn lù	1
 文墨	wén mò	1
 温妮莎	wēn nī shā	1
 文强	wén qiáng	1
@@ -5741,9 +6804,12 @@ sort: by_weight
 温特	wēn tè	1
 文投	wén tóu	1
 文轩	wén xuān	1
+稳赢	wěn yíng	1
+稳扎稳打	wěn zhā wěn dǎ	1
 问诊	wèn zhěn	1
 文职	wén zhí	1
 温州	wēn zhōu	1
+稳住	wěn zhù	1
 翁法洛斯	wēng fǎ luò sī	1
 翁法罗斯	wēng fǎ luó sī	1
 翁瓦克	wēng wǎ kè	1
@@ -5756,11 +6822,9 @@ sort: by_weight
 沃尔沃	wò ěr wò	1
 我国	wǒ guó	1
 我国考	wǒ guó kǎo	1
-我教资	wǒ jiào zī	1
+我行让我上	wǒ háng ràng wǒ shàng	1
 蜗居	wō jū	1
-我理解您的不满	wǒ lǐ jiě nín de bù mǎn	1
 我们	wǒ men	1
-我们的歌	wǒ men de gē	1
 我们仅有一次的人生	wǒ men jǐn yǒu yī cì de rén shēng	1
 我们来了	wǒ men lái le	1
 我们是冠军	wǒ men shì guàn jūn	1
@@ -5770,6 +6834,8 @@ sort: by_weight
 我要冷死了	wǒ yào lěng sǐ le	1
 我在	wǒ zài	1
 我真没招了	wǒ zhēn méi zhāo le	1
+我主队	wǒ zhǔ duì	1
+吾岸	wú àn	1
 乌巢	wū cháo	1
 武大	wǔ dà	1
 雾大	wù dà	1
@@ -5780,11 +6846,17 @@ sort: by_weight
 雾灯	wù dēng	1
 吴迪	wú dí	1
 乌冬	wū dōng	1
+雾都	wù dū	1
 吾恩	wú ēn	1
 武凤	wǔ fèng	1
 误封	wù fēng	1
+五福临门	wǔ fú lín mén	1
 五公	wǔ gōng	1
 武功山	wǔ gōng shān	1
+无冠	wú guàn	1
+乌龟	wū guī	1
+乌龟壳	wū guī ké	1
+乌龟阵	wū guī zhèn	1
 五哈	wǔ hā	1
 乌海	wū hǎi	1
 武汉	wǔ hàn	1
@@ -5794,9 +6866,9 @@ sort: by_weight
 芜湖	wú hú	1
 物华弥新	wù huá mí xīn	1
 无幻	wú huàn	1
+武魂真身	wǔ hún zhēn shēn	1
 五家渠	wǔ jiā qú	1
 五角场	wǔ jiǎo chǎng	1
-五角大楼	wǔ jiǎo dà lóu	1
 武进	wǔ jìn	1
 无尽冬日	wú jìn dōng rì	1
 吴京	wú jīng	1
@@ -5804,6 +6876,7 @@ sort: by_weight
 无氪	wú kè	1
 乌克兰	wū kè lán	1
 乌克兰国防部	wū kè lán guó fáng bù	1
+乌克兰卡空军基地	wū kè lán kǎ kōng jūn jī dì	1
 无可替代	wú kě tì dài	1
 无可替代的你	wú kě tì dài de nǐ	1
 悟空	wù kōng	1
@@ -5812,6 +6885,7 @@ sort: by_weight
 乌兰察布	wū lán chá bù	1
 吴磊	wú lěi	1
 物理	wù lǐ	1
+无力回天	wú lì huí tiān	1
 五粮液	wǔ liáng yè	1
 武林外传	wǔ lín wài zhuàn	1
 五菱	wǔ líng	1
@@ -5819,8 +6893,11 @@ sort: by_weight
 乌鲁木齐	wū lǔ mù qí	1
 乌鲁木齐军区	wū lǔ mù qí jūn qū	1
 雾霾	wù mái	1
+雾霾天	wù mái tiān	1
 乌美	wū měi	1
+舞美	wǔ měi	1
 乌蒙山	wū méng shān	1
+无冕之王	wú miǎn zhī wáng	1
 无名	wú míng	1
 无名之辈	wú míng zhī bèi	1
 无明宙	wú míng zhòu	1
@@ -5834,6 +6911,7 @@ sort: by_weight
 吴清	wú qīng	1
 五仁	wǔ rén	1
 无人机	wú rén jī	1
+五人组	wǔ rén zǔ	1
 乌萨奇	wū sà qí	1
 乌萨斯	wū sà sī	1
 武山	wǔ shān	1
@@ -5842,6 +6920,9 @@ sort: by_weight
 舞室	wǔ shì	1
 吴世勋	wú shì xūn	1
 无双	wú shuāng	1
+雾水	wù shuǐ	1
+雾凇	wù sōng	1
+舞台	wǔ tái	1
 无题	wú tí	1
 雾天	wù tiān	1
 五条人	wǔ tiáo rén	1
@@ -5853,15 +6934,20 @@ sort: by_weight
 武威	wǔ wēi	1
 无畏契约	wú wèi qì yuē	1
 悟悟	wù wù	1
+五五开	wǔ wǔ kāi	1
 无锡	wú xī	1
+吴贤德	wú xián dé	1
 无限暖暖	wú xiàn nuǎn nuǎn	1
+无懈可击	wú xiè kě jī	1
 五星红旗	wǔ xīng hóng qí	1
 雾行千山	wù xíng qiān shān	1
 无袖	wú xiù	1
+吴宣仪	wú xuān yí	1
 武穴	wǔ xué	1
 无言	wú yán	1
 吴艳萍	wú yàn píng	1
 吴彦祖	wú yàn zǔ	1
+巫妖	wū yāo	1
 物业	wù yè	1
 午夜规则	wǔ yè guī zé	1
 五一	wǔ yī	1
@@ -5869,6 +6955,7 @@ sort: by_weight
 五一广场	wǔ yī guǎng chǎng	1
 武夷山	wǔ yí shān	1
 无印良品	wú yìn liáng pǐn	1
+武永强	wǔ yǒng qiáng	1
 无语子	wú yǔ zǐ	1
 婺源	wù yuán	1
 吴越	wú yuè	1
@@ -5889,6 +6976,7 @@ sort: by_weight
 西班牙	xī bān yá	1
 喜报	xǐ bào	1
 西部材料	xī bù cái liào	1
+西部计划	xī bù jì huá	1
 喜茶	xǐ chá	1
 西昌	xī chāng	1
 西村力	xī cūn lì	1
@@ -5899,14 +6987,14 @@ sort: by_weight
 西湖区	xī hú qū	1
 西甲	xī jiǎ	1
 喜家德	xǐ jiā dé	1
-希金斯	xī jīn sī	1
+西津渡	xī jīn dù	1
 戏剧	xì jù	1
+西卡	xī kǎ	1
 希腊	xī là	1
 喜来登	xǐ lái dēng	1
 喜乐	xǐ lè	1
-锡里克地区	xī lǐ kè dì qū	1
 昔涟	xī lián	1
-西落	xī luò	1
+系列赛	xì liè sài	1
 喜马拉雅	xǐ mǎ lā yǎ	1
 西门庆	xī mén qìng	1
 戏梦	xì mèng	1
@@ -5915,14 +7003,20 @@ sort: by_weight
 西宁	xī níng	1
 希诺宁	xī nuò níng	1
 西平	xī píng	1
+希然	xī rán	1
 息肉	xī ròu	1
+西沙	xī shā	1
 牺牲品	xī shēng pǐn	1
+牺牲位	xī shēng wèi	1
 稀世	xī shì	1
 西施	xī shī	1
+戏耍	xì shuǎ	1
 蟋蟀	xī shuài	1
 西双版纳	xī shuāng bǎn nà	1
+稀碎	xī suì	1
 系统	xì tǒng	1
 希维尔	xī wéi ěr	1
+希沃	xī wò	1
 西咸	xī xián	1
 西咸新区	xī xián xīn qū	1
 西亚	xī yà	1
@@ -5933,22 +7027,27 @@ sort: by_weight
 戏乐	xì yuè	1
 西藏	xī zàng	1
 惜字如金	xī zì rú jīn	1
+夏安	xià ān	1
 下半	xià bàn	1
 下半区	xià bàn qū	1
+下波	xià bō	1
 下达	xià dá	1
+厦大	xià dà	1
 下跌	xià diē	1
 瑕蝶	xiá dié	1
 遐蝶	xiá dié	1
-霞飞	xiá fēi	1
 下高速	xià gāo sù	1
 夏宫	xià gōng	1
+峡谷	xiá gǔ	1
 厦航	xià háng	1
 夏侯惇	xià hóu dūn	1
 夏活	xià huó	1
 夏季赛	xià jì sài	1
 狭间	xiá jiān	1
 下界	xià jiè	1
+夏决	xià jué	1
 夏利	xià lì	1
+下路	xià lù	1
 下落	xià luò	1
 夏洛	xià luò	1
 霞洛	xiá luò	1
@@ -5957,6 +7056,8 @@ sort: by_weight
 厦门大学	xià mén dà xué	1
 厦门经济特区	xià mén jīng jì tè qū	1
 夏鸣星	xià míng xīng	1
+夏普	xià pǔ	1
+辖区	xiá qū	1
 下霜了	xià shuāng le	1
 遐思	xiá sī	1
 虾淘	xiā táo	1
@@ -5964,27 +7065,42 @@ sort: by_weight
 夏萧因	xià xiāo yīn	1
 夏彦	xià yàn	1
 下野	xià yě	1
+下一局	xià yī jú	1
 侠隐	xiá yǐn	1
 下雨天	xià yǔ tiān	1
 下周一	xià zhōu yī	1
+瞎子	xiā zǐ	1
 侠佐	xiá zuǒ	1
 现包	xiàn bāo	1
 先辈	xiān bèi	1
+现场	xiàn chǎng	1
+先到先得	xiān dào xiān dé	1
 现点	xiàn diǎn	1
 馅儿	xiàn ér	1
+先锋	xiān fēng	1
 先锋赛	xiān fēng sài	1
+先锋团	xiān fēng tuán	1
+贤哥	xián gē	1
+限韩令	xiàn hán lìng	1
 鲜花	xiān huā	1
-现货黄金	xiàn huò huáng jīn	1
+仙境	xiān jìng	1
 险境	xiǎn jìng	1
+陷阱	xiàn jǐng	1
 咸口	xián kǒu	1
 限免	xiàn miǎn	1
 仙逆	xiān nì	1
 咸宁	xián níng	1
 鲜牛乳	xiān niú rǔ	1
 现偶	xiàn ǒu	1
+线圈	xiàn quān	1
+线权	xiàn quán	1
 线杀	xiàn shā	1
 险胜	xiǎn shèng	1
+先声药业	xiān shēng yào yè	1
+先手	xiān shǒu	1
 线束	xiàn shù	1
+仙台	xiān tái	1
+先天性	xiān tiān xìng	1
 先相信	xiān xiāng xìn	1
 先行	xiān xíng	1
 线性代数	xiàn xìng dài shù	1
@@ -6003,6 +7119,7 @@ sort: by_weight
 湘超	xiāng chāo	1
 香风	xiāng fēng	1
 香港	xiāng gǎng	1
+香港迪士尼	xiāng gǎng dí shì ní	1
 香格里拉	xiāng gé lǐ lā	1
 香骨鸡	xiāng gǔ jī	1
 乡归	xiāng guī	1
@@ -6019,29 +7136,37 @@ sort: by_weight
 响起	xiǎng qǐ	1
 向前	xiàng qián	1
 详情	xiáng qíng	1
+香肉	xiāng ròu	1
 象山	xiàng shān	1
 香山	xiāng shān	1
 相思	xiāng sī	1
 湘潭	xiāng tán	1
+相提并论	xiāng tí bìng lùn	1
 湘西	xiāng xī	1
 翔翔	xiáng xiáng	1
 象行记	xiàng xíng jì	1
 襄阳	xiāng yáng	1
 向阳青春	xiàng yáng qīng chūn	1
 向鱼	xiàng yú	1
+乡政府大院	xiāng zhèng fǔ dà yuàn	1
 小安	xiǎo ān	1
 小白杨	xiǎo bái yáng	1
 小保底	xiǎo bǎo dǐ	1
+小长假	xiǎo cháng jiǎ	1
 校车	xiào chē	1
 小陈	xiǎo chén	1
 小城	xiǎo chéng	1
 小城良方	xiǎo chéng liáng fāng	1
 小程序	xiǎo chéng xù	1
 小城之春	xiǎo chéng zhī chūn	1
+小虫	xiǎo chóng	1
 小翠	xiǎo cuì	1
+小妲己	xiǎo dá jǐ	1
 小地震	xiǎo dì zhèn	1
 小度	xiǎo dù	1
 小恩	xiǎo ēn	1
+小耳朵	xiǎo ěr duǒ	1
+小二黑	xiǎo èr hēi	1
 小凡	xiǎo fán	1
 小范	xiǎo fàn	1
 小番茄	xiǎo fān qié	1
@@ -6068,6 +7193,8 @@ sort: by_weight
 小黑猫	xiǎo hēi māo	1
 小红	xiǎo hóng	1
 小红书	xiǎo hóng shū	1
+小狐狸	xiǎo hú lí	1
+小户型	xiǎo hù xíng	1
 小虎牙	xiǎo hǔ yá	1
 小华	xiǎo huá	1
 小花	xiǎo huā	1
@@ -6076,19 +7203,22 @@ sort: by_weight
 小皇帝	xiǎo huáng dì	1
 小黄鸭	xiǎo huáng yā	1
 小灰	xiǎo huī	1
+小货车	xiǎo huò chē	1
 小吉	xiǎo jí	1
 校级	xiào jí	1
-小鸡蛋	xiǎo jī dàn	1
 小佳	xiǎo jiā	1
 小将	xiǎo jiāng	1
 小江	xiǎo jiāng	1
+肖杰	xiāo jié	1
 萧敬腾	xiāo jìng téng	1
 小鲸鱼	xiǎo jīng yú	1
 小酒馆	xiǎo jiǔ guǎn	1
 小舅舅	xiǎo jiù jiù	1
+小局	xiǎo jú	1
 小凯	xiǎo kǎi	1
 校考	xiào kǎo	1
 小可	xiǎo kě	1
+小亏	xiǎo kuī	1
 小辣椒	xiǎo là jiāo	1
 小李	xiǎo lǐ	1
 小礼物	xiǎo lǐ wù	1
@@ -6104,42 +7234,53 @@ sort: by_weight
 小萝卜	xiǎo luó bo	1
 小洛熙	xiǎo luò xī	1
 小吕布	xiǎo lǚ bù	1
+小麦果汁	xiǎo mài guǒ zhī	1
 小猫猫	xiǎo māo māo	1
+校门	xiào mén	1
 校门口	xiào mén kǒu	1
 小梦	xiǎo mèng	1
 小米	xiǎo mǐ	1
 小蜜蜂	xiǎo mì fēng	1
 小米手机	xiǎo mǐ shǒu jī	1
+小苗	xiǎo miáo	1
 小明	xiǎo míng	1
+小铭	xiǎo míng	1
 小娜	xiǎo nà	1
+小奶油	xiǎo nǎi yóu	1
 小南	xiǎo nán	1
 小胖	xiǎo pàng	1
 小炮	xiǎo pào	1
 小鹏	xiǎo péng	1
 小苹果	xiǎo píng guǒ	1
+小破站	xiǎo pò zhàn	1
 小乔	xiǎo qiáo	1
+小人国	xiǎo rén guó	1
 小沈	xiǎo shěn	1
 小沈阳	xiǎo shěn yáng	1
 小升初	xiǎo shēng chū	1
+小石	xiǎo shí	1
 小说家	xiǎo shuō jiā	1
+小汤	xiǎo tāng	1
 小特	xiǎo tè	1
 小天	xiǎo tiān	1
 小天才	xiǎo tiān cái	1
-肖天乐	xiāo tiān lè	1
 小彤	xiǎo tóng	1
+小团	xiǎo tuán	1
 小王	xiǎo wáng	1
 小王子	xiǎo wáng zǐ	1
 小微	xiǎo wēi	1
 小温	xiǎo wēn	1
 小希	xiǎo xī	1
+笑嘻了	xiào xī le	1
 小巷	xiǎo xiàng	1
+肖像权	xiāo xiàng quán	1
 小香猪	xiǎo xiāng zhū	1
 小小号	xiǎo xiǎo hào	1
 小小绘	xiǎo xiǎo huì	1
 小小徐	xiǎo xiǎo xú	1
+小心脏	xiǎo xīn zāng	1
 小星河	xiǎo xīng hé	1
 小熊	xiǎo xióng	1
-小熊虫	xiǎo xióng chóng	1
 小雪	xiǎo xuě	1
 小雅	xiǎo yǎ	1
 小鸭	xiǎo yā	1
@@ -6147,19 +7288,24 @@ sort: by_weight
 小杨哥	xiǎo yáng gē	1
 小瑶	xiǎo yáo	1
 小叶子	xiǎo yè zǐ	1
+孝义	xiào yì	1
 校医	xiào yī	1
 小伊伊	xiǎo yī yī	1
 小衣又	xiǎo yī yòu	1
+校医院	xiào yī yuàn	1
 消音	xiao yīn	1
+小优	xiǎo yōu	1
 小瑜	xiǎo yú	1
 小雨	xiǎo yǔ	1
 小鱼	xiǎo yú	1
+小元	xiǎo yuán	1
 小源	xiǎo yuán	1
 小缘	xiǎo yuán	1
 小月	xiǎo yuè	1
 校运会	xiào yùn huì	1
 小泽	xiǎo zé	1
 肖战	xiāo zhàn	1
+肖战上海演唱会	xiāo zhàn shàng hǎi yǎn chàng huì	1
 小张	xiǎo zhāng	1
 小赵	xiǎo zhào	1
 校招	xiào zhāo	1
@@ -6182,16 +7328,19 @@ sort: by_weight
 卸任	xiè rèn	1
 谢霆锋	xiè tíng fēng	1
 协同	xié tóng	1
+蟹腿	xiè tuǐ	1
 谢谢你的包容	xiè xiè nǐ de bāo róng	1
 邪修	xié xiū	1
 写序	xiě xù	1
 协议	xié yì	1
 协战	xié zhàn	1
+写真集	xiě zhēn jí	1
 楔子	xiē zǐ	1
 蝎子	xiē zǐ	1
+新蔡	xīn cài	1
 新车	xīn chē	1
+信达生物	xìn dá shēng wù	1
 新刀	xīn dāo	1
-新刀皮	xīn dāo pí	1
 辛德拉	xīn dé lā	1
 新低	xīn dī	1
 新地图	xīn dì tú	1
@@ -6209,6 +7358,8 @@ sort: by_weight
 心患	xīn huàn	1
 新加坡	xīn jiā pō	1
 新疆	xīn jiāng	1
+新疆足协	xīn jiāng zú xié	1
+心惊胆战	xīn jīng dǎn zhàn	1
 新剧情	xīn jù qíng	1
 新角色	xīn jué sè	1
 辛克莱	xīn kè lái	1
@@ -6219,33 +7370,39 @@ sort: by_weight
 心理课	xīn lǐ kè	1
 新联邦	xīn lián bāng	1
 心连心	xīn lián xīn	1
+心率	xīn lǜ	1
 新媒体	xīn méi tǐ	1
+新密	xīn mì	1
 心迷宫	xīn mí gōng	1
 心迷宫之三重罪	xīn mí gōng zhī sān zhòng zuì	1
 新民	xīn mín	1
 心魔	xīn mó	1
 新模式	xīn mó shì	1
 新娘	xīn niáng	1
+新宁	xīn níng	1
 新皮肤	xīn pí fū	1
+心情愉悦	xīn qíng yú yuè	1
 新人	xīn rén	1
 新忍者	xīn rěn zhě	1
+新三国	xīn sān guó	1
 心室	xīn shì	1
 新视角	xīn shì jiǎo	1
 心兽	xīn shòu	1
-心叹号	xīn tàn hào	1
 新田	xīn tián	1
 欣旺达	xīn wàng dá	1
 信维	xìn wéi	1
 信维通信	xìn wéi tōng xìn	1
 新闻联播	xīn wén lián bō	1
-新武学	xīn wǔ xué	1
 心隙	xīn xì	1
 新西兰	xīn xī lán	1
+新希望	xīn xī wàng	1
 新乡	xīn xiāng	1
 心想事成	xīn xiǎng shì chéng	1
+新星	xīn xīng	1
 信阳	xìn yáng	1
 信宜	xìn yí	1
 心意	xīn yì	1
+新沂	xīn yí	1
 新音	xīn yīn	1
 新英雄	xīn yīng xióng	1
 新月	xīn yuè	1
@@ -6253,9 +7410,7 @@ sort: by_weight
 心之钢	xīn zhī gāng	1
 忻州	xīn zhōu	1
 新周	xīn zhōu	1
-新专	xīn zhuān	1
 新专辑	xīn zhuān jí	1
-新子弹	xīn zǐ dàn	1
 星巴克	xīng bā kè	1
 星布谷地	xīng bù gǔ dì	1
 星超导	xīng chāo dǎo	1
@@ -6271,11 +7426,15 @@ sort: by_weight
 星舰	xīng jiàn	1
 星姐	xīng jiě	1
 刑警	xíng jǐng	1
+刑具	xíng jù	1
 星扩散	xīng kuò sàn	1
 醒来	xǐng lái	1
 行李牌	xíng lǐ pái	1
 星链	xīng liàn	1
 星芒	xīng máng	1
+兴平	xìng píng	1
+兴平牵手希望小学	xìng píng qiān shǒu xī wàng xiǎo xué	1
+星期八	xīng qī bā	1
 星期二	xīng qī èr	1
 星期六	xīng qī liù	1
 星期日	xīng qī rì	1
@@ -6292,7 +7451,9 @@ sort: by_weight
 星声	xīng shēng	1
 形态	xíng tài	1
 邢台	xíng tái	1
+行天	xíng tiān	1
 星铁	xīng tiě	1
+星瞳	xīng tóng	1
 星网	xīng wǎng	1
 醒醒	xǐng xǐng	1
 幸幸福福	xìng xìng fú fú	1
@@ -6307,15 +7468,17 @@ sort: by_weight
 熊大快跑	xióng dà kuài pǎo	1
 雄鹿	xióng lù	1
 熊猫杯	xióng māo bēi	1
-熊猫外卖	xióng māo wài mài	1
 匈牙利	xiōng yá lì	1
 兄长	xiōng zhǎng	1
+熊掌	xióng zhǎng	1
 嗅盒	xiù hé	1
 秀妹	xiù mèi	1
 休宁凯	xiū níng kǎi	1
 秀山	xiù shān	1
+修水	xiū shuǐ	1
+修元口腔	xiū yuán kǒu qiāng	1
+徐彬	xú bīn	1
 许昌	xǔ chāng	1
-许昌法院	xǔ chāng fǎ yuàn	1
 许飞	xǔ fēi	1
 许哥	xǔ gē	1
 虚构	xū gòu	1
@@ -6324,6 +7487,7 @@ sort: by_weight
 徐和谊	xú hé yì	1
 虚环	xū huán	1
 虚幻武器	xū huàn wǔ qì	1
+徐佳	xú jiā	1
 许家印	xǔ jiā yìn	1
 许凯	xǔ kǎi	1
 许可证	xǔ kě zhèng	1
@@ -6336,11 +7500,14 @@ sort: by_weight
 序列号	xù liè hào	1
 徐梦洁	xú mèng jié	1
 徐明浩	xú míng hào	1
+许墨	xǔ mò	1
+虚胖	xū pàng	1
 许晴	xǔ qíng	1
 旭日	xù rì	1
 徐若晗	xú ruò hán	1
 许绍雄	xǔ shào xióng	1
 虚狩	xū shòu	1
+徐庶	xú shù	1
 许嵩	xǔ sōng	1
 许鑫蓁	xǔ xīn zhēn	1
 许星纯	xǔ xīng chún	1
@@ -6358,34 +7525,43 @@ sort: by_weight
 徐峥	xú zhēng	1
 徐州	xú zhōu	1
 选拔赛	xuǎn bá sài	1
+选边	xuǎn biān	1
 炫彩蛋	xuàn cǎi dàn	1
 宣城	xuān chéng	1
+选出	xuǎn chū	1
 宣传部	xuān chuán bù	1
+宣传片	xuān chuán piàn	1
+选点	xuǎn diǎn	1
 选调	xuǎn diào	1
 选调生	xuǎn diào shēng	1
 玄方	xuán fāng	1
 选股	xuǎn gǔ	1
+宣化区	xuān huà qū	1
 炫技	xuàn jì	1
 宣讲	xuān jiǎng	1
-选举权	xuǎn jǔ quán	1
 炫迈	xuàn mài	1
 选民	xuǎn mín	1
-选民证	xuǎn mín zhèng	1
 悬念	xuán niàn	1
+选皮肤	xuǎn pí fū	1
 选票	xuǎn piào	1
+轩染	xuān rǎn	1
+选人	xuǎn rén	1
+炫神	xuàn shén	1
 宣威	xuān wēi	1
+玄武	xuán wǔ	1
+玄武大阵	xuán wǔ dà zhèn	1
 玄武湖	xuán wǔ hú	1
 选修课	xuǎn xiū kè	1
 悬崖	xuán yá	1
 轩辕甲	xuān yuán jiǎ	1
 旋转木马	xuán zhuǎn mù mǎ	1
 雪豹	xuě bào	1
-雪崩	xuě bēng	1
 雪碧	xuě bì	1
 雪大	xuě dà	1
 血滴子	xuè dī zǐ	1
 学而思	xué ér sī	1
 学法	xué fǎ	1
+雪峰	xuě fēng	1
 学功夫	xué gōng fū	1
 学号	xué hào	1
 血迹	xuè jì	1
@@ -6396,37 +7572,49 @@ sort: by_weight
 学年	xué nián	1
 雪女	xuě nǚ	1
 学前班	xué qián bān	1
+雪球	xuě qiú	1
 血色	xuè sè	1
 血色全传	xuè sè quán zhuàn	1
 血色森林	xuè sè sēn lín	1
+血手	xuè shǒu	1
 学术	xué shù	1
 学硕	xué shuò	1
 雪天	xuě tiān	1
+雪铁龙	xuě tiě lóng	1
 学位	xué wèi	1
 学委	xué wěi	1
 雪吻	xuě wěn	1
+血线	xuè xiàn	1
 雪乡	xuě xiāng	1
 学信网	xué xìn wǎng	1
+血型	xuè xíng	1
+血性	xuè xìng	1
+薛洋	xuē yáng	1
 学业	xué yè	1
 雪御前	xuě yù qián	1
-血雨腥风	xuè yǔ xīng fēng	1
 学院	xué yuàn	1
 雪战冬日	xuě zhàn dōng rì	1
 雪仗	xuě zhàng	1
 薛之谦	xuē zhī qiān	1
+雪子	xuě zǐ	1
 血族	xuè zú	1
+寻访	xún fǎng	1
 讯飞	xùn fēi	1
+勋哥	xūn gē	1
 巡回	xún huí	1
 迅捷	xùn jié	1
 训练赛	xùn liàn sài	1
+驯龙高手	xùn lóng gāo shǒu	1
 寻香行	xún xiāng xíng	1
 巡游	xún you	1
 雅安	yǎ ān	1
+押宝	yā bǎo	1
 雅典	yǎ diǎn	1
 亚丁	yà dīng	1
 亚东	yà dōng	1
 亚飞	yà fēi	1
 亚恒	yà héng	1
+哑火	yǎ huǒ	1
 雅加达	yǎ jiā dá	1
 亚军	yà jūn	1
 雅克	yǎ kè	1
@@ -6442,11 +7630,14 @@ sort: by_weight
 雅思	yǎ sī	1
 压缩饼干	yā suō bing gàn	1
 亚太	yà tài	1
+亚太经合组织	yà tài jīng hé zǔ zhī	1
 亚轩	yà xuān	1
 丫丫	yā yā	1
 鸭鸭	yā yā	1
 亚运	yà yùn	1
 亚运会	yà yùn huì	1
+压制	yā zhì	1
+压制力	yā zhì lì	1
 亚洲	yà zhōu	1
 压轴	yā zhóu	1
 鸭嘴兽	yā zuǐ shòu	1
@@ -6455,28 +7646,37 @@ sort: by_weight
 颜安	yán ān	1
 延保	yán bǎo	1
 延边	yán biān	1
+砚边青梅	yàn biān qīng méi	1
 演唱会	yǎn chàng huì	1
 盐城	yán chéng	1
 严成玹	yán chéng xuán	1
-演出顺利	yǎn chū shùn lì	1
+研读	yán dú	1
+研二	yán èr	1
 严浩翔	yán hào xiáng	1
 烟花	yān huā	1
+宴会厅	yàn huì tīng	1
 烟火气	yān huǒ qì	1
 妍姐	yán jiě	1
 研究生	yán jiū shēng	1
 研究所	yán jiū suǒ	1
 研究院	yán jiū yuàn	1
+颜骏凌	yán jùn líng	1
 言论	yán lùn	1
+咽气	yān qì	1
+雁栖湖	yàn qī hú	1
 延庆	yán qìng	1
 岩雀	yán què	1
 言尚	yán shàng	1
 烟台	yān tái	1
 烟台山	yān tái shān	1
 衍天	yǎn tiān	1
+岩土	yán tǔ	1
+演武	yǎn wǔ	1
 言行	yán xíng	1
 炎亚纶	yán yà lún	1
 燕云十六声	yàn yún shí liù shēng	1
 彦祖	yàn zǔ	1
+样板间	yàng bǎn jiān	1
 样本	yàng běn	1
 杨博	yáng bó	1
 杨博文	yáng bó wén	1
@@ -6487,36 +7687,51 @@ sort: by_weight
 羊村	yáng cūn	1
 杨迪	yáng dí	1
 羊肚菌	yáng dù jūn	1
+羊哥	yáng gē	1
 杨瀚森	yáng hàn sēn	1
 杨翰森	yáng hàn sēn	1
 央行	yāng háng	1
-杨和苏	yáng hé sū	1
+杨冀鹏	yáng jì péng	1
 阳江	yáng jiāng	1
 杨杰	yáng jié	1
+央捷科斯	yāng jié kē sī	1
 杨金瑞	yáng jīn ruì	1
 杨静	yáng jìng	1
+杨俊	yáng jùn	1
 杨坤	yáng kūn	1
 养老金	yǎng lǎo jīn	1
+扬眉吐气	yáng méi tǔ qì	1
 杨幂	yáng mì	1
 仰慕	yǎng mù	1
 央企	yāng qǐ	1
+杨琪	yáng qí	1
+杨千嬅	yáng qiān huà	1
+杨清柠	yáng qīng níng	1
 阳泉	yáng quán	1
 羊肉汤	yáng ròu tāng	1
+杨瑞	yáng ruì	1
 央视	yāng shì	1
+央视八套	yāng shì bā tào	1
 央视体育	yāng shì tǐ yù	1
+央视新闻	yāng shì xīn wén	1
 阳叔	yáng shū	1
 阳朔	yáng shuò	1
 仰望	yǎng wàng	1
 杨威	yáng wēi	1
+杨希	yáng xī	1
 洋相	yáng xiāng	1
 杨洋	yáng yáng	1
 杨阳	yáng yáng	1
+泱泱	yāng yāng	1
 秧秧	yāng yāng	1
 阳阳	yáng yáng	1
 杨毅	yáng yì	1
 扬州	yáng zhōu	1
+养猪场	yǎng zhū chǎng	1
 杨紫	yáng zǐ	1
+摇摆	yáo bǎi	1
 药厂	yào chǎng	1
+姚琛	yáo chēn	1
 咬唇	yǎo chún	1
 要冻死了	yào dòng sǐ le	1
 要夺冠	yào duó guàn	1
@@ -6531,6 +7746,7 @@ sort: by_weight
 耀嘉音	yào jiā yīn	1
 妖锯	yāo jù	1
 姚明	yáo míng	1
+药明巨诺	yào míng jù nuò	1
 摇奶茶	yáo nǎi chá	1
 药品	yào pǐn	1
 药瓶	yào píng	1
@@ -6544,46 +7760,60 @@ sort: by_weight
 野辅	yě fǔ	1
 野核	yě hé	1
 野火	yě huǒ	1
+叶俊杰	yè jùn jié	1
 叶俊君	yè jùn jūn	1
 夜兰	yè lán	1
 耶路撒冷	yē lù sǎ lěng	1
 叶罗丽	yè luó lì	1
+耶律	yē lǜ	1
 也门	yě mén	1
 夜幕之下	yè mù zhī xià	1
-叶念琛	yè niàn chēn	1
-叶平君	yè píng jūn	1
+叶倩文	yè qiàn wén	1
 夜市	yè shì	1
 叶师傅	yè shī fù	1
 野兽之心	yě shòu zhī xīn	1
+叶舒华	yè shū huá	1
 野桃	yě táo	1
+野田佳彦	yě tián jiā yàn	1
 叶问	yè wèn	1
 业务	yè wù	1
+野心家	yě xīn jiā	1
 爷爷不泡茶	yé yé bù pào chá	1
 爷爷奶奶那些事	yé yé nǎi nǎi nà xiē shì	1
-叶泽	yè zé	1
 椰子树	yē zǐ shù	1
 伊比利亚	yī bǐ lì yà	1
+一边倒	yī biān dǎo	1
 宜宾	yí bīn	1
+一波	yī bō	1
+一波团	yī bō tuán	1
 宜昌	yí chāng	1
+一穿四	yī chuān sì	1
 伊春	yī chūn	1
 宜春	yí chūn	1
 意大利	yì dà lì	1
+一代人	yī dài rén	1
 一等奖	yī děng jiǎng	1
-易点天下	yì diǎn tiān xià	1
 一朵山花别样红	yī duǒ shān huā bié yàng hóng	1
+乙方	yǐ fāng	1
 伊芙琳	yī fú lín	1
 一哥	yī gē	1
 异格	yì gé	1
 乙骨	yǐ gǔ	1
+一鼓作气	yī gǔ zuò qì	1
 一冠	yī guàn	1
+遗憾	yí hàn	1
+一航	yī háng	1
 一号线	yī hào xiàn	1
+一号种子	yī hào zhǒng zǐ	1
 颐和园	yí hé yuán	1
 一护	yī hù	1
 异环	yì huán	1
+一换一	yī huàn yī	1
 一魂	yī hún	1
 遗迹	yí jì	1
 一加	yī jiā	1
 意甲	yì jiǎ	1
+议价	yì jià	1
 一家亲	yī jiā qīn	1
 意见	yì jiàn	1
 易建联	yì jiàn lián	1
@@ -6592,12 +7822,11 @@ sort: by_weight
 以旧换新	yǐ jiù huàn xīn	1
 壹决	yī jué	1
 抑菌	yì jūn	1
+一卡通	yī kǎ tōng	1
 伊拉克	yī lā kè	1
-伊兰龙	yī lán lóng	1
 伊朗	yī lǎng	1
 伊朗革命卫队	yī lǎng gé mìng wèi duì	1
-伊朗外交部	yī lǎng wài jiāo bù	1
-伊雷龙	yī léi lóng	1
+伊朗海军	yī lǎng hǎi jūn	1
 伊蕾娜	yī lěi nà	1
 医疗	yī liáo	1
 医疗保险	yī liáo bǎo xiǎn	1
@@ -6609,6 +7838,7 @@ sort: by_weight
 伊姆	yī mǔ	1
 伊能静	yī néng jìng	1
 一年冬	yī nián dōng	1
+一年一度	yī nián yī dù	1
 姨娘	yí niáng	1
 艺宁	yì níng	1
 易怒	yì nù	1
@@ -6622,8 +7852,10 @@ sort: by_weight
 异人之下	yì rén zhī xià	1
 易三方	yì sān fāng	1
 以色列	yǐ sè liè	1
+以色列国防军	yǐ sè liè guó fáng jūn	1
 以色列议会	yǐ sè liè yì huì	1
 以闪	yǐ shǎn	1
+以闪亮之名	yǐ shǎn liàng zhī míng	1
 一审	yī shěn	1
 一审法院	yī shěn fǎ yuàn	1
 一笙	yī shēng	1
@@ -6633,22 +7865,25 @@ sort: by_weight
 一束花	yī shù huā	1
 艺术家	yì shù jiā	1
 艺术节	yì shù jié	1
-易水歌	yì shuǐ gē	1
+以太坊	yǐ tài fāng	1
 伊藤	yī téng	1
 义体	yì tǐ	1
 艺体	yì tǐ	1
 议题	yì tí	1
 一突	yī tū	1
+意图	yì tú	1
 义乌	yì wū	1
 一线队	yī xiàn duì	1
 异相	yì xiāng	1
 意向金	yì xiàng jīn	1
 异想天开	yì xiǎng tiān kāi	1
 一小局	yī xiǎo jú	1
+一泻千里	yī xiè qiān lǐ	1
 宜兴	yí xìng	1
 一选	yī xuǎn	1
 一雪	yī xuě	1
 医学	yī xué	1
+一阳	yī yáng	1
 益阳	yì yáng	1
 易烊千玺	yì yàng qiān xǐ	1
 医药	yī yào	1
@@ -6657,6 +7892,7 @@ sort: by_weight
 医院	yī yuàn	1
 驿站	yì zhàn	1
 遗照	yí zhào	1
+义诊	yì zhěn	1
 遗志	yí zhì	1
 易中天	yì zhōng tiān	1
 宜州	yí zhōu	1
@@ -6666,6 +7902,8 @@ sort: by_weight
 银行	yín háng	1
 银河战舰	yín hé zhàn jiàn	1
 银河综艺馆	yín hé zōng yì guǎn	1
+银河左岸	yín hé zuǒ àn	1
+音画	yīn huà	1
 银灰	yín huī	1
 银基	yín jī	1
 尹净汉	yǐn jìng hàn	1
@@ -6676,13 +7914,13 @@ sort: by_weight
 隐身	yǐn shēn	1
 银饰	yín shì	1
 引体向上	yǐn tǐ xiàng shàng	1
+阴险	yīn xiǎn	1
 印象服	yìn xiàng fú	1
 阴阳路惊魂	yīn yáng lù jīng hún	1
 阴阳师	yīn yáng shī	1
 银翼	yín yì	1
 音音	yīn yīn	1
 因缘	yīn yuán	1
-因缘精灵	yīn yuán jīng líng	1
 银月	yín yuè	1
 饮月	yǐn yuè	1
 音乐节	yīn yuè jié	1
@@ -6692,98 +7930,123 @@ sort: by_weight
 颖宝	yǐng bǎo	1
 英博	yīng bó	1
 英超	yīng chāo	1
+影城	yǐng chéng	1
 英歌	yīng gē	1
 英格兰	yīng gé lán	1
 英冠	yīng guàn	1
 英国	yīng guó	1
 影后	yǐng hòu	1
+赢家	yíng jiā	1
 硬件	yìng jiàn	1
 鹰角	yīng jiǎo	1
 鹰角网络	yīng jiǎo wǎng luò	1
-硬科技	yìng kē jì	1
 营口	yíng kǒu	1
+赢麻了	yíng má le	1
 赢面	yíng miàn	1
 英明	yīng míng	1
 赢球	yíng qiú	1
+营生	yíng shēng	1
 影石	yǐng shí	1
 影视飓风	yǐng shì jù fēng	1
 硬实力	yìng shí lì	1
 鹰潭	yīng tán	1
+英特	yīng tè	1
 英特尔	yīng tè ěr	1
+硬拖	yìng tuō	1
 英伟达	yīng wěi dá	1
 赢下	yíng xià	1
+迎新晚会	yíng xīn wǎn huì	1
 英雄	yīng xióng	1
 英雄池	yīng xióng chí	1
+英雄连	yīng xióng lián	1
 英雄联盟	yīng xióng lián méng	1
 英雄联盟全球总决赛	yīng xióng lián méng quán qiú zǒng jué sài	1
 英雄杀	yīng xióng shā	1
+影焰	yǐng yàn	1
 营业图	yíng yè tú	1
 营业执照	yíng yè zhí zhào	1
+英英	yīng yīng	1
+影院	yǐng yuàn	1
 迎泽区	yíng zé qū	1
+硬仗	yìng zhàng	1
+营长	yíng zhǎng	1
 嬴政	yíng zhèng	1
 影之刃零	yǐng zhī rèn líng	1
 影之诗	yǐng zhī shī	1
 佣兵	yōng bīng	1
 勇闯恐龙岛	yǒng chuǎng kǒng lóng dǎo	1
 永恩	yǒng ēn	1
+永辉	yǒng huī	1
 永嘉	yǒng jiā	1
 永劫无间	yǒng jié wú jiān	1
 勇士	yǒng shì	1
 永泰	yǒng tài	1
 用心	yòng xīn	1
+拥有者	yōng yǒu zhě	1
 永州	yǒng zhōu	1
+永州队	yǒng zhōu duì	1
 邮差	yóu chāi	1
 游船	you chuán	1
+有大	yǒu dà	1
 又地震	yòu dì zhèn	1
+有点紧张	yǒu diǎn jǐn zhāng	1
+有点离谱	yǒu diǎn lí pǔ	1
 有点凉	yǒu diǎn liáng	1
 幼儿园	yòu ér yuán	1
+油管	yóu guǎn	1
+幽会	yōu huì	1
 游记	you jì	1
 油价	yóu jià	1
 邮件	yóu jiàn	1
 幽境	yōu jìng	1
 幽静	yōu jìng	1
 幽境危战	yōu jìng wēi zhàn	1
+有惊无险	yǒu jīng wú xiǎn	1
 优酷	yōu kù	1
 优菈	yōu lā	1
 游历	you lì	1
 游龙	you lóng	1
+尤尼斯	yóu ní sī	1
 邮票	yóu piào	1
 有期	yǒu qī	1
 游骑兵	you qí bīng	1
 友圈	yǒu quān	1
 友商	yǒu shāng	1
 优势	yōu shì	1
-由是感激	yóu shì gǎn jī	1
 又是一年冬	yòu shì yī nián dōng	1
 右手	yòu shǒu	1
 尤文	yóu wén	1
 游戏卡	you xì kǎ	1
+游戏内容	you xì nèi róng	1
 游戏玩家	you xì wán jiā	1
-游戏显卡	you xì xiǎn kǎ	1
 有限	yǒu xiàn	1
 有限公司	yǒu xiàn gōng sī	1
 优先购	yōu xiān gòu	1
+优先级	yōu xiān jí	1
 优享	yōu xiǎng	1
 邮箱	yóu xiāng	1
 游行	you xíng	1
-有研	yǒu yán	1
-有研新材	yǒu yán xīn cái	1
 酉阳	yǒu yáng	1
 友谊赛	yǒu yì sài	1
+有一手	yǒu yī shǒu	1
 幽影	yōu yǐng	1
 幽幽	yōu yōu	1
 又又又	yòu yòu yòu	1
 有早八	yǒu zǎo bā	1
 邮政	yóu zhèng	1
+游总	you zǒng	1
+游走	you zǒu	1
 雨爱	yǔ ài	1
 预报	yù bào	1
-虞昶轩	yú chǎng xuān	1
+余波	yú bō	1
+预测	yù cè	1
+渝超	yú chāo	1
 余承东	yú chéng dōng	1
 雨大	yǔ dà	1
 玉簟秋	yù diàn qiū	1
 于东来	yú dōng lái	1
 余额宝	yú é bǎo	1
-俞风城	yú fēng chéng	1
+喻繁	yù fán	1
 羽哥	yǔ gē	1
 于根伟	yú gēn wěi	1
 玉桂狗	yù guì gǒu	1
@@ -6796,15 +8059,19 @@ sort: by_weight
 宇将军	yǔ jiāng jūn	1
 鱼姐	yú jiě	1
 预警	yù jǐng	1
+喻军	yù jūn	1
 郁可唯	yù kě wéi	1
 娱乐模式	yú lè mó shì	1
 榆林	yú lín	1
 玉林	yù lín	1
 御龙	yù lóng	1
+玉龙雪山	yù lóng xuě shān	1
+玉龙雪山派出所	yù lóng xuě shān pài chū suǒ	1
 雨露	yǔ lù	1
 羽毛球	yǔ máo qiú	1
 雨梦	yǔ mèng	1
 余年	yú nián	1
+预判	yù pàn	1
 雨披	yǔ pī	1
 雨琦	yǔ qí	1
 愚人金	yú rén jīn	1
@@ -6818,6 +8085,7 @@ sort: by_weight
 宇树科技	yǔ shù kē jì	1
 虞书欣	yú shū xīn	1
 雨刷	yǔ shuā	1
+余霜	yú shuāng	1
 雨婷	yǔ tíng	1
 雨桐	yǔ tóng	1
 玉兔	yù tù	1
@@ -6845,13 +8113,14 @@ sort: by_weight
 遇知音	yù zhī yīn	1
 鱼珠	yú zhū	1
 余总	yú zǒng	1
-元宝搜索	yuán bǎo sōu suǒ	1
-袁成杰	yuán chéng jié	1
+余罪	yú zuì	1
 园丁	yuán dīng	1
 远东	yuǎn dōng	1
 原告	yuán gào	1
+原稿	yuán gǎo	1
 源哥	yuán gē	1
 远哥	yuǎn gē	1
+远古	yuǎn gǔ	1
 远古龙	yuǎn gǔ lóng	1
 原号主	yuán hào zhǔ	1
 袁基	yuán jī	1
@@ -6860,17 +8129,23 @@ sort: by_weight
 远见	yuǎn jiàn	1
 源杰	yuán jié	1
 愿礼	yuàn lǐ	1
+圆梦	yuán mèng	1
 元年	yuán nián	1
 原神	yuán shén	1
 袁术	yuán shù	1
 元坦	yuán tǎn	1
+鸢尾花	yuān wěi huā	1
 原形	yuán xíng	1
+原形毕露	yuán xíng bì lù	1
 远牙	yuǎn yá	1
 袁一琦	yuán yī qí	1
+元英	yuán yīng	1
 原油	yuán yóu	1
 愿与愁	yuàn yǔ chóu	1
 媛媛	yuán yuán	1
 源源	yuán yuán	1
+缘缘	yuán yuán	1
+原站	yuán zhàn	1
 园长	yuán zhǎng	1
 院长	yuàn zhǎng	1
 远征	yuǎn zhēng	1
@@ -6886,6 +8161,8 @@ sort: by_weight
 月亮岛	yuè liàng dǎo	1
 岳麓区	yuè lù qū	1
 岳麓山	yuè lù shān	1
+岳伦	yuè lún	1
+月轮	yuè lún	1
 越南	yuè nán	1
 月评	yuè píng	1
 月球	yuè qiú	1
@@ -6895,6 +8172,7 @@ sort: by_weight
 越塔	yuè tǎ	1
 越位	yuè wèi	1
 岳阳	yuè yáng	1
+岳阳队	yuè yáng duì	1
 悦悦	yuè yuè	1
 岳云鹏	yuè yún péng	1
 芸阿娜	yún ā nà	1
@@ -6903,6 +8181,7 @@ sort: by_weight
 云包场	yún bāo chǎng	1
 运城	yùn chéng	1
 郓城	yùn chéng	1
+云顶之弈	yún dǐng zhī yì	1
 云浮	yún fú	1
 云谷	yún gǔ	1
 运河	yùn hé	1
@@ -6912,17 +8191,23 @@ sort: by_weight
 云厘	yún lí	1
 云璃	yún lí	1
 云路	yún lù	1
+云露	yún lù	1
 云麓	yún lù	1
+韵母	yùn mǔ	1
 云南	yún nán	1
 云南白药	yún nán bái yào	1
 云旗	yún qí	1
 云闪付	yún shǎn fù	1
+云玩家	yún wán jiā	1
 云霄	yún xiāo	1
+允许	yǔn xǔ	1
 云熠	yún yì	1
 云缨	yún yīng	1
+运营	yùn yíng	1
 云游戏	yún you xì	1
 云原神	yún yuán shén	1
 云中彼岸	yún zhōng bǐ àn	1
+云子	yún zǐ	1
 砸金蛋	zá jīn dàn	1
 再出发	zài chū fā	1
 载大哥	zǎi dà gē	1
@@ -6935,6 +8220,8 @@ sort: by_weight
 在校生	zài xiào shēng	1
 赞赏	zàn shǎng	1
 暂停	zàn tíng	1
+赞助商	zàn zhù shāng	1
+葬送	zàng sòng	1
 早八	zǎo bā	1
 早操	zǎo cāo	1
 造车	zào chē	1
@@ -6942,10 +8229,12 @@ sort: by_weight
 早读	zǎo dú	1
 枣糕	zǎo gāo	1
 早高峰	zǎo gāo fēng	1
-造黄谣	zào huáng yáo	1
+早结束了	zǎo jié shù le	1
 早苗	zǎo miáo	1
 早鸟	zǎo niǎo	1
+造神	zào shén	1
 早十	zǎo shí	1
+造势	zào shì	1
 早田	zǎo tián	1
 早田希娜	zǎo tián xī nà	1
 造型师	zào xíng shī	1
@@ -6953,48 +8242,65 @@ sort: by_weight
 凿子	záo zǐ	1
 早自习	zǎo zì xí	1
 泽卡	zé kǎ	1
+泽拉斯	zé lā sī	1
 泽丽	zé lì	1
 泽连斯基	zé lián sī jī	1
+泽禹	zé yǔ	1
 泽泽	zé zé	1
 增程	zēng chéng	1
 曾沛慈	zēng pèi cí	1
 综评	zèng píng	1
+增速	zēng sù	1
 增值税	zēng zhí shuì	1
 扎波罗热核电站	zhā bō luó rè hé diàn zhàn	1
+炸弹	zhà dàn	1
+炸弹猫	zhà dàn māo	1
+炸弹人	zhà dàn rén	1
 炸服	zhà fú	1
-扎哈罗娃	zhā hā luó wá	1
 札幌	zhá huǎng	1
 炸开	zhà kāi	1
 扎克	zhā kè	1
 扎口	zhā kǒu	1
+炸线	zhà xiàn	1
 摘抄	zhāi chāo	1
 债券	zhài quàn	1
 战报	zhàn bào	1
+站不出来	zhàn bù chū lái	1
 战车	zhàn chē	1
+站出来	zhàn chū lái	1
 战队	zhàn duì	1
 战犯	zhàn fàn	1
 战哥	zhàn gē	1
+战歌	zhàn gē	1
+战功	zhàn gōng	1
 战狗	zhàn gǒu	1
 战记	zhàn jì	1
 詹记	zhān jì	1
 湛江	zhàn jiāng	1
 站姐	zhàn jiě	1
 战令	zhàn lìng	1
+战略	zhàn luè	1
 斩马刀	zhǎn mǎ dāo	1
 詹密	zhān mì	1
 詹姆斯	zhān mǔ sī	1
 战区	zhàn qū	1
 詹森	zhān sēn	1
+斩杀线	zhǎn shā xiàn	1
 战神	zhàn shén	1
 战胜	zhàn shèng	1
+战术	zhàn shù	1
+占位	zhàn wèi	1
+站位	zhàn wèi	1
 战战	zhàn zhàn	1
 展智伟	zhǎn zhì wěi	1
+张柏芝	zhāng bǎi zhī	1
 张本	zhāng běn	1
 张本美和	zhāng běn měi hé	1
 张本智和	zhāng běn zhì hé	1
 张碧晨	zhāng bì chén	1
 张兵	zhāng bīng	1
 张博	zhāng bó	1
+张博恒	zhāng bó héng	1
 张博文	zhāng bó wén	1
 张翅	zhāng chì	1
 张驰	zhāng chí	1
@@ -7003,10 +8309,8 @@ sort: by_weight
 长官	zhǎng guān	1
 张桂源	zhāng guì yuán	1
 张国荣	zhāng guó róng	1
-张晗	zhāng hán	1
 张涵	zhāng hán	1
 张函瑞	zhāng hán ruì	1
-张汉生	zhāng hàn shēng	1
 章昊	zhāng hào	1
 张浩然	zhāng hào rán	1
 张洪全	zhāng hóng quán	1
@@ -7023,15 +8327,16 @@ sort: by_weight
 张静	zhāng jìng	1
 张婧仪	zhāng jìng yí	1
 张居正	zhāng jū zhèng	1
-张军	zhāng jūn	1
 张峻豪	zhāng jùn háo	1
+张可依	zhāng kě yī	1
 张磊	zhāng lěi	1
 张力	zhāng lì	1
+张莉	zhāng lì	1
 张辽	zhāng liáo	1
 张凌赫	zhāng líng hè	1
 张璐	zhāng lù	1
 张萌	zhāng méng	1
-张敏捷	zhāng mǐn jié	1
+掌盟	zhǎng méng	1
 漳浦	zhāng pǔ	1
 张起灵	zhāng qǐ líng	1
 章丘	zhāng qiū	1
@@ -7041,13 +8346,16 @@ sort: by_weight
 张韶涵	zhāng sháo hán	1
 掌声	zhǎng shēng	1
 张帅	zhāng shuài	1
+张水华	zhāng shuǐ huá	1
+张硕	zhāng shuò	1
 张颂文	zhāng sòng wén	1
+张太	zhāng tài	1
 张天赋	zhāng tiān fù	1
 涨停	zhǎng tíng	1
 掌瓦	zhǎng wǎ	1
 张万森	zhāng wàn sēn	1
 张晚意	zhāng wǎn yì	1
-张王	zhāng wáng	1
+张翔	zhāng xiáng	1
 张小斐	zhāng xiǎo fěi	1
 张新成	zhāng xīn chéng	1
 张馨月	zhāng xīn yuè	1
@@ -7069,6 +8377,7 @@ sort: by_weight
 张远	zhāng yuǎn	1
 张元英	zhāng yuán yīng	1
 张月	zhāng yuè	1
+张云彬	zhāng yún bīn	1
 张泽禹	zhāng zé yǔ	1
 张钊	zhāng zhāo	1
 张真源	zhāng zhēn yuán	1
@@ -7080,26 +8389,33 @@ sort: by_weight
 诏安	zhào ān	1
 赵本山	zhào běn shān	1
 招标	zhāo biāo	1
+赵大	zhào dà	1
 赵大哥	zhào dà gē	1
 赵大牛	zhào dà niú	1
+赵光义	zhào guāng yì	1
 招行	zhāo háng	1
+赵怀振	zhào huái zhèn	1
 赵怀真	zhào huái zhēn	1
 召回	zhào huí	1
 赵今麦	zhào jīn mài	1
 昭珏	zhāo jué	1
-赵军华	zhào jūn huá	1
+昭觉	zhāo jué	1
 赵磊	zhào lěi	1
 赵丽颖	zhào lì yǐng	1
+照料	zhào liào	1
 赵露思	zhào lù sī	1
+赵美延	zhào měi yán	1
 赵敏	zhào mǐn	1
 赵鹏	zhào péng	1
 招聘会	zhāo pìn huì	1
 肇庆	zhào qìng	1
 赵四	zhào sì	1
 昭通	zhāo tōng	1
+朝闻天下	zhāo wén tiān xià	1
 朝霞	zhāo xiá	1
 赵显	zhào xiǎn	1
 赵信	zhào xìn	1
+赵雅芝	zhào yǎ zhī	1
 朝阳	zhāo yáng	1
 赵一博	zhào yī bó	1
 赵雨凡	zhào yǔ fán	1
@@ -7112,28 +8428,48 @@ sort: by_weight
 折痕	zhé hén	1
 浙江	zhè jiāng	1
 浙江省	zhè jiāng shěng	1
+这俩队	zhè liā duì	1
+这两波	zhè liǎng bō	1
+这两个队	zhè liǎng gè duì	1
+柘荣	zhè róng	1
 遮天	zhē tiān	1
 浙文	zhè wén	1
 谪星	zhé xīng	1
 这一秒过火	zhè yī miǎo guò huǒ	1
 折月亮	zhé yuè liàng	1
+臻彩	zhēn cǎi	1
+侦察兵	zhēn chá bīng	1
+真唱	zhēn chàng	1
+真成	zhēn chéng	1
+真刺激	zhēn cì jī	1
+阵地	zhèn dì	1
+真东西	zhēn dōng xī	1
 震耳欲聋	zhèn ěr yù lóng	1
 阵风	zhèn fēng	1
 震感	zhèn gǎn	1
 甄嬛传	zhēn huān zhuàn	1
+真火	zhēn huǒ	1
 镇江	zhèn jiāng	1
+珍姐	zhēn jiě	1
+真牛皮	zhēn niú pí	1
 珍品	zhēn pǐn	1
+真强	zhēn qiáng	1
 阵容	zhèn róng	1
+真肉	zhēn ròu	1
+真伤	zhēn shāng	1
 震慑	zhèn shè	1
 帧生成	zhēn shēng chéng	1
+真实伤害	zhēn shí shāng hài	1
 镇守	zhèn shǒu	1
 针头	zhēn tóu	1
 真维斯	zhēn wéi sī	1
 真我	zhēn wǒ	1
 真心换真心	zhēn xīn huàn zhēn xīn	1
+阵型	zhèn xíng	1
 真言	zhēn yán	1
 真赢了	zhēn yíng le	1
 真有机会	zhēn yǒu jī huì	1
+真有说法	zhēn yǒu shuō fǎ	1
 镇远	zhèn yuǎn	1
 臻臻	zhēn zhēn	1
 珍重	zhēn zhòng	1
@@ -7142,9 +8478,12 @@ sort: by_weight
 甄子丹	zhēn zǐ dān	1
 政策	zhèng cè	1
 整场	zhěng chǎng	1
+郑成灿	zhèng chéng càn	1
 郑大圣	zhèng dà shèng	1
 正道大营	zhèng dào dà yíng	1
 正定	zhèng dìng	1
+整段	zhěng duàn	1
+争夺战	zhēng duó zhàn	1
 政法	zhèng fǎ	1
 正反手	zhèng fǎn shǒu	1
 争锋	zhēng fēng	1
@@ -7152,13 +8491,15 @@ sort: by_weight
 正佳	zhèng jiā	1
 证监会	zhèng jiān huì	1
 政教处	zhèng jiào chù	1
-郑丽文	zhèng lì wén	1
 蒸馏	zhēng liú	1
 正路	zhèng lù	1
+正面	zhèng miàn	1
 证明	zhèng míng	1
+正念	zhèng niàn	1
 郑朋	zhèng péng	1
 郑钦文	zhèng qīn wén	1
 证券	zhèng quàn	1
+整容	zhěng róng	1
 郑润泽	zhèng rùn zé	1
 正赛	zhèng sài	1
 政史	zhèng shǐ	1
@@ -7170,17 +8511,20 @@ sort: by_weight
 政务	zhèng wù	1
 正午	zhèng wǔ	1
 正午阳光	zhèng wǔ yáng guāng	1
+正义必胜	zhèng yì bì shèng	1
 铮铮	zhēng zhēng	1
 蒸蒸日上	zhēng zhēng rì shàng	1
 整治	zhěng zhì	1
 正直党	zhèng zhí dǎng	1
 政治理论	zhèng zhì lǐ lùn	1
+政治正确	zhèng zhì zhèng què	1
 郑州	zhèng zhōu	1
 挚爱	zhì ài	1
 直板	zhí bǎn	1
 直博	zhí bó	1
 支部	zhī bù	1
 职测	zhí cè	1
+稚楚	zhì chǔ	1
 纸袋	zhǐ dài	1
 指导老师	zhǐ dǎo lǎo shī	1
 值得买	zhí dé mǎi	1
@@ -7197,10 +8541,13 @@ sort: by_weight
 滞后	zhì hòu	1
 指挥官	zhǐ huī guān	1
 智慧末刃	zhì huì mò rèn	1
+指挥中心	zhǐ huī zhōng xīn	1
 智驾	zhì jià	1
 芝加哥	zhī jiā gē	1
+纸老虎	zhǐ lǎo hǔ	1
 智利	zhì lì	1
 织梦	zhī mèng	1
+纸面	zhǐ miàn	1
 智能体	zhì néng tǐ	1
 纸尿裤	zhǐ niào kù	1
 稚气	zhì qì	1
@@ -7208,6 +8555,8 @@ sort: by_weight
 知情	zhī qíng	1
 值日	zhí rì	1
 质润	zhì rùn	1
+指桑骂槐	zhǐ sāng mà huái	1
+指示灯	zhǐ shì dēng	1
 指数	zhǐ shù	1
 纸条	zhǐ tiáo	1
 知网	zhī wǎng	1
@@ -7216,33 +8565,38 @@ sort: by_weight
 知行合一	zhī xíng hé yī	1
 只要有你	zhī yào yǒu nǐ	1
 执业	zhí yè	1
-纸野	zhǐ yě	1
+职业比赛	zhí yè bǐ sài	1
+职业生涯	zhí yè shēng yá	1
+知意	zhī yì	1
 治愈系	zhì yù xì	1
 志愿	zhì yuàn	1
 致远	zhì yuǎn	1
 职责	zhí zé	1
 执照	zhí zhào	1
+至臻	zhì zhēn	1
 执政	zhí zhèng	1
 之之	zhī zhī	1
 纸质版	zhǐ zhì bǎn	1
 蜘蛛侠	zhī zhū xiá	1
+纸醉金迷	zhǐ zuì jīn mí	1
+制作人	zhì zuò rén	1
 中北	zhōng běi	1
 中标	zhōng biāo	1
 众宾欢也	zhòng bīn huān yě	1
 中部	zhōng bù	1
 中场	zhōng chǎng	1
+中场休息	zhōng chǎng xiū xī	1
 中超	zhōng chāo	1
 忠臣	zhōng chén	1
-钟楚曦	zhōng chǔ xī	1
 重锤	zhòng chuí	1
+中单	zhōng dān	1
 种地吧	zhǒng dì ba	1
 中东	zhōng dōng	1
 终端	zhōng duān	1
+中俄	zhōng é	1
 中方	zhōng fāng	1
 中锋	zhōng fēng	1
 中福袋	zhōng fú dài	1
-中概	zhōng gài	1
-中概股	zhōng gài gǔ	1
 中古	zhōng gǔ	1
 中关村	zhōng guān cūn	1
 中国	zhōng guó	1
@@ -7252,11 +8606,14 @@ sort: by_weight
 中国电影家协会	zhōng guó diàn yǐng jiā xié huì	1
 中国队	zhōng guó duì	1
 中国队长	zhōng guó duì zhǎng	1
+中国国际经济交流中心	zhōng guó guó jì jīng jì jiāo liú zhōng xīn	1
 中国航空工业集团	zhōng guó háng kōng gōng yè jí tuán	1
 中国好声音	zhōng guó hǎo shēng yīn	1
-中国教育	zhōng guó jiào yù	1
 中国军网	zhōng guó jūn wǎng	1
+中国贸促会	zhōng guó mào cù huì	1
 中国女排	zhōng guó nǚ pái	1
+中国赛区	zhōng guó sài qū	1
+中国商飞	zhōng guó shāng fēi	1
 中国射击队	zhōng guó shè jī duì	1
 中国式	zhōng guó shì	1
 中国石化	zhōng guó shí huà	1
@@ -7264,18 +8621,18 @@ sort: by_weight
 中国文联	zhōng guó wén lián	1
 中国移动	zhōng guó yí dòng	1
 中国银行	zhōng guó yín háng	1
-中国邮政	zhōng guó yóu zhèng	1
-中国驻墨尔本总领馆	zhōng guó zhù mò ěr běn zǒng lǐng guǎn	1
+中国战队	zhōng guó zhàn duì	1
+中国中检	zhōng guó zhōng jiǎn	1
 中国资本市场学术年会	zhōng guó zī běn shì chǎng xué shù nián huì	1
 中国足球	zhōng guó zú qiú	1
 中国足协	zhōng guó zú xié	1
 中韩	zhōng hán	1
 中行	zhōng háng	1
+中后期	zhōng hòu qī	1
+中华人民共和国	zhōng huá rén mín gòng hé guó	1
+中汇	zhōng huì	1
 钟会	zhōng huì	1
 中级	zhōng jí	1
-中际	zhōng jì	1
-中际旭创	zhōng jì xù chuàng	1
-钟嘉欣	zhōng jiā xīn	1
 中建	zhōng jiàn	1
 中奖率	zhōng jiǎng lǜ	1
 中街	zhōng jiē	1
@@ -7285,11 +8642,13 @@ sort: by_weight
 中科院	zhōng kē yuàn	1
 钟离	zhōng lí	1
 钟离权	zhōng lí quán	1
+中路	zhōng lù	1
 中美	zhōng měi	1
 中美经贸磋商机制	zhōng měi jīng mào cuō shāng jī zhì	1
+中美贸易会议	zhōng měi mào yì huì yì	1
 终末	zhōng mò	1
 终末地	zhōng mò dì	1
-重器	zhòng qì	1
+中期	zhōng qī	1
 中期选举	zhōng qī xuǎn jǔ	1
 中青宝	zhōng qīng bǎo	1
 中秋套	zhōng qiū tào	1
@@ -7297,22 +8656,32 @@ sort: by_weight
 中日德兰	zhōng rì dé lán	1
 中山	zhōng shān	1
 中山大学	zhōng shān dà xué	1
+中山陵	zhōng shān líng	1
 中山路	zhōng shān lù	1
 中山市	zhōng shān shì	1
+中上	zhōng shàng	1
+中上野	zhōng shàng yě	1
 中石化	zhōng shí huà	1
 中暑	zhōng shǔ	1
 种树	zhǒng shù	1
 中塔	zhōng tǎ	1
 中网	zhōng wǎng	1
 钟无艳	zhōng wú yàn	1
+中下	zhōng xià	1
 重肖	zhòng xiāo	1
 中兴	zhōng xìng	1
+中亚	zhōng yà	1
 中央	zhōng yāng	1
 中央大街	zhōng yāng dà jiē	1
+中央气象台	zhōng yāng qì xiàng tái	1
 中央宣讲团	zhōng yāng xuān jiǎng tuán	1
+中也	zhōng yě	1
+中野	zhōng yě	1
+中一	zhōng yī	1
 中乙	zhōng yǐ	1
 钟意	zhōng yì	1
 众议院	zhòng yì yuàn	1
+中影	zhōng yǐng	1
 中雨	zhōng yǔ	1
 中元节	zhōng yuán jié	1
 重云	zhòng yún	1
@@ -7328,6 +8697,7 @@ sort: by_weight
 周二	zhōu èr	1
 周海洋	zhōu hǎi yáng	1
 周黑鸭	zhōu hēi yā	1
+宙活	zhòu huó	1
 骤降	zhòu jiàng	1
 周杰	zhōu jié	1
 周杰伦	zhōu jié lún	1
@@ -7335,6 +8705,7 @@ sort: by_weight
 周六	zhōu liù	1
 周六福	zhōu liù fú	1
 周码	zhōu mǎ	1
+周末好	zhōu mò hǎo	1
 周末快乐	zhōu mò kuài lè	1
 周末愉快	zhōu mò yú kuài	1
 周年庆	zhōu nián qìng	1
@@ -7356,17 +8727,22 @@ sort: by_weight
 周诣涛	zhōu yì tāo	1
 周雨彤	zhōu yǔ tóng	1
 周正	zhōu zhèng	1
+周志	zhōu zhì	1
 周忠	zhōu zhōng	1
 周周	zhōu zhōu	1
+主办方	zhǔ bàn fāng	1
 主包	zhǔ bāo	1
+主场	zhǔ chǎng	1
 诸城	zhū chéng	1
 祝大家	zhù dà jiā	1
+主动性	zhǔ dòng xìng	1
 珠峰	zhū fēng	1
 祝福语	zhù fú yǔ	1
 诸葛青	zhū gě qīng	1
 主观	zhǔ guān	1
 主观题	zhǔ guān tí	1
 珠海	zhū hǎi	1
+珠海市	zhū hǎi shì	1
 祝贺	zhù hè	1
 烛煌	zhú huáng	1
 铸魂	zhù hún	1
@@ -7376,7 +8752,10 @@ sort: by_weight
 住建局	zhù jiàn jú	1
 猪颈肉	zhū jǐng ròu	1
 主角	zhǔ jué	1
+朱军	zhū jūn	1
 祝君好	zhù jūn hǎo	1
+朱凯	zhū kǎi	1
+朱开	zhū kāi	1
 朱老板	zhū lǎo bǎn	1
 主力	zhǔ lì	1
 主路	zhǔ lù	1
@@ -7391,9 +8770,14 @@ sort: by_weight
 住宿生	zhù sù shēng	1
 竹荪	zhú sūn	1
 主套	zhǔ tào	1
+主题曲	zhǔ tí qǔ	1
 主天使	zhǔ tiān shǐ	1
+朱天天	zhū tiān tiān	1
 助威	zhù wēi	1
+主舞	zhǔ wǔ	1
+朱晓东	zhū xiǎo dōng	1
 逐霄拾梦	zhú xiāo shí mèng	1
+助学帮	zhù xué bāng	1
 朱一龙	zhū yī lóng	1
 朱映宸	zhū yìng chén	1
 茱萸	zhū yú	1
@@ -7405,9 +8789,14 @@ sort: by_weight
 株洲	zhū zhōu	1
 朱珠	zhū zhū	1
 抓取	zhuā qǔ	1
+转播	zhuǎn bō	1
+转播权	zhuǎn bō quán	1
 专怪	zhuān guài	1
+转化率	zhuǎn huà lǜ	1
+转会期	zhuǎn huì qī	1
 专家	zhuān jiā	1
 专利	zhuān lì	1
+赚麻了	zhuàn má le	1
 转盘	zhuǎn pán	1
 砖皮	zhuān pí	1
 专区	zhuān qū	1
@@ -7418,18 +8807,30 @@ sort: by_weight
 专项	zhuān xiang	1
 专员	zhuān yuán	1
 转赠	zhuǎn zèng	1
+转折点	zhuǎn zhé diǎn	1
+壮举	zhuàng jǔ	1
 妆前	zhuāng qián	1
+状态	zhuàng tài	1
 壮壮妈	zhuàng zhuàng mā	1
 追捕	zhuī bǔ	1
+追梦不休	zhuī mèng bù xiū	1
+追梦格林	zhuī mèng gé lín	1
+追评	zhuī píng	1
 追三	zhuī sān	1
 准备夺冠	zhǔn bèi duó guàn	1
+准备就绪	zhǔn bèi jiù xù	1
 准考证	zhǔn kǎo zhèng	1
+卓定	zhuó dìng	1
 卓哥	zhuó gē	1
 捉奸	zhuō jiān	1
 啄木鸟	zhuó mù niǎo	1
 卓荣泰	zhuó róng tài	1
 着色器	zhuó sè qì	1
+着手	zhuó shǒu	1
 兹白	zī bái	1
+自爆	zì bào	1
+自爆兵	zì bào bīng	1
+自爆流	zì bào liú	1
 淄博	zī bó	1
 资产	zī chǎn	1
 子弹	zǐ dàn	1
@@ -7447,42 +8848,55 @@ sort: by_weight
 紫荆花	zǐ jīng huā	1
 自来卷	zì lái juǎn	1
 资料	zī liào	1
+紫灵	zǐ líng	1
+籽岷	zǐ mín	1
+子墨	zǐ mò	1
 梓墨	zǐ mò	1
 字母哥	zì mǔ gē	1
 紫皮	zǐ pí	1
-子旗	zǐ qí	1
 紫气	zǐ qì	1
 紫气东来	zǐ qì dōng lái	1
 自强	zì qiáng	1
 自染	zì rǎn	1
 自然卷	zì rán juǎn	1
+自然之力	zì rán zhī lì	1
+资生堂	zī shēng táng	1
 自首	zì shǒu	1
 姿态	zī tài	1
+紫檀	zǐ tán	1
 字头	zì tóu	1
+紫薇	zǐ wēi	1
 紫溪山	zǐ xī shān	1
+自卸车	zì xiè chē	1
 紫萱	zǐ xuān	1
 自选图	zì xuǎn tú	1
 咨询师	zī xún shī	1
+紫燕	zǐ yàn	1
 自由笔记	zì yóu bǐ jì	1
 梓渝	zǐ yú	1
+资源	zī yuán	1
+资源团	zī yuán tuán	1
 资质	zī zhì	1
 自治区	zì zhì qū	1
 自走棋	zì zǒu qí	1
-宗馥莉	zōng fù lì	1
+总攻	zǒng gōng	1
 总冠军	zǒng guàn jūn	1
 总行	zǒng háng	1
 综合	zōng hé	1
-综合能力测试	zōng hé néng lì cè shì	1
 综合素质	zōng hé sù zhì	1
 综合征	zōng hé zhēng	1
+总局	zǒng jú	1
 总决赛	zǒng jué sài	1
 总理	zǒng lǐ	1
 总人数	zǒng rén shù	1
 宗师	zōng shī	1
 综述	zōng shù	1
+总助	zǒng zhù	1
 走钢丝	zǒu gāng sī	1
 走马上任	zǒu mǎ shàng rèn	1
 走起来	zǒu qǐ lái	1
+走位	zǒu wèi	1
+走下	zǒu xià	1
 祖海	zǔ hǎi	1
 组会	zǔ huì	1
 阻击	zǔ jī	1
@@ -7495,14 +8909,18 @@ sort: by_weight
 祖训	zǔ xùn	1
 组织部	zǔ zhī bù	1
 钻风	zuàn fēng	1
+最大赢家	zuì dà yíng jiā	1
 最低温	zuì dī wēn	1
+罪犯	zuì fàn	1
 最高检	zuì gāo jiǎn	1
 最高难度	zuì gāo nán dù	1
 醉驾	zuì jià	1
+最佳对手	zuì jiā duì shǒu	1
 最佳女主角	zuì jiā nǚ zhǔ jué	1
 醉剑	zuì jiàn	1
 最冷	zuì lěng	1
 醉梦	zuì mèng	1
+最强	zuì qiáng	1
 醉拳	zuì quán	1
 醉人	zuì rén	1
 最有希望的	zuì yǒu xī wàng de	1
@@ -7530,26 +8948,32 @@ sort: by_weight
 佐证	zuǒ zhèng	1
 佐助	zuǒ zhù	1
 左左	zuǒ zuǒ	1
-a股	gǔ	1
-ai短剧	duǎn jù	1
 ai全民制作人	quán mín zhì zuò rén	1
 b站	zhàn	1
 bin哥	gē	1
+blg电竞基金	diàn jìng jī jīn	1
+blg夺冠	duó guàn	1
 boss直聘	zhí pìn	1
 c罗	luó	1
+c位	wèi	1
 fe电动方程式	diàn dòng fāng chéng shì	1
 fresh果果	guǒ guǒ	1
+jdg超话	chāo huà	1
+kda表演	biǎo yǎn	1
+kpl年度总决赛	nián dù zǒng jué sài	1
 kpl奇妙日	qí miào rì	1
+mj校园	xiào yuán	1
 nba杯	bēi	1
 qq音乐	yīn yuè	1
 s赛	sài	1
+sc原油	yuán yóu	1
 sk海力士	hǎi lì shì	1
 t恤	xù	1
 w年度光影盛典	nián dù guāng yǐng shèng diǎn	1
-w年度盛典	nián dù shèng diǎn	1
 w盛典	shèng diǎn	1
+w盛典晚宴	shèng diǎn wǎn yàn	1
 w中文版	zhōng wén bǎn	1
 w中文版年度盛典	zhōng wén bǎn nián dù shèng diǎn	1
-wtt重庆冠军赛	chóng qìng guàn jūn sài	1
+wta年终总决赛	nián zhōng zǒng jué sài	1
 wtt法兰克福冠军赛	fǎ lán kè fú guàn jūn sài	1
-wtt六站冠军赛	liù zhàn guàn jūn sài	1
+xun抢龙	qiǎng lóng	1
